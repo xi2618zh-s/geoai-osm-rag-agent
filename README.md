@@ -54,8 +54,8 @@ The 100% retrieval result does not imply 100% end-to-end semantic accuracy: the 
 The verified local path uses Windows, Miniconda/Anaconda, Ollama, Python 3.10, and roughly 6–8 GB of free disk space. The local Qwen model also requires enough RAM for a 3B-parameter model.
 
 ```bat
-git clone https://github.com/xi2618zh-s/geoai-osm-llm-project.git
-cd geoai-osm-llm-project
+git clone https://github.com/xi2618zh-s/geoai-osm-rag-agent.git
+cd geoai-osm-rag-agent
 
 scripts\setup_env.cmd
 conda run -n geoai_project_env python scripts\fetch_osm_data.py
