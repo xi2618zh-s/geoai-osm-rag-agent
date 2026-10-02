@@ -1,18 +1,49 @@
 __pycache__/
-*.pyc
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+.env
+.env.*
+!.env.example
 .venv/
-.vscode/
-.idea/
-# 排除数据集文件夹
-data/
-# 排除模型权重
-models/
-# 排除虚拟环境
 venv/
 
-sample_2024group/
-osmium-tool-1.18.0/
-output/
-faiss_index/
+# Runtime outputs
+output/*.geojson
+output/*.json
+output/geoai_clip_*/
+output/*.osm.pbf
+output/*.log
+*.log
 
-*.zip
+# Large source data and model caches
+data/osm/*.osm.pbf
+data/osm/*.osm.pbf.part
+data/osm/*.osm.pbf.receipt.json
+.cache/
+.idea/
+.vscode/
+.DS_Store
+
+# Model and generated binary artifacts
+*.ckpt
+*.pt
+*.pth
+*.pkl
+*.pickle
+*.parquet
+
+# Private career-planning and handoff material
+/JOB_SEARCH_MATERIALS.md
+/PROJECT_HANDOFF*.md
+/RESUME_MATERIAL_BANK*.md
+/JOB_SEARCH_MATERIALS*.md
+/RESUME_INTERVIEW*.md
+/INTERVIEW*.md
+/CAREER*.md
+
+# Keep the small knowledge source and index metadata by policy; move the binary
+# FAISS index to Git LFS if repository size becomes a concern.

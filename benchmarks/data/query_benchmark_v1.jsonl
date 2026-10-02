@@ -1,0 +1,63 @@
+{"id":"aeroway_aerodrome_canonical","query":"Find aerodromes in Lund","expected_place":"Lund","key":"aeroway","value":"aerodrome","category":"canonical","difficulty":"easy"}
+{"id":"aeroway_airport_canonical","query":"Find OSM features explicitly tagged as airports in Lund","expected_place":"Lund","key":"aeroway","value":"airport","category":"canonical","difficulty":"medium"}
+{"id":"aeroway_terminal_canonical","query":"Find airport terminals in Lund","expected_place":"Lund","key":"aeroway","value":"terminal","category":"canonical","difficulty":"easy"}
+{"id":"amenity_cafe_canonical","query":"Find all cafes in Lund","expected_place":"Lund","key":"amenity","value":"cafe","category":"canonical","difficulty":"easy"}
+{"id":"amenity_cinema_canonical","query":"Show cinemas in Lund","expected_place":"Lund","key":"amenity","value":"cinema","category":"canonical","difficulty":"easy"}
+{"id":"amenity_hospital_canonical","query":"Find hospitals in Lund","expected_place":"Lund","key":"amenity","value":"hospital","category":"canonical","difficulty":"easy"}
+{"id":"amenity_library_canonical","query":"Show public libraries in Lund","expected_place":"Lund","key":"amenity","value":"library","category":"canonical","difficulty":"easy"}
+{"id":"amenity_parking_canonical","query":"Find parking facilities in Lund","expected_place":"Lund","key":"amenity","value":"parking","category":"canonical","difficulty":"easy"}
+{"id":"amenity_police_canonical","query":"Show police stations in Lund","expected_place":"Lund","key":"amenity","value":"police","category":"canonical","difficulty":"easy"}
+{"id":"amenity_restaurant_canonical","query":"Find restaurants in Lund","expected_place":"Lund","key":"amenity","value":"restaurant","category":"canonical","difficulty":"easy"}
+{"id":"amenity_school_canonical","query":"Find school campuses in Lund","expected_place":"Lund","key":"amenity","value":"school","category":"canonical","difficulty":"medium"}
+{"id":"building_residential_canonical","query":"Find residential buildings in Lund","expected_place":"Lund","key":"building","value":"residential","category":"canonical","difficulty":"easy"}
+{"id":"building_school_canonical","query":"Find buildings used as schools in Lund","expected_place":"Lund","key":"building","value":"school","category":"canonical","difficulty":"medium"}
+{"id":"highway_bus_stop_canonical","query":"Find bus stops in Uppsala","expected_place":"Uppsala","key":"highway","value":"bus_stop","category":"canonical","difficulty":"easy"}
+{"id":"highway_traffic_signals_canonical","query":"Show traffic signals in Lund","expected_place":"Lund","key":"highway","value":"traffic_signals","category":"canonical","difficulty":"easy"}
+{"id":"leisure_park_canonical","query":"Find parks in Lund","expected_place":"Lund","key":"leisure","value":"park","category":"canonical","difficulty":"easy"}
+{"id":"leisure_swimming_pool_canonical","query":"Show swimming pools in Lund","expected_place":"Lund","key":"leisure","value":"swimming_pool","category":"canonical","difficulty":"easy"}
+{"id":"railway_halt_canonical","query":"Find railway halts in Lund","expected_place":"Lund","key":"railway","value":"halt","category":"canonical","difficulty":"easy"}
+{"id":"railway_station_canonical","query":"Find railway stations in Lund","expected_place":"Lund","key":"railway","value":"station","category":"canonical","difficulty":"easy"}
+{"id":"shop_convenience_canonical","query":"Find convenience stores in Lund","expected_place":"Lund","key":"shop","value":"convenience","category":"canonical","difficulty":"easy"}
+{"id":"shop_supermarket_canonical","query":"Find supermarkets in Lund","expected_place":"Lund","key":"shop","value":"supermarket","category":"canonical","difficulty":"easy"}
+{"id":"aeroway_aerodrome_paraphrase","query":"Show airfields used for aircraft operations around Malmö","expected_place":"Malmö","key":"aeroway","value":"aerodrome","category":"paraphrase","difficulty":"medium"}
+{"id":"aeroway_airport_paraphrase","query":"List places mapped specifically with the OSM airport tag in Malmö","expected_place":"Malmö","key":"aeroway","value":"airport","category":"paraphrase","difficulty":"hard"}
+{"id":"aeroway_terminal_paraphrase","query":"Where are the passenger terminal buildings at airports in Malmö?","expected_place":"Malmö","key":"aeroway","value":"terminal","category":"paraphrase","difficulty":"medium"}
+{"id":"amenity_cafe_paraphrase","query":"Show sit-down coffee shops around Malmö","expected_place":"Malmö","key":"amenity","value":"cafe","category":"paraphrase","difficulty":"medium"}
+{"id":"amenity_cinema_paraphrase","query":"Where can people go to watch films in Malmö?","expected_place":"Malmö","key":"amenity","value":"cinema","category":"paraphrase","difficulty":"medium"}
+{"id":"amenity_hospital_paraphrase","query":"Show medical facilities providing inpatient treatment in Malmö","expected_place":"Malmö","key":"amenity","value":"hospital","category":"paraphrase","difficulty":"medium"}
+{"id":"amenity_library_paraphrase","query":"Where can residents borrow books in Malmö?","expected_place":"Malmö","key":"amenity","value":"library","category":"paraphrase","difficulty":"medium"}
+{"id":"amenity_parking_paraphrase","query":"Show places where cars can be parked in Malmö","expected_place":"Malmö","key":"amenity","value":"parking","category":"paraphrase","difficulty":"medium"}
+{"id":"amenity_police_paraphrase","query":"Find law enforcement offices in Malmö","expected_place":"Malmö","key":"amenity","value":"police","category":"paraphrase","difficulty":"medium"}
+{"id":"amenity_restaurant_paraphrase","query":"Show sit-down places serving full meals in Malmö","expected_place":"Malmö","key":"amenity","value":"restaurant","category":"paraphrase","difficulty":"medium"}
+{"id":"amenity_school_paraphrase","query":"Find educational school grounds and campuses in Malmö","expected_place":"Malmö","key":"amenity","value":"school","category":"paraphrase","difficulty":"medium"}
+{"id":"building_residential_paraphrase","query":"Show structures mainly used as homes in Malmö","expected_place":"Malmö","key":"building","value":"residential","category":"paraphrase","difficulty":"medium"}
+{"id":"building_school_paraphrase","query":"Find individual structures whose building use is school in Malmö","expected_place":"Malmö","key":"building","value":"school","category":"paraphrase","difficulty":"hard"}
+{"id":"highway_bus_stop_paraphrase","query":"Where can passengers board local buses in Malmö?","expected_place":"Malmö","key":"highway","value":"bus_stop","category":"paraphrase","difficulty":"medium"}
+{"id":"highway_traffic_signals_paraphrase","query":"Show road junction lights controlling traffic in Malmö","expected_place":"Malmö","key":"highway","value":"traffic_signals","category":"paraphrase","difficulty":"medium"}
+{"id":"leisure_park_paraphrase","query":"Find public green recreation areas in Malmö","expected_place":"Malmö","key":"leisure","value":"park","category":"paraphrase","difficulty":"medium"}
+{"id":"leisure_swimming_pool_paraphrase","query":"Show facilities built for swimming in Malmö","expected_place":"Malmö","key":"leisure","value":"swimming_pool","category":"paraphrase","difficulty":"medium"}
+{"id":"railway_halt_paraphrase","query":"Find small rail stopping places with limited facilities in Malmö","expected_place":"Malmö","key":"railway","value":"halt","category":"paraphrase","difficulty":"hard"}
+{"id":"railway_station_paraphrase","query":"Show major places where passenger trains stop in Malmö","expected_place":"Malmö","key":"railway","value":"station","category":"paraphrase","difficulty":"medium"}
+{"id":"shop_convenience_paraphrase","query":"Find small neighborhood shops selling everyday items in Malmö","expected_place":"Malmö","key":"shop","value":"convenience","category":"paraphrase","difficulty":"medium"}
+{"id":"shop_supermarket_paraphrase","query":"Show large self-service grocery stores in Malmö","expected_place":"Malmö","key":"shop","value":"supermarket","category":"paraphrase","difficulty":"medium"}
+{"id":"aeroway_aerodrome_hard","query":"List aviation grounds tagged as aerodromes rather than terminal buildings in Uppsala","expected_place":"Uppsala","key":"aeroway","value":"aerodrome","category":"hard","difficulty":"hard"}
+{"id":"aeroway_airport_hard","query":"List aeroway airport features, not general aerodromes, in Uppsala","expected_place":"Uppsala","key":"aeroway","value":"airport","category":"hard","difficulty":"hard"}
+{"id":"aeroway_terminal_hard","query":"Find airport passenger terminals, not the whole airfield, in Uppsala","expected_place":"Uppsala","key":"aeroway","value":"terminal","category":"hard","difficulty":"hard"}
+{"id":"amenity_cafe_hard","query":"Find informal coffee places with seating, not full restaurants, in Uppsala","expected_place":"Uppsala","key":"amenity","value":"cafe","category":"hard","difficulty":"hard"}
+{"id":"amenity_cinema_hard","query":"Find venues for watching movies, excluding libraries and schools, in Uppsala","expected_place":"Uppsala","key":"amenity","value":"cinema","category":"hard","difficulty":"hard"}
+{"id":"amenity_hospital_hard","query":"Find hospitals with inpatient care, not police or school facilities, in Uppsala","expected_place":"Uppsala","key":"amenity","value":"hospital","category":"hard","difficulty":"hard"}
+{"id":"amenity_library_hard","query":"Find public book-lending amenities, not book shops, in Uppsala","expected_place":"Uppsala","key":"amenity","value":"library","category":"hard","difficulty":"hard"}
+{"id":"amenity_parking_hard","query":"Find designated vehicle parking amenities, not traffic signals, in Uppsala","expected_place":"Uppsala","key":"amenity","value":"parking","category":"hard","difficulty":"hard"}
+{"id":"amenity_police_hard","query":"Find police amenities for law enforcement, not hospitals, in Uppsala","expected_place":"Uppsala","key":"amenity","value":"police","category":"hard","difficulty":"hard"}
+{"id":"amenity_restaurant_hard","query":"Find places serving full meals, not informal coffee shops, in Uppsala","expected_place":"Uppsala","key":"amenity","value":"restaurant","category":"hard","difficulty":"hard"}
+{"id":"amenity_school_hard","query":"Find entire school sites, not only building footprints, in Uppsala","expected_place":"Uppsala","key":"amenity","value":"school","category":"hard","difficulty":"hard"}
+{"id":"building_residential_hard","query":"Find buildings classified for residential use rather than schools in Uppsala","expected_place":"Uppsala","key":"building","value":"residential","category":"hard","difficulty":"hard"}
+{"id":"building_school_hard","query":"Find school building footprints rather than the whole school amenity in Uppsala","expected_place":"Uppsala","key":"building","value":"school","category":"hard","difficulty":"hard"}
+{"id":"highway_bus_stop_hard","query":"Find roadside bus boarding points, not railway halts, in Uppsala","expected_place":"Uppsala","key":"highway","value":"bus_stop","category":"hard","difficulty":"hard"}
+{"id":"highway_traffic_signals_hard","query":"Find signal-controlled road points, not bus stops, in Uppsala","expected_place":"Uppsala","key":"highway","value":"traffic_signals","category":"hard","difficulty":"hard"}
+{"id":"leisure_park_hard","query":"Find mapped public parks, not swimming facilities, in Uppsala","expected_place":"Uppsala","key":"leisure","value":"park","category":"hard","difficulty":"hard"}
+{"id":"leisure_swimming_pool_hard","query":"Find swimming pools, excluding parks and natural water, in Uppsala","expected_place":"Uppsala","key":"leisure","value":"swimming_pool","category":"hard","difficulty":"hard"}
+{"id":"railway_halt_hard","query":"Find minor railway halts rather than full stations in Uppsala","expected_place":"Uppsala","key":"railway","value":"halt","category":"hard","difficulty":"hard"}
+{"id":"railway_station_hard","query":"Find full railway stations rather than small halts in Uppsala","expected_place":"Uppsala","key":"railway","value":"station","category":"hard","difficulty":"hard"}
+{"id":"shop_convenience_hard","query":"Find small convenience shops rather than large supermarkets in Uppsala","expected_place":"Uppsala","key":"shop","value":"convenience","category":"hard","difficulty":"hard"}
+{"id":"shop_supermarket_hard","query":"Find supermarkets rather than small convenience stores in Uppsala","expected_place":"Uppsala","key":"shop","value":"supermarket","category":"hard","difficulty":"hard"}

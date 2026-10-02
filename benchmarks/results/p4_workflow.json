@@ -1,0 +1,392 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-08-04T21:55:13.416604+00:00",
+  "dataset": "benchmarks/data/workflow_benchmark_v1.jsonl",
+  "plan_compilation": {
+    "n": 12,
+    "plan_validity_rate": 1.0,
+    "operation_accuracy": 1.0,
+    "place_accuracy": 1.0,
+    "filter_set_accuracy": 1.0,
+    "exact_plan_accuracy": 1.0,
+    "latency_ms": {
+      "mean": 45.31771666612864,
+      "p50": 43.86930000327993,
+      "p95": 57.71507999743334
+    },
+    "rows": [
+      {
+        "id": "workflow_food_lund",
+        "query": "Find cafes or restaurants in Lund",
+        "difficulty": "easy",
+        "plan_valid": true,
+        "operation_correct": true,
+        "place_correct": true,
+        "filters_correct": true,
+        "exact_plan_correct": true,
+        "predicted_filters": [
+          "amenity=cafe",
+          "amenity=restaurant"
+        ],
+        "expected_filters": [
+          "amenity=cafe",
+          "amenity=restaurant"
+        ],
+        "step_count": 6,
+        "latency_ms": 61.954,
+        "error_code": null
+      },
+      {
+        "id": "workflow_aviation_lund",
+        "query": "Show airport terminals or aerodromes in Lund",
+        "difficulty": "medium",
+        "plan_valid": true,
+        "operation_correct": true,
+        "place_correct": true,
+        "filters_correct": true,
+        "exact_plan_correct": true,
+        "predicted_filters": [
+          "aeroway=aerodrome",
+          "aeroway=terminal"
+        ],
+        "expected_filters": [
+          "aeroway=aerodrome",
+          "aeroway=terminal"
+        ],
+        "step_count": 6,
+        "latency_ms": 49.76,
+        "error_code": null
+      },
+      {
+        "id": "workflow_school_lund",
+        "query": "Map school campuses or individual school buildings in Lund",
+        "difficulty": "hard",
+        "plan_valid": true,
+        "operation_correct": true,
+        "place_correct": true,
+        "filters_correct": true,
+        "exact_plan_correct": true,
+        "predicted_filters": [
+          "amenity=school",
+          "building=school"
+        ],
+        "expected_filters": [
+          "amenity=school",
+          "building=school"
+        ],
+        "step_count": 6,
+        "latency_ms": 36.854,
+        "error_code": null
+      },
+      {
+        "id": "workflow_rail_uppsala",
+        "query": "Locate minor railway halts or full railway stations in Uppsala",
+        "difficulty": "hard",
+        "plan_valid": true,
+        "operation_correct": true,
+        "place_correct": true,
+        "filters_correct": true,
+        "exact_plan_correct": true,
+        "predicted_filters": [
+          "railway=halt",
+          "railway=station"
+        ],
+        "expected_filters": [
+          "railway=halt",
+          "railway=station"
+        ],
+        "step_count": 6,
+        "latency_ms": 54.247,
+        "error_code": null
+      },
+      {
+        "id": "workflow_shops_lund",
+        "query": "Find convenience stores or supermarkets in Lund",
+        "difficulty": "easy",
+        "plan_valid": true,
+        "operation_correct": true,
+        "place_correct": true,
+        "filters_correct": true,
+        "exact_plan_correct": true,
+        "predicted_filters": [
+          "shop=convenience",
+          "shop=supermarket"
+        ],
+        "expected_filters": [
+          "shop=convenience",
+          "shop=supermarket"
+        ],
+        "step_count": 6,
+        "latency_ms": 42.416,
+        "error_code": null
+      },
+      {
+        "id": "workflow_leisure_lund",
+        "query": "Show parks or swimming pools in Lund",
+        "difficulty": "easy",
+        "plan_valid": true,
+        "operation_correct": true,
+        "place_correct": true,
+        "filters_correct": true,
+        "exact_plan_correct": true,
+        "predicted_filters": [
+          "leisure=park",
+          "leisure=swimming_pool"
+        ],
+        "expected_filters": [
+          "leisure=park",
+          "leisure=swimming_pool"
+        ],
+        "step_count": 6,
+        "latency_ms": 35.163,
+        "error_code": null
+      },
+      {
+        "id": "workflow_services_malmo",
+        "query": "Find hospitals or police stations in Malmö",
+        "difficulty": "easy",
+        "plan_valid": true,
+        "operation_correct": true,
+        "place_correct": true,
+        "filters_correct": true,
+        "exact_plan_correct": true,
+        "predicted_filters": [
+          "amenity=hospital",
+          "amenity=police"
+        ],
+        "expected_filters": [
+          "amenity=hospital",
+          "amenity=police"
+        ],
+        "step_count": 6,
+        "latency_ms": 39.219,
+        "error_code": null
+      },
+      {
+        "id": "workflow_road_lund",
+        "query": "Show parking facilities or traffic signals in Lund",
+        "difficulty": "medium",
+        "plan_valid": true,
+        "operation_correct": true,
+        "place_correct": true,
+        "filters_correct": true,
+        "exact_plan_correct": true,
+        "predicted_filters": [
+          "amenity=parking",
+          "highway=traffic_signals"
+        ],
+        "expected_filters": [
+          "amenity=parking",
+          "highway=traffic_signals"
+        ],
+        "step_count": 6,
+        "latency_ms": 40.78,
+        "error_code": null
+      },
+      {
+        "id": "workflow_culture_lund",
+        "query": "Find cinemas or public libraries in Lund",
+        "difficulty": "easy",
+        "plan_valid": true,
+        "operation_correct": true,
+        "place_correct": true,
+        "filters_correct": true,
+        "exact_plan_correct": true,
+        "predicted_filters": [
+          "amenity=cinema",
+          "amenity=library"
+        ],
+        "expected_filters": [
+          "amenity=cinema",
+          "amenity=library"
+        ],
+        "step_count": 6,
+        "latency_ms": 45.322,
+        "error_code": null
+      },
+      {
+        "id": "workflow_buildings_lund",
+        "query": "Locate residential buildings or school buildings in Lund",
+        "difficulty": "medium",
+        "plan_valid": true,
+        "operation_correct": true,
+        "place_correct": true,
+        "filters_correct": true,
+        "exact_plan_correct": true,
+        "predicted_filters": [
+          "building=residential",
+          "building=school"
+        ],
+        "expected_filters": [
+          "building=residential",
+          "building=school"
+        ],
+        "step_count": 6,
+        "latency_ms": 45.745,
+        "error_code": null
+      },
+      {
+        "id": "workflow_legacy_airport_vasteras",
+        "query": "Find obsolete airport-tagged objects or aerodromes in Västerås",
+        "difficulty": "hard",
+        "plan_valid": true,
+        "operation_correct": true,
+        "place_correct": true,
+        "filters_correct": true,
+        "exact_plan_correct": true,
+        "predicted_filters": [
+          "aeroway=aerodrome",
+          "aeroway=airport"
+        ],
+        "expected_filters": [
+          "aeroway=aerodrome",
+          "aeroway=airport"
+        ],
+        "step_count": 6,
+        "latency_ms": 50.242,
+        "error_code": null
+      },
+      {
+        "id": "workflow_transport_uppsala",
+        "query": "Show bus stops or railway stations in Uppsala",
+        "difficulty": "medium",
+        "plan_valid": true,
+        "operation_correct": true,
+        "place_correct": true,
+        "filters_correct": true,
+        "exact_plan_correct": true,
+        "predicted_filters": [
+          "highway=bus_stop",
+          "railway=station"
+        ],
+        "expected_filters": [
+          "highway=bus_stop",
+          "railway=station"
+        ],
+        "step_count": 6,
+        "latency_ms": 42.11,
+        "error_code": null
+      }
+    ]
+  },
+  "e2e": {
+    "query": "Find cafes or restaurants in Lund",
+    "success": true,
+    "operation": "union",
+    "chosen_tags": [
+      "amenity=cafe",
+      "amenity=restaurant"
+    ],
+    "count": 173,
+    "counts_by_type": {
+      "node": 131,
+      "way": 42,
+      "relation": 0
+    },
+    "matched_counts_by_tag": {
+      "amenity=cafe": 50,
+      "amenity=restaurant": 123
+    },
+    "step_success_rate": 1.0,
+    "step_count": 6,
+    "recovery_count": 0,
+    "clip_cache_hit": true,
+    "elapsed_ms": 7324.543,
+    "workflow_id": "bf8d6a2a33eb409d981702d41bf31d2d",
+    "trace_id": "f04e7fdada24423daca695097abf1808",
+    "geojson_filename": "workflow_lund_union_amenity_cafe_amenity_restaurant_find_cafes_or_restaurants_in_lund_1f64e7d090.geojson",
+    "error_code": null,
+    "step_records": [
+      {
+        "step_id": "geocode_place",
+        "tool": "geocode_place",
+        "status": "succeeded",
+        "attempts": 1,
+        "recovered": false,
+        "elapsed_ms": 1638.32,
+        "output_summary": {
+          "bbox": [
+            13.140177,
+            55.6780929,
+            13.263408,
+            55.7412932
+          ]
+        }
+      },
+      {
+        "step_id": "clip_city",
+        "tool": "clip_osm",
+        "status": "succeeded",
+        "attempts": 1,
+        "recovered": false,
+        "elapsed_ms": 2.88,
+        "output_summary": {
+          "clip_cache_hit": true,
+          "clip_filename": "21d9c3466fc69eadbaf9a0c7.osm.pbf"
+        }
+      },
+      {
+        "step_id": "extract_tag_1",
+        "tool": "extract_tag",
+        "status": "succeeded",
+        "attempts": 1,
+        "recovered": false,
+        "elapsed_ms": 2809.19,
+        "output_summary": {
+          "tag": "amenity=cafe",
+          "count": 50,
+          "counts_by_type": {
+            "node": 38,
+            "way": 12,
+            "relation": 0
+          }
+        }
+      },
+      {
+        "step_id": "extract_tag_2",
+        "tool": "extract_tag",
+        "status": "succeeded",
+        "attempts": 1,
+        "recovered": false,
+        "elapsed_ms": 2609.63,
+        "output_summary": {
+          "tag": "amenity=restaurant",
+          "count": 123,
+          "counts_by_type": {
+            "node": 93,
+            "way": 30,
+            "relation": 0
+          }
+        }
+      },
+      {
+        "step_id": "combine_features",
+        "tool": "combine_features",
+        "status": "succeeded",
+        "attempts": 1,
+        "recovered": false,
+        "elapsed_ms": 0.61,
+        "output_summary": {
+          "operation": "union",
+          "input_counts": {
+            "amenity=cafe": 50,
+            "amenity=restaurant": 123
+          },
+          "deduplicated_count": 173
+        }
+      },
+      {
+        "step_id": "write_geojson",
+        "tool": "write_geojson",
+        "status": "succeeded",
+        "attempts": 1,
+        "recovered": false,
+        "elapsed_ms": 14.37,
+        "output_summary": {
+          "geojson_filename": "workflow_lund_union_amenity_cafe_amenity_restaurant_find_cafes_or_restaurants_in_lund_1f64e7d090.geojson",
+          "count": 173
+        }
+      }
+    ]
+  }
+}

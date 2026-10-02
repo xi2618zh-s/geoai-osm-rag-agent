@@ -1,0 +1,9 @@
+name: geoai_project_env
+channels:
+  - conda-forge
+dependencies:
+  - python=3.10
+  - pip
+  - osmium-tool>=1.18
+  - pip:
+      - -r requirements.txt

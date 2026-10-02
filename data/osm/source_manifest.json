@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "region": "Sweden",
+  "provider": "Geofabrik GmbH",
+  "landing_page": "https://download.geofabrik.de/europe/sweden.html",
+  "pbf_url": "https://download.geofabrik.de/europe/sweden-latest.osm.pbf",
+  "checksum_url": "https://download.geofabrik.de/europe/sweden-latest.osm.pbf.md5",
+  "checksum_algorithm": "md5",
+  "default_output": "data/osm/sweden-latest.osm.pbf",
+  "license": "OpenStreetMap data is available under ODbL 1.0; retain attribution and review provider terms.",
+  "notes": "The latest URL is intentionally mutable. The downloader records the resolved checksum beside each downloaded snapshot."
+}

@@ -1,0 +1,10 @@
+* text=auto
+*.py text eol=lf
+*.yml text eol=lf
+*.yaml text eol=lf
+*.json text eol=lf
+*.jsonl text eol=lf
+*.md text eol=lf
+*.html text eol=lf
+*.cmd text eol=crlf
+faiss_index/faiss_index binary

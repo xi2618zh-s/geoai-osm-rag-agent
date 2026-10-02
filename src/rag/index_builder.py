@@ -4,12 +4,16 @@ from dataclasses import dataclass
 from pathlib import Path
 import json
 import re
-from typing import Iterable, List, Dict
+from typing import List, Dict
 
 import numpy as np
-import faiss
 from sentence_transformers import SentenceTransformer
 from tqdm import tqdm
+
+import faiss
+
+from src.config import EMBEDDING_MODEL
+from src.path_compat import write_faiss_index
 
 
 @dataclass
@@ -106,7 +110,7 @@ def build_faiss_index(
     wiki_raw_jsonl: Path,
     index_path: Path,
     metadata_path: Path,
-    embedding_model_name: str = "sentence-transformers/all-MiniLM-L6-v2",
+    embedding_model_name: str = EMBEDDING_MODEL,
     chunk_size: int = 1200,
     overlap: int = 150,
 ) -> None:
@@ -147,7 +151,7 @@ def build_faiss_index(
 
     # Save
     index_path.parent.mkdir(parents=True, exist_ok=True)
-    faiss.write_index(index, str(index_path))
+    write_faiss_index(index, index_path)
 
     metadata = [
         {
@@ -156,6 +160,9 @@ def build_faiss_index(
             "title": c.title,
             "key": c.key,
             "value": c.value,
+            "embedding_model": embedding_model_name,
+            "chunk_size": chunk_size,
+            "overlap": overlap,
         }
         for c in all_chunks
     ]

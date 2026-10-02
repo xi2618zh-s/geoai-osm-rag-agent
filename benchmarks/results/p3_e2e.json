@@ -1,0 +1,4931 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-08-04T20:45:35.154063+00:00",
+  "dataset": "benchmarks\\data\\query_benchmark_v1.jsonl",
+  "retriever_mode": "hybrid",
+  "report_title": "P3 Hybrid E2E Regression",
+  "retrieval": {
+    "n": 63,
+    "labels": 21,
+    "category_counts": {
+      "canonical": 21,
+      "paraphrase": 21,
+      "hard": 21
+    },
+    "difficulty_counts": {
+      "easy": 18,
+      "medium": 21,
+      "hard": 24
+    },
+    "recall_at": {
+      "1": 1.0,
+      "3": 1.0,
+      "5": 1.0,
+      "10": 1.0
+    },
+    "mrr": 1.0,
+    "top1_tag_accuracy": 1.0,
+    "weighted_grid": [
+      {
+        "k": 1,
+        "min_score": 0.0,
+        "accuracy": 1.0,
+        "coverage": 1.0
+      },
+      {
+        "k": 1,
+        "min_score": 0.15,
+        "accuracy": 1.0,
+        "coverage": 1.0
+      },
+      {
+        "k": 1,
+        "min_score": 0.25,
+        "accuracy": 1.0,
+        "coverage": 1.0
+      },
+      {
+        "k": 3,
+        "min_score": 0.0,
+        "accuracy": 1.0,
+        "coverage": 1.0
+      },
+      {
+        "k": 3,
+        "min_score": 0.15,
+        "accuracy": 1.0,
+        "coverage": 1.0
+      },
+      {
+        "k": 3,
+        "min_score": 0.25,
+        "accuracy": 1.0,
+        "coverage": 1.0
+      },
+      {
+        "k": 5,
+        "min_score": 0.0,
+        "accuracy": 1.0,
+        "coverage": 1.0
+      },
+      {
+        "k": 5,
+        "min_score": 0.15,
+        "accuracy": 1.0,
+        "coverage": 1.0
+      },
+      {
+        "k": 5,
+        "min_score": 0.25,
+        "accuracy": 1.0,
+        "coverage": 1.0
+      },
+      {
+        "k": 10,
+        "min_score": 0.0,
+        "accuracy": 1.0,
+        "coverage": 1.0
+      },
+      {
+        "k": 10,
+        "min_score": 0.15,
+        "accuracy": 1.0,
+        "coverage": 1.0
+      },
+      {
+        "k": 10,
+        "min_score": 0.25,
+        "accuracy": 1.0,
+        "coverage": 1.0
+      }
+    ],
+    "category_metrics": {
+      "canonical": {
+        "n": 21,
+        "recall_at_5": 1.0,
+        "weighted_accuracy_k5_t015": 1.0
+      },
+      "hard": {
+        "n": 21,
+        "recall_at_5": 1.0,
+        "weighted_accuracy_k5_t015": 1.0
+      },
+      "paraphrase": {
+        "n": 21,
+        "recall_at_5": 1.0,
+        "weighted_accuracy_k5_t015": 1.0
+      }
+    },
+    "latency_ms": {
+      "mean": 18.806731745985054,
+      "p50": 18.36139999795705,
+      "p95": 23.768330000166316
+    },
+    "rows": [
+      {
+        "id": "aeroway_aerodrome_canonical",
+        "query": "Find aerodromes in Lund",
+        "expected_place": "Lund",
+        "key": "aeroway",
+        "value": "aerodrome",
+        "category": "canonical",
+        "difficulty": "easy",
+        "expected_tag": "aeroway=aerodrome",
+        "latency_ms": 27.85740001127124,
+        "reciprocal_rank": 1.0,
+        "top1_prediction": "aeroway=aerodrome",
+        "hits": [
+          {
+            "rank": 1,
+            "tag": "aeroway=aerodrome",
+            "score": 1.0,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:aeroway%3Daerodrome"
+          },
+          {
+            "rank": 2,
+            "tag": "highway=bus_stop",
+            "score": 0.47091768407640006,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:highway%3Dbus_stop"
+          },
+          {
+            "rank": 3,
+            "tag": "railway=halt",
+            "score": 0.46596065582296425,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:railway%3Dhalt"
+          },
+          {
+            "rank": 4,
+            "tag": "railway=station",
+            "score": 0.45412959560480726,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:railway%3Dstation"
+          },
+          {
+            "rank": 5,
+            "tag": "aeroway=terminal",
+            "score": 0.45391126406845883,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:aeroway%3Dterminal"
+          },
+          {
+            "rank": 6,
+            "tag": "aeroway=airport",
+            "score": 0.4469366182771626,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:aeroway%3Dairport"
+          },
+          {
+            "rank": 7,
+            "tag": "amenity=police",
+            "score": 0.41845631615554263,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dpolice"
+          },
+          {
+            "rank": 8,
+            "tag": "amenity=hospital",
+            "score": 0.41555256569647636,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dhospital"
+          },
+          {
+            "rank": 9,
+            "tag": "amenity=library",
+            "score": 0.4125911180721772,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dlibrary"
+          },
+          {
+            "rank": 10,
+            "tag": "highway=traffic_signals",
+            "score": 0.403437643115542,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:highway%3Dtraffic_signals"
+          }
+        ]
+      },
+      {
+        "id": "aeroway_airport_canonical",
+        "query": "Find OSM features explicitly tagged as airports in Lund",
+        "expected_place": "Lund",
+        "key": "aeroway",
+        "value": "airport",
+        "category": "canonical",
+        "difficulty": "medium",
+        "expected_tag": "aeroway=airport",
+        "latency_ms": 17.528399999719113,
+        "reciprocal_rank": 1.0,
+        "top1_prediction": "aeroway=airport",
+        "hits": [
+          {
+            "rank": 1,
+            "tag": "aeroway=airport",
+            "score": 1.0,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:aeroway%3Dairport"
+          },
+          {
+            "rank": 2,
+            "tag": "highway=bus_stop",
+            "score": 0.4798521085232594,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:highway%3Dbus_stop"
+          },
+          {
+            "rank": 3,
+            "tag": "aeroway=aerodrome",
+            "score": 0.47702891610197906,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:aeroway%3Daerodrome"
+          },
+          {
+            "rank": 4,
+            "tag": "amenity=cafe",
+            "score": 0.4680567029310771,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dcafe"
+          },
+          {
+            "rank": 5,
+            "tag": "leisure=park",
+            "score": 0.46093738017031105,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:leisure%3Dpark"
+          },
+          {
+            "rank": 6,
+            "tag": "aeroway=terminal",
+            "score": 0.4568695010918404,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:aeroway%3Dterminal"
+          },
+          {
+            "rank": 7,
+            "tag": "railway=station",
+            "score": 0.4560198705741717,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:railway%3Dstation"
+          },
+          {
+            "rank": 8,
+            "tag": "amenity=parking",
+            "score": 0.45555395748524113,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dparking"
+          },
+          {
+            "rank": 9,
+            "tag": "shop=supermarket",
+            "score": 0.44576773485264853,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:shop%3Dsupermarket"
+          },
+          {
+            "rank": 10,
+            "tag": "amenity=hospital",
+            "score": 0.4278328755670812,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dhospital"
+          }
+        ]
+      },
+      {
+        "id": "aeroway_terminal_canonical",
+        "query": "Find airport terminals in Lund",
+        "expected_place": "Lund",
+        "key": "aeroway",
+        "value": "terminal",
+        "category": "canonical",
+        "difficulty": "easy",
+        "expected_tag": "aeroway=terminal",
+        "latency_ms": 18.981700006406754,
+        "reciprocal_rank": 1.0,
+        "top1_prediction": "aeroway=terminal",
+        "hits": [
+          {
+            "rank": 1,
+            "tag": "aeroway=terminal",
+            "score": 1.0,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:aeroway%3Dterminal"
+          },
+          {
+            "rank": 2,
+            "tag": "aeroway=airport",
+            "score": 0.9803610957965179,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:aeroway%3Dairport"
+          },
+          {
+            "rank": 3,
+            "tag": "aeroway=aerodrome",
+            "score": 0.46832114546745746,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:aeroway%3Daerodrome"
+          },
+          {
+            "rank": 4,
+            "tag": "railway=station",
+            "score": 0.46100362756952845,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:railway%3Dstation"
+          },
+          {
+            "rank": 5,
+            "tag": "railway=halt",
+            "score": 0.4566474512256,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:railway%3Dhalt"
+          },
+          {
+            "rank": 6,
+            "tag": "highway=bus_stop",
+            "score": 0.45391126406845883,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:highway%3Dbus_stop"
+          },
+          {
+            "rank": 7,
+            "tag": "amenity=hospital",
+            "score": 0.41753138743788815,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dhospital"
+          },
+          {
+            "rank": 8,
+            "tag": "amenity=police",
+            "score": 0.4079625644965407,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dpolice"
+          },
+          {
+            "rank": 9,
+            "tag": "highway=traffic_signals",
+            "score": 0.4078203276319486,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:highway%3Dtraffic_signals"
+          },
+          {
+            "rank": 10,
+            "tag": "amenity=parking",
+            "score": 0.39680151352389775,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dparking"
+          }
+        ]
+      },
+      {
+        "id": "amenity_cafe_canonical",
+        "query": "Find all cafes in Lund",
+        "expected_place": "Lund",
+        "key": "amenity",
+        "value": "cafe",
+        "category": "canonical",
+        "difficulty": "easy",
+        "expected_tag": "amenity=cafe",
+        "latency_ms": 17.283299996051937,
+        "reciprocal_rank": 1.0,
+        "top1_prediction": "amenity=cafe",
+        "hits": [
+          {
+            "rank": 1,
+            "tag": "amenity=cafe",
+            "score": 1.0,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dcafe"
+          },
+          {
+            "rank": 2,
+            "tag": "highway=bus_stop",
+            "score": 0.47335685670904304,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:highway%3Dbus_stop"
+          },
+          {
+            "rank": 3,
+            "tag": "shop=convenience",
+            "score": 0.4612253705361324,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:shop%3Dconvenience"
+          },
+          {
+            "rank": 4,
+            "tag": "amenity=restaurant",
+            "score": 0.45391126406845883,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Drestaurant"
+          },
+          {
+            "rank": 5,
+            "tag": "railway=station",
+            "score": 0.44368994917709337,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:railway%3Dstation"
+          },
+          {
+            "rank": 6,
+            "tag": "highway=traffic_signals",
+            "score": 0.44023769839972987,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:highway%3Dtraffic_signals"
+          },
+          {
+            "rank": 7,
+            "tag": "amenity=police",
+            "score": 0.4365400690144802,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dpolice"
+          },
+          {
+            "rank": 8,
+            "tag": "amenity=library",
+            "score": 0.4317897006164154,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dlibrary"
+          },
+          {
+            "rank": 9,
+            "tag": "aeroway=aerodrome",
+            "score": 0.4216636328390716,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:aeroway%3Daerodrome"
+          },
+          {
+            "rank": 10,
+            "tag": "leisure=park",
+            "score": 0.4157152085793321,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:leisure%3Dpark"
+          }
+        ]
+      },
+      {
+        "id": "amenity_cinema_canonical",
+        "query": "Show cinemas in Lund",
+        "expected_place": "Lund",
+        "key": "amenity",
+        "value": "cinema",
+        "category": "canonical",
+        "difficulty": "easy",
+        "expected_tag": "amenity=cinema",
+        "latency_ms": 20.585200007189997,
+        "reciprocal_rank": 1.0,
+        "top1_prediction": "amenity=cinema",
+        "hits": [
+          {
+            "rank": 1,
+            "tag": "amenity=cinema",
+            "score": 1.0,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dcinema"
+          },
+          {
+            "rank": 2,
+            "tag": "amenity=parking",
+            "score": 0.4640370329186459,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dparking"
+          },
+          {
+            "rank": 3,
+            "tag": "railway=station",
+            "score": 0.4568426860197257,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:railway%3Dstation"
+          },
+          {
+            "rank": 4,
+            "tag": "shop=convenience",
+            "score": 0.4451400319125466,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:shop%3Dconvenience"
+          },
+          {
+            "rank": 5,
+            "tag": "amenity=restaurant",
+            "score": 0.42833879848713724,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Drestaurant"
+          },
+          {
+            "rank": 6,
+            "tag": "railway=halt",
+            "score": 0.4282969706963683,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:railway%3Dhalt"
+          },
+          {
+            "rank": 7,
+            "tag": "amenity=library",
+            "score": 0.4280699467076605,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dlibrary"
+          },
+          {
+            "rank": 8,
+            "tag": "aeroway=terminal",
+            "score": 0.417966991753859,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:aeroway%3Dterminal"
+          },
+          {
+            "rank": 9,
+            "tag": "amenity=police",
+            "score": 0.4117048567548423,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dpolice"
+          },
+          {
+            "rank": 10,
+            "tag": "highway=bus_stop",
+            "score": 0.4115549460168566,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:highway%3Dbus_stop"
+          }
+        ]
+      },
+      {
+        "id": "amenity_hospital_canonical",
+        "query": "Find hospitals in Lund",
+        "expected_place": "Lund",
+        "key": "amenity",
+        "value": "hospital",
+        "category": "canonical",
+        "difficulty": "easy",
+        "expected_tag": "amenity=hospital",
+        "latency_ms": 17.631499998969957,
+        "reciprocal_rank": 1.0,
+        "top1_prediction": "amenity=hospital",
+        "hits": [
+          {
+            "rank": 1,
+            "tag": "amenity=hospital",
+            "score": 1.0,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dhospital"
+          },
+          {
+            "rank": 2,
+            "tag": "highway=bus_stop",
+            "score": 0.4758747123298358,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:highway%3Dbus_stop"
+          },
+          {
+            "rank": 3,
+            "tag": "railway=station",
+            "score": 0.4590013216770603,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:railway%3Dstation"
+          },
+          {
+            "rank": 4,
+            "tag": "railway=halt",
+            "score": 0.44056093277232766,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:railway%3Dhalt"
+          },
+          {
+            "rank": 5,
+            "tag": "amenity=police",
+            "score": 0.42929438334516934,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dpolice"
+          },
+          {
+            "rank": 6,
+            "tag": "amenity=library",
+            "score": 0.4231129184542247,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dlibrary"
+          },
+          {
+            "rank": 7,
+            "tag": "amenity=restaurant",
+            "score": 0.4216636328390716,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Drestaurant"
+          },
+          {
+            "rank": 8,
+            "tag": "aeroway=aerodrome",
+            "score": 0.406300237013659,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:aeroway%3Daerodrome"
+          },
+          {
+            "rank": 9,
+            "tag": "shop=supermarket",
+            "score": 0.39799213570508324,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:shop%3Dsupermarket"
+          },
+          {
+            "rank": 10,
+            "tag": "amenity=parking",
+            "score": 0.39069044638130257,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dparking"
+          }
+        ]
+      },
+      {
+        "id": "amenity_library_canonical",
+        "query": "Show public libraries in Lund",
+        "expected_place": "Lund",
+        "key": "amenity",
+        "value": "library",
+        "category": "canonical",
+        "difficulty": "easy",
+        "expected_tag": "amenity=library",
+        "latency_ms": 17.393199988873675,
+        "reciprocal_rank": 1.0,
+        "top1_prediction": "amenity=library",
+        "hits": [
+          {
+            "rank": 1,
+            "tag": "amenity=library",
+            "score": 1.0,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dlibrary"
+          },
+          {
+            "rank": 2,
+            "tag": "amenity=cafe",
+            "score": 0.4597823307534646,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dcafe"
+          },
+          {
+            "rank": 3,
+            "tag": "highway=bus_stop",
+            "score": 0.45871455786812504,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:highway%3Dbus_stop"
+          },
+          {
+            "rank": 4,
+            "tag": "amenity=police",
+            "score": 0.44788208219278663,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dpolice"
+          },
+          {
+            "rank": 5,
+            "tag": "amenity=cinema",
+            "score": 0.4469366182771626,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dcinema"
+          },
+          {
+            "rank": 6,
+            "tag": "amenity=parking",
+            "score": 0.44585327361184446,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dparking"
+          },
+          {
+            "rank": 7,
+            "tag": "leisure=park",
+            "score": 0.4448097718144101,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:leisure%3Dpark"
+          },
+          {
+            "rank": 8,
+            "tag": "railway=station",
+            "score": 0.4425857229553381,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:railway%3Dstation"
+          },
+          {
+            "rank": 9,
+            "tag": "railway=halt",
+            "score": 0.42449108954550313,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:railway%3Dhalt"
+          },
+          {
+            "rank": 10,
+            "tag": "aeroway=aerodrome",
+            "score": 0.408164964528539,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:aeroway%3Daerodrome"
+          }
+        ]
+      },
+      {
+        "id": "amenity_parking_canonical",
+        "query": "Find parking facilities in Lund",
+        "expected_place": "Lund",
+        "key": "amenity",
+        "value": "parking",
+        "category": "canonical",
+        "difficulty": "easy",
+        "expected_tag": "amenity=parking",
+        "latency_ms": 17.433400003938004,
+        "reciprocal_rank": 1.0,
+        "top1_prediction": "amenity=parking",
+        "hits": [
+          {
+            "rank": 1,
+            "tag": "amenity=parking",
+            "score": 1.0,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dparking"
+          },
+          {
+            "rank": 2,
+            "tag": "highway=bus_stop",
+            "score": 0.46832114546745746,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:highway%3Dbus_stop"
+          },
+          {
+            "rank": 3,
+            "tag": "aeroway=terminal",
+            "score": 0.46187839726131125,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:aeroway%3Dterminal"
+          },
+          {
+            "rank": 4,
+            "tag": "railway=halt",
+            "score": 0.44487820408699696,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:railway%3Dhalt"
+          },
+          {
+            "rank": 5,
+            "tag": "railway=station",
+            "score": 0.4429250539393509,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:railway%3Dstation"
+          },
+          {
+            "rank": 6,
+            "tag": "amenity=police",
+            "score": 0.441125031277798,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dpolice"
+          },
+          {
+            "rank": 7,
+            "tag": "aeroway=aerodrome",
+            "score": 0.4214890309207117,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:aeroway%3Daerodrome"
+          },
+          {
+            "rank": 8,
+            "tag": "amenity=restaurant",
+            "score": 0.41956756633122494,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Drestaurant"
+          },
+          {
+            "rank": 9,
+            "tag": "leisure=park",
+            "score": 0.41079782859242236,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:leisure%3Dpark"
+          },
+          {
+            "rank": 10,
+            "tag": "amenity=library",
+            "score": 0.40223512222645946,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dlibrary"
+          }
+        ]
+      },
+      {
+        "id": "amenity_police_canonical",
+        "query": "Show police stations in Lund",
+        "expected_place": "Lund",
+        "key": "amenity",
+        "value": "police",
+        "category": "canonical",
+        "difficulty": "easy",
+        "expected_tag": "amenity=police",
+        "latency_ms": 17.288100003497675,
+        "reciprocal_rank": 1.0,
+        "top1_prediction": "amenity=police",
+        "hits": [
+          {
+            "rank": 1,
+            "tag": "amenity=police",
+            "score": 1.0,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dpolice"
+          },
+          {
+            "rank": 2,
+            "tag": "railway=station",
+            "score": 0.9822847187008362,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:railway%3Dstation"
+          },
+          {
+            "rank": 3,
+            "tag": "amenity=parking",
+            "score": 0.4590013216770603,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dparking"
+          },
+          {
+            "rank": 4,
+            "tag": "railway=halt",
+            "score": 0.4516904229721643,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:railway%3Dhalt"
+          },
+          {
+            "rank": 5,
+            "tag": "aeroway=aerodrome",
+            "score": 0.4516187829367999,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:aeroway%3Daerodrome"
+          },
+          {
+            "rank": 6,
+            "tag": "highway=bus_stop",
+            "score": 0.44056093277232766,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:highway%3Dbus_stop"
+          },
+          {
+            "rank": 7,
+            "tag": "highway=traffic_signals",
+            "score": 0.4115549460168566,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:highway%3Dtraffic_signals"
+          },
+          {
+            "rank": 8,
+            "tag": "amenity=library",
+            "score": 0.4068884305031969,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dlibrary"
+          },
+          {
+            "rank": 9,
+            "tag": "amenity=cinema",
+            "score": 0.31724980821989057,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dcinema"
+          },
+          {
+            "rank": 10,
+            "tag": "aeroway=terminal",
+            "score": 0.29357444939751065,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:aeroway%3Dterminal"
+          }
+        ]
+      },
+      {
+        "id": "amenity_restaurant_canonical",
+        "query": "Find restaurants in Lund",
+        "expected_place": "Lund",
+        "key": "amenity",
+        "value": "restaurant",
+        "category": "canonical",
+        "difficulty": "easy",
+        "expected_tag": "amenity=restaurant",
+        "latency_ms": 16.216200005146675,
+        "reciprocal_rank": 1.0,
+        "top1_prediction": "amenity=restaurant",
+        "hits": [
+          {
+            "rank": 1,
+            "tag": "amenity=restaurant",
+            "score": 1.0,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Drestaurant"
+          },
+          {
+            "rank": 2,
+            "tag": "amenity=cafe",
+            "score": 0.4708390010882502,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dcafe"
+          },
+          {
+            "rank": 3,
+            "tag": "highway=bus_stop",
+            "score": 0.46855356290937683,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:highway%3Dbus_stop"
+          },
+          {
+            "rank": 4,
+            "tag": "railway=station",
+            "score": 0.4519643407544397,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:railway%3Dstation"
+          },
+          {
+            "rank": 5,
+            "tag": "shop=convenience",
+            "score": 0.4472423252540202,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:shop%3Dconvenience"
+          },
+          {
+            "rank": 6,
+            "tag": "railway=halt",
+            "score": 0.42759756760072204,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:railway%3Dhalt"
+          },
+          {
+            "rank": 7,
+            "tag": "amenity=library",
+            "score": 0.4148151669312492,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dlibrary"
+          },
+          {
+            "rank": 8,
+            "tag": "aeroway=terminal",
+            "score": 0.41175756509650857,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:aeroway%3Dterminal"
+          },
+          {
+            "rank": 9,
+            "tag": "amenity=hospital",
+            "score": 0.4117048567548423,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dhospital"
+          },
+          {
+            "rank": 10,
+            "tag": "amenity=police",
+            "score": 0.40603871002572367,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dpolice"
+          }
+        ]
+      },
+      {
+        "id": "amenity_school_canonical",
+        "query": "Find school campuses in Lund",
+        "expected_place": "Lund",
+        "key": "amenity",
+        "value": "school",
+        "category": "canonical",
+        "difficulty": "medium",
+        "expected_tag": "amenity=school",
+        "latency_ms": 14.073300000745803,
+        "reciprocal_rank": 1.0,
+        "top1_prediction": "amenity=school",
+        "hits": [
+          {
+            "rank": 1,
+            "tag": "amenity=school",
+            "score": 1.0,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dschool"
+          },
+          {
+            "rank": 2,
+            "tag": "building=school",
+            "score": 0.9921987752077077,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:building%3Dschool"
+          },
+          {
+            "rank": 3,
+            "tag": "highway=bus_stop",
+            "score": 0.4658819728348145,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:highway%3Dbus_stop"
+          },
+          {
+            "rank": 4,
+            "tag": "railway=station",
+            "score": 0.45871455786812504,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:railway%3Dstation"
+          },
+          {
+            "rank": 5,
+            "tag": "amenity=hospital",
+            "score": 0.4519643407544397,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dhospital"
+          },
+          {
+            "rank": 6,
+            "tag": "railway=halt",
+            "score": 0.43636879975663434,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:railway%3Dhalt"
+          },
+          {
+            "rank": 7,
+            "tag": "aeroway=terminal",
+            "score": 0.41753138743788815,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:aeroway%3Dterminal"
+          },
+          {
+            "rank": 8,
+            "tag": "amenity=police",
+            "score": 0.4162322672964706,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dpolice"
+          },
+          {
+            "rank": 9,
+            "tag": "amenity=library",
+            "score": 0.4148151669312492,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dlibrary"
+          },
+          {
+            "rank": 10,
+            "tag": "aeroway=aerodrome",
+            "score": 0.3988535088897846,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:aeroway%3Daerodrome"
+          }
+        ]
+      },
+      {
+        "id": "building_residential_canonical",
+        "query": "Find residential buildings in Lund",
+        "expected_place": "Lund",
+        "key": "building",
+        "value": "residential",
+        "category": "canonical",
+        "difficulty": "easy",
+        "expected_tag": "building=residential",
+        "latency_ms": 14.160299993818626,
+        "reciprocal_rank": 1.0,
+        "top1_prediction": "building=residential",
+        "hits": [
+          {
+            "rank": 1,
+            "tag": "building=residential",
+            "score": 1.0,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:building%3Dresidential"
+          },
+          {
+            "rank": 2,
+            "tag": "building=school",
+            "score": 0.24036040364196476,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:building%3Dschool"
+          },
+          {
+            "rank": 3,
+            "tag": "highway=bus_stop",
+            "score": 0.23578607070068172,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:highway%3Dbus_stop"
+          },
+          {
+            "rank": 4,
+            "tag": "amenity=parking",
+            "score": 0.23296233944382094,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dparking"
+          },
+          {
+            "rank": 5,
+            "tag": "amenity=library",
+            "score": 0.2317188983855651,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dlibrary"
+          },
+          {
+            "rank": 6,
+            "tag": "amenity=school",
+            "score": 0.22735568850311044,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dschool"
+          },
+          {
+            "rank": 7,
+            "tag": "amenity=hospital",
+            "score": 0.22262991715247346,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dhospital"
+          },
+          {
+            "rank": 8,
+            "tag": "amenity=police",
+            "score": 0.22045791796074202,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dpolice"
+          },
+          {
+            "rank": 9,
+            "tag": "shop=supermarket",
+            "score": 0.21413774885997108,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:shop%3Dsupermarket"
+          },
+          {
+            "rank": 10,
+            "tag": "amenity=cafe",
+            "score": 0.20927254717209054,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dcafe"
+          }
+        ]
+      },
+      {
+        "id": "building_school_canonical",
+        "query": "Find buildings used as schools in Lund",
+        "expected_place": "Lund",
+        "key": "building",
+        "value": "school",
+        "category": "canonical",
+        "difficulty": "medium",
+        "expected_tag": "building=school",
+        "latency_ms": 17.41839999158401,
+        "reciprocal_rank": 1.0,
+        "top1_prediction": "building=school",
+        "hits": [
+          {
+            "rank": 1,
+            "tag": "building=school",
+            "score": 1.0,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:building%3Dschool"
+          },
+          {
+            "rank": 2,
+            "tag": "amenity=school",
+            "score": 0.5065113500597372,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dschool"
+          },
+          {
+            "rank": 3,
+            "tag": "highway=bus_stop",
+            "score": 0.2366230020551008,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:highway%3Dbus_stop"
+          },
+          {
+            "rank": 4,
+            "tag": "amenity=library",
+            "score": 0.23417095022033294,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dlibrary"
+          },
+          {
+            "rank": 5,
+            "tag": "amenity=hospital",
+            "score": 0.22965497703822987,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dhospital"
+          },
+          {
+            "rank": 6,
+            "tag": "building=residential",
+            "score": 0.22611050593076737,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:building%3Dresidential"
+          },
+          {
+            "rank": 7,
+            "tag": "amenity=police",
+            "score": 0.2259706725937663,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dpolice"
+          },
+          {
+            "rank": 8,
+            "tag": "railway=station",
+            "score": 0.22045791796074202,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:railway%3Dstation"
+          },
+          {
+            "rank": 9,
+            "tag": "amenity=cafe",
+            "score": 0.2195143676625158,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dcafe"
+          },
+          {
+            "rank": 10,
+            "tag": "amenity=parking",
+            "score": 0.21864295973203493,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dparking"
+          }
+        ]
+      },
+      {
+        "id": "highway_bus_stop_canonical",
+        "query": "Find bus stops in Uppsala",
+        "expected_place": "Uppsala",
+        "key": "highway",
+        "value": "bus_stop",
+        "category": "canonical",
+        "difficulty": "easy",
+        "expected_tag": "highway=bus_stop",
+        "latency_ms": 18.043100004433654,
+        "reciprocal_rank": 1.0,
+        "top1_prediction": "highway=bus_stop",
+        "hits": [
+          {
+            "rank": 1,
+            "tag": "highway=bus_stop",
+            "score": 1.0,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:highway%3Dbus_stop"
+          },
+          {
+            "rank": 2,
+            "tag": "railway=station",
+            "score": 0.47335685670904304,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:railway%3Dstation"
+          },
+          {
+            "rank": 3,
+            "tag": "railway=halt",
+            "score": 0.4658819728348145,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:railway%3Dhalt"
+          },
+          {
+            "rank": 4,
+            "tag": "aeroway=aerodrome",
+            "score": 0.4612324134889178,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:aeroway%3Daerodrome"
+          },
+          {
+            "rank": 5,
+            "tag": "aeroway=terminal",
+            "score": 0.45634702527084636,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:aeroway%3Dterminal"
+          },
+          {
+            "rank": 6,
+            "tag": "highway=traffic_signals",
+            "score": 0.44487820408699696,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:highway%3Dtraffic_signals"
+          },
+          {
+            "rank": 7,
+            "tag": "amenity=library",
+            "score": 0.4365400690144802,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dlibrary"
+          },
+          {
+            "rank": 8,
+            "tag": "amenity=parking",
+            "score": 0.43604440278159673,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dparking"
+          },
+          {
+            "rank": 9,
+            "tag": "amenity=hospital",
+            "score": 0.41043248241484254,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dhospital"
+          },
+          {
+            "rank": 10,
+            "tag": "amenity=police",
+            "score": 0.40134157660769526,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dpolice"
+          }
+        ]
+      },
+      {
+        "id": "highway_traffic_signals_canonical",
+        "query": "Show traffic signals in Lund",
+        "expected_place": "Lund",
+        "key": "highway",
+        "value": "traffic_signals",
+        "category": "canonical",
+        "difficulty": "easy",
+        "expected_tag": "highway=traffic_signals",
+        "latency_ms": 17.670400004135445,
+        "reciprocal_rank": 1.0,
+        "top1_prediction": "highway=traffic_signals",
+        "hits": [
+          {
+            "rank": 1,
+            "tag": "highway=traffic_signals",
+            "score": 1.0,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:highway%3Dtraffic_signals"
+          },
+          {
+            "rank": 2,
+            "tag": "highway=bus_stop",
+            "score": 0.46596065582296425,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:highway%3Dbus_stop"
+          },
+          {
+            "rank": 3,
+            "tag": "amenity=parking",
+            "score": 0.4590013216770603,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dparking"
+          },
+          {
+            "rank": 4,
+            "tag": "railway=station",
+            "score": 0.45412959560480726,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:railway%3Dstation"
+          },
+          {
+            "rank": 5,
+            "tag": "railway=halt",
+            "score": 0.4346605631369839,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:railway%3Dhalt"
+          },
+          {
+            "rank": 6,
+            "tag": "aeroway=terminal",
+            "score": 0.4178159238974376,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:aeroway%3Dterminal"
+          },
+          {
+            "rank": 7,
+            "tag": "amenity=police",
+            "score": 0.4112711150196036,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dpolice"
+          },
+          {
+            "rank": 8,
+            "tag": "aeroway=aerodrome",
+            "score": 0.4067516522171904,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:aeroway%3Daerodrome"
+          },
+          {
+            "rank": 9,
+            "tag": "shop=supermarket",
+            "score": 0.38840112390398923,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:shop%3Dsupermarket"
+          },
+          {
+            "rank": 10,
+            "tag": "amenity=cinema",
+            "score": 0.31724980821989057,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dcinema"
+          }
+        ]
+      },
+      {
+        "id": "leisure_park_canonical",
+        "query": "Find parks in Lund",
+        "expected_place": "Lund",
+        "key": "leisure",
+        "value": "park",
+        "category": "canonical",
+        "difficulty": "easy",
+        "expected_tag": "leisure=park",
+        "latency_ms": 17.04799999424722,
+        "reciprocal_rank": 1.0,
+        "top1_prediction": "leisure=park",
+        "hits": [
+          {
+            "rank": 1,
+            "tag": "leisure=park",
+            "score": 1.0,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:leisure%3Dpark"
+          },
+          {
+            "rank": 2,
+            "tag": "amenity=parking",
+            "score": 0.4758747123298358,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dparking"
+          },
+          {
+            "rank": 3,
+            "tag": "highway=bus_stop",
+            "score": 0.46351785166779125,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:highway%3Dbus_stop"
+          },
+          {
+            "rank": 4,
+            "tag": "leisure=swimming_pool",
+            "score": 0.45634702527084636,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:leisure%3Dswimming_pool"
+          },
+          {
+            "rank": 5,
+            "tag": "railway=station",
+            "score": 0.4472423252540202,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:railway%3Dstation"
+          },
+          {
+            "rank": 6,
+            "tag": "amenity=school",
+            "score": 0.4365400690144802,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dschool"
+          },
+          {
+            "rank": 7,
+            "tag": "railway=halt",
+            "score": 0.4157198573895909,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:railway%3Dhalt"
+          },
+          {
+            "rank": 8,
+            "tag": "amenity=library",
+            "score": 0.4149161025632737,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dlibrary"
+          },
+          {
+            "rank": 9,
+            "tag": "amenity=restaurant",
+            "score": 0.4068884305031969,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Drestaurant"
+          },
+          {
+            "rank": 10,
+            "tag": "aeroway=aerodrome",
+            "score": 0.3959442411679413,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:aeroway%3Daerodrome"
+          }
+        ]
+      },
+      {
+        "id": "leisure_swimming_pool_canonical",
+        "query": "Show swimming pools in Lund",
+        "expected_place": "Lund",
+        "key": "leisure",
+        "value": "swimming_pool",
+        "category": "canonical",
+        "difficulty": "easy",
+        "expected_tag": "leisure=swimming_pool",
+        "latency_ms": 15.864799992414191,
+        "reciprocal_rank": 1.0,
+        "top1_prediction": "leisure=swimming_pool",
+        "hits": [
+          {
+            "rank": 1,
+            "tag": "leisure=swimming_pool",
+            "score": 1.0,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:leisure%3Dswimming_pool"
+          },
+          {
+            "rank": 2,
+            "tag": "amenity=cinema",
+            "score": 0.46832114546745746,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dcinema"
+          },
+          {
+            "rank": 3,
+            "tag": "amenity=school",
+            "score": 0.4640370329186459,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dschool"
+          },
+          {
+            "rank": 4,
+            "tag": "amenity=parking",
+            "score": 0.46100362756952845,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dparking"
+          },
+          {
+            "rank": 5,
+            "tag": "amenity=restaurant",
+            "score": 0.4178159238974376,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Drestaurant"
+          },
+          {
+            "rank": 6,
+            "tag": "leisure=park",
+            "score": 0.4174339581840665,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:leisure%3Dpark"
+          },
+          {
+            "rank": 7,
+            "tag": "amenity=hospital",
+            "score": 0.41555256569647636,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dhospital"
+          },
+          {
+            "rank": 8,
+            "tag": "amenity=police",
+            "score": 0.40994138623795245,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dpolice"
+          },
+          {
+            "rank": 9,
+            "tag": "amenity=library",
+            "score": 0.4083364159069959,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dlibrary"
+          },
+          {
+            "rank": 10,
+            "tag": "highway=bus_stop",
+            "score": 0.4011841980403045,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:highway%3Dbus_stop"
+          }
+        ]
+      },
+      {
+        "id": "railway_halt_canonical",
+        "query": "Find railway halts in Lund",
+        "expected_place": "Lund",
+        "key": "railway",
+        "value": "halt",
+        "category": "canonical",
+        "difficulty": "easy",
+        "expected_tag": "railway=halt",
+        "latency_ms": 17.452400003094226,
+        "reciprocal_rank": 1.0,
+        "top1_prediction": "railway=halt",
+        "hits": [
+          {
+            "rank": 1,
+            "tag": "railway=halt",
+            "score": 1.0,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:railway%3Dhalt"
+          },
+          {
+            "rank": 2,
+            "tag": "railway=station",
+            "score": 0.2429311031461569,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:railway%3Dstation"
+          },
+          {
+            "rank": 3,
+            "tag": "highway=bus_stop",
+            "score": 0.2390750538898687,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:highway%3Dbus_stop"
+          },
+          {
+            "rank": 4,
+            "tag": "aeroway=terminal",
+            "score": 0.23296233944382094,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:aeroway%3Dterminal"
+          },
+          {
+            "rank": 5,
+            "tag": "aeroway=aerodrome",
+            "score": 0.2329257676479899,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:aeroway%3Daerodrome"
+          },
+          {
+            "rank": 6,
+            "tag": "highway=traffic_signals",
+            "score": 0.22937830345237753,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:highway%3Dtraffic_signals"
+          },
+          {
+            "rank": 7,
+            "tag": "amenity=police",
+            "score": 0.2106252189170929,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dpolice"
+          },
+          {
+            "rank": 8,
+            "tag": "amenity=parking",
+            "score": 0.202564723261891,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dparking"
+          },
+          {
+            "rank": 9,
+            "tag": "shop=supermarket",
+            "score": 0.1998651661302755,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:shop%3Dsupermarket"
+          },
+          {
+            "rank": 10,
+            "tag": "building=school",
+            "score": 0.14986794422946995,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:building%3Dschool"
+          }
+        ]
+      },
+      {
+        "id": "railway_station_canonical",
+        "query": "Find railway stations in Lund",
+        "expected_place": "Lund",
+        "key": "railway",
+        "value": "station",
+        "category": "canonical",
+        "difficulty": "easy",
+        "expected_tag": "railway=station",
+        "latency_ms": 18.80249999521766,
+        "reciprocal_rank": 1.0,
+        "top1_prediction": "railway=station",
+        "hits": [
+          {
+            "rank": 1,
+            "tag": "railway=station",
+            "score": 1.0,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:railway%3Dstation"
+          },
+          {
+            "rank": 2,
+            "tag": "railway=halt",
+            "score": 0.2429311031461569,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:railway%3Dhalt"
+          },
+          {
+            "rank": 3,
+            "tag": "highway=bus_stop",
+            "score": 0.2390750538898687,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:highway%3Dbus_stop"
+          },
+          {
+            "rank": 4,
+            "tag": "aeroway=terminal",
+            "score": 0.2341326369104147,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:aeroway%3Dterminal"
+          },
+          {
+            "rank": 5,
+            "tag": "aeroway=aerodrome",
+            "score": 0.2329257676479899,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:aeroway%3Daerodrome"
+          },
+          {
+            "rank": 6,
+            "tag": "highway=traffic_signals",
+            "score": 0.22820800598578378,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:highway%3Dtraffic_signals"
+          },
+          {
+            "rank": 7,
+            "tag": "shop=convenience",
+            "score": 0.22369994616604705,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:shop%3Dconvenience"
+          },
+          {
+            "rank": 8,
+            "tag": "amenity=police",
+            "score": 0.22042597679615775,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dpolice"
+          },
+          {
+            "rank": 9,
+            "tag": "amenity=hospital",
+            "score": 0.20927254717209054,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dhospital"
+          },
+          {
+            "rank": 10,
+            "tag": "shop=supermarket",
+            "score": 0.20203716532200694,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:shop%3Dsupermarket"
+          }
+        ]
+      },
+      {
+        "id": "shop_convenience_canonical",
+        "query": "Find convenience stores in Lund",
+        "expected_place": "Lund",
+        "key": "shop",
+        "value": "convenience",
+        "category": "canonical",
+        "difficulty": "easy",
+        "expected_tag": "shop=convenience",
+        "latency_ms": 20.09370000450872,
+        "reciprocal_rank": 1.0,
+        "top1_prediction": "shop=convenience",
+        "hits": [
+          {
+            "rank": 1,
+            "tag": "shop=convenience",
+            "score": 1.0,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:shop%3Dconvenience"
+          },
+          {
+            "rank": 2,
+            "tag": "shop=supermarket",
+            "score": 0.4758747123298358,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:shop%3Dsupermarket"
+          },
+          {
+            "rank": 3,
+            "tag": "highway=bus_stop",
+            "score": 0.4590013216770603,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:highway%3Dbus_stop"
+          },
+          {
+            "rank": 4,
+            "tag": "railway=station",
+            "score": 0.45634702527084636,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:railway%3Dstation"
+          },
+          {
+            "rank": 5,
+            "tag": "railway=halt",
+            "score": 0.4317897006164154,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:railway%3Dhalt"
+          },
+          {
+            "rank": 6,
+            "tag": "amenity=restaurant",
+            "score": 0.42685521071252636,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Drestaurant"
+          },
+          {
+            "rank": 7,
+            "tag": "aeroway=terminal",
+            "score": 0.41758635470848293,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:aeroway%3Dterminal"
+          },
+          {
+            "rank": 8,
+            "tag": "amenity=library",
+            "score": 0.4171076480629081,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dlibrary"
+          },
+          {
+            "rank": 9,
+            "tag": "amenity=hospital",
+            "score": 0.41175756509650857,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dhospital"
+          },
+          {
+            "rank": 10,
+            "tag": "amenity=police",
+            "score": 0.40994138623795245,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dpolice"
+          }
+        ]
+      },
+      {
+        "id": "shop_supermarket_canonical",
+        "query": "Find supermarkets in Lund",
+        "expected_place": "Lund",
+        "key": "shop",
+        "value": "supermarket",
+        "category": "canonical",
+        "difficulty": "easy",
+        "expected_tag": "shop=supermarket",
+        "latency_ms": 18.25459999963641,
+        "reciprocal_rank": 1.0,
+        "top1_prediction": "shop=supermarket",
+        "hits": [
+          {
+            "rank": 1,
+            "tag": "shop=supermarket",
+            "score": 1.0,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:shop%3Dsupermarket"
+          },
+          {
+            "rank": 2,
+            "tag": "shop=convenience",
+            "score": 0.47972259519495253,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:shop%3Dconvenience"
+          },
+          {
+            "rank": 3,
+            "tag": "highway=bus_stop",
+            "score": 0.4601980244228909,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:highway%3Dbus_stop"
+          },
+          {
+            "rank": 4,
+            "tag": "railway=station",
+            "score": 0.45279623801608915,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:railway%3Dstation"
+          },
+          {
+            "rank": 5,
+            "tag": "amenity=parking",
+            "score": 0.4489996778260521,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dparking"
+          },
+          {
+            "rank": 6,
+            "tag": "railway=halt",
+            "score": 0.43750649526251123,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:railway%3Dhalt"
+          },
+          {
+            "rank": 7,
+            "tag": "amenity=restaurant",
+            "score": 0.4242160533852104,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Drestaurant"
+          },
+          {
+            "rank": 8,
+            "tag": "aeroway=terminal",
+            "score": 0.416635989366345,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:aeroway%3Dterminal"
+          },
+          {
+            "rank": 9,
+            "tag": "amenity=library",
+            "score": 0.4079492651436088,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dlibrary"
+          },
+          {
+            "rank": 10,
+            "tag": "amenity=hospital",
+            "score": 0.4071480326515458,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dhospital"
+          }
+        ]
+      },
+      {
+        "id": "aeroway_aerodrome_paraphrase",
+        "query": "Show airfields used for aircraft operations around Malmö",
+        "expected_place": "Malmö",
+        "key": "aeroway",
+        "value": "aerodrome",
+        "category": "paraphrase",
+        "difficulty": "medium",
+        "expected_tag": "aeroway=aerodrome",
+        "latency_ms": 15.54059999762103,
+        "reciprocal_rank": 1.0,
+        "top1_prediction": "aeroway=aerodrome",
+        "hits": [
+          {
+            "rank": 1,
+            "tag": "aeroway=aerodrome",
+            "score": 1.0,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:aeroway%3Daerodrome"
+          },
+          {
+            "rank": 2,
+            "tag": "aeroway=terminal",
+            "score": 0.9786653012459464,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:aeroway%3Dterminal"
+          },
+          {
+            "rank": 3,
+            "tag": "railway=station",
+            "score": 0.9489852325673221,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:railway%3Dstation"
+          },
+          {
+            "rank": 4,
+            "tag": "amenity=parking",
+            "score": 0.9004158004158005,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dparking"
+          },
+          {
+            "rank": 5,
+            "tag": "highway=bus_stop",
+            "score": 0.889033189033189,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:highway%3Dbus_stop"
+          },
+          {
+            "rank": 6,
+            "tag": "amenity=school",
+            "score": 0.879848171152519,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dschool"
+          },
+          {
+            "rank": 7,
+            "tag": "leisure=park",
+            "score": 0.8776353276353276,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:leisure%3Dpark"
+          },
+          {
+            "rank": 8,
+            "tag": "railway=halt",
+            "score": 0.8427249217367633,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:railway%3Dhalt"
+          },
+          {
+            "rank": 9,
+            "tag": "highway=traffic_signals",
+            "score": 0.8394850329781837,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:highway%3Dtraffic_signals"
+          },
+          {
+            "rank": 10,
+            "tag": "amenity=police",
+            "score": 0.8297737096364098,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dpolice"
+          }
+        ]
+      },
+      {
+        "id": "aeroway_airport_paraphrase",
+        "query": "List places mapped specifically with the OSM airport tag in Malmö",
+        "expected_place": "Malmö",
+        "key": "aeroway",
+        "value": "airport",
+        "category": "paraphrase",
+        "difficulty": "hard",
+        "expected_tag": "aeroway=airport",
+        "latency_ms": 19.48919999995269,
+        "reciprocal_rank": 1.0,
+        "top1_prediction": "aeroway=airport",
+        "hits": [
+          {
+            "rank": 1,
+            "tag": "aeroway=airport",
+            "score": 1.0,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:aeroway%3Dairport"
+          },
+          {
+            "rank": 2,
+            "tag": "aeroway=aerodrome",
+            "score": 0.49913180116596134,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:aeroway%3Daerodrome"
+          },
+          {
+            "rank": 3,
+            "tag": "amenity=cafe",
+            "score": 0.4782521143777688,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dcafe"
+          },
+          {
+            "rank": 4,
+            "tag": "amenity=school",
+            "score": 0.46453635374425783,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dschool"
+          },
+          {
+            "rank": 5,
+            "tag": "aeroway=terminal",
+            "score": 0.45443343091229316,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:aeroway%3Dterminal"
+          },
+          {
+            "rank": 6,
+            "tag": "amenity=hospital",
+            "score": 0.4485501409585179,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dhospital"
+          },
+          {
+            "rank": 7,
+            "tag": "building=residential",
+            "score": 0.44581698056908436,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:building%3Dresidential"
+          },
+          {
+            "rank": 8,
+            "tag": "amenity=parking",
+            "score": 0.44144424005357397,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dparking"
+          },
+          {
+            "rank": 9,
+            "tag": "amenity=library",
+            "score": 0.43766141228887906,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dlibrary"
+          },
+          {
+            "rank": 10,
+            "tag": "amenity=police",
+            "score": 0.43513789376709433,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dpolice"
+          }
+        ]
+      },
+      {
+        "id": "aeroway_terminal_paraphrase",
+        "query": "Where are the passenger terminal buildings at airports in Malmö?",
+        "expected_place": "Malmö",
+        "key": "aeroway",
+        "value": "terminal",
+        "category": "paraphrase",
+        "difficulty": "medium",
+        "expected_tag": "aeroway=terminal",
+        "latency_ms": 24.534199998015538,
+        "reciprocal_rank": 1.0,
+        "top1_prediction": "aeroway=terminal",
+        "hits": [
+          {
+            "rank": 1,
+            "tag": "aeroway=terminal",
+            "score": 1.0,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:aeroway%3Dterminal"
+          },
+          {
+            "rank": 2,
+            "tag": "aeroway=airport",
+            "score": 0.9594279158970817,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:aeroway%3Dairport"
+          },
+          {
+            "rank": 3,
+            "tag": "aeroway=aerodrome",
+            "score": 0.47335685670904304,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:aeroway%3Daerodrome"
+          },
+          {
+            "rank": 4,
+            "tag": "railway=station",
+            "score": 0.4658819728348145,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:railway%3Dstation"
+          },
+          {
+            "rank": 5,
+            "tag": "highway=bus_stop",
+            "score": 0.4586395064025052,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:highway%3Dbus_stop"
+          },
+          {
+            "rank": 6,
+            "tag": "railway=halt",
+            "score": 0.44788208219278663,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:railway%3Dhalt"
+          },
+          {
+            "rank": 7,
+            "tag": "amenity=hospital",
+            "score": 0.4382030384389313,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dhospital"
+          },
+          {
+            "rank": 8,
+            "tag": "building=residential",
+            "score": 0.43461621454366317,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:building%3Dresidential"
+          },
+          {
+            "rank": 9,
+            "tag": "amenity=school",
+            "score": 0.4119775651312893,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dschool"
+          },
+          {
+            "rank": 10,
+            "tag": "amenity=library",
+            "score": 0.4117048567548423,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dlibrary"
+          }
+        ]
+      },
+      {
+        "id": "amenity_cafe_paraphrase",
+        "query": "Show sit-down coffee shops around Malmö",
+        "expected_place": "Malmö",
+        "key": "amenity",
+        "value": "cafe",
+        "category": "paraphrase",
+        "difficulty": "medium",
+        "expected_tag": "amenity=cafe",
+        "latency_ms": 17.12720000068657,
+        "reciprocal_rank": 1.0,
+        "top1_prediction": "amenity=cafe",
+        "hits": [
+          {
+            "rank": 1,
+            "tag": "amenity=cafe",
+            "score": 1.0,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dcafe"
+          },
+          {
+            "rank": 2,
+            "tag": "amenity=restaurant",
+            "score": 0.9838709677419355,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Drestaurant"
+          },
+          {
+            "rank": 3,
+            "tag": "shop=convenience",
+            "score": 0.9682539682539683,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:shop%3Dconvenience"
+          },
+          {
+            "rank": 4,
+            "tag": "shop=supermarket",
+            "score": 0.9338699494949495,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:shop%3Dsupermarket"
+          },
+          {
+            "rank": 5,
+            "tag": "aeroway=aerodrome",
+            "score": 0.9161172161172161,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:aeroway%3Daerodrome"
+          },
+          {
+            "rank": 6,
+            "tag": "amenity=library",
+            "score": 0.8974527887571366,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dlibrary"
+          },
+          {
+            "rank": 7,
+            "tag": "amenity=cinema",
+            "score": 0.8933501506551748,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dcinema"
+          },
+          {
+            "rank": 8,
+            "tag": "amenity=parking",
+            "score": 0.8728139904610493,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dparking"
+          },
+          {
+            "rank": 9,
+            "tag": "aeroway=terminal",
+            "score": 0.8717895608947804,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:aeroway%3Dterminal"
+          },
+          {
+            "rank": 10,
+            "tag": "highway=bus_stop",
+            "score": 0.8433536276002029,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:highway%3Dbus_stop"
+          }
+        ]
+      },
+      {
+        "id": "amenity_cinema_paraphrase",
+        "query": "Where can people go to watch films in Malmö?",
+        "expected_place": "Malmö",
+        "key": "amenity",
+        "value": "cinema",
+        "category": "paraphrase",
+        "difficulty": "medium",
+        "expected_tag": "amenity=cinema",
+        "latency_ms": 19.175399997038767,
+        "reciprocal_rank": 1.0,
+        "top1_prediction": "amenity=cinema",
+        "hits": [
+          {
+            "rank": 1,
+            "tag": "amenity=cinema",
+            "score": 1.0,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dcinema"
+          },
+          {
+            "rank": 2,
+            "tag": "leisure=park",
+            "score": 0.9633736559139785,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:leisure%3Dpark"
+          },
+          {
+            "rank": 3,
+            "tag": "amenity=school",
+            "score": 0.9445222533457828,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dschool"
+          },
+          {
+            "rank": 4,
+            "tag": "highway=traffic_signals",
+            "score": 0.9383213859020311,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:highway%3Dtraffic_signals"
+          },
+          {
+            "rank": 5,
+            "tag": "leisure=swimming_pool",
+            "score": 0.9021924934968414,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:leisure%3Dswimming_pool"
+          },
+          {
+            "rank": 6,
+            "tag": "amenity=restaurant",
+            "score": 0.8904782863849766,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Drestaurant"
+          },
+          {
+            "rank": 7,
+            "tag": "aeroway=terminal",
+            "score": 0.8844349680170576,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:aeroway%3Dterminal"
+          },
+          {
+            "rank": 8,
+            "tag": "railway=station",
+            "score": 0.8728139904610493,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:railway%3Dstation"
+          },
+          {
+            "rank": 9,
+            "tag": "amenity=library",
+            "score": 0.8723008723008723,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dlibrary"
+          },
+          {
+            "rank": 10,
+            "tag": "amenity=police",
+            "score": 0.8431685273790537,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dpolice"
+          }
+        ]
+      },
+      {
+        "id": "amenity_hospital_paraphrase",
+        "query": "Show medical facilities providing inpatient treatment in Malmö",
+        "expected_place": "Malmö",
+        "key": "amenity",
+        "value": "hospital",
+        "category": "paraphrase",
+        "difficulty": "medium",
+        "expected_tag": "amenity=hospital",
+        "latency_ms": 18.185000008088537,
+        "reciprocal_rank": 1.0,
+        "top1_prediction": "amenity=hospital",
+        "hits": [
+          {
+            "rank": 1,
+            "tag": "amenity=hospital",
+            "score": 1.0,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dhospital"
+          },
+          {
+            "rank": 2,
+            "tag": "amenity=cinema",
+            "score": 0.9549335863377609,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dcinema"
+          },
+          {
+            "rank": 3,
+            "tag": "amenity=police",
+            "score": 0.944118605408928,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dpolice"
+          },
+          {
+            "rank": 4,
+            "tag": "leisure=swimming_pool",
+            "score": 0.9291236127057023,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:leisure%3Dswimming_pool"
+          },
+          {
+            "rank": 5,
+            "tag": "railway=station",
+            "score": 0.9240414582880336,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:railway%3Dstation"
+          },
+          {
+            "rank": 6,
+            "tag": "amenity=school",
+            "score": 0.9021924934968414,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dschool"
+          },
+          {
+            "rank": 7,
+            "tag": "amenity=restaurant",
+            "score": 0.895521275802966,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Drestaurant"
+          },
+          {
+            "rank": 8,
+            "tag": "amenity=cafe",
+            "score": 0.8595008051529791,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dcafe"
+          },
+          {
+            "rank": 9,
+            "tag": "leisure=park",
+            "score": 0.8458468614718615,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:leisure%3Dpark"
+          },
+          {
+            "rank": 10,
+            "tag": "shop=convenience",
+            "score": 0.8243243243243243,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:shop%3Dconvenience"
+          }
+        ]
+      },
+      {
+        "id": "amenity_library_paraphrase",
+        "query": "Where can residents borrow books in Malmö?",
+        "expected_place": "Malmö",
+        "key": "amenity",
+        "value": "library",
+        "category": "paraphrase",
+        "difficulty": "medium",
+        "expected_tag": "amenity=library",
+        "latency_ms": 18.03549999021925,
+        "reciprocal_rank": 1.0,
+        "top1_prediction": "amenity=library",
+        "hits": [
+          {
+            "rank": 1,
+            "tag": "amenity=library",
+            "score": 1.0,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dlibrary"
+          },
+          {
+            "rank": 2,
+            "tag": "leisure=park",
+            "score": 0.9838709677419355,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:leisure%3Dpark"
+          },
+          {
+            "rank": 3,
+            "tag": "shop=convenience",
+            "score": 0.934436274509804,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:shop%3Dconvenience"
+          },
+          {
+            "rank": 4,
+            "tag": "amenity=school",
+            "score": 0.9150459822101614,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dschool"
+          },
+          {
+            "rank": 5,
+            "tag": "amenity=cafe",
+            "score": 0.9108597285067873,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dcafe"
+          },
+          {
+            "rank": 6,
+            "tag": "leisure=swimming_pool",
+            "score": 0.9041798384264138,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:leisure%3Dswimming_pool"
+          },
+          {
+            "rank": 7,
+            "tag": "railway=station",
+            "score": 0.8756383712905452,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:railway%3Dstation"
+          },
+          {
+            "rank": 8,
+            "tag": "amenity=restaurant",
+            "score": 0.8723008723008723,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Drestaurant"
+          },
+          {
+            "rank": 9,
+            "tag": "amenity=cinema",
+            "score": 0.8717793880837359,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dcinema"
+          },
+          {
+            "rank": 10,
+            "tag": "amenity=hospital",
+            "score": 0.8552910052910052,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dhospital"
+          }
+        ]
+      },
+      {
+        "id": "amenity_parking_paraphrase",
+        "query": "Show places where cars can be parked in Malmö",
+        "expected_place": "Malmö",
+        "key": "amenity",
+        "value": "parking",
+        "category": "paraphrase",
+        "difficulty": "medium",
+        "expected_tag": "amenity=parking",
+        "latency_ms": 18.499499987228774,
+        "reciprocal_rank": 1.0,
+        "top1_prediction": "amenity=parking",
+        "hits": [
+          {
+            "rank": 1,
+            "tag": "amenity=parking",
+            "score": 1.0,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dparking"
+          },
+          {
+            "rank": 2,
+            "tag": "leisure=park",
+            "score": 0.9734596347499573,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:leisure%3Dpark"
+          },
+          {
+            "rank": 3,
+            "tag": "highway=traffic_signals",
+            "score": 0.953125,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:highway%3Dtraffic_signals"
+          },
+          {
+            "rank": 4,
+            "tag": "highway=bus_stop",
+            "score": 0.950599968832788,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:highway%3Dbus_stop"
+          },
+          {
+            "rank": 5,
+            "tag": "amenity=cinema",
+            "score": 0.9104477611940298,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dcinema"
+          },
+          {
+            "rank": 6,
+            "tag": "leisure=swimming_pool",
+            "score": 0.890936390936391,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:leisure%3Dswimming_pool"
+          },
+          {
+            "rank": 7,
+            "tag": "amenity=library",
+            "score": 0.8875661375661376,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dlibrary"
+          },
+          {
+            "rank": 8,
+            "tag": "aeroway=terminal",
+            "score": 0.8808507611324514,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:aeroway%3Dterminal"
+          },
+          {
+            "rank": 9,
+            "tag": "amenity=restaurant",
+            "score": 0.8765780284716627,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Drestaurant"
+          },
+          {
+            "rank": 10,
+            "tag": "amenity=police",
+            "score": 0.8550427350427352,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dpolice"
+          }
+        ]
+      },
+      {
+        "id": "amenity_police_paraphrase",
+        "query": "Find law enforcement offices in Malmö",
+        "expected_place": "Malmö",
+        "key": "amenity",
+        "value": "police",
+        "category": "paraphrase",
+        "difficulty": "medium",
+        "expected_tag": "amenity=police",
+        "latency_ms": 19.664199993712828,
+        "reciprocal_rank": 1.0,
+        "top1_prediction": "amenity=police",
+        "hits": [
+          {
+            "rank": 1,
+            "tag": "amenity=police",
+            "score": 1.0,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dpolice"
+          },
+          {
+            "rank": 2,
+            "tag": "highway=traffic_signals",
+            "score": 0.950599968832788,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:highway%3Dtraffic_signals"
+          },
+          {
+            "rank": 3,
+            "tag": "amenity=library",
+            "score": 0.9483923483923484,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dlibrary"
+          },
+          {
+            "rank": 4,
+            "tag": "highway=bus_stop",
+            "score": 0.9318876220284671,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:highway%3Dbus_stop"
+          },
+          {
+            "rank": 5,
+            "tag": "amenity=hospital",
+            "score": 0.9151812240047535,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dhospital"
+          },
+          {
+            "rank": 6,
+            "tag": "leisure=park",
+            "score": 0.9139554794520548,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:leisure%3Dpark"
+          },
+          {
+            "rank": 7,
+            "tag": "building=school",
+            "score": 0.8928545677410051,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:building%3Dschool"
+          },
+          {
+            "rank": 8,
+            "tag": "shop=convenience",
+            "score": 0.8904782863849766,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:shop%3Dconvenience"
+          },
+          {
+            "rank": 9,
+            "tag": "amenity=school",
+            "score": 0.8804466230936819,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dschool"
+          },
+          {
+            "rank": 10,
+            "tag": "aeroway=terminal",
+            "score": 0.8503030303030304,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:aeroway%3Dterminal"
+          }
+        ]
+      },
+      {
+        "id": "amenity_restaurant_paraphrase",
+        "query": "Show sit-down places serving full meals in Malmö",
+        "expected_place": "Malmö",
+        "key": "amenity",
+        "value": "restaurant",
+        "category": "paraphrase",
+        "difficulty": "medium",
+        "expected_tag": "amenity=restaurant",
+        "latency_ms": 21.277600011671893,
+        "reciprocal_rank": 1.0,
+        "top1_prediction": "amenity=restaurant",
+        "hits": [
+          {
+            "rank": 1,
+            "tag": "amenity=restaurant",
+            "score": 1.0,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Drestaurant"
+          },
+          {
+            "rank": 2,
+            "tag": "amenity=cafe",
+            "score": 0.9838709677419355,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dcafe"
+          },
+          {
+            "rank": 3,
+            "tag": "amenity=school",
+            "score": 0.9445222533457828,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dschool"
+          },
+          {
+            "rank": 4,
+            "tag": "amenity=cinema",
+            "score": 0.9337218337218338,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dcinema"
+          },
+          {
+            "rank": 5,
+            "tag": "shop=supermarket",
+            "score": 0.9021924934968414,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:shop%3Dsupermarket"
+          },
+          {
+            "rank": 6,
+            "tag": "shop=convenience",
+            "score": 0.8986607142857143,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:shop%3Dconvenience"
+          },
+          {
+            "rank": 7,
+            "tag": "amenity=parking",
+            "score": 0.8933501506551748,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dparking"
+          },
+          {
+            "rank": 8,
+            "tag": "leisure=park",
+            "score": 0.8875661375661376,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:leisure%3Dpark"
+          },
+          {
+            "rank": 9,
+            "tag": "highway=bus_stop",
+            "score": 0.8762525401163198,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:highway%3Dbus_stop"
+          },
+          {
+            "rank": 10,
+            "tag": "leisure=swimming_pool",
+            "score": 0.8517636159089406,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:leisure%3Dswimming_pool"
+          }
+        ]
+      },
+      {
+        "id": "amenity_school_paraphrase",
+        "query": "Find educational school grounds and campuses in Malmö",
+        "expected_place": "Malmö",
+        "key": "amenity",
+        "value": "school",
+        "category": "paraphrase",
+        "difficulty": "medium",
+        "expected_tag": "amenity=school",
+        "latency_ms": 16.90220000455156,
+        "reciprocal_rank": 1.0,
+        "top1_prediction": "amenity=school",
+        "hits": [
+          {
+            "rank": 1,
+            "tag": "amenity=school",
+            "score": 1.0,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dschool"
+          },
+          {
+            "rank": 2,
+            "tag": "building=school",
+            "score": 0.9921987752077077,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:building%3Dschool"
+          },
+          {
+            "rank": 3,
+            "tag": "amenity=hospital",
+            "score": 0.4527104406185422,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dhospital"
+          },
+          {
+            "rank": 4,
+            "tag": "aeroway=aerodrome",
+            "score": 0.4493947340777279,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:aeroway%3Daerodrome"
+          },
+          {
+            "rank": 5,
+            "tag": "highway=bus_stop",
+            "score": 0.4439294191410274,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:highway%3Dbus_stop"
+          },
+          {
+            "rank": 6,
+            "tag": "leisure=park",
+            "score": 0.4405550696492288,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:leisure%3Dpark"
+          },
+          {
+            "rank": 7,
+            "tag": "amenity=police",
+            "score": 0.4346605631369839,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dpolice"
+          },
+          {
+            "rank": 8,
+            "tag": "amenity=library",
+            "score": 0.43314209228680345,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dlibrary"
+          },
+          {
+            "rank": 9,
+            "tag": "aeroway=terminal",
+            "score": 0.42969363410856876,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:aeroway%3Dterminal"
+          },
+          {
+            "rank": 10,
+            "tag": "railway=halt",
+            "score": 0.42074879728720155,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:railway%3Dhalt"
+          }
+        ]
+      },
+      {
+        "id": "building_residential_paraphrase",
+        "query": "Show structures mainly used as homes in Malmö",
+        "expected_place": "Malmö",
+        "key": "building",
+        "value": "residential",
+        "category": "paraphrase",
+        "difficulty": "medium",
+        "expected_tag": "building=residential",
+        "latency_ms": 15.244000009261072,
+        "reciprocal_rank": 1.0,
+        "top1_prediction": "building=residential",
+        "hits": [
+          {
+            "rank": 1,
+            "tag": "building=residential",
+            "score": 1.0,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:building%3Dresidential"
+          },
+          {
+            "rank": 2,
+            "tag": "amenity=parking",
+            "score": 0.963410900183711,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dparking"
+          },
+          {
+            "rank": 3,
+            "tag": "amenity=school",
+            "score": 0.953603156354515,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dschool"
+          },
+          {
+            "rank": 4,
+            "tag": "building=school",
+            "score": 0.9360613810741687,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:building%3Dschool"
+          },
+          {
+            "rank": 5,
+            "tag": "leisure=swimming_pool",
+            "score": 0.9302804357152182,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:leisure%3Dswimming_pool"
+          },
+          {
+            "rank": 6,
+            "tag": "amenity=cinema",
+            "score": 0.9278004227053139,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dcinema"
+          },
+          {
+            "rank": 7,
+            "tag": "amenity=library",
+            "score": 0.9052552027138677,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dlibrary"
+          },
+          {
+            "rank": 8,
+            "tag": "amenity=police",
+            "score": 0.8980480188294598,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dpolice"
+          },
+          {
+            "rank": 9,
+            "tag": "leisure=park",
+            "score": 0.8871748420661464,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:leisure%3Dpark"
+          },
+          {
+            "rank": 10,
+            "tag": "amenity=hospital",
+            "score": 0.884014566754329,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dhospital"
+          }
+        ]
+      },
+      {
+        "id": "building_school_paraphrase",
+        "query": "Find individual structures whose building use is school in Malmö",
+        "expected_place": "Malmö",
+        "key": "building",
+        "value": "school",
+        "category": "paraphrase",
+        "difficulty": "hard",
+        "expected_tag": "building=school",
+        "latency_ms": 20.763099993928336,
+        "reciprocal_rank": 1.0,
+        "top1_prediction": "building=school",
+        "hits": [
+          {
+            "rank": 1,
+            "tag": "building=school",
+            "score": 1.0,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:building%3Dschool"
+          },
+          {
+            "rank": 2,
+            "tag": "amenity=school",
+            "score": 0.5065113500597372,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dschool"
+          },
+          {
+            "rank": 3,
+            "tag": "amenity=hospital",
+            "score": 0.22820800598578378,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dhospital"
+          },
+          {
+            "rank": 4,
+            "tag": "amenity=parking",
+            "score": 0.22815838476247743,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dparking"
+          },
+          {
+            "rank": 5,
+            "tag": "railway=station",
+            "score": 0.22760534399814528,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:railway%3Dstation"
+          },
+          {
+            "rank": 6,
+            "tag": "amenity=police",
+            "score": 0.22620178175733732,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dpolice"
+          },
+          {
+            "rank": 7,
+            "tag": "amenity=library",
+            "score": 0.2252156304759633,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dlibrary"
+          },
+          {
+            "rank": 8,
+            "tag": "building=residential",
+            "score": 0.2218915343915344,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:building%3Dresidential"
+          },
+          {
+            "rank": 9,
+            "tag": "highway=bus_stop",
+            "score": 0.22042597679615775,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:highway%3Dbus_stop"
+          },
+          {
+            "rank": 10,
+            "tag": "amenity=cafe",
+            "score": 0.21293087959754628,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dcafe"
+          }
+        ]
+      },
+      {
+        "id": "highway_bus_stop_paraphrase",
+        "query": "Where can passengers board local buses in Malmö?",
+        "expected_place": "Malmö",
+        "key": "highway",
+        "value": "bus_stop",
+        "category": "paraphrase",
+        "difficulty": "medium",
+        "expected_tag": "highway=bus_stop",
+        "latency_ms": 18.86749999539461,
+        "reciprocal_rank": 1.0,
+        "top1_prediction": "highway=bus_stop",
+        "hits": [
+          {
+            "rank": 1,
+            "tag": "highway=bus_stop",
+            "score": 1.0,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:highway%3Dbus_stop"
+          },
+          {
+            "rank": 2,
+            "tag": "aeroway=terminal",
+            "score": 0.973622311827957,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:aeroway%3Dterminal"
+          },
+          {
+            "rank": 3,
+            "tag": "railway=station",
+            "score": 0.9682539682539683,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:railway%3Dstation"
+          },
+          {
+            "rank": 4,
+            "tag": "amenity=police",
+            "score": 0.9434974747474748,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dpolice"
+          },
+          {
+            "rank": 5,
+            "tag": "railway=halt",
+            "score": 0.9384615384615386,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:railway%3Dhalt"
+          },
+          {
+            "rank": 6,
+            "tag": "aeroway=aerodrome",
+            "score": 0.9173289699236404,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:aeroway%3Daerodrome"
+          },
+          {
+            "rank": 7,
+            "tag": "amenity=school",
+            "score": 0.8933501506551748,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dschool"
+          },
+          {
+            "rank": 8,
+            "tag": "amenity=parking",
+            "score": 0.8762525401163198,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dparking"
+          },
+          {
+            "rank": 9,
+            "tag": "highway=traffic_signals",
+            "score": 0.8595008051529791,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:highway%3Dtraffic_signals"
+          },
+          {
+            "rank": 10,
+            "tag": "amenity=restaurant",
+            "score": 0.8341073271413829,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Drestaurant"
+          }
+        ]
+      },
+      {
+        "id": "highway_traffic_signals_paraphrase",
+        "query": "Show road junction lights controlling traffic in Malmö",
+        "expected_place": "Malmö",
+        "key": "highway",
+        "value": "traffic_signals",
+        "category": "paraphrase",
+        "difficulty": "medium",
+        "expected_tag": "highway=traffic_signals",
+        "latency_ms": 19.462700001895428,
+        "reciprocal_rank": 1.0,
+        "top1_prediction": "highway=traffic_signals",
+        "hits": [
+          {
+            "rank": 1,
+            "tag": "highway=traffic_signals",
+            "score": 1.0,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:highway%3Dtraffic_signals"
+          },
+          {
+            "rank": 2,
+            "tag": "highway=bus_stop",
+            "score": 0.9838709677419355,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:highway%3Dbus_stop"
+          },
+          {
+            "rank": 3,
+            "tag": "amenity=parking",
+            "score": 0.9535834535834535,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dparking"
+          },
+          {
+            "rank": 4,
+            "tag": "railway=halt",
+            "score": 0.9483923483923484,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:railway%3Dhalt"
+          },
+          {
+            "rank": 5,
+            "tag": "aeroway=aerodrome",
+            "score": 0.9021924934968414,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:aeroway%3Daerodrome"
+          },
+          {
+            "rank": 6,
+            "tag": "railway=station",
+            "score": 0.8986607142857143,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:railway%3Dstation"
+          },
+          {
+            "rank": 7,
+            "tag": "amenity=cafe",
+            "score": 0.8595008051529791,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dcafe"
+          },
+          {
+            "rank": 8,
+            "tag": "aeroway=terminal",
+            "score": 0.8530321366142263,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:aeroway%3Dterminal"
+          },
+          {
+            "rank": 9,
+            "tag": "amenity=police",
+            "score": 0.8203871292106586,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dpolice"
+          },
+          {
+            "rank": 10,
+            "tag": "amenity=cinema",
+            "score": 0.6354166666666666,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dcinema"
+          }
+        ]
+      },
+      {
+        "id": "leisure_park_paraphrase",
+        "query": "Find public green recreation areas in Malmö",
+        "expected_place": "Malmö",
+        "key": "leisure",
+        "value": "park",
+        "category": "paraphrase",
+        "difficulty": "medium",
+        "expected_tag": "leisure=park",
+        "latency_ms": 18.00169999478385,
+        "reciprocal_rank": 1.0,
+        "top1_prediction": "leisure=park",
+        "hits": [
+          {
+            "rank": 1,
+            "tag": "leisure=park",
+            "score": 1.0,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:leisure%3Dpark"
+          },
+          {
+            "rank": 2,
+            "tag": "highway=bus_stop",
+            "score": 0.9463901689708141,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:highway%3Dbus_stop"
+          },
+          {
+            "rank": 3,
+            "tag": "amenity=school",
+            "score": 0.9388992537313433,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dschool"
+          },
+          {
+            "rank": 4,
+            "tag": "amenity=library",
+            "score": 0.9384615384615386,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dlibrary"
+          },
+          {
+            "rank": 5,
+            "tag": "highway=traffic_signals",
+            "score": 0.9202774202774203,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:highway%3Dtraffic_signals"
+          },
+          {
+            "rank": 6,
+            "tag": "leisure=swimming_pool",
+            "score": 0.9007269422989551,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:leisure%3Dswimming_pool"
+          },
+          {
+            "rank": 7,
+            "tag": "amenity=parking",
+            "score": 0.8986607142857143,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dparking"
+          },
+          {
+            "rank": 8,
+            "tag": "amenity=police",
+            "score": 0.8974527887571366,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dpolice"
+          },
+          {
+            "rank": 9,
+            "tag": "aeroway=terminal",
+            "score": 0.8893725815367606,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:aeroway%3Dterminal"
+          },
+          {
+            "rank": 10,
+            "tag": "amenity=cafe",
+            "score": 0.8508898508898509,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dcafe"
+          }
+        ]
+      },
+      {
+        "id": "leisure_swimming_pool_paraphrase",
+        "query": "Show facilities built for swimming in Malmö",
+        "expected_place": "Malmö",
+        "key": "leisure",
+        "value": "swimming_pool",
+        "category": "paraphrase",
+        "difficulty": "medium",
+        "expected_tag": "leisure=swimming_pool",
+        "latency_ms": 15.875299999606796,
+        "reciprocal_rank": 1.0,
+        "top1_prediction": "leisure=swimming_pool",
+        "hits": [
+          {
+            "rank": 1,
+            "tag": "leisure=swimming_pool",
+            "score": 1.0,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:leisure%3Dswimming_pool"
+          },
+          {
+            "rank": 2,
+            "tag": "amenity=school",
+            "score": 0.9786653012459464,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dschool"
+          },
+          {
+            "rank": 3,
+            "tag": "amenity=cinema",
+            "score": 0.953125,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dcinema"
+          },
+          {
+            "rank": 4,
+            "tag": "aeroway=aerodrome",
+            "score": 0.924660633484163,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:aeroway%3Daerodrome"
+          },
+          {
+            "rank": 5,
+            "tag": "amenity=parking",
+            "score": 0.9202774202774203,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dparking"
+          },
+          {
+            "rank": 6,
+            "tag": "amenity=police",
+            "score": 0.8947004289470043,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dpolice"
+          },
+          {
+            "rank": 7,
+            "tag": "amenity=hospital",
+            "score": 0.8844241922120961,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dhospital"
+          },
+          {
+            "rank": 8,
+            "tag": "amenity=restaurant",
+            "score": 0.8776353276353276,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Drestaurant"
+          },
+          {
+            "rank": 9,
+            "tag": "amenity=cafe",
+            "score": 0.8714285714285714,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dcafe"
+          },
+          {
+            "rank": 10,
+            "tag": "aeroway=terminal",
+            "score": 0.8674559433898075,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:aeroway%3Dterminal"
+          }
+        ]
+      },
+      {
+        "id": "railway_halt_paraphrase",
+        "query": "Find small rail stopping places with limited facilities in Malmö",
+        "expected_place": "Malmö",
+        "key": "railway",
+        "value": "halt",
+        "category": "paraphrase",
+        "difficulty": "hard",
+        "expected_tag": "railway=halt",
+        "latency_ms": 17.208500008564442,
+        "reciprocal_rank": 1.0,
+        "top1_prediction": "railway=halt",
+        "hits": [
+          {
+            "rank": 1,
+            "tag": "railway=halt",
+            "score": 1.0,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:railway%3Dhalt"
+          },
+          {
+            "rank": 2,
+            "tag": "aeroway=aerodrome",
+            "score": 0.9483923483923484,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:aeroway%3Daerodrome"
+          },
+          {
+            "rank": 3,
+            "tag": "amenity=restaurant",
+            "score": 0.9383213859020311,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Drestaurant"
+          },
+          {
+            "rank": 4,
+            "tag": "aeroway=terminal",
+            "score": 0.9289821289821291,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:aeroway%3Dterminal"
+          },
+          {
+            "rank": 5,
+            "tag": "shop=convenience",
+            "score": 0.9218016431924884,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:shop%3Dconvenience"
+          },
+          {
+            "rank": 6,
+            "tag": "amenity=parking",
+            "score": 0.9130465051517683,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dparking"
+          },
+          {
+            "rank": 7,
+            "tag": "railway=station",
+            "score": 0.8927718040621266,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:railway%3Dstation"
+          },
+          {
+            "rank": 8,
+            "tag": "highway=traffic_signals",
+            "score": 0.889033189033189,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:highway%3Dtraffic_signals"
+          },
+          {
+            "rank": 9,
+            "tag": "leisure=park",
+            "score": 0.8762525401163198,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:leisure%3Dpark"
+          },
+          {
+            "rank": 10,
+            "tag": "highway=bus_stop",
+            "score": 0.8747859589041096,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:highway%3Dbus_stop"
+          }
+        ]
+      },
+      {
+        "id": "railway_station_paraphrase",
+        "query": "Show major places where passenger trains stop in Malmö",
+        "expected_place": "Malmö",
+        "key": "railway",
+        "value": "station",
+        "category": "paraphrase",
+        "difficulty": "medium",
+        "expected_tag": "railway=station",
+        "latency_ms": 21.95870000286959,
+        "reciprocal_rank": 1.0,
+        "top1_prediction": "railway=station",
+        "hits": [
+          {
+            "rank": 1,
+            "tag": "railway=station",
+            "score": 1.0,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:railway%3Dstation"
+          },
+          {
+            "rank": 2,
+            "tag": "highway=bus_stop",
+            "score": 0.9839553839553838,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:highway%3Dbus_stop"
+          },
+          {
+            "rank": 3,
+            "tag": "railway=halt",
+            "score": 0.9641580041580042,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:railway%3Dhalt"
+          },
+          {
+            "rank": 4,
+            "tag": "aeroway=terminal",
+            "score": 0.9635032835032835,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:aeroway%3Dterminal"
+          },
+          {
+            "rank": 5,
+            "tag": "aeroway=aerodrome",
+            "score": 0.9389178951678951,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:aeroway%3Daerodrome"
+          },
+          {
+            "rank": 6,
+            "tag": "highway=traffic_signals",
+            "score": 0.9110179698414992,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:highway%3Dtraffic_signals"
+          },
+          {
+            "rank": 7,
+            "tag": "amenity=cinema",
+            "score": 0.8941800008964187,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dcinema"
+          },
+          {
+            "rank": 8,
+            "tag": "leisure=park",
+            "score": 0.880490778592432,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:leisure%3Dpark"
+          },
+          {
+            "rank": 9,
+            "tag": "amenity=restaurant",
+            "score": 0.8761389961389962,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Drestaurant"
+          },
+          {
+            "rank": 10,
+            "tag": "amenity=cafe",
+            "score": 0.8431031188297489,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dcafe"
+          }
+        ]
+      },
+      {
+        "id": "shop_convenience_paraphrase",
+        "query": "Find small neighborhood shops selling everyday items in Malmö",
+        "expected_place": "Malmö",
+        "key": "shop",
+        "value": "convenience",
+        "category": "paraphrase",
+        "difficulty": "medium",
+        "expected_tag": "shop=convenience",
+        "latency_ms": 19.894199998816475,
+        "reciprocal_rank": 1.0,
+        "top1_prediction": "shop=convenience",
+        "hits": [
+          {
+            "rank": 1,
+            "tag": "shop=convenience",
+            "score": 1.0,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:shop%3Dconvenience"
+          },
+          {
+            "rank": 2,
+            "tag": "shop=supermarket",
+            "score": 0.9838709677419355,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:shop%3Dsupermarket"
+          },
+          {
+            "rank": 3,
+            "tag": "amenity=library",
+            "score": 0.9682539682539683,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dlibrary"
+          },
+          {
+            "rank": 4,
+            "tag": "amenity=cafe",
+            "score": 0.9482371794871796,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dcafe"
+          },
+          {
+            "rank": 5,
+            "tag": "amenity=restaurant",
+            "score": 0.943349358974359,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Drestaurant"
+          },
+          {
+            "rank": 6,
+            "tag": "amenity=cinema",
+            "score": 0.8927252060244388,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dcinema"
+          },
+          {
+            "rank": 7,
+            "tag": "leisure=swimming_pool",
+            "score": 0.8633597883597884,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:leisure%3Dswimming_pool"
+          },
+          {
+            "rank": 8,
+            "tag": "amenity=police",
+            "score": 0.8605602126354529,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dpolice"
+          },
+          {
+            "rank": 9,
+            "tag": "aeroway=terminal",
+            "score": 0.8552910052910052,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:aeroway%3Dterminal"
+          },
+          {
+            "rank": 10,
+            "tag": "building=school",
+            "score": 0.8475447278264181,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:building%3Dschool"
+          }
+        ]
+      },
+      {
+        "id": "shop_supermarket_paraphrase",
+        "query": "Show large self-service grocery stores in Malmö",
+        "expected_place": "Malmö",
+        "key": "shop",
+        "value": "supermarket",
+        "category": "paraphrase",
+        "difficulty": "medium",
+        "expected_tag": "shop=supermarket",
+        "latency_ms": 18.96390000183601,
+        "reciprocal_rank": 1.0,
+        "top1_prediction": "shop=supermarket",
+        "hits": [
+          {
+            "rank": 1,
+            "tag": "shop=supermarket",
+            "score": 1.0,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:shop%3Dsupermarket"
+          },
+          {
+            "rank": 2,
+            "tag": "shop=convenience",
+            "score": 0.9838709677419355,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:shop%3Dconvenience"
+          },
+          {
+            "rank": 3,
+            "tag": "amenity=cafe",
+            "score": 0.9632109788359788,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dcafe"
+          },
+          {
+            "rank": 4,
+            "tag": "amenity=police",
+            "score": 0.924660633484163,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dpolice"
+          },
+          {
+            "rank": 5,
+            "tag": "amenity=parking",
+            "score": 0.9242424242424243,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dparking"
+          },
+          {
+            "rank": 6,
+            "tag": "amenity=library",
+            "score": 0.9021924934968414,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dlibrary"
+          },
+          {
+            "rank": 7,
+            "tag": "leisure=park",
+            "score": 0.9015218027509512,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:leisure%3Dpark"
+          },
+          {
+            "rank": 8,
+            "tag": "amenity=restaurant",
+            "score": 0.8875661375661376,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Drestaurant"
+          },
+          {
+            "rank": 9,
+            "tag": "amenity=hospital",
+            "score": 0.8674559433898075,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dhospital"
+          },
+          {
+            "rank": 10,
+            "tag": "railway=halt",
+            "score": 0.8633597883597884,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:railway%3Dhalt"
+          }
+        ]
+      },
+      {
+        "id": "aeroway_aerodrome_hard",
+        "query": "List aviation grounds tagged as aerodromes rather than terminal buildings in Uppsala",
+        "expected_place": "Uppsala",
+        "key": "aeroway",
+        "value": "aerodrome",
+        "category": "hard",
+        "difficulty": "hard",
+        "expected_tag": "aeroway=aerodrome",
+        "latency_ms": 21.451699998578988,
+        "reciprocal_rank": 1.0,
+        "top1_prediction": "aeroway=aerodrome",
+        "hits": [
+          {
+            "rank": 1,
+            "tag": "aeroway=aerodrome",
+            "score": 1.0,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:aeroway%3Daerodrome"
+          },
+          {
+            "rank": 2,
+            "tag": "building=school",
+            "score": 0.4415498594267799,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:building%3Dschool"
+          },
+          {
+            "rank": 3,
+            "tag": "aeroway=airport",
+            "score": 0.4411893151061922,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:aeroway%3Dairport"
+          },
+          {
+            "rank": 4,
+            "tag": "highway=bus_stop",
+            "score": 0.43492143912317655,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:highway%3Dbus_stop"
+          },
+          {
+            "rank": 5,
+            "tag": "building=residential",
+            "score": 0.4279860210911565,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:building%3Dresidential"
+          },
+          {
+            "rank": 6,
+            "tag": "amenity=school",
+            "score": 0.4203892269887692,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dschool"
+          },
+          {
+            "rank": 7,
+            "tag": "amenity=hospital",
+            "score": 0.4176707156988368,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dhospital"
+          },
+          {
+            "rank": 8,
+            "tag": "aeroway=terminal",
+            "score": 0.4163769815375588,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:aeroway%3Dterminal"
+          },
+          {
+            "rank": 9,
+            "tag": "railway=halt",
+            "score": 0.41198062519569834,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:railway%3Dhalt"
+          },
+          {
+            "rank": 10,
+            "tag": "amenity=police",
+            "score": 0.4018289098482143,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dpolice"
+          }
+        ]
+      },
+      {
+        "id": "aeroway_airport_hard",
+        "query": "List aeroway airport features, not general aerodromes, in Uppsala",
+        "expected_place": "Uppsala",
+        "key": "aeroway",
+        "value": "airport",
+        "category": "hard",
+        "difficulty": "hard",
+        "expected_tag": "aeroway=airport",
+        "latency_ms": 20.245299994712695,
+        "reciprocal_rank": 1.0,
+        "top1_prediction": "aeroway=airport",
+        "hits": [
+          {
+            "rank": 1,
+            "tag": "aeroway=airport",
+            "score": 1.0,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:aeroway%3Dairport"
+          },
+          {
+            "rank": 2,
+            "tag": "aeroway=terminal",
+            "score": 0.22965912124345764,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:aeroway%3Dterminal"
+          },
+          {
+            "rank": 3,
+            "tag": "aeroway=aerodrome",
+            "score": 0.2264981034547652,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:aeroway%3Daerodrome"
+          },
+          {
+            "rank": 4,
+            "tag": "amenity=hospital",
+            "score": 0.21986194079439306,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dhospital"
+          },
+          {
+            "rank": 5,
+            "tag": "highway=bus_stop",
+            "score": 0.21453124804661058,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:highway%3Dbus_stop"
+          },
+          {
+            "rank": 6,
+            "tag": "amenity=police",
+            "score": 0.20993991666756537,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dpolice"
+          },
+          {
+            "rank": 7,
+            "tag": "highway=traffic_signals",
+            "score": 0.20853991866892926,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:highway%3Dtraffic_signals"
+          },
+          {
+            "rank": 8,
+            "tag": "railway=station",
+            "score": 0.20595415170747214,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:railway%3Dstation"
+          },
+          {
+            "rank": 9,
+            "tag": "amenity=parking",
+            "score": 0.19535795984426163,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dparking"
+          },
+          {
+            "rank": 10,
+            "tag": "amenity=school",
+            "score": 0.1945525081704139,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dschool"
+          }
+        ]
+      },
+      {
+        "id": "aeroway_terminal_hard",
+        "query": "Find airport passenger terminals, not the whole airfield, in Uppsala",
+        "expected_place": "Uppsala",
+        "key": "aeroway",
+        "value": "terminal",
+        "category": "hard",
+        "difficulty": "hard",
+        "expected_tag": "aeroway=terminal",
+        "latency_ms": 22.136500003398396,
+        "reciprocal_rank": 1.0,
+        "top1_prediction": "aeroway=terminal",
+        "hits": [
+          {
+            "rank": 1,
+            "tag": "aeroway=terminal",
+            "score": 1.0,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:aeroway%3Dterminal"
+          },
+          {
+            "rank": 2,
+            "tag": "aeroway=airport",
+            "score": 0.9764362010299311,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:aeroway%3Dairport"
+          },
+          {
+            "rank": 3,
+            "tag": "highway=bus_stop",
+            "score": 0.4511010002528047,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:highway%3Dbus_stop"
+          },
+          {
+            "rank": 4,
+            "tag": "aeroway=aerodrome",
+            "score": 0.43655331627054267,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:aeroway%3Daerodrome"
+          },
+          {
+            "rank": 5,
+            "tag": "railway=halt",
+            "score": 0.43269283046739637,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:railway%3Dhalt"
+          },
+          {
+            "rank": 6,
+            "tag": "railway=station",
+            "score": 0.43154092901648694,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:railway%3Dstation"
+          },
+          {
+            "rank": 7,
+            "tag": "amenity=cafe",
+            "score": 0.11571415387040876,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dcafe"
+          },
+          {
+            "rank": 8,
+            "tag": "highway=traffic_signals",
+            "score": 0.11493548060269562,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:highway%3Dtraffic_signals"
+          },
+          {
+            "rank": 9,
+            "tag": "amenity=school",
+            "score": 0.11112926301615354,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dschool"
+          },
+          {
+            "rank": 10,
+            "tag": "amenity=hospital",
+            "score": 0.10919156348327025,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dhospital"
+          }
+        ]
+      },
+      {
+        "id": "amenity_cafe_hard",
+        "query": "Find informal coffee places with seating, not full restaurants, in Uppsala",
+        "expected_place": "Uppsala",
+        "key": "amenity",
+        "value": "cafe",
+        "category": "hard",
+        "difficulty": "hard",
+        "expected_tag": "amenity=cafe",
+        "latency_ms": 19.80560000811238,
+        "reciprocal_rank": 1.0,
+        "top1_prediction": "amenity=cafe",
+        "hits": [
+          {
+            "rank": 1,
+            "tag": "amenity=cafe",
+            "score": 1.0,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dcafe"
+          },
+          {
+            "rank": 2,
+            "tag": "amenity=restaurant",
+            "score": 0.9756850977450244,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Drestaurant"
+          },
+          {
+            "rank": 3,
+            "tag": "highway=bus_stop",
+            "score": 0.9411382659521943,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:highway%3Dbus_stop"
+          },
+          {
+            "rank": 4,
+            "tag": "leisure=park",
+            "score": 0.9268238560161945,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:leisure%3Dpark"
+          },
+          {
+            "rank": 5,
+            "tag": "building=residential",
+            "score": 0.905151490107634,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:building%3Dresidential"
+          },
+          {
+            "rank": 6,
+            "tag": "railway=halt",
+            "score": 0.8994343945869552,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:railway%3Dhalt"
+          },
+          {
+            "rank": 7,
+            "tag": "shop=supermarket",
+            "score": 0.8956782610444999,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:shop%3Dsupermarket"
+          },
+          {
+            "rank": 8,
+            "tag": "shop=convenience",
+            "score": 0.8926793776796667,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:shop%3Dconvenience"
+          },
+          {
+            "rank": 9,
+            "tag": "amenity=parking",
+            "score": 0.8761528383963404,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dparking"
+          },
+          {
+            "rank": 10,
+            "tag": "amenity=school",
+            "score": 0.8475569728552539,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dschool"
+          }
+        ]
+      },
+      {
+        "id": "amenity_cinema_hard",
+        "query": "Find venues for watching movies, excluding libraries and schools, in Uppsala",
+        "expected_place": "Uppsala",
+        "key": "amenity",
+        "value": "cinema",
+        "category": "hard",
+        "difficulty": "hard",
+        "expected_tag": "amenity=cinema",
+        "latency_ms": 25.388800000655465,
+        "reciprocal_rank": 1.0,
+        "top1_prediction": "amenity=cinema",
+        "hits": [
+          {
+            "rank": 1,
+            "tag": "amenity=cinema",
+            "score": 1.0,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dcinema"
+          },
+          {
+            "rank": 2,
+            "tag": "amenity=school",
+            "score": 0.9435097102297978,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dschool"
+          },
+          {
+            "rank": 3,
+            "tag": "amenity=library",
+            "score": 0.9422447949762645,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dlibrary"
+          },
+          {
+            "rank": 4,
+            "tag": "building=school",
+            "score": 0.8934784419754771,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:building%3Dschool"
+          },
+          {
+            "rank": 5,
+            "tag": "amenity=parking",
+            "score": 0.8921937690903678,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dparking"
+          },
+          {
+            "rank": 6,
+            "tag": "leisure=swimming_pool",
+            "score": 0.8833962386164798,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:leisure%3Dswimming_pool"
+          },
+          {
+            "rank": 7,
+            "tag": "aeroway=aerodrome",
+            "score": 0.8757266792387097,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:aeroway%3Daerodrome"
+          },
+          {
+            "rank": 8,
+            "tag": "leisure=park",
+            "score": 0.8678382902021373,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:leisure%3Dpark"
+          },
+          {
+            "rank": 9,
+            "tag": "amenity=cafe",
+            "score": 0.8580712378753014,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dcafe"
+          },
+          {
+            "rank": 10,
+            "tag": "amenity=restaurant",
+            "score": 0.8094284981331891,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Drestaurant"
+          }
+        ]
+      },
+      {
+        "id": "amenity_hospital_hard",
+        "query": "Find hospitals with inpatient care, not police or school facilities, in Uppsala",
+        "expected_place": "Uppsala",
+        "key": "amenity",
+        "value": "hospital",
+        "category": "hard",
+        "difficulty": "hard",
+        "expected_tag": "amenity=hospital",
+        "latency_ms": 23.777700000209734,
+        "reciprocal_rank": 1.0,
+        "top1_prediction": "amenity=hospital",
+        "hits": [
+          {
+            "rank": 1,
+            "tag": "amenity=hospital",
+            "score": 1.0,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dhospital"
+          },
+          {
+            "rank": 2,
+            "tag": "highway=bus_stop",
+            "score": 0.4478504098939492,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:highway%3Dbus_stop"
+          },
+          {
+            "rank": 3,
+            "tag": "shop=convenience",
+            "score": 0.43028050188396794,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:shop%3Dconvenience"
+          },
+          {
+            "rank": 4,
+            "tag": "amenity=parking",
+            "score": 0.42703318237354687,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dparking"
+          },
+          {
+            "rank": 5,
+            "tag": "railway=station",
+            "score": 0.40869640354865233,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:railway%3Dstation"
+          },
+          {
+            "rank": 6,
+            "tag": "amenity=police",
+            "score": 0.4066549540217984,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dpolice"
+          },
+          {
+            "rank": 7,
+            "tag": "building=school",
+            "score": 0.40641683779316756,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:building%3Dschool"
+          },
+          {
+            "rank": 8,
+            "tag": "amenity=restaurant",
+            "score": 0.40131506213741097,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Drestaurant"
+          },
+          {
+            "rank": 9,
+            "tag": "aeroway=aerodrome",
+            "score": 0.3953261499310621,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:aeroway%3Daerodrome"
+          },
+          {
+            "rank": 10,
+            "tag": "aeroway=terminal",
+            "score": 0.39407585468226974,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:aeroway%3Dterminal"
+          }
+        ]
+      },
+      {
+        "id": "amenity_library_hard",
+        "query": "Find public book-lending amenities, not book shops, in Uppsala",
+        "expected_place": "Uppsala",
+        "key": "amenity",
+        "value": "library",
+        "category": "hard",
+        "difficulty": "hard",
+        "expected_tag": "amenity=library",
+        "latency_ms": 23.68399999977555,
+        "reciprocal_rank": 1.0,
+        "top1_prediction": "amenity=library",
+        "hits": [
+          {
+            "rank": 1,
+            "tag": "amenity=library",
+            "score": 1.0,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dlibrary"
+          },
+          {
+            "rank": 2,
+            "tag": "amenity=cafe",
+            "score": 0.9613327980263464,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dcafe"
+          },
+          {
+            "rank": 3,
+            "tag": "amenity=police",
+            "score": 0.9543313975132157,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dpolice"
+          },
+          {
+            "rank": 4,
+            "tag": "leisure=park",
+            "score": 0.9202492323073626,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:leisure%3Dpark"
+          },
+          {
+            "rank": 5,
+            "tag": "amenity=cinema",
+            "score": 0.8856056122833256,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dcinema"
+          },
+          {
+            "rank": 6,
+            "tag": "leisure=swimming_pool",
+            "score": 0.8838692377703694,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:leisure%3Dswimming_pool"
+          },
+          {
+            "rank": 7,
+            "tag": "railway=station",
+            "score": 0.8736910574506481,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:railway%3Dstation"
+          },
+          {
+            "rank": 8,
+            "tag": "amenity=restaurant",
+            "score": 0.8554526554526555,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Drestaurant"
+          },
+          {
+            "rank": 9,
+            "tag": "shop=supermarket",
+            "score": 0.8415957464252919,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:shop%3Dsupermarket"
+          },
+          {
+            "rank": 10,
+            "tag": "shop=convenience",
+            "score": 0.8385127417385482,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:shop%3Dconvenience"
+          }
+        ]
+      },
+      {
+        "id": "amenity_parking_hard",
+        "query": "Find designated vehicle parking amenities, not traffic signals, in Uppsala",
+        "expected_place": "Uppsala",
+        "key": "amenity",
+        "value": "parking",
+        "category": "hard",
+        "difficulty": "hard",
+        "expected_tag": "amenity=parking",
+        "latency_ms": 19.940099999075755,
+        "reciprocal_rank": 1.0,
+        "top1_prediction": "amenity=parking",
+        "hits": [
+          {
+            "rank": 1,
+            "tag": "amenity=parking",
+            "score": 1.0,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dparking"
+          },
+          {
+            "rank": 2,
+            "tag": "amenity=police",
+            "score": 0.22544799768411777,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dpolice"
+          },
+          {
+            "rank": 3,
+            "tag": "aeroway=terminal",
+            "score": 0.22377659028141053,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:aeroway%3Dterminal"
+          },
+          {
+            "rank": 4,
+            "tag": "highway=traffic_signals",
+            "score": 0.2215724504883484,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:highway%3Dtraffic_signals"
+          },
+          {
+            "rank": 5,
+            "tag": "highway=bus_stop",
+            "score": 0.2157522528885948,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:highway%3Dbus_stop"
+          },
+          {
+            "rank": 6,
+            "tag": "leisure=park",
+            "score": 0.21173024054389641,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:leisure%3Dpark"
+          },
+          {
+            "rank": 7,
+            "tag": "amenity=library",
+            "score": 0.21030958434343366,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dlibrary"
+          },
+          {
+            "rank": 8,
+            "tag": "amenity=restaurant",
+            "score": 0.20210884591129913,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Drestaurant"
+          },
+          {
+            "rank": 9,
+            "tag": "amenity=school",
+            "score": 0.1372057753594229,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dschool"
+          },
+          {
+            "rank": 10,
+            "tag": "leisure=swimming_pool",
+            "score": 0.13479269380192394,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:leisure%3Dswimming_pool"
+          }
+        ]
+      },
+      {
+        "id": "amenity_police_hard",
+        "query": "Find police amenities for law enforcement, not hospitals, in Uppsala",
+        "expected_place": "Uppsala",
+        "key": "amenity",
+        "value": "police",
+        "category": "hard",
+        "difficulty": "hard",
+        "expected_tag": "amenity=police",
+        "latency_ms": 18.36139999795705,
+        "reciprocal_rank": 1.0,
+        "top1_prediction": "amenity=police",
+        "hits": [
+          {
+            "rank": 1,
+            "tag": "amenity=police",
+            "score": 1.0,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dpolice"
+          },
+          {
+            "rank": 2,
+            "tag": "amenity=parking",
+            "score": 0.23092176760989142,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dparking"
+          },
+          {
+            "rank": 3,
+            "tag": "amenity=library",
+            "score": 0.22313504635165007,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dlibrary"
+          },
+          {
+            "rank": 4,
+            "tag": "highway=bus_stop",
+            "score": 0.21788534346994903,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:highway%3Dbus_stop"
+          },
+          {
+            "rank": 5,
+            "tag": "highway=traffic_signals",
+            "score": 0.2178407597402898,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:highway%3Dtraffic_signals"
+          },
+          {
+            "rank": 6,
+            "tag": "amenity=hospital",
+            "score": 0.21050080798584875,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dhospital"
+          },
+          {
+            "rank": 7,
+            "tag": "leisure=park",
+            "score": 0.20959484008221324,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:leisure%3Dpark"
+          },
+          {
+            "rank": 8,
+            "tag": "shop=convenience",
+            "score": 0.19833400607311985,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:shop%3Dconvenience"
+          },
+          {
+            "rank": 9,
+            "tag": "building=school",
+            "score": 0.19370103751095086,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:building%3Dschool"
+          },
+          {
+            "rank": 10,
+            "tag": "leisure=swimming_pool",
+            "score": 0.19157264002562574,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:leisure%3Dswimming_pool"
+          }
+        ]
+      },
+      {
+        "id": "amenity_restaurant_hard",
+        "query": "Find places serving full meals, not informal coffee shops, in Uppsala",
+        "expected_place": "Uppsala",
+        "key": "amenity",
+        "value": "restaurant",
+        "category": "hard",
+        "difficulty": "hard",
+        "expected_tag": "amenity=restaurant",
+        "latency_ms": 19.60329999565147,
+        "reciprocal_rank": 1.0,
+        "top1_prediction": "amenity=restaurant",
+        "hits": [
+          {
+            "rank": 1,
+            "tag": "amenity=restaurant",
+            "score": 1.0,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Drestaurant"
+          },
+          {
+            "rank": 2,
+            "tag": "amenity=cafe",
+            "score": 0.992636229749632,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dcafe"
+          },
+          {
+            "rank": 3,
+            "tag": "amenity=school",
+            "score": 0.9396641264562975,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dschool"
+          },
+          {
+            "rank": 4,
+            "tag": "highway=bus_stop",
+            "score": 0.936964979674847,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:highway%3Dbus_stop"
+          },
+          {
+            "rank": 5,
+            "tag": "railway=halt",
+            "score": 0.9326843074483557,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:railway%3Dhalt"
+          },
+          {
+            "rank": 6,
+            "tag": "shop=supermarket",
+            "score": 0.9163805986312051,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:shop%3Dsupermarket"
+          },
+          {
+            "rank": 7,
+            "tag": "building=residential",
+            "score": 0.914082379696369,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:building%3Dresidential"
+          },
+          {
+            "rank": 8,
+            "tag": "shop=convenience",
+            "score": 0.9110279701302306,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:shop%3Dconvenience"
+          },
+          {
+            "rank": 9,
+            "tag": "leisure=park",
+            "score": 0.9060439986337204,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:leisure%3Dpark"
+          },
+          {
+            "rank": 10,
+            "tag": "railway=station",
+            "score": 0.901441425931813,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:railway%3Dstation"
+          }
+        ]
+      },
+      {
+        "id": "amenity_school_hard",
+        "query": "Find entire school sites, not only building footprints, in Uppsala",
+        "expected_place": "Uppsala",
+        "key": "amenity",
+        "value": "school",
+        "category": "hard",
+        "difficulty": "hard",
+        "expected_tag": "amenity=school",
+        "latency_ms": 15.673699992476031,
+        "reciprocal_rank": 1.0,
+        "top1_prediction": "amenity=school",
+        "hits": [
+          {
+            "rank": 1,
+            "tag": "amenity=school",
+            "score": 1.0,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dschool"
+          },
+          {
+            "rank": 2,
+            "tag": "building=school",
+            "score": 0.9966060737703806,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:building%3Dschool"
+          },
+          {
+            "rank": 3,
+            "tag": "leisure=park",
+            "score": 0.431415211285156,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:leisure%3Dpark"
+          },
+          {
+            "rank": 4,
+            "tag": "aeroway=aerodrome",
+            "score": 0.4256668078772041,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:aeroway%3Daerodrome"
+          },
+          {
+            "rank": 5,
+            "tag": "amenity=library",
+            "score": 0.4234317641270645,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dlibrary"
+          },
+          {
+            "rank": 6,
+            "tag": "highway=bus_stop",
+            "score": 0.4155004739549261,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:highway%3Dbus_stop"
+          },
+          {
+            "rank": 7,
+            "tag": "amenity=parking",
+            "score": 0.2814008665476878,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dparking"
+          },
+          {
+            "rank": 8,
+            "tag": "amenity=restaurant",
+            "score": 0.27285570466747167,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Drestaurant"
+          },
+          {
+            "rank": 9,
+            "tag": "highway=traffic_signals",
+            "score": 0.2677906285577996,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:highway%3Dtraffic_signals"
+          },
+          {
+            "rank": 10,
+            "tag": "amenity=hospital",
+            "score": 0.2567165800084169,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dhospital"
+          }
+        ]
+      },
+      {
+        "id": "building_residential_hard",
+        "query": "Find buildings classified for residential use rather than schools in Uppsala",
+        "expected_place": "Uppsala",
+        "key": "building",
+        "value": "residential",
+        "category": "hard",
+        "difficulty": "hard",
+        "expected_tag": "building=residential",
+        "latency_ms": 17.219600005773827,
+        "reciprocal_rank": 1.0,
+        "top1_prediction": "building=residential",
+        "hits": [
+          {
+            "rank": 1,
+            "tag": "building=residential",
+            "score": 1.0,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:building%3Dresidential"
+          },
+          {
+            "rank": 2,
+            "tag": "building=school",
+            "score": 0.22177393546008556,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:building%3Dschool"
+          },
+          {
+            "rank": 3,
+            "tag": "amenity=school",
+            "score": 0.2203287855008718,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dschool"
+          },
+          {
+            "rank": 4,
+            "tag": "amenity=library",
+            "score": 0.21622899007966595,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dlibrary"
+          },
+          {
+            "rank": 5,
+            "tag": "amenity=police",
+            "score": 0.2149015008447059,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dpolice"
+          },
+          {
+            "rank": 6,
+            "tag": "amenity=parking",
+            "score": 0.2021929668546339,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dparking"
+          },
+          {
+            "rank": 7,
+            "tag": "amenity=hospital",
+            "score": 0.20111587130928807,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dhospital"
+          },
+          {
+            "rank": 8,
+            "tag": "leisure=park",
+            "score": 0.19912631046668808,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:leisure%3Dpark"
+          },
+          {
+            "rank": 9,
+            "tag": "amenity=cafe",
+            "score": 0.19521008510626314,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dcafe"
+          },
+          {
+            "rank": 10,
+            "tag": "aeroway=terminal",
+            "score": 0.19490564250401313,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:aeroway%3Dterminal"
+          }
+        ]
+      },
+      {
+        "id": "building_school_hard",
+        "query": "Find school building footprints rather than the whole school amenity in Uppsala",
+        "expected_place": "Uppsala",
+        "key": "building",
+        "value": "school",
+        "category": "hard",
+        "difficulty": "hard",
+        "expected_tag": "building=school",
+        "latency_ms": 18.967299998621456,
+        "reciprocal_rank": 1.0,
+        "top1_prediction": "building=school",
+        "hits": [
+          {
+            "rank": 1,
+            "tag": "building=school",
+            "score": 1.0,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:building%3Dschool"
+          },
+          {
+            "rank": 2,
+            "tag": "amenity=school",
+            "score": 0.4964827866630524,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dschool"
+          },
+          {
+            "rank": 3,
+            "tag": "building=residential",
+            "score": 0.221998022855866,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:building%3Dresidential"
+          },
+          {
+            "rank": 4,
+            "tag": "amenity=hospital",
+            "score": 0.2173067666308441,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dhospital"
+          },
+          {
+            "rank": 5,
+            "tag": "amenity=library",
+            "score": 0.21562452892376166,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dlibrary"
+          },
+          {
+            "rank": 6,
+            "tag": "highway=bus_stop",
+            "score": 0.21214228934817173,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:highway%3Dbus_stop"
+          },
+          {
+            "rank": 7,
+            "tag": "aeroway=terminal",
+            "score": 0.21041239609378246,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:aeroway%3Dterminal"
+          },
+          {
+            "rank": 8,
+            "tag": "amenity=police",
+            "score": 0.2062249677539,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dpolice"
+          },
+          {
+            "rank": 9,
+            "tag": "amenity=parking",
+            "score": 0.2053658015737755,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dparking"
+          },
+          {
+            "rank": 10,
+            "tag": "amenity=cafe",
+            "score": 0.20267856341746132,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dcafe"
+          }
+        ]
+      },
+      {
+        "id": "highway_bus_stop_hard",
+        "query": "Find roadside bus boarding points, not railway halts, in Uppsala",
+        "expected_place": "Uppsala",
+        "key": "highway",
+        "value": "bus_stop",
+        "category": "hard",
+        "difficulty": "hard",
+        "expected_tag": "highway=bus_stop",
+        "latency_ms": 18.561900011263788,
+        "reciprocal_rank": 1.0,
+        "top1_prediction": "highway=bus_stop",
+        "hits": [
+          {
+            "rank": 1,
+            "tag": "highway=bus_stop",
+            "score": 1.0,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:highway%3Dbus_stop"
+          },
+          {
+            "rank": 2,
+            "tag": "aeroway=terminal",
+            "score": 0.9560365938018816,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:aeroway%3Dterminal"
+          },
+          {
+            "rank": 3,
+            "tag": "railway=station",
+            "score": 0.9530807611974937,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:railway%3Dstation"
+          },
+          {
+            "rank": 4,
+            "tag": "aeroway=aerodrome",
+            "score": 0.9410777531820698,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:aeroway%3Daerodrome"
+          },
+          {
+            "rank": 5,
+            "tag": "railway=halt",
+            "score": 0.9363362096246757,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:railway%3Dhalt"
+          },
+          {
+            "rank": 6,
+            "tag": "highway=traffic_signals",
+            "score": 0.9115791220483588,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:highway%3Dtraffic_signals"
+          },
+          {
+            "rank": 7,
+            "tag": "amenity=parking",
+            "score": 0.8652004172419735,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dparking"
+          },
+          {
+            "rank": 8,
+            "tag": "amenity=school",
+            "score": 0.6443647017869575,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dschool"
+          },
+          {
+            "rank": 9,
+            "tag": "amenity=library",
+            "score": 0.5768023698688108,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dlibrary"
+          },
+          {
+            "rank": 10,
+            "tag": "amenity=police",
+            "score": 0.5663781078544919,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dpolice"
+          }
+        ]
+      },
+      {
+        "id": "highway_traffic_signals_hard",
+        "query": "Find signal-controlled road points, not bus stops, in Uppsala",
+        "expected_place": "Uppsala",
+        "key": "highway",
+        "value": "traffic_signals",
+        "category": "hard",
+        "difficulty": "hard",
+        "expected_tag": "highway=traffic_signals",
+        "latency_ms": 19.109999993816018,
+        "reciprocal_rank": 1.0,
+        "top1_prediction": "highway=traffic_signals",
+        "hits": [
+          {
+            "rank": 1,
+            "tag": "highway=traffic_signals",
+            "score": 1.0,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:highway%3Dtraffic_signals"
+          },
+          {
+            "rank": 2,
+            "tag": "highway=bus_stop",
+            "score": 0.9860255906371458,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:highway%3Dbus_stop"
+          },
+          {
+            "rank": 3,
+            "tag": "railway=station",
+            "score": 0.9327030040379968,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:railway%3Dstation"
+          },
+          {
+            "rank": 4,
+            "tag": "amenity=parking",
+            "score": 0.9299220816020933,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dparking"
+          },
+          {
+            "rank": 5,
+            "tag": "amenity=hospital",
+            "score": 0.9113342540836162,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dhospital"
+          },
+          {
+            "rank": 6,
+            "tag": "aeroway=aerodrome",
+            "score": 0.9021741181270884,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:aeroway%3Daerodrome"
+          },
+          {
+            "rank": 7,
+            "tag": "railway=halt",
+            "score": 0.8590016030918816,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:railway%3Dhalt"
+          },
+          {
+            "rank": 8,
+            "tag": "amenity=cafe",
+            "score": 0.850585881581476,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dcafe"
+          },
+          {
+            "rank": 9,
+            "tag": "leisure=park",
+            "score": 0.6307302656051509,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:leisure%3Dpark"
+          },
+          {
+            "rank": 10,
+            "tag": "amenity=school",
+            "score": 0.6224469409144504,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dschool"
+          }
+        ]
+      },
+      {
+        "id": "leisure_park_hard",
+        "query": "Find mapped public parks, not swimming facilities, in Uppsala",
+        "expected_place": "Uppsala",
+        "key": "leisure",
+        "value": "park",
+        "category": "hard",
+        "difficulty": "hard",
+        "expected_tag": "leisure=park",
+        "latency_ms": 19.3991999985883,
+        "reciprocal_rank": 1.0,
+        "top1_prediction": "leisure=park",
+        "hits": [
+          {
+            "rank": 1,
+            "tag": "leisure=park",
+            "score": 1.0,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:leisure%3Dpark"
+          },
+          {
+            "rank": 2,
+            "tag": "amenity=parking",
+            "score": 0.45711417821586625,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dparking"
+          },
+          {
+            "rank": 3,
+            "tag": "amenity=library",
+            "score": 0.44034676308689014,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dlibrary"
+          },
+          {
+            "rank": 4,
+            "tag": "leisure=swimming_pool",
+            "score": 0.42777716306854463,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:leisure%3Dswimming_pool"
+          },
+          {
+            "rank": 5,
+            "tag": "amenity=police",
+            "score": 0.4214315222576593,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dpolice"
+          },
+          {
+            "rank": 6,
+            "tag": "aeroway=aerodrome",
+            "score": 0.4033226668492387,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:aeroway%3Daerodrome"
+          },
+          {
+            "rank": 7,
+            "tag": "railway=station",
+            "score": 0.40037305943613777,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:railway%3Dstation"
+          },
+          {
+            "rank": 8,
+            "tag": "amenity=school",
+            "score": 0.39873197850072767,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dschool"
+          },
+          {
+            "rank": 9,
+            "tag": "amenity=cafe",
+            "score": 0.39600262872569225,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dcafe"
+          },
+          {
+            "rank": 10,
+            "tag": "aeroway=terminal",
+            "score": 0.3936395995619233,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:aeroway%3Dterminal"
+          }
+        ]
+      },
+      {
+        "id": "leisure_swimming_pool_hard",
+        "query": "Find swimming pools, excluding parks and natural water, in Uppsala",
+        "expected_place": "Uppsala",
+        "key": "leisure",
+        "value": "swimming_pool",
+        "category": "hard",
+        "difficulty": "hard",
+        "expected_tag": "leisure=swimming_pool",
+        "latency_ms": 16.512699992745183,
+        "reciprocal_rank": 1.0,
+        "top1_prediction": "leisure=swimming_pool",
+        "hits": [
+          {
+            "rank": 1,
+            "tag": "leisure=swimming_pool",
+            "score": 1.0,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:leisure%3Dswimming_pool"
+          },
+          {
+            "rank": 2,
+            "tag": "amenity=school",
+            "score": 0.4393805671646599,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dschool"
+          },
+          {
+            "rank": 3,
+            "tag": "highway=bus_stop",
+            "score": 0.2926988197644557,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:highway%3Dbus_stop"
+          },
+          {
+            "rank": 4,
+            "tag": "amenity=cafe",
+            "score": 0.12597880660863833,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dcafe"
+          },
+          {
+            "rank": 5,
+            "tag": "leisure=park",
+            "score": 0.1232043974492628,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:leisure%3Dpark"
+          },
+          {
+            "rank": 6,
+            "tag": "amenity=library",
+            "score": 0.12180124748241301,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dlibrary"
+          },
+          {
+            "rank": 7,
+            "tag": "building=residential",
+            "score": 0.12124103840418357,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:building%3Dresidential"
+          },
+          {
+            "rank": 8,
+            "tag": "amenity=parking",
+            "score": 0.11691333417278099,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dparking"
+          },
+          {
+            "rank": 9,
+            "tag": "amenity=police",
+            "score": 0.1151611616496671,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dpolice"
+          },
+          {
+            "rank": 10,
+            "tag": "amenity=restaurant",
+            "score": 0.11454149185733425,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Drestaurant"
+          }
+        ]
+      },
+      {
+        "id": "railway_halt_hard",
+        "query": "Find minor railway halts rather than full stations in Uppsala",
+        "expected_place": "Uppsala",
+        "key": "railway",
+        "value": "halt",
+        "category": "hard",
+        "difficulty": "hard",
+        "expected_tag": "railway=halt",
+        "latency_ms": 16.80820000183303,
+        "reciprocal_rank": 1.0,
+        "top1_prediction": "railway=halt",
+        "hits": [
+          {
+            "rank": 1,
+            "tag": "railway=halt",
+            "score": 1.0,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:railway%3Dhalt"
+          },
+          {
+            "rank": 2,
+            "tag": "railway=station",
+            "score": 0.22694939367251543,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:railway%3Dstation"
+          },
+          {
+            "rank": 3,
+            "tag": "highway=bus_stop",
+            "score": 0.222727192688154,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:highway%3Dbus_stop"
+          },
+          {
+            "rank": 4,
+            "tag": "aeroway=terminal",
+            "score": 0.21984984091336351,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:aeroway%3Dterminal"
+          },
+          {
+            "rank": 5,
+            "tag": "aeroway=aerodrome",
+            "score": 0.21959924019405086,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:aeroway%3Daerodrome"
+          },
+          {
+            "rank": 6,
+            "tag": "highway=traffic_signals",
+            "score": 0.21670718308883025,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:highway%3Dtraffic_signals"
+          },
+          {
+            "rank": 7,
+            "tag": "amenity=cinema",
+            "score": 0.05780853907499896,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dcinema"
+          },
+          {
+            "rank": 8,
+            "tag": "shop=convenience",
+            "score": 0.057642909598704654,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:shop%3Dconvenience"
+          },
+          {
+            "rank": 9,
+            "tag": "aeroway=airport",
+            "score": 0.05486156575675875,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:aeroway%3Dairport"
+          },
+          {
+            "rank": 10,
+            "tag": "amenity=police",
+            "score": 0.0546381313973942,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dpolice"
+          }
+        ]
+      },
+      {
+        "id": "railway_station_hard",
+        "query": "Find full railway stations rather than small halts in Uppsala",
+        "expected_place": "Uppsala",
+        "key": "railway",
+        "value": "station",
+        "category": "hard",
+        "difficulty": "hard",
+        "expected_tag": "railway=station",
+        "latency_ms": 16.949300013948232,
+        "reciprocal_rank": 1.0,
+        "top1_prediction": "railway=station",
+        "hits": [
+          {
+            "rank": 1,
+            "tag": "railway=station",
+            "score": 1.0,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:railway%3Dstation"
+          },
+          {
+            "rank": 2,
+            "tag": "railway=halt",
+            "score": 0.22861406960179095,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:railway%3Dhalt"
+          },
+          {
+            "rank": 3,
+            "tag": "highway=bus_stop",
+            "score": 0.22392687302758918,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:highway%3Dbus_stop"
+          },
+          {
+            "rank": 4,
+            "tag": "aeroway=terminal",
+            "score": 0.22042969082139544,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:aeroway%3Dterminal"
+          },
+          {
+            "rank": 5,
+            "tag": "aeroway=aerodrome",
+            "score": 0.21959815881530828,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:aeroway%3Daerodrome"
+          },
+          {
+            "rank": 6,
+            "tag": "shop=supermarket",
+            "score": 0.21352001784371452,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:shop%3Dsupermarket"
+          },
+          {
+            "rank": 7,
+            "tag": "highway=traffic_signals",
+            "score": 0.208303897853254,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:highway%3Dtraffic_signals"
+          },
+          {
+            "rank": 8,
+            "tag": "shop=convenience",
+            "score": 0.2030545351179644,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:shop%3Dconvenience"
+          },
+          {
+            "rank": 9,
+            "tag": "amenity=police",
+            "score": 0.2028072011655215,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dpolice"
+          },
+          {
+            "rank": 10,
+            "tag": "amenity=restaurant",
+            "score": 0.13815756540130736,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Drestaurant"
+          }
+        ]
+      },
+      {
+        "id": "shop_convenience_hard",
+        "query": "Find small convenience shops rather than large supermarkets in Uppsala",
+        "expected_place": "Uppsala",
+        "key": "shop",
+        "value": "convenience",
+        "category": "hard",
+        "difficulty": "hard",
+        "expected_tag": "shop=convenience",
+        "latency_ms": 22.430899989558384,
+        "reciprocal_rank": 1.0,
+        "top1_prediction": "shop=convenience",
+        "hits": [
+          {
+            "rank": 1,
+            "tag": "shop=convenience",
+            "score": 1.0,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:shop%3Dconvenience"
+          },
+          {
+            "rank": 2,
+            "tag": "shop=supermarket",
+            "score": 0.22694939367251543,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:shop%3Dsupermarket"
+          },
+          {
+            "rank": 3,
+            "tag": "amenity=cafe",
+            "score": 0.21805420782749407,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dcafe"
+          },
+          {
+            "rank": 4,
+            "tag": "railway=halt",
+            "score": 0.2170883641702751,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:railway%3Dhalt"
+          },
+          {
+            "rank": 5,
+            "tag": "amenity=library",
+            "score": 0.2153761166599556,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dlibrary"
+          },
+          {
+            "rank": 6,
+            "tag": "amenity=restaurant",
+            "score": 0.21196086664396224,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Drestaurant"
+          },
+          {
+            "rank": 7,
+            "tag": "aeroway=terminal",
+            "score": 0.21034112301062624,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:aeroway%3Dterminal"
+          },
+          {
+            "rank": 8,
+            "tag": "highway=bus_stop",
+            "score": 0.20687481490060294,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:highway%3Dbus_stop"
+          },
+          {
+            "rank": 9,
+            "tag": "leisure=park",
+            "score": 0.2040332438996994,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:leisure%3Dpark"
+          },
+          {
+            "rank": 10,
+            "tag": "aeroway=aerodrome",
+            "score": 0.1983267746295076,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:aeroway%3Daerodrome"
+          }
+        ]
+      },
+      {
+        "id": "shop_supermarket_hard",
+        "query": "Find supermarkets rather than small convenience stores in Uppsala",
+        "expected_place": "Uppsala",
+        "key": "shop",
+        "value": "supermarket",
+        "category": "hard",
+        "difficulty": "hard",
+        "expected_tag": "shop=supermarket",
+        "latency_ms": 17.046799999661744,
+        "reciprocal_rank": 1.0,
+        "top1_prediction": "shop=supermarket",
+        "hits": [
+          {
+            "rank": 1,
+            "tag": "shop=supermarket",
+            "score": 1.0,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:shop%3Dsupermarket"
+          },
+          {
+            "rank": 2,
+            "tag": "shop=convenience",
+            "score": 0.457501255752705,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:shop%3Dconvenience"
+          },
+          {
+            "rank": 3,
+            "tag": "amenity=parking",
+            "score": 0.43509514396544074,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dparking"
+          },
+          {
+            "rank": 4,
+            "tag": "highway=bus_stop",
+            "score": 0.42458890982107567,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:highway%3Dbus_stop"
+          },
+          {
+            "rank": 5,
+            "tag": "amenity=cafe",
+            "score": 0.1313012490342873,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dcafe"
+          },
+          {
+            "rank": 6,
+            "tag": "amenity=restaurant",
+            "score": 0.126218985170805,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Drestaurant"
+          },
+          {
+            "rank": 7,
+            "tag": "amenity=library",
+            "score": 0.1246396182658248,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dlibrary"
+          },
+          {
+            "rank": 8,
+            "tag": "aeroway=terminal",
+            "score": 0.11809697506009775,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:aeroway%3Dterminal"
+          },
+          {
+            "rank": 9,
+            "tag": "amenity=police",
+            "score": 0.11723125557659907,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dpolice"
+          },
+          {
+            "rank": 10,
+            "tag": "leisure=park",
+            "score": 0.11609094760287386,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:leisure%3Dpark"
+          }
+        ]
+      }
+    ]
+  },
+  "e2e": {
+    "n": 3,
+    "success_rate": 1.0,
+    "tag_accuracy": 1.0,
+    "llm_success_rate": 1.0,
+    "latency_ms": {
+      "mean": 68205.7831333271,
+      "p50": 65676.98469999596,
+      "p95": 75736.00056998985
+    },
+    "rows": [
+      {
+        "id": "amenity_cafe_canonical",
+        "query": "Find all cafes in Lund",
+        "expected_place": "Lund",
+        "key": "amenity",
+        "value": "cafe",
+        "category": "canonical",
+        "difficulty": "easy",
+        "expected_tag": "amenity=cafe",
+        "latency_ms": 65676.98469999596,
+        "success": true,
+        "tag_correct": true,
+        "llm_ok": true,
+        "count": 50,
+        "counts_by_type": {
+          "node": 38,
+          "way": 12,
+          "relation": 0
+        },
+        "geojson_filename": "result_lund_amenity_cafe_find_all_cafes_in_lund_16fb0fcfd5.geojson",
+        "error": null
+      },
+      {
+        "id": "leisure_park_canonical",
+        "query": "Find parks in Lund",
+        "expected_place": "Lund",
+        "key": "leisure",
+        "value": "park",
+        "category": "canonical",
+        "difficulty": "easy",
+        "expected_tag": "leisure=park",
+        "latency_ms": 62086.6956999962,
+        "success": true,
+        "tag_correct": true,
+        "llm_ok": true,
+        "count": 170,
+        "counts_by_type": {
+          "node": 0,
+          "way": 164,
+          "relation": 6
+        },
+        "geojson_filename": "result_lund_leisure_park_find_parks_in_lund_0b39eb82ec.geojson",
+        "error": null
+      },
+      {
+        "id": "highway_bus_stop_canonical",
+        "query": "Find bus stops in Uppsala",
+        "expected_place": "Uppsala",
+        "key": "highway",
+        "value": "bus_stop",
+        "category": "canonical",
+        "difficulty": "easy",
+        "expected_tag": "highway=bus_stop",
+        "latency_ms": 76853.66899998917,
+        "success": true,
+        "tag_correct": true,
+        "llm_ok": true,
+        "count": 1204,
+        "counts_by_type": {
+          "node": 1204,
+          "way": 0,
+          "relation": 0
+        },
+        "geojson_filename": "result_uppsala_highway_bus_stop_find_bus_stops_in_uppsala_d035071dfc.geojson",
+        "error": null
+      }
+    ]
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "catalog_version": "2026-08-05.v1",
+  "source": "Local OSM Wiki snapshot",
+  "source_file": "data/wiki_raw/wiki_raw.jsonl",
+  "source_sha256": "8e64e0083d147f0471d0ebe0a072df127910d96229fa9799c12aedf6edc8a36b",
+  "entries": [
+    {"key":"aeroway","value":"aerodrome","status":"de_facto","aliases":["aerodrome","airfield","airport grounds","aviation field"],"description":"An aerodrome, airport, or airfield mapped as the whole aviation site.","url":"https://wiki.openstreetmap.org/wiki/Tag:aeroway%3Daerodrome"},
+    {"key":"aeroway","value":"airport","status":"obsolete","aliases":["airport","legacy airport tag","obsolete airport tag","explicit airport tag"],"description":"The legacy aeroway=airport tag. Its use is discouraged in favor of aeroway=aerodrome, but existing explicitly tagged features can still be queried.","url":"https://wiki.openstreetmap.org/wiki/Tag:aeroway%3Dairport"},
+    {"key":"aeroway","value":"terminal","status":"de_facto","aliases":["airport terminal","passenger terminal","passenger building"],"description":"An airport passenger terminal building.","url":"https://wiki.openstreetmap.org/wiki/Tag:aeroway%3Dterminal"},
+    {"key":"amenity","value":"cafe","status":"approved","aliases":["cafe","café","coffee shop","sit-down coffee"],"description":"An informal place serving coffee or refreshments, commonly with seating.","url":"https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dcafe"},
+    {"key":"amenity","value":"cinema","status":"de_facto","aliases":["cinema","movie theater","film venue","watch movies"],"description":"A venue where films are shown to an audience.","url":"https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dcinema"},
+    {"key":"amenity","value":"hospital","status":"approved","aliases":["hospital","inpatient medical facility","inpatient care"],"description":"A hospital providing medical treatment, typically including inpatient care.","url":"https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dhospital"},
+    {"key":"amenity","value":"library","status":"approved","aliases":["library","public library","book lending","borrow books"],"description":"A public or institutional library for reading and borrowing materials.","url":"https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dlibrary"},
+    {"key":"amenity","value":"parking","status":"approved","aliases":["parking","car park","vehicle parking","parking facility"],"description":"A designated place where vehicles may be parked.","url":"https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dparking"},
+    {"key":"amenity","value":"police","status":"approved","aliases":["police","police station","law enforcement office"],"description":"A police or law-enforcement facility.","url":"https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dpolice"},
+    {"key":"amenity","value":"restaurant","status":"approved","aliases":["restaurant","dining","full meals","sit-down meal"],"description":"A place serving prepared full meals, usually for consumption on site.","url":"https://wiki.openstreetmap.org/wiki/Tag:amenity%3Drestaurant"},
+    {"key":"amenity","value":"school","status":"approved","aliases":["school amenity","school grounds","school campus","educational site"],"description":"The grounds or campus of a school as an amenity, not merely one building footprint.","url":"https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dschool"},
+    {"key":"building","value":"residential","status":"de_facto","aliases":["residential building","homes","housing","dwelling building"],"description":"A building used primarily for residential purposes.","url":"https://wiki.openstreetmap.org/wiki/Tag:building%3Dresidential"},
+    {"key":"building","value":"school","status":"de_facto","aliases":["school building","school structure","school footprint"],"description":"An individual building whose use is a school, distinct from the whole school amenity.","url":"https://wiki.openstreetmap.org/wiki/Tag:building%3Dschool"},
+    {"key":"highway","value":"bus_stop","status":"approved","aliases":["bus stop","bus boarding point","roadside bus stop"],"description":"A point where passengers board or leave buses.","url":"https://wiki.openstreetmap.org/wiki/Tag:highway%3Dbus_stop"},
+    {"key":"highway","value":"traffic_signals","status":"approved","aliases":["traffic signals","traffic lights","signal-controlled junction","road signals"],"description":"A road point controlled by traffic signals.","url":"https://wiki.openstreetmap.org/wiki/Tag:highway%3Dtraffic_signals"},
+    {"key":"leisure","value":"park","status":"de_facto","aliases":["park","public park","green recreation area"],"description":"An area of open space used for recreation, commonly a public park.","url":"https://wiki.openstreetmap.org/wiki/Tag:leisure%3Dpark"},
+    {"key":"leisure","value":"swimming_pool","status":"approved","aliases":["swimming pool","swimming facility","pool for swimming"],"description":"A constructed pool or facility intended for swimming.","url":"https://wiki.openstreetmap.org/wiki/Tag:leisure%3Dswimming_pool"},
+    {"key":"railway","value":"halt","status":"approved","aliases":["railway halt","minor rail stop","small train stop"],"description":"A minor railway stopping place with fewer facilities than a full station.","url":"https://wiki.openstreetmap.org/wiki/Tag:railway%3Dhalt"},
+    {"key":"railway","value":"station","status":"approved","aliases":["railway station","train station","passenger station"],"description":"A full railway station where trains stop for passengers or goods.","url":"https://wiki.openstreetmap.org/wiki/Tag:railway%3Dstation"},
+    {"key":"shop","value":"convenience","status":"approved","aliases":["convenience store","neighborhood shop","everyday items"],"description":"A small local shop selling everyday goods and groceries.","url":"https://wiki.openstreetmap.org/wiki/Tag:shop%3Dconvenience"},
+    {"key":"shop","value":"supermarket","status":"approved","aliases":["supermarket","grocery store","large self-service grocery"],"description":"A large self-service shop selling groceries and household goods.","url":"https://wiki.openstreetmap.org/wiki/Tag:shop%3Dsupermarket"}
+  ]
+}

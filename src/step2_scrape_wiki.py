@@ -1,5 +1,4 @@
 # src/step2_scrape_wiki.py
-from pathlib import Path
 from src.config import WIKI_RAW_DIR
 from src.seed_urls import SEED_URLS
 from src.rag.wiki_scraper import scrape_urls

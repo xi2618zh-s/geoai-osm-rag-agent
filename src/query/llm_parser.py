@@ -4,7 +4,9 @@ LLM 查询解析器
 将用户自然语言查询 + RAG 证据 -> 结构化 JSON (place + tag)
 """
 from __future__ import annotations
-from typing import Dict, Any, List
+from typing import Dict, Any, List, Optional
+from src.config import OLLAMA_MODEL
+from src.contracts import llm_decision_is_valid
 from src.llm.ollama_client import call_ollama_json
 
 # 关键 System Prompt - 这是让 LLM 正确输出的核心
@@ -62,7 +64,8 @@ def format_evidence(chunks: List) -> str:
 def llm_parse_query(
     query: str,
     chunks: List,
-    model: str = "mistral",
+    model: str = OLLAMA_MODEL,
+    trace_id: str | None = None,
 ) -> Dict[str, Any]:
     """
     使用 LLM 解析用户查询
@@ -95,29 +98,31 @@ Based on the user query and evidence above, return a JSON object with:
 
 Return ONLY the JSON object, nothing else."""
 
-    result = call_ollama_json(model=model, system=SYSTEM_PROMPT, user=user_prompt)
+    result = call_ollama_json(
+        model=model,
+        system=SYSTEM_PROMPT,
+        user=user_prompt,
+        trace_id=trace_id,
+    )
     
     if result.ok:
-        return {"ok": True, "data": result.data, "raw": result.raw}
-    return {"ok": False, "data": {}, "raw": result.raw}
+        return {
+            "ok": True,
+            "data": result.data,
+            "raw": result.raw,
+            "attempts": result.attempts,
+            "latency_ms": result.latency_ms,
+        }
+    return {
+        "ok": False,
+        "data": {},
+        "raw": result.raw,
+        "error_code": result.error_code,
+        "attempts": result.attempts,
+        "latency_ms": result.latency_ms,
+    }
 
 
-def validate_llm_response(data: Dict) -> bool:
-    """验证 LLM 响应是否符合预期格式"""
-    if not isinstance(data, dict):
-        return False
-    
-    tag = data.get("tag")
-    if not isinstance(tag, dict):
-        return False
-    
-    key = tag.get("key")
-    value = tag.get("value")
-    
-    if not key or not value:
-        return False
-    
-    if not isinstance(key, str) or not isinstance(value, str):
-        return False
-    
-    return True
+def validate_llm_response(data: Dict, chunks: Optional[List] = None) -> bool:
+    """Validate the LLM schema and, when supplied, its evidence grounding."""
+    return llm_decision_is_valid(data, chunks)

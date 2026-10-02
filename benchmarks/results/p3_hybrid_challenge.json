@@ -1,0 +1,1688 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-08-04T21:03:02.077691+00:00",
+  "dataset": "benchmarks\\data\\query_benchmark_p3_challenge.jsonl",
+  "retriever_mode": "hybrid",
+  "report_title": "P3 Hybrid Challenge Validation",
+  "retrieval": {
+    "n": 21,
+    "labels": 21,
+    "category_counts": {
+      "validation_challenge": 21
+    },
+    "difficulty_counts": {
+      "hard": 21
+    },
+    "recall_at": {
+      "1": 1.0,
+      "3": 1.0,
+      "5": 1.0,
+      "10": 1.0
+    },
+    "mrr": 1.0,
+    "top1_tag_accuracy": 1.0,
+    "weighted_grid": [
+      {
+        "k": 1,
+        "min_score": 0.0,
+        "accuracy": 1.0,
+        "coverage": 1.0
+      },
+      {
+        "k": 1,
+        "min_score": 0.15,
+        "accuracy": 1.0,
+        "coverage": 1.0
+      },
+      {
+        "k": 1,
+        "min_score": 0.25,
+        "accuracy": 1.0,
+        "coverage": 1.0
+      },
+      {
+        "k": 3,
+        "min_score": 0.0,
+        "accuracy": 1.0,
+        "coverage": 1.0
+      },
+      {
+        "k": 3,
+        "min_score": 0.15,
+        "accuracy": 1.0,
+        "coverage": 1.0
+      },
+      {
+        "k": 3,
+        "min_score": 0.25,
+        "accuracy": 1.0,
+        "coverage": 1.0
+      },
+      {
+        "k": 5,
+        "min_score": 0.0,
+        "accuracy": 1.0,
+        "coverage": 1.0
+      },
+      {
+        "k": 5,
+        "min_score": 0.15,
+        "accuracy": 1.0,
+        "coverage": 1.0
+      },
+      {
+        "k": 5,
+        "min_score": 0.25,
+        "accuracy": 1.0,
+        "coverage": 1.0
+      },
+      {
+        "k": 10,
+        "min_score": 0.0,
+        "accuracy": 1.0,
+        "coverage": 1.0
+      },
+      {
+        "k": 10,
+        "min_score": 0.15,
+        "accuracy": 1.0,
+        "coverage": 1.0
+      },
+      {
+        "k": 10,
+        "min_score": 0.25,
+        "accuracy": 1.0,
+        "coverage": 1.0
+      }
+    ],
+    "category_metrics": {
+      "validation_challenge": {
+        "n": 21,
+        "recall_at_5": 1.0,
+        "weighted_accuracy_k5_t015": 1.0
+      }
+    },
+    "latency_ms": {
+      "mean": 20.253361908197846,
+      "p50": 19.52990000427235,
+      "p95": 26.15190000506118
+    },
+    "rows": [
+      {
+        "id": "p3_aeroway_aerodrome",
+        "query": "Locate mapped aviation sites that operate as airfields in Västerås",
+        "expected_place": "Västerås",
+        "key": "aeroway",
+        "value": "aerodrome",
+        "category": "validation_challenge",
+        "difficulty": "hard",
+        "expected_tag": "aeroway=aerodrome",
+        "latency_ms": 33.128499999293126,
+        "reciprocal_rank": 1.0,
+        "top1_prediction": "aeroway=aerodrome",
+        "hits": [
+          {
+            "rank": 1,
+            "tag": "aeroway=aerodrome",
+            "score": 1.0,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:aeroway%3Daerodrome"
+          },
+          {
+            "rank": 2,
+            "tag": "amenity=hospital",
+            "score": 0.9445222533457828,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dhospital"
+          },
+          {
+            "rank": 3,
+            "tag": "leisure=park",
+            "score": 0.9289821289821291,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:leisure%3Dpark"
+          },
+          {
+            "rank": 4,
+            "tag": "highway=traffic_signals",
+            "score": 0.9270250896057348,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:highway%3Dtraffic_signals"
+          },
+          {
+            "rank": 5,
+            "tag": "amenity=parking",
+            "score": 0.92032701597919,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dparking"
+          },
+          {
+            "rank": 6,
+            "tag": "amenity=school",
+            "score": 0.9101914414414415,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dschool"
+          },
+          {
+            "rank": 7,
+            "tag": "highway=bus_stop",
+            "score": 0.8928545677410051,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:highway%3Dbus_stop"
+          },
+          {
+            "rank": 8,
+            "tag": "shop=convenience",
+            "score": 0.8844241922120961,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:shop%3Dconvenience"
+          },
+          {
+            "rank": 9,
+            "tag": "railway=station",
+            "score": 0.879828948322099,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:railway%3Dstation"
+          },
+          {
+            "rank": 10,
+            "tag": "railway=halt",
+            "score": 0.8775065387968615,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:railway%3Dhalt"
+          }
+        ]
+      },
+      {
+        "id": "p3_aeroway_airport",
+        "query": "Return objects retaining the deprecated airport tag instead of the normal aerodrome tag in Västerås",
+        "expected_place": "Västerås",
+        "key": "aeroway",
+        "value": "airport",
+        "category": "validation_challenge",
+        "difficulty": "hard",
+        "expected_tag": "aeroway=airport",
+        "latency_ms": 25.202599994372576,
+        "reciprocal_rank": 1.0,
+        "top1_prediction": "aeroway=airport",
+        "hits": [
+          {
+            "rank": 1,
+            "tag": "aeroway=airport",
+            "score": 1.0,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:aeroway%3Dairport"
+          },
+          {
+            "rank": 2,
+            "tag": "aeroway=aerodrome",
+            "score": 0.4581128417365484,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:aeroway%3Daerodrome"
+          },
+          {
+            "rank": 3,
+            "tag": "aeroway=terminal",
+            "score": 0.4417124118440834,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:aeroway%3Dterminal"
+          },
+          {
+            "rank": 4,
+            "tag": "amenity=school",
+            "score": 0.43742383565689874,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dschool"
+          },
+          {
+            "rank": 5,
+            "tag": "shop=supermarket",
+            "score": 0.43073332066163766,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:shop%3Dsupermarket"
+          },
+          {
+            "rank": 6,
+            "tag": "amenity=hospital",
+            "score": 0.4173455102854106,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dhospital"
+          },
+          {
+            "rank": 7,
+            "tag": "amenity=library",
+            "score": 0.41623664730031984,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dlibrary"
+          },
+          {
+            "rank": 8,
+            "tag": "amenity=police",
+            "score": 0.41478598844532094,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dpolice"
+          },
+          {
+            "rank": 9,
+            "tag": "railway=halt",
+            "score": 0.4130998300838639,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:railway%3Dhalt"
+          },
+          {
+            "rank": 10,
+            "tag": "railway=station",
+            "score": 0.4100287178733298,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:railway%3Dstation"
+          }
+        ]
+      },
+      {
+        "id": "p3_aeroway_terminal",
+        "query": "Map buildings where air travelers transfer from ground transport to their flights in Västerås",
+        "expected_place": "Västerås",
+        "key": "aeroway",
+        "value": "terminal",
+        "category": "validation_challenge",
+        "difficulty": "hard",
+        "expected_tag": "aeroway=terminal",
+        "latency_ms": 23.492199994507246,
+        "reciprocal_rank": 1.0,
+        "top1_prediction": "aeroway=terminal",
+        "hits": [
+          {
+            "rank": 1,
+            "tag": "aeroway=terminal",
+            "score": 1.0,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:aeroway%3Dterminal"
+          },
+          {
+            "rank": 2,
+            "tag": "building=school",
+            "score": 0.973622311827957,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:building%3Dschool"
+          },
+          {
+            "rank": 3,
+            "tag": "aeroway=aerodrome",
+            "score": 0.944118605408928,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:aeroway%3Daerodrome"
+          },
+          {
+            "rank": 4,
+            "tag": "highway=bus_stop",
+            "score": 0.934436274509804,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:highway%3Dbus_stop"
+          },
+          {
+            "rank": 5,
+            "tag": "railway=halt",
+            "score": 0.9037037037037036,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:railway%3Dhalt"
+          },
+          {
+            "rank": 6,
+            "tag": "amenity=school",
+            "score": 0.9016511644675175,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dschool"
+          },
+          {
+            "rank": 7,
+            "tag": "amenity=hospital",
+            "score": 0.8808507611324514,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dhospital"
+          },
+          {
+            "rank": 8,
+            "tag": "railway=station",
+            "score": 0.8804466230936819,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:railway%3Dstation"
+          },
+          {
+            "rank": 9,
+            "tag": "amenity=cafe",
+            "score": 0.869898138391289,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dcafe"
+          },
+          {
+            "rank": 10,
+            "tag": "amenity=parking",
+            "score": 0.8604830917874396,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dparking"
+          }
+        ]
+      },
+      {
+        "id": "p3_amenity_cafe",
+        "query": "Where can I sit down for espresso and pastries in Västerås?",
+        "expected_place": "Västerås",
+        "key": "amenity",
+        "value": "cafe",
+        "category": "validation_challenge",
+        "difficulty": "hard",
+        "expected_tag": "amenity=cafe",
+        "latency_ms": 21.730400010710582,
+        "reciprocal_rank": 1.0,
+        "top1_prediction": "amenity=cafe",
+        "hits": [
+          {
+            "rank": 1,
+            "tag": "amenity=cafe",
+            "score": 1.0,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dcafe"
+          },
+          {
+            "rank": 2,
+            "tag": "amenity=restaurant",
+            "score": 0.9838709677419355,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Drestaurant"
+          },
+          {
+            "rank": 3,
+            "tag": "amenity=school",
+            "score": 0.9489852325673221,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dschool"
+          },
+          {
+            "rank": 4,
+            "tag": "railway=station",
+            "score": 0.9139554794520548,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:railway%3Dstation"
+          },
+          {
+            "rank": 5,
+            "tag": "amenity=library",
+            "score": 0.9080484330484331,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dlibrary"
+          },
+          {
+            "rank": 6,
+            "tag": "amenity=hospital",
+            "score": 0.9066378066378066,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dhospital"
+          },
+          {
+            "rank": 7,
+            "tag": "highway=bus_stop",
+            "score": 0.9021924934968414,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:highway%3Dbus_stop"
+          },
+          {
+            "rank": 8,
+            "tag": "amenity=police",
+            "score": 0.9016511644675175,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dpolice"
+          },
+          {
+            "rank": 9,
+            "tag": "leisure=park",
+            "score": 0.889033189033189,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:leisure%3Dpark"
+          },
+          {
+            "rank": 10,
+            "tag": "amenity=parking",
+            "score": 0.8844241922120961,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dparking"
+          }
+        ]
+      },
+      {
+        "id": "p3_amenity_cinema",
+        "query": "Map venues offering public film screenings in Västerås",
+        "expected_place": "Västerås",
+        "key": "amenity",
+        "value": "cinema",
+        "category": "validation_challenge",
+        "difficulty": "hard",
+        "expected_tag": "amenity=cinema",
+        "latency_ms": 17.928600005689077,
+        "reciprocal_rank": 1.0,
+        "top1_prediction": "amenity=cinema",
+        "hits": [
+          {
+            "rank": 1,
+            "tag": "amenity=cinema",
+            "score": 1.0,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dcinema"
+          },
+          {
+            "rank": 2,
+            "tag": "amenity=cafe",
+            "score": 0.9786653012459464,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dcafe"
+          },
+          {
+            "rank": 3,
+            "tag": "leisure=park",
+            "score": 0.9734596347499573,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:leisure%3Dpark"
+          },
+          {
+            "rank": 4,
+            "tag": "amenity=police",
+            "score": 0.9482371794871796,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dpolice"
+          },
+          {
+            "rank": 5,
+            "tag": "leisure=swimming_pool",
+            "score": 0.924660633484163,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:leisure%3Dswimming_pool"
+          },
+          {
+            "rank": 6,
+            "tag": "railway=station",
+            "score": 0.9066378066378066,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:railway%3Dstation"
+          },
+          {
+            "rank": 7,
+            "tag": "amenity=parking",
+            "score": 0.8974527887571366,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dparking"
+          },
+          {
+            "rank": 8,
+            "tag": "amenity=library",
+            "score": 0.8904782863849766,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dlibrary"
+          },
+          {
+            "rank": 9,
+            "tag": "aeroway=aerodrome",
+            "score": 0.8442355398877139,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:aeroway%3Daerodrome"
+          },
+          {
+            "rank": 10,
+            "tag": "shop=supermarket",
+            "score": 0.8385703063629223,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:shop%3Dsupermarket"
+          }
+        ]
+      },
+      {
+        "id": "p3_amenity_hospital",
+        "query": "Locate medical complexes with wards for admitted patients in Västerås",
+        "expected_place": "Västerås",
+        "key": "amenity",
+        "value": "hospital",
+        "category": "validation_challenge",
+        "difficulty": "hard",
+        "expected_tag": "amenity=hospital",
+        "latency_ms": 18.41720000084024,
+        "reciprocal_rank": 1.0,
+        "top1_prediction": "amenity=hospital",
+        "hits": [
+          {
+            "rank": 1,
+            "tag": "amenity=hospital",
+            "score": 1.0,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dhospital"
+          },
+          {
+            "rank": 2,
+            "tag": "highway=bus_stop",
+            "score": 0.944118605408928,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:highway%3Dbus_stop"
+          },
+          {
+            "rank": 3,
+            "tag": "shop=convenience",
+            "score": 0.9401886358408098,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:shop%3Dconvenience"
+          },
+          {
+            "rank": 4,
+            "tag": "leisure=park",
+            "score": 0.9388992537313433,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:leisure%3Dpark"
+          },
+          {
+            "rank": 5,
+            "tag": "amenity=parking",
+            "score": 0.9157475490196079,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dparking"
+          },
+          {
+            "rank": 6,
+            "tag": "amenity=school",
+            "score": 0.9150459822101614,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dschool"
+          },
+          {
+            "rank": 7,
+            "tag": "aeroway=aerodrome",
+            "score": 0.9120260021668474,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:aeroway%3Daerodrome"
+          },
+          {
+            "rank": 8,
+            "tag": "amenity=police",
+            "score": 0.9037037037037036,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dpolice"
+          },
+          {
+            "rank": 9,
+            "tag": "leisure=swimming_pool",
+            "score": 0.879848171152519,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:leisure%3Dswimming_pool"
+          },
+          {
+            "rank": 10,
+            "tag": "amenity=library",
+            "score": 0.8638344226579521,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dlibrary"
+          }
+        ]
+      },
+      {
+        "id": "p3_amenity_library",
+        "query": "Find municipal reading and book-loan services in Västerås",
+        "expected_place": "Västerås",
+        "key": "amenity",
+        "value": "library",
+        "category": "validation_challenge",
+        "difficulty": "hard",
+        "expected_tag": "amenity=library",
+        "latency_ms": 20.338900008937344,
+        "reciprocal_rank": 1.0,
+        "top1_prediction": "amenity=library",
+        "hits": [
+          {
+            "rank": 1,
+            "tag": "amenity=library",
+            "score": 1.0,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dlibrary"
+          },
+          {
+            "rank": 2,
+            "tag": "amenity=police",
+            "score": 0.9639947865754317,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dpolice"
+          },
+          {
+            "rank": 3,
+            "tag": "leisure=park",
+            "score": 0.9583231583231583,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:leisure%3Dpark"
+          },
+          {
+            "rank": 4,
+            "tag": "shop=supermarket",
+            "score": 0.9388992537313433,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:shop%3Dsupermarket"
+          },
+          {
+            "rank": 5,
+            "tag": "amenity=restaurant",
+            "score": 0.9157475490196079,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Drestaurant"
+          },
+          {
+            "rank": 6,
+            "tag": "highway=bus_stop",
+            "score": 0.9066378066378066,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:highway%3Dbus_stop"
+          },
+          {
+            "rank": 7,
+            "tag": "amenity=school",
+            "score": 0.9007269422989551,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dschool"
+          },
+          {
+            "rank": 8,
+            "tag": "amenity=cafe",
+            "score": 0.8883915885194658,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dcafe"
+          },
+          {
+            "rank": 9,
+            "tag": "railway=halt",
+            "score": 0.8855039869147414,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:railway%3Dhalt"
+          },
+          {
+            "rank": 10,
+            "tag": "amenity=hospital",
+            "score": 0.8633597883597884,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dhospital"
+          }
+        ]
+      },
+      {
+        "id": "p3_amenity_parking",
+        "query": "Show designated areas where visitors may leave automobiles in Västerås",
+        "expected_place": "Västerås",
+        "key": "amenity",
+        "value": "parking",
+        "category": "validation_challenge",
+        "difficulty": "hard",
+        "expected_tag": "amenity=parking",
+        "latency_ms": 19.621200000983663,
+        "reciprocal_rank": 1.0,
+        "top1_prediction": "amenity=parking",
+        "hits": [
+          {
+            "rank": 1,
+            "tag": "amenity=parking",
+            "score": 1.0,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dparking"
+          },
+          {
+            "rank": 2,
+            "tag": "leisure=park",
+            "score": 0.9841269841269842,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:leisure%3Dpark"
+          },
+          {
+            "rank": 3,
+            "tag": "highway=bus_stop",
+            "score": 0.9788851351351351,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:highway%3Dbus_stop"
+          },
+          {
+            "rank": 4,
+            "tag": "shop=convenience",
+            "score": 0.9435343035343036,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:shop%3Dconvenience"
+          },
+          {
+            "rank": 5,
+            "tag": "amenity=cinema",
+            "score": 0.9246152529734619,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dcinema"
+          },
+          {
+            "rank": 6,
+            "tag": "highway=traffic_signals",
+            "score": 0.8923637923637923,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:highway%3Dtraffic_signals"
+          },
+          {
+            "rank": 7,
+            "tag": "amenity=police",
+            "score": 0.880490778592432,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dpolice"
+          },
+          {
+            "rank": 8,
+            "tag": "amenity=library",
+            "score": 0.8761389961389962,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dlibrary"
+          },
+          {
+            "rank": 9,
+            "tag": "shop=supermarket",
+            "score": 0.8721448944351577,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:shop%3Dsupermarket"
+          },
+          {
+            "rank": 10,
+            "tag": "amenity=restaurant",
+            "score": 0.854899262899263,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Drestaurant"
+          }
+        ]
+      },
+      {
+        "id": "p3_amenity_police",
+        "query": "Locate local constabulary and law-enforcement facilities in Västerås",
+        "expected_place": "Västerås",
+        "key": "amenity",
+        "value": "police",
+        "category": "validation_challenge",
+        "difficulty": "hard",
+        "expected_tag": "amenity=police",
+        "latency_ms": 15.645299994503148,
+        "reciprocal_rank": 1.0,
+        "top1_prediction": "amenity=police",
+        "hits": [
+          {
+            "rank": 1,
+            "tag": "amenity=police",
+            "score": 1.0,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dpolice"
+          },
+          {
+            "rank": 2,
+            "tag": "highway=traffic_signals",
+            "score": 0.9734596347499573,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:highway%3Dtraffic_signals"
+          },
+          {
+            "rank": 3,
+            "tag": "leisure=park",
+            "score": 0.950599968832788,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:leisure%3Dpark"
+          },
+          {
+            "rank": 4,
+            "tag": "amenity=parking",
+            "score": 0.9389129389129389,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dparking"
+          },
+          {
+            "rank": 5,
+            "tag": "shop=convenience",
+            "score": 0.9291236127057023,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:shop%3Dconvenience"
+          },
+          {
+            "rank": 6,
+            "tag": "amenity=library",
+            "score": 0.9218016431924884,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dlibrary"
+          },
+          {
+            "rank": 7,
+            "tag": "railway=station",
+            "score": 0.9197856869498662,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:railway%3Dstation"
+          },
+          {
+            "rank": 8,
+            "tag": "highway=bus_stop",
+            "score": 0.8970588235294117,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:highway%3Dbus_stop"
+          },
+          {
+            "rank": 9,
+            "tag": "amenity=hospital",
+            "score": 0.8552910052910052,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dhospital"
+          },
+          {
+            "rank": 10,
+            "tag": "railway=halt",
+            "score": 0.852796052631579,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:railway%3Dhalt"
+          }
+        ]
+      },
+      {
+        "id": "p3_amenity_restaurant",
+        "query": "Find table-service establishments preparing complete meals in Västerås",
+        "expected_place": "Västerås",
+        "key": "amenity",
+        "value": "restaurant",
+        "category": "validation_challenge",
+        "difficulty": "hard",
+        "expected_tag": "amenity=restaurant",
+        "latency_ms": 16.39410000643693,
+        "reciprocal_rank": 1.0,
+        "top1_prediction": "amenity=restaurant",
+        "hits": [
+          {
+            "rank": 1,
+            "tag": "amenity=restaurant",
+            "score": 1.0,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Drestaurant"
+          },
+          {
+            "rank": 2,
+            "tag": "amenity=cafe",
+            "score": 0.9838709677419355,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dcafe"
+          },
+          {
+            "rank": 3,
+            "tag": "highway=bus_stop",
+            "score": 0.9384615384615386,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:highway%3Dbus_stop"
+          },
+          {
+            "rank": 4,
+            "tag": "amenity=library",
+            "score": 0.9359788359788359,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dlibrary"
+          },
+          {
+            "rank": 5,
+            "tag": "shop=supermarket",
+            "score": 0.9338699494949495,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:shop%3Dsupermarket"
+          },
+          {
+            "rank": 6,
+            "tag": "amenity=police",
+            "score": 0.930102657004831,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dpolice"
+          },
+          {
+            "rank": 7,
+            "tag": "amenity=school",
+            "score": 0.9150459822101614,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dschool"
+          },
+          {
+            "rank": 8,
+            "tag": "amenity=parking",
+            "score": 0.8844241922120961,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dparking"
+          },
+          {
+            "rank": 9,
+            "tag": "amenity=hospital",
+            "score": 0.8799719887955182,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dhospital"
+          },
+          {
+            "rank": 10,
+            "tag": "shop=convenience",
+            "score": 0.8723008723008723,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:shop%3Dconvenience"
+          }
+        ]
+      },
+      {
+        "id": "p3_amenity_school",
+        "query": "Map the entire premises of educational institutions in Västerås, not one structure",
+        "expected_place": "Västerås",
+        "key": "amenity",
+        "value": "school",
+        "category": "validation_challenge",
+        "difficulty": "hard",
+        "expected_tag": "amenity=school",
+        "latency_ms": 20.01800001016818,
+        "reciprocal_rank": 1.0,
+        "top1_prediction": "amenity=school",
+        "hits": [
+          {
+            "rank": 1,
+            "tag": "amenity=school",
+            "score": 1.0,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dschool"
+          },
+          {
+            "rank": 2,
+            "tag": "amenity=cafe",
+            "score": 0.9844151618675775,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dcafe"
+          },
+          {
+            "rank": 3,
+            "tag": "amenity=hospital",
+            "score": 0.9517295021961932,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dhospital"
+          },
+          {
+            "rank": 4,
+            "tag": "leisure=park",
+            "score": 0.9482934764925979,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:leisure%3Dpark"
+          },
+          {
+            "rank": 5,
+            "tag": "amenity=library",
+            "score": 0.9408458822204409,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dlibrary"
+          },
+          {
+            "rank": 6,
+            "tag": "amenity=restaurant",
+            "score": 0.9348650023225197,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Drestaurant"
+          },
+          {
+            "rank": 7,
+            "tag": "building=school",
+            "score": 0.8932783294856171,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:building%3Dschool"
+          },
+          {
+            "rank": 8,
+            "tag": "aeroway=aerodrome",
+            "score": 0.888185977052232,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:aeroway%3Daerodrome"
+          },
+          {
+            "rank": 9,
+            "tag": "amenity=parking",
+            "score": 0.8738140062438764,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dparking"
+          },
+          {
+            "rank": 10,
+            "tag": "shop=supermarket",
+            "score": 0.8640776466760447,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:shop%3Dsupermarket"
+          }
+        ]
+      },
+      {
+        "id": "p3_building_residential",
+        "query": "Show housing blocks and structures primarily occupied as homes in Västerås",
+        "expected_place": "Västerås",
+        "key": "building",
+        "value": "residential",
+        "category": "validation_challenge",
+        "difficulty": "hard",
+        "expected_tag": "building=residential",
+        "latency_ms": 19.11320000363048,
+        "reciprocal_rank": 1.0,
+        "top1_prediction": "building=residential",
+        "hits": [
+          {
+            "rank": 1,
+            "tag": "building=residential",
+            "score": 1.0,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:building%3Dresidential"
+          },
+          {
+            "rank": 2,
+            "tag": "amenity=parking",
+            "score": 0.9687344913151364,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dparking"
+          },
+          {
+            "rank": 3,
+            "tag": "amenity=school",
+            "score": 0.943349358974359,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dschool"
+          },
+          {
+            "rank": 4,
+            "tag": "amenity=cinema",
+            "score": 0.9166137566137567,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dcinema"
+          },
+          {
+            "rank": 5,
+            "tag": "building=school",
+            "score": 0.9121233034276514,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:building%3Dschool"
+          },
+          {
+            "rank": 6,
+            "tag": "amenity=library",
+            "score": 0.9059847819724904,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dlibrary"
+          },
+          {
+            "rank": 7,
+            "tag": "highway=traffic_signals",
+            "score": 0.8985690235690236,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:highway%3Dtraffic_signals"
+          },
+          {
+            "rank": 8,
+            "tag": "leisure=park",
+            "score": 0.8927718040621266,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:leisure%3Dpark"
+          },
+          {
+            "rank": 9,
+            "tag": "amenity=police",
+            "score": 0.8808507611324514,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dpolice"
+          },
+          {
+            "rank": 10,
+            "tag": "amenity=hospital",
+            "score": 0.8728139904610493,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dhospital"
+          }
+        ]
+      },
+      {
+        "id": "p3_building_school",
+        "query": "Return individual edifices classified for school use in Västerås rather than the whole campus",
+        "expected_place": "Västerås",
+        "key": "building",
+        "value": "school",
+        "category": "validation_challenge",
+        "difficulty": "hard",
+        "expected_tag": "building=school",
+        "latency_ms": 26.15190000506118,
+        "reciprocal_rank": 1.0,
+        "top1_prediction": "building=school",
+        "hits": [
+          {
+            "rank": 1,
+            "tag": "building=school",
+            "score": 1.0,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:building%3Dschool"
+          },
+          {
+            "rank": 2,
+            "tag": "amenity=school",
+            "score": 0.9959514980856832,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dschool"
+          },
+          {
+            "rank": 3,
+            "tag": "amenity=hospital",
+            "score": 0.43034262528444645,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dhospital"
+          },
+          {
+            "rank": 4,
+            "tag": "railway=station",
+            "score": 0.43001110371396345,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:railway%3Dstation"
+          },
+          {
+            "rank": 5,
+            "tag": "amenity=parking",
+            "score": 0.42958736311507145,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dparking"
+          },
+          {
+            "rank": 6,
+            "tag": "leisure=park",
+            "score": 0.41304272466474296,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:leisure%3Dpark"
+          },
+          {
+            "rank": 7,
+            "tag": "amenity=library",
+            "score": 0.4122297469347566,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dlibrary"
+          },
+          {
+            "rank": 8,
+            "tag": "amenity=police",
+            "score": 0.4101728919928573,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dpolice"
+          },
+          {
+            "rank": 9,
+            "tag": "building=residential",
+            "score": 0.3999795469300451,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:building%3Dresidential"
+          },
+          {
+            "rank": 10,
+            "tag": "aeroway=aerodrome",
+            "score": 0.39726801618503915,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:aeroway%3Daerodrome"
+          }
+        ]
+      },
+      {
+        "id": "p3_highway_bus_stop",
+        "query": "Where are the curbside pickup points for scheduled local buses in Västerås?",
+        "expected_place": "Västerås",
+        "key": "highway",
+        "value": "bus_stop",
+        "category": "validation_challenge",
+        "difficulty": "hard",
+        "expected_tag": "highway=bus_stop",
+        "latency_ms": 20.569600004819222,
+        "reciprocal_rank": 1.0,
+        "top1_prediction": "highway=bus_stop",
+        "hits": [
+          {
+            "rank": 1,
+            "tag": "highway=bus_stop",
+            "score": 1.0,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:highway%3Dbus_stop"
+          },
+          {
+            "rank": 2,
+            "tag": "railway=station",
+            "score": 0.9734596347499573,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:railway%3Dstation"
+          },
+          {
+            "rank": 3,
+            "tag": "highway=traffic_signals",
+            "score": 0.9639947865754317,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:highway%3Dtraffic_signals"
+          },
+          {
+            "rank": 4,
+            "tag": "aeroway=terminal",
+            "score": 0.9384615384615386,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:aeroway%3Dterminal"
+          },
+          {
+            "rank": 5,
+            "tag": "aeroway=aerodrome",
+            "score": 0.9246735074626866,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:aeroway%3Daerodrome"
+          },
+          {
+            "rank": 6,
+            "tag": "amenity=police",
+            "score": 0.9218016431924884,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dpolice"
+          },
+          {
+            "rank": 7,
+            "tag": "railway=halt",
+            "score": 0.9015218027509512,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:railway%3Dhalt"
+          },
+          {
+            "rank": 8,
+            "tag": "leisure=park",
+            "score": 0.8840579710144928,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:leisure%3Dpark"
+          },
+          {
+            "rank": 9,
+            "tag": "amenity=parking",
+            "score": 0.879828948322099,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dparking"
+          },
+          {
+            "rank": 10,
+            "tag": "amenity=restaurant",
+            "score": 0.8714285714285714,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Drestaurant"
+          }
+        ]
+      },
+      {
+        "id": "p3_highway_traffic_signals",
+        "query": "Map red-amber-green controls regulating road movements in Västerås",
+        "expected_place": "Västerås",
+        "key": "highway",
+        "value": "traffic_signals",
+        "category": "validation_challenge",
+        "difficulty": "hard",
+        "expected_tag": "highway=traffic_signals",
+        "latency_ms": 18.449199997121468,
+        "reciprocal_rank": 1.0,
+        "top1_prediction": "highway=traffic_signals",
+        "hits": [
+          {
+            "rank": 1,
+            "tag": "highway=traffic_signals",
+            "score": 1.0,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:highway%3Dtraffic_signals"
+          },
+          {
+            "rank": 2,
+            "tag": "leisure=park",
+            "score": 0.9786653012459464,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:leisure%3Dpark"
+          },
+          {
+            "rank": 3,
+            "tag": "highway=bus_stop",
+            "score": 0.9633736559139785,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:highway%3Dbus_stop"
+          },
+          {
+            "rank": 4,
+            "tag": "amenity=parking",
+            "score": 0.9632109788359788,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dparking"
+          },
+          {
+            "rank": 5,
+            "tag": "aeroway=aerodrome",
+            "score": 0.8855904658721562,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:aeroway%3Daerodrome"
+          },
+          {
+            "rank": 6,
+            "tag": "railway=station",
+            "score": 0.8530321366142263,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:railway%3Dstation"
+          },
+          {
+            "rank": 7,
+            "tag": "amenity=police",
+            "score": 0.8362193362193363,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dpolice"
+          },
+          {
+            "rank": 8,
+            "tag": "amenity=cafe",
+            "score": 0.6256410256410256,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dcafe"
+          },
+          {
+            "rank": 9,
+            "tag": "amenity=hospital",
+            "score": 0.6161616161616162,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dhospital"
+          },
+          {
+            "rank": 10,
+            "tag": "amenity=cinema",
+            "score": 0.6069651741293532,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dcinema"
+          }
+        ]
+      },
+      {
+        "id": "p3_leisure_park",
+        "query": "Find landscaped municipal gardens and outdoor recreation grounds in Västerås",
+        "expected_place": "Västerås",
+        "key": "leisure",
+        "value": "park",
+        "category": "validation_challenge",
+        "difficulty": "hard",
+        "expected_tag": "leisure=park",
+        "latency_ms": 19.124000013107434,
+        "reciprocal_rank": 1.0,
+        "top1_prediction": "leisure=park",
+        "hits": [
+          {
+            "rank": 1,
+            "tag": "leisure=park",
+            "score": 1.0,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:leisure%3Dpark"
+          },
+          {
+            "rank": 2,
+            "tag": "amenity=school",
+            "score": 0.9535834535834535,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dschool"
+          },
+          {
+            "rank": 3,
+            "tag": "leisure=swimming_pool",
+            "score": 0.929716496880676,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:leisure%3Dswimming_pool"
+          },
+          {
+            "rank": 4,
+            "tag": "amenity=restaurant",
+            "score": 0.9258928571428571,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Drestaurant"
+          },
+          {
+            "rank": 5,
+            "tag": "building=school",
+            "score": 0.9108476064997805,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:building%3Dschool"
+          },
+          {
+            "rank": 6,
+            "tag": "amenity=cafe",
+            "score": 0.9080484330484331,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dcafe"
+          },
+          {
+            "rank": 7,
+            "tag": "amenity=police",
+            "score": 0.8928545677410051,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dpolice"
+          },
+          {
+            "rank": 8,
+            "tag": "amenity=parking",
+            "score": 0.8825231481481481,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dparking"
+          },
+          {
+            "rank": 9,
+            "tag": "aeroway=aerodrome",
+            "score": 0.8717895608947804,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:aeroway%3Daerodrome"
+          },
+          {
+            "rank": 10,
+            "tag": "amenity=library",
+            "score": 0.8701792114695341,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dlibrary"
+          }
+        ]
+      },
+      {
+        "id": "p3_leisure_swimming_pool",
+        "query": "Locate purpose-built aquatic basins used for swimming in Västerås",
+        "expected_place": "Västerås",
+        "key": "leisure",
+        "value": "swimming_pool",
+        "category": "validation_challenge",
+        "difficulty": "hard",
+        "expected_tag": "leisure=swimming_pool",
+        "latency_ms": 19.52990000427235,
+        "reciprocal_rank": 1.0,
+        "top1_prediction": "leisure=swimming_pool",
+        "hits": [
+          {
+            "rank": 1,
+            "tag": "leisure=swimming_pool",
+            "score": 1.0,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:leisure%3Dswimming_pool"
+          },
+          {
+            "rank": 2,
+            "tag": "amenity=school",
+            "score": 0.9786653012459464,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dschool"
+          },
+          {
+            "rank": 3,
+            "tag": "amenity=parking",
+            "score": 0.9632109788359788,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dparking"
+          },
+          {
+            "rank": 4,
+            "tag": "shop=convenience",
+            "score": 0.9258928571428571,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:shop%3Dconvenience"
+          },
+          {
+            "rank": 5,
+            "tag": "highway=bus_stop",
+            "score": 0.9021924934968414,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:highway%3Dbus_stop"
+          },
+          {
+            "rank": 6,
+            "tag": "aeroway=aerodrome",
+            "score": 0.9015218027509512,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:aeroway%3Daerodrome"
+          },
+          {
+            "rank": 7,
+            "tag": "railway=station",
+            "score": 0.889033189033189,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:railway%3Dstation"
+          },
+          {
+            "rank": 8,
+            "tag": "leisure=park",
+            "score": 0.8775065387968615,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:leisure%3Dpark"
+          },
+          {
+            "rank": 9,
+            "tag": "amenity=cinema",
+            "score": 0.8595008051529791,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dcinema"
+          },
+          {
+            "rank": 10,
+            "tag": "amenity=library",
+            "score": 0.8591549295774648,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dlibrary"
+          }
+        ]
+      },
+      {
+        "id": "p3_railway_halt",
+        "query": "Show minor train stopping points with only limited passenger facilities in Västerås",
+        "expected_place": "Västerås",
+        "key": "railway",
+        "value": "halt",
+        "category": "validation_challenge",
+        "difficulty": "hard",
+        "expected_tag": "railway=halt",
+        "latency_ms": 21.965200008708052,
+        "reciprocal_rank": 1.0,
+        "top1_prediction": "railway=halt",
+        "hits": [
+          {
+            "rank": 1,
+            "tag": "railway=halt",
+            "score": 1.0,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:railway%3Dhalt"
+          },
+          {
+            "rank": 2,
+            "tag": "railway=station",
+            "score": 0.9893048128342247,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:railway%3Dstation"
+          },
+          {
+            "rank": 3,
+            "tag": "highway=bus_stop",
+            "score": 0.9736771174745558,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:highway%3Dbus_stop"
+          },
+          {
+            "rank": 4,
+            "tag": "aeroway=terminal",
+            "score": 0.9696574913941591,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:aeroway%3Dterminal"
+          },
+          {
+            "rank": 5,
+            "tag": "aeroway=aerodrome",
+            "score": 0.9438578633932913,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:aeroway%3Daerodrome"
+          },
+          {
+            "rank": 6,
+            "tag": "amenity=restaurant",
+            "score": 0.930170085668807,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Drestaurant"
+          },
+          {
+            "rank": 7,
+            "tag": "amenity=parking",
+            "score": 0.9118416110743477,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dparking"
+          },
+          {
+            "rank": 8,
+            "tag": "amenity=cinema",
+            "score": 0.8980182447310474,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dcinema"
+          },
+          {
+            "rank": 9,
+            "tag": "highway=traffic_signals",
+            "score": 0.8668028748242652,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:highway%3Dtraffic_signals"
+          },
+          {
+            "rank": 10,
+            "tag": "amenity=cafe",
+            "score": 0.8524835924933529,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dcafe"
+          }
+        ]
+      },
+      {
+        "id": "p3_railway_station",
+        "query": "Locate full passenger rail complexes serving trains in Västerås",
+        "expected_place": "Västerås",
+        "key": "railway",
+        "value": "station",
+        "category": "validation_challenge",
+        "difficulty": "hard",
+        "expected_tag": "railway=station",
+        "latency_ms": 16.29119999415707,
+        "reciprocal_rank": 1.0,
+        "top1_prediction": "railway=station",
+        "hits": [
+          {
+            "rank": 1,
+            "tag": "railway=station",
+            "score": 1.0,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:railway%3Dstation"
+          },
+          {
+            "rank": 2,
+            "tag": "railway=halt",
+            "score": 0.9945945945945946,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:railway%3Dhalt"
+          },
+          {
+            "rank": 3,
+            "tag": "aeroway=terminal",
+            "score": 0.9533627858627859,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:aeroway%3Dterminal"
+          },
+          {
+            "rank": 4,
+            "tag": "highway=bus_stop",
+            "score": 0.9484485446985447,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:highway%3Dbus_stop"
+          },
+          {
+            "rank": 5,
+            "tag": "aeroway=aerodrome",
+            "score": 0.943988143988144,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:aeroway%3Daerodrome"
+          },
+          {
+            "rank": 6,
+            "tag": "shop=supermarket",
+            "score": 0.9110179698414992,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:shop%3Dsupermarket"
+          },
+          {
+            "rank": 7,
+            "tag": "amenity=cafe",
+            "score": 0.8902904949521183,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dcafe"
+          },
+          {
+            "rank": 8,
+            "tag": "highway=traffic_signals",
+            "score": 0.8892156975739064,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:highway%3Dtraffic_signals"
+          },
+          {
+            "rank": 9,
+            "tag": "shop=convenience",
+            "score": 0.8888366627497062,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:shop%3Dconvenience"
+          },
+          {
+            "rank": 10,
+            "tag": "amenity=school",
+            "score": 0.8607247860269617,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dschool"
+          }
+        ]
+      },
+      {
+        "id": "p3_shop_convenience",
+        "query": "Find small corner retailers for daily essentials in Västerås",
+        "expected_place": "Västerås",
+        "key": "shop",
+        "value": "convenience",
+        "category": "validation_challenge",
+        "difficulty": "hard",
+        "expected_tag": "shop=convenience",
+        "latency_ms": 15.713200002210215,
+        "reciprocal_rank": 1.0,
+        "top1_prediction": "shop=convenience",
+        "hits": [
+          {
+            "rank": 1,
+            "tag": "shop=convenience",
+            "score": 1.0,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:shop%3Dconvenience"
+          },
+          {
+            "rank": 2,
+            "tag": "shop=supermarket",
+            "score": 0.9734596347499573,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:shop%3Dsupermarket"
+          },
+          {
+            "rank": 3,
+            "tag": "amenity=restaurant",
+            "score": 0.943349358974359,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Drestaurant"
+          },
+          {
+            "rank": 4,
+            "tag": "highway=bus_stop",
+            "score": 0.9306887532693985,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:highway%3Dbus_stop"
+          },
+          {
+            "rank": 5,
+            "tag": "leisure=park",
+            "score": 0.9150459822101614,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:leisure%3Dpark"
+          },
+          {
+            "rank": 6,
+            "tag": "amenity=cinema",
+            "score": 0.8883915885194658,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dcinema"
+          },
+          {
+            "rank": 7,
+            "tag": "railway=halt",
+            "score": 0.8872727272727273,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:railway%3Dhalt"
+          },
+          {
+            "rank": 8,
+            "tag": "amenity=library",
+            "score": 0.8776353276353276,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dlibrary"
+          },
+          {
+            "rank": 9,
+            "tag": "amenity=hospital",
+            "score": 0.8714285714285714,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dhospital"
+          },
+          {
+            "rank": 10,
+            "tag": "amenity=police",
+            "score": 0.8457048092868988,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dpolice"
+          }
+        ]
+      },
+      {
+        "id": "p3_shop_supermarket",
+        "query": "Show large grocery retailers with self-service aisles in Västerås",
+        "expected_place": "Västerås",
+        "key": "shop",
+        "value": "supermarket",
+        "category": "validation_challenge",
+        "difficulty": "hard",
+        "expected_tag": "shop=supermarket",
+        "latency_ms": 16.496200012625195,
+        "reciprocal_rank": 1.0,
+        "top1_prediction": "shop=supermarket",
+        "hits": [
+          {
+            "rank": 1,
+            "tag": "shop=supermarket",
+            "score": 1.0,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:shop%3Dsupermarket"
+          },
+          {
+            "rank": 2,
+            "tag": "amenity=parking",
+            "score": 0.9687344913151364,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dparking"
+          },
+          {
+            "rank": 3,
+            "tag": "amenity=cafe",
+            "score": 0.9632109788359788,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dcafe"
+          },
+          {
+            "rank": 4,
+            "tag": "shop=convenience",
+            "score": 0.944118605408928,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:shop%3Dconvenience"
+          },
+          {
+            "rank": 5,
+            "tag": "amenity=police",
+            "score": 0.9120260021668474,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dpolice"
+          },
+          {
+            "rank": 6,
+            "tag": "amenity=restaurant",
+            "score": 0.9037037037037036,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Drestaurant"
+          },
+          {
+            "rank": 7,
+            "tag": "amenity=cinema",
+            "score": 0.9029605263157895,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dcinema"
+          },
+          {
+            "rank": 8,
+            "tag": "amenity=library",
+            "score": 0.9015218027509512,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dlibrary"
+          },
+          {
+            "rank": 9,
+            "tag": "leisure=park",
+            "score": 0.8855039869147414,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:leisure%3Dpark"
+          },
+          {
+            "rank": 10,
+            "tag": "amenity=hospital",
+            "score": 0.8674559433898075,
+            "url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dhospital"
+          }
+        ]
+      }
+    ]
+  }
+}

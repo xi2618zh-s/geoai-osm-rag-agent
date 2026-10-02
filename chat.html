@@ -47,6 +47,13 @@
       border-radius: 4px;
       font-size: 14px;
     }
+    .topbar select {
+      padding: 8px 12px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      background: white;
+      font-size: 14px;
+    }
     #query {
       width: 350px;
     }
@@ -189,6 +196,11 @@
   </div>
 
   <div class="topbar">
+    <label>Mode:</label>
+    <select id="queryMode">
+      <option value="chat">Single-tag RAG + LLM</option>
+      <option value="workflow">Multi-tag OR workflow</option>
+    </select>
     <label>Query:</label>
     <input id="query" value="Find all cafes in Lund" placeholder="e.g., Find all bus stops in Malmö" />
     <button id="searchBtn" onclick="run()">🔍 Search</button>
@@ -202,6 +214,7 @@
     <span onclick="setQuery('Find bus stops in Uppsala')">bus stops in Uppsala</span>
     <span onclick="setQuery('hospitals in Stockholm')">hospitals in Stockholm</span>
     <span onclick="setQuery('supermarkets in Gothenburg')">supermarkets in Gothenburg</span>
+    <span onclick="setWorkflowQuery('Find cafes or restaurants in Lund')">cafes OR restaurants</span>
   </div>
 
   <div class="main-container">
@@ -219,6 +232,21 @@
   </div>
 
 <script>
+  function escapeHtml(value) {
+    return String(value ?? '').replace(/[&<>'"]/g, (char) => ({
+      '&': '&amp;', '<': '&lt;', '>': '&gt;', "'": '&#39;', '"': '&quot;'
+    })[char]);
+  }
+
+  function safeHttpUrl(value) {
+    try {
+      const parsed = new URL(String(value));
+      return ['http:', 'https:'].includes(parsed.protocol) ? parsed.href : '#';
+    } catch (_) {
+      return '#';
+    }
+  }
+
   // Initialize map centered on Sweden
   const map = L.map('map').setView([55.7047, 13.1910], 12);
   L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
@@ -229,6 +257,12 @@
   let geoLayer = null;
 
   function setQuery(q) {
+    document.getElementById('queryMode').value = 'chat';
+    document.getElementById('query').value = q;
+  }
+
+  function setWorkflowQuery(q) {
+    document.getElementById('queryMode').value = 'workflow';
     document.getElementById('query').value = q;
   }
 
@@ -244,7 +278,7 @@
       log.innerHTML = `
         <div class="result-section">
           <span class="status-badge status-error">Error</span>
-          <p>${data.message}</p>
+          <p>${escapeHtml(data.message)}</p>
         </div>
       `;
       return;
@@ -256,12 +290,26 @@
         <h3>🎯 Query Result</h3>
         <span class="status-badge status-success">Success</span>
         ${data.llm_ok ? '<span class="status-badge status-llm" style="margin-left:5px;">LLM Used</span>' : ''}
-        <p><strong>Place:</strong> ${data.place || 'N/A'}</p>
-        <p><strong>Tag:</strong> <code>${data.chosen_tag}</code></p>
+        ${data.workflow_id ? '<span class="status-badge status-llm" style="margin-left:5px;">Constrained Workflow</span>' : ''}
+        <p><strong>Place:</strong> ${escapeHtml(data.place || 'N/A')}</p>
+        <p><strong>Tag(s):</strong> <code>${escapeHtml(data.chosen_tag || (data.chosen_tags || []).join(', '))}</code></p>
+        ${data.operation ? `<p><strong>Operation:</strong> ${escapeHtml(data.operation)}</p>` : ''}
         <p><strong>Features found:</strong> ${data.count}</p>
+        ${data.counts_by_type ? `<p><strong>By type:</strong> nodes ${data.counts_by_type.node || 0}, ways ${data.counts_by_type.way || 0}, relations ${data.counts_by_type.relation || 0}</p>` : ''}
         ${data.llm_confidence ? `<p><strong>LLM Confidence:</strong> ${(data.llm_confidence * 100).toFixed(0)}%</p>` : ''}
+        ${data.recovery_count !== undefined ? `<p><strong>Recovered steps:</strong> ${data.recovery_count}</p>` : ''}
       </div>
     `;
+
+    if (data.step_records && data.step_records.length > 0) {
+      html += `<div class="result-section"><h3>🧭 Workflow Steps</h3>`;
+      for (const step of data.step_records) {
+        html += `<div class="evidence-item"><span class="tag">${escapeHtml(step.step_id)}</span> ` +
+          `${escapeHtml(step.tool)} — ${escapeHtml(step.status)} — ${Number(step.elapsed_ms || 0).toFixed(1)} ms` +
+          `${step.recovered ? ' — recovered after retry' : ''}</div>`;
+      }
+      html += `</div>`;
+    }
 
     // Evidence section
     if (data.evidence && data.evidence.length > 0) {
@@ -270,9 +318,9 @@
         html += `
           <div class="evidence-item">
             <span class="score">Score: ${e.score.toFixed(3)}</span>
-            <span class="tag">${e.key}=${e.value}</span>
-            <div class="url"><a href="${e.url}" target="_blank">${e.url}</a></div>
-            <div class="snippet">${e.snippet}</div>
+            <span class="tag">${escapeHtml(e.key)}=${escapeHtml(e.value)}</span>
+            <div class="url"><a href="${safeHttpUrl(e.url)}" target="_blank" rel="noopener noreferrer">${escapeHtml(e.url)}</a></div>
+            <div class="snippet">${escapeHtml(e.snippet)}</div>
           </div>
         `;
       }
@@ -304,14 +352,17 @@
         },
         onEachFeature: (feature, layer) => {
           const props = feature.properties;
-          let popup = `<strong>${props.name || 'Unnamed'}</strong><br>`;
-          popup += `OSM ID: ${props.osm_id}<br>`;
+          let popup = `<strong>${escapeHtml(props.name || 'Unnamed')}</strong><br>`;
+          popup += `OSM ID: ${escapeHtml(props.osm_id)}<br>`;
           if (props.tags) {
             for (const [k, v] of Object.entries(props.tags)) {
               if (k !== 'name') {
-                popup += `${k}: ${v}<br>`;
+                popup += `${escapeHtml(k)}: ${escapeHtml(v)}<br>`;
               }
             }
+          }
+          if (props.matched_filters) {
+            popup += `Matched: ${escapeHtml(props.matched_filters.join(', '))}<br>`;
           }
           layer.bindPopup(popup);
         }
@@ -337,10 +388,15 @@
     document.getElementById('log').innerHTML = '<p><span class="loading"></span> Processing query...</p>';
 
     try {
-      const resp = await fetch("/chat", {
+      const mode = document.getElementById('queryMode').value;
+      const endpoint = mode === 'workflow' ? '/workflow' : '/chat';
+      const body = mode === 'workflow'
+        ? { mode: 'natural_language', query }
+        : { query };
+      const resp = await fetch(endpoint, {
         method: "POST",
         headers: {"Content-Type": "application/json"},
-        body: JSON.stringify({ query })
+        body: JSON.stringify(body)
       });
 
       const data = await resp.json();
