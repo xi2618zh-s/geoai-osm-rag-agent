@@ -126,6 +126,9 @@ def main() -> int:
         with zipfile.ZipFile(zip_path, "w") as fixture:
             for name in FILES:
                 info = zipfile.ZipInfo(name, (1980, 1, 1, 0, 0, 0))
+                # Pin "version made by" to the value of the frozen fixture so the
+                # rebuild is byte-identical on every OS (zipfile uses 3 off Windows).
+                info.create_system = 0
                 info.compress_type = zipfile.ZIP_DEFLATED
                 info.external_attr = 0o644 << 16
                 fixture.writestr(info, table_payloads[name])

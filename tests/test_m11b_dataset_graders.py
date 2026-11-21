@@ -1,7 +1,9 @@
 from __future__ import annotations
 
 import json
+import math
 from pathlib import Path
+import sys
 import tempfile
 import unittest
 
@@ -11,15 +13,57 @@ from shapely.geometry import box, mapping, shape
 from src.evaluation.m11b import (
     M11bPrediction, M11bTask, load_m11b_tasks, score_m11b,
 )
-from scripts.build_m11b_dataset import build_dataset, audit_dataset
+from scripts.build_m11b_dataset import _json_bytes, _tasks_bytes, build_dataset, audit_dataset
 from scripts.build_m11b_trace_provenance import audit_traces
 
 ROOT = Path(__file__).resolve().parents[1]
 TASKS = ROOT / "benchmarks/data/dev/m11b_tasks_v1.jsonl"
 MANIFEST = ROOT / "benchmarks/data/dev/m11b_manifest_v1.json"
+TRACES = ROOT / "benchmarks/data/dev/m11b_tool_traces_v1.jsonl"
+
+# The frozen M11b release was built on Windows. GEOS buffer arithmetic can differ in
+# the last floating-point digit on other platforms, so byte identity of a rebuild is
+# required on the reference platform only; elsewhere the rebuild must match the
+# frozen release structurally, with floats equal within a relative 1e-9.
+REFERENCE_PLATFORM = sys.platform == "win32"
+# Fields that are hashes of geometry-bearing bytes and therefore cannot match when
+# a coordinate differs in its last digit.
+GEOMETRY_HASH_KEYS = frozenset({"tasks_sha256", "input_hashes", "output_hash"})
+
+
+def _numerically_equal(left, right, *, ignore=frozenset()):
+    if isinstance(left, bool) or isinstance(right, bool):
+        return left is right
+    if isinstance(left, float) or isinstance(right, float):
+        return (isinstance(left, (int, float)) and isinstance(right, (int, float))
+                and math.isclose(left, right, rel_tol=1e-9, abs_tol=1e-9))
+    if isinstance(left, dict) and isinstance(right, dict):
+        return (left.keys() == right.keys()
+                and all(key in ignore or _numerically_equal(left[key], right[key], ignore=ignore)
+                        for key in left))
+    if isinstance(left, list) and isinstance(right, list):
+        return len(left) == len(right) and all(
+            _numerically_equal(a, b, ignore=ignore) for a, b in zip(left, right))
+    return left == right
+
+
+def _json_records(data: bytes):
+    text = data.decode("utf-8")
+    return [json.loads(line) for line in text.splitlines() if line.strip()]
 
 
 class M11bDatasetTests(unittest.TestCase):
+    def assertRebuildMatches(self, rebuilt: bytes, frozen: bytes, label: str):
+        """Byte identity on the reference platform; numeric equality elsewhere."""
+        if rebuilt == frozen:
+            return
+        if REFERENCE_PLATFORM:
+            self.fail(f"{label}: byte-level rebuild differs on the reference platform")
+        self.assertTrue(
+            _numerically_equal(_json_records(rebuilt), _json_records(frozen), ignore=GEOMETRY_HASH_KEYS),
+            f"{label}: rebuild differs beyond floating-point tolerance",
+        )
+
     def test_release_has_160_unique_tasks_and_real_tool_provenance(self):
         tasks = load_m11b_tasks(TASKS)
         self.assertEqual(len(tasks), 160)
@@ -40,10 +84,15 @@ class M11bDatasetTests(unittest.TestCase):
         self.assertEqual(sum(t.capability == "supported" for t in tasks), 144)
         self.assertEqual(sum(t.capability == "clarification" for t in tasks), 8)
         self.assertEqual(sum(t.capability == "unsupported" for t in tasks), 8)
-        self.assertTrue(audit_dataset(TASKS, MANIFEST))
+        if REFERENCE_PLATFORM:
+            self.assertTrue(audit_dataset(TASKS, MANIFEST))
+        else:
+            task_bytes, manifest_bytes = _tasks_bytes()
+            self.assertRebuildMatches(task_bytes, TASKS.read_bytes(), "M11b tasks")
+            self.assertRebuildMatches(manifest_bytes, MANIFEST.read_bytes(), "M11b manifest")
 
     def test_real_m04_tool_trace_provenance_is_byte_reproducible(self):
-        trace_path = ROOT / "benchmarks/data/dev/m11b_tool_traces_v1.jsonl"
+        trace_path = TRACES
         rows = [json.loads(line) for line in trace_path.read_text("utf-8").splitlines()]
         tasks = load_m11b_tasks(TASKS)
         self.assertEqual(len(rows), 160)
@@ -54,13 +103,20 @@ class M11bDatasetTests(unittest.TestCase):
             for call in row["calls"]:
                 self.assertTrue(call["parameters_hash"].startswith("sha256:"))
                 self.assertTrue(call["output_hash"].startswith("sha256:"))
-        self.assertTrue(audit_traces())
+        if REFERENCE_PLATFORM:
+            self.assertTrue(audit_traces())
+        else:
+            rebuilt_rows = []
+            _tasks_bytes(rebuilt_rows)
+            rebuilt = b"".join(_json_bytes(row) for row in rebuilt_rows)
+            self.assertRebuildMatches(rebuilt, TRACES.read_bytes(), "M11b tool traces")
+
     def test_build_is_byte_reproducible_and_exclusive(self):
         with tempfile.TemporaryDirectory(prefix="m11b_build_") as temp:
             output = Path(temp)
             built_tasks, built_manifest = build_dataset(output)
-            self.assertEqual(built_tasks.read_bytes(), TASKS.read_bytes())
-            self.assertEqual(built_manifest.read_bytes(), MANIFEST.read_bytes())
+            self.assertRebuildMatches(built_tasks.read_bytes(), TASKS.read_bytes(), "M11b tasks")
+            self.assertRebuildMatches(built_manifest.read_bytes(), MANIFEST.read_bytes(), "M11b manifest")
             with self.assertRaises(FileExistsError):
                 build_dataset(output)
 

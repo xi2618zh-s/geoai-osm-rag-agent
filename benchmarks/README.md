@@ -155,7 +155,10 @@ output content hash and output row count. Its exclusive receipt is
 m11b_tool_traces_receipt_v1.json. The task/manifest files were not rewritten
 when this audit evidence was added. The M11b audit rebuilds all of them byte
 for byte and scans private query strings against public benchmarks, Agent
-source, knowledge assets and development fixtures.
+source, knowledge assets and development fixtures. Byte identity holds on the
+reference platform (Windows); on other platforms GEOS can differ in the last
+floating-point digit, so the offline tests there check the rebuild structurally
+with floats equal within a relative 1e-9.
 
 ## M11c v1 baseline comparison (offline, deterministic)
 
