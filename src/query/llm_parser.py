@@ -1,7 +1,7 @@
 # src/query/llm_parser.py
 """
-LLM 查询解析器
-将用户自然语言查询 + RAG 证据 -> 结构化 JSON (place + tag)
+LLM query parser
+Turns a natural-language user query + RAG evidence into structured JSON (place + tag)
 """
 from __future__ import annotations
 from typing import Dict, Any, List, Optional
@@ -9,7 +9,7 @@ from src.config import OLLAMA_MODEL
 from src.contracts import llm_decision_is_valid
 from src.llm.ollama_client import call_ollama_json
 
-# 关键 System Prompt - 这是让 LLM 正确输出的核心
+# Key system prompt: the core of getting correct LLM output
 SYSTEM_PROMPT = """You are a careful GIS assistant for OpenStreetMap.
 You MUST base decisions on the provided evidence (OSM Wiki snippets).
 Return ONLY valid JSON. No extra text, no markdown, no explanation outside JSON.
@@ -39,17 +39,17 @@ Examples:
 
 def format_evidence(chunks: List) -> str:
     """
-    将 RAG 检索到的 chunks 格式化为 LLM 可读的证据文本
+    Format the chunks retrieved by RAG as evidence text the LLM can read
     
     Args:
-        chunks: RetrievedChunk 列表
+        chunks: list of RetrievedChunk
     
     Returns:
-        格式化的证据字符串
+        Formatted evidence string
     """
     lines = []
     for i, c in enumerate(chunks, 1):
-        # 截取 snippet，避免太长
+        # Truncate the snippet to keep it short
         snippet = c.page_content[:600].replace("\n", " ").strip()
         lines.append(
             f"[Evidence {i}]\n"
@@ -68,18 +68,18 @@ def llm_parse_query(
     trace_id: str | None = None,
 ) -> Dict[str, Any]:
     """
-    使用 LLM 解析用户查询
+    Parse the user query with the LLM
     
     Args:
-        query: 用户的自然语言查询
-        chunks: RAG 检索到的证据 chunks
-        model: Ollama 模型名称
+        query: the user's natural-language query
+        chunks: evidence chunks retrieved by RAG
+        model: Ollama model name
     
     Returns:
         {
             "ok": bool,
             "data": {"place": str|None, "tag": {"key": str, "value": str}, ...},
-            "raw": str  # LLM 原始输出
+            "raw": str  # raw LLM output
         }
     """
     evidence = format_evidence(chunks)

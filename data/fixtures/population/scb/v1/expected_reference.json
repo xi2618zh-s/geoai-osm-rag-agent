@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "method": "fully_contained_grid_population",
+  "buffer_distance_m": 1500.0,
+  "quad_segs": 8,
+  "poi_id": "lund-reference",
+  "fully_contained_grid_ids": [
+    "SE_CRS3006RES1000mN6174000E385000",
+    "SE_CRS3006RES1000mN6174000E386000",
+    "SE_CRS3006RES1000mN6175000E385000",
+    "SE_CRS3006RES1000mN6175000E386000"
+  ],
+  "fully_contained_grid_count": 4,
+  "partially_intersecting_excluded_grid_count": 12,
+  "fully_contained_grid_population": 20412,
+  "warning": "fully_contained_grid_population_is_a_conservative_lower_bound_not_an_area_weighted_or_true_buffer_population_estimate"
+}

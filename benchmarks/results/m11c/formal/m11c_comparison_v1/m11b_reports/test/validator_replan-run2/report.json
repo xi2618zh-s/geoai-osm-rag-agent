@@ -1,0 +1,48 @@
+{
+  "metadata": {
+    "config_hash": "sha256:387bdbbf36e838266114c95853c9034356202ff97a5a4bf33005687cb7e15587",
+    "data_version": "m11b-private-test-v1",
+    "generated_at": "2026-10-06T21:05:24.517123+00:00",
+    "git_commit": "cb17d605bbb42eb755acea332b898d2939186574",
+    "model_id": null,
+    "official_release_verified": true,
+    "predictions_hash": "sha256:bec672c104e02a6c6e9ca4e320f94170d1795d0038085a74ddd60e4f4883e593",
+    "private_seed_recorded_in_ignored_manifest": true,
+    "prompt_version": null,
+    "random_seeds": null,
+    "reference_calibration": false,
+    "run_id": "validator_replan-run2",
+    "schema_version": "2.0",
+    "scorer_version": "m11b-v2.0",
+    "split": "test",
+    "system_id": "validator_replan",
+    "tasks_hash": "sha256:e0f9d97fc68f22f1c75e3e861b5d8b8370530ae4a634cae21d72a6f8aa2121fd",
+    "working_tree_dirty": true
+  },
+  "summary": {
+    "failure_category_counts": {
+      "crs_mismatch": 40,
+      "feature_set_mismatch": 39,
+      "field_mismatch": 40,
+      "geometry_mismatch": 40,
+      "numeric_tolerance_exceeded": 40,
+      "operation_mismatch": 40,
+      "required_step_mismatch": 40,
+      "status_mismatch": 40,
+      "tool_sequence_mismatch": 40
+    },
+    "latency_mean_ms": 26.14305,
+    "latency_p50_ms": 25.747500000000002,
+    "latency_p95_ms": 29.129099999999998,
+    "mean_llm_calls": 0.0,
+    "mean_tool_calls": 0.0,
+    "pass_rate": 0.0,
+    "passed_count": 0,
+    "score_mean": 0.0027777777777777775,
+    "score_p50": 0.0,
+    "score_p95": 0.0,
+    "score_stdev": 0.017347216662217772,
+    "task_count": 40,
+    "total_estimated_cost_usd": 0.0
+  }
+}

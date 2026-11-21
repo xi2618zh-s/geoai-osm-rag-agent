@@ -1,6 +1,6 @@
 # src/rag/retriever.py
 """
-RAG 检索器 - 使用 FAISS 进行语义搜索
+RAG retriever: semantic search with FAISS
 """
 from __future__ import annotations
 import json
@@ -16,13 +16,13 @@ from src.path_compat import read_faiss_index
 
 @dataclass
 class RetrievedChunk:
-    """检索到的文档块"""
-    score: float          # 相似度分数
-    page_content: str     # 文档内容
-    url: str              # 来源 URL
-    title: str            # 页面标题
-    key: str | None       # OSM tag key (如 "amenity")
-    value: str | None     # OSM tag value (如 "cafe")
+    """A retrieved document chunk"""
+    score: float          # similarity score
+    page_content: str     # document content
+    url: str              # source URL
+    title: str            # page title
+    key: str | None       # OSM tag key (e.g. "amenity")
+    value: str | None     # OSM tag value (e.g. "cafe")
     chunk_id: int | None = None
     dense_score: float | None = None
     lexical_score: float | None = None
@@ -32,8 +32,8 @@ class RetrievedChunk:
 
 class FaissRetriever:
     """
-    FAISS 向量检索器
-    从预建的索引中检索与查询最相似的文档块
+    FAISS vector retriever
+    Retrieves the document chunks most similar to a query from a prebuilt index
     """
     
     def __init__(
@@ -45,12 +45,12 @@ class FaissRetriever:
         local_files_only: bool = False,
     ):
         """
-        初始化检索器
+        Initialize the retriever
         
         Args:
-            model_name: Sentence Transformer 模型名称
-            index_path: FAISS 索引文件路径
-            meta_path: 元数据 JSON 文件路径
+            model_name: Sentence Transformer model name
+            index_path: path to the FAISS index file
+            meta_path: path to the metadata JSON file
         """
         print(f"[Retriever] Loading model: {model_name}")
         self.model = SentenceTransformer(
@@ -81,25 +81,25 @@ class FaissRetriever:
 
     def retrieve(self, query: str, k: int = 5) -> List[RetrievedChunk]:
         """
-        检索与查询最相似的 k 个文档块
+        Retrieve the k document chunks most similar to the query
         
         Args:
-            query: 用户查询文本
-            k: 返回的结果数量
+            query: user query text
+            k: number of results to return
         
         Returns:
-            RetrievedChunk 列表，按相似度降序排列
+            List of RetrievedChunk, sorted by descending similarity
         """
-        # 将查询编码为向量
+        # Encode the query as a vector
         query_vector = self.model.encode(
             query,
             normalize_embeddings=True
         ).astype(np.float32)[None, :]
         
-        # FAISS 搜索
+        # FAISS search
         distances, indices = self.index.search(query_vector, k)
         
-        # 构建结果
+        # Build the results
         results: List[RetrievedChunk] = []
         for rank, idx in enumerate(indices[0]):
             if idx < 0 or idx >= len(self.meta):
@@ -127,18 +127,18 @@ def pick_tag_from_chunks(
     chunks: List[RetrievedChunk], min_score: float = RAG_MIN_SCORE
 ) -> Tuple[str, str]:
     """
-    从检索结果中投票选择最可能的 OSM tag
+    Vote for the most likely OSM tag among the retrieved chunks
     
-    使用加权投票：相似度分数作为权重
+    Uses weighted voting with the similarity score as the weight
     
     Args:
-        chunks: 检索到的文档块列表
+        chunks: list of retrieved document chunks
     
     Returns:
-        (key, value) 元组
+        (key, value) tuple
     
     Raises:
-        ValueError: 如果没有找到有效的 tag
+        ValueError: if no valid tag is found
     """
     votes: Dict[Tuple[str, str], float] = {}
     
@@ -153,6 +153,6 @@ def pick_tag_from_chunks(
             f"the similarity threshold {min_score:.3f}."
         )
     
-    # 选择得分最高的 tag
+    # Pick the tag with the highest score
     best_tag = max(votes.items(), key=lambda x: x[1])[0]
     return best_tag[0], best_tag[1]

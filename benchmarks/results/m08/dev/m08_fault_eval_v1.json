@@ -1,0 +1,287 @@
+{
+  "case_count": 16,
+  "cases": [
+    {
+      "actions": [],
+      "case_id": "clean_search",
+      "error_code": null,
+      "fault": "none",
+      "finding_codes": [],
+      "first_pass_success": true,
+      "replan_count": 0,
+      "status": "success",
+      "tool_call_count": 3
+    },
+    {
+      "actions": [],
+      "case_id": "clean_filtered",
+      "error_code": null,
+      "fault": "none",
+      "finding_codes": [],
+      "first_pass_success": true,
+      "replan_count": 0,
+      "status": "success",
+      "tool_call_count": 3
+    },
+    {
+      "actions": [],
+      "case_id": "clean_distance",
+      "error_code": null,
+      "fault": "none",
+      "finding_codes": [],
+      "first_pass_success": true,
+      "replan_count": 0,
+      "status": "success",
+      "tool_call_count": 7
+    },
+    {
+      "actions": [],
+      "case_id": "clean_aggregate",
+      "error_code": null,
+      "fault": "none",
+      "finding_codes": [],
+      "first_pass_success": true,
+      "replan_count": 0,
+      "status": "success",
+      "tool_call_count": 4
+    },
+    {
+      "actions": [
+        {
+          "action": "retry_same_parameters",
+          "reason_code": "M08_TOOL_TIMEOUT",
+          "status": "succeeded"
+        }
+      ],
+      "case_id": "recover_timeout",
+      "error_code": null,
+      "fault": "transient_timeout",
+      "finding_codes": [
+        "M08_TOOL_TIMEOUT"
+      ],
+      "first_pass_success": false,
+      "replan_count": 0,
+      "status": "success",
+      "tool_call_count": 4
+    },
+    {
+      "actions": [
+        {
+          "action": "repair_crs",
+          "reason_code": "M08_CRS_MISMATCH",
+          "status": "succeeded"
+        }
+      ],
+      "case_id": "recover_crs",
+      "error_code": null,
+      "fault": "wrong_crs",
+      "finding_codes": [
+        "M08_CRS_MISMATCH"
+      ],
+      "first_pass_success": false,
+      "replan_count": 0,
+      "status": "success",
+      "tool_call_count": 4
+    },
+    {
+      "actions": [
+        {
+          "action": "repair_geometry",
+          "reason_code": "M08_GEOMETRY_INVALID",
+          "status": "succeeded"
+        }
+      ],
+      "case_id": "recover_geometry",
+      "error_code": null,
+      "fault": "invalid_geometry",
+      "finding_codes": [
+        "M08_GEOMETRY_INVALID"
+      ],
+      "first_pass_success": false,
+      "replan_count": 0,
+      "status": "success",
+      "tool_call_count": 5
+    },
+    {
+      "actions": [
+        {
+          "action": "alternate_source",
+          "reason_code": "M08_DATASET_UNAVAILABLE",
+          "status": "succeeded"
+        }
+      ],
+      "case_id": "recover_alternate",
+      "error_code": null,
+      "fault": "missing_primary_with_alternate",
+      "finding_codes": [
+        "M08_DATASET_UNAVAILABLE"
+      ],
+      "first_pass_success": false,
+      "replan_count": 0,
+      "status": "success",
+      "tool_call_count": 3
+    },
+    {
+      "actions": [],
+      "case_id": "guard_missing_output",
+      "error_code": "M08_OUTPUT_UNREADABLE",
+      "fault": "missing_output",
+      "finding_codes": [
+        "M08_OUTPUT_UNREADABLE"
+      ],
+      "first_pass_success": false,
+      "replan_count": 0,
+      "status": "partial",
+      "tool_call_count": 2
+    },
+    {
+      "actions": [],
+      "case_id": "guard_corrupt_output",
+      "error_code": "M08_OUTPUT_UNREADABLE",
+      "fault": "corrupt_output",
+      "finding_codes": [
+        "M08_OUTPUT_UNREADABLE"
+      ],
+      "first_pass_success": false,
+      "replan_count": 0,
+      "status": "partial",
+      "tool_call_count": 2
+    },
+    {
+      "actions": [],
+      "case_id": "guard_empty",
+      "error_code": "M08_EMPTY_UNEXPECTED",
+      "fault": "empty_result",
+      "finding_codes": [
+        "M08_EMPTY_UNEXPECTED"
+      ],
+      "first_pass_success": false,
+      "replan_count": 0,
+      "status": "partial",
+      "tool_call_count": 3
+    },
+    {
+      "actions": [],
+      "case_id": "guard_invalid_geometry",
+      "error_code": "M08_GEOMETRY_INVALID",
+      "fault": "invalid_geometry_no_repair",
+      "finding_codes": [
+        "M08_GEOMETRY_INVALID"
+      ],
+      "first_pass_success": false,
+      "replan_count": 0,
+      "status": "partial",
+      "tool_call_count": 1
+    },
+    {
+      "actions": [],
+      "case_id": "guard_excessive",
+      "error_code": "M08_LIMIT_EXCEEDED",
+      "fault": "feature_cap",
+      "finding_codes": [
+        "M08_LIMIT_EXCEEDED"
+      ],
+      "first_pass_success": false,
+      "replan_count": 0,
+      "status": "partial",
+      "tool_call_count": 1
+    },
+    {
+      "actions": [],
+      "case_id": "guard_tool_unavailable",
+      "error_code": "M08_TOOL_UNAVAILABLE",
+      "fault": "tool_unavailable",
+      "finding_codes": [
+        "M08_TOOL_UNAVAILABLE"
+      ],
+      "first_pass_success": false,
+      "replan_count": 0,
+      "status": "partial",
+      "tool_call_count": 2
+    },
+    {
+      "actions": [
+        {
+          "action": "replan_once",
+          "reason_code": "M08_TOOL_UNAVAILABLE",
+          "status": "failed"
+        }
+      ],
+      "case_id": "guard_replan",
+      "error_code": "M08_REPLAN_INVALID",
+      "fault": "invalid_replan",
+      "finding_codes": [
+        "M08_TOOL_UNAVAILABLE",
+        "M08_REPLAN_INVALID"
+      ],
+      "first_pass_success": false,
+      "replan_count": 1,
+      "status": "partial",
+      "tool_call_count": 2
+    },
+    {
+      "actions": [],
+      "case_id": "guard_false_conclusion",
+      "error_code": "M08_CONCLUSION_MISMATCH",
+      "fault": "false_conclusion",
+      "finding_codes": [
+        "M08_CONCLUSION_MISMATCH"
+      ],
+      "first_pass_success": false,
+      "replan_count": 0,
+      "status": "partial",
+      "tool_call_count": 3
+    }
+  ],
+  "cases_sha256": "fbd3b3cccea9ef2de5cedb1050c3ac23c5e0237317ae53d2463158f55f76b3eb",
+  "error_counts": {
+    "M08_CONCLUSION_MISMATCH": 1,
+    "M08_CRS_MISMATCH": 1,
+    "M08_DATASET_UNAVAILABLE": 1,
+    "M08_EMPTY_UNEXPECTED": 1,
+    "M08_GEOMETRY_INVALID": 2,
+    "M08_LIMIT_EXCEEDED": 1,
+    "M08_OUTPUT_UNREADABLE": 2,
+    "M08_REPLAN_INVALID": 1,
+    "M08_TOOL_TIMEOUT": 1,
+    "M08_TOOL_UNAVAILABLE": 1
+  },
+  "evaluation_id": "m08_fault_eval_v1",
+  "limitations": "Visible small fixtures and mocked faults; no real model, network, hidden set, full transport isochrone or production recovery evidence. M03 Phase 2 queries are catalog-informed.",
+  "metrics": {
+    "clean_first_pass": {
+      "passed": 4,
+      "rate": 1.0,
+      "total": 4
+    },
+    "error_classification": {
+      "passed": 12,
+      "rate": 1.0,
+      "total": 12
+    },
+    "first_pass_success": {
+      "passed": 4,
+      "rate": 0.25,
+      "total": 16
+    },
+    "guarded_rejection": {
+      "passed": 8,
+      "rate": 1.0,
+      "total": 8
+    },
+    "recovered_success": {
+      "passed": 4,
+      "rate": 1.0,
+      "total": 4
+    }
+  },
+  "passed": true,
+  "schema_version": "1.0",
+  "source": "public synthetic offline M04c fixtures with injected failures",
+  "thresholds": {
+    "clean_first_pass": "4/4",
+    "error_classification": ">=11/12",
+    "guarded_rejection": "8/8",
+    "recovered_success": ">=3/4"
+  }
+}

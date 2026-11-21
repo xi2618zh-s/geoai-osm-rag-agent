@@ -1,0 +1,113 @@
+{
+  "attribution": "© OpenStreetMap contributors",
+  "build_command": "python scripts/build_m12_lund_data.py build-osm --pbf data/osm/<local pbf> --precheck-report benchmarks/results/m12/precheck/m12_data_precheck_v2.json --output-dir data/fixtures/osm/m12_lund_poi_v1",
+  "categories": [
+    {
+      "category": "school",
+      "tag": "amenity=school"
+    },
+    {
+      "category": "supermarket",
+      "tag": "shop=supermarket"
+    },
+    {
+      "category": "pharmacy",
+      "tag": "amenity=pharmacy"
+    }
+  ],
+  "counts": {
+    "pharmacy": {
+      "by_method": {
+        "node": 24,
+        "relation_representative_point": 0,
+        "way_representative_point": 5
+      },
+      "expanded_bbox": 29,
+      "study_bbox": 24
+    },
+    "school": {
+      "by_method": {
+        "node": 9,
+        "relation_representative_point": 2,
+        "way_representative_point": 121
+      },
+      "expanded_bbox": 132,
+      "study_bbox": 111
+    },
+    "supermarket": {
+      "by_method": {
+        "node": 32,
+        "relation_representative_point": 0,
+        "way_representative_point": 34
+      },
+      "expanded_bbox": 66,
+      "study_bbox": 50
+    }
+  },
+  "crs": "EPSG:4326",
+  "expanded_bbox_3006": [
+    375000.0,
+    6163000.0,
+    401000.0,
+    6189000.0
+  ],
+  "extraction_stats": {
+    "candidates_total_sweden_file": 9504,
+    "skipped_geometry": 0,
+    "skipped_relation_type": 0,
+    "skipped_unlocated": 0,
+    "tagged_nodes": 4072,
+    "tagged_relations": 425,
+    "tagged_ways": 5007
+  },
+  "files": {
+    "README.md": {
+      "bytes": 667,
+      "sha256": "aabbcac9faed59b51ee5c2afb928c2ff98588f048e4cf80da8a12837e8ae6ba8"
+    },
+    "lund_poi_points_v1.geojson": {
+      "bytes": 68461,
+      "feature_count": 227,
+      "sha256": "65640faa539e5337ce4cc3ce87656b9cdcd9319116b6e6df36607d0ce80b6d2f"
+    }
+  },
+  "fixture_id": "osm-poi-lund-m12-v1",
+  "geometry_rule": "node location; way/relation shapely representative_point; coordinates rounded to 1e-7 deg",
+  "license": "ODbL-1.0",
+  "precheck": {
+    "report": "m12_data_precheck_v2.json",
+    "report_sha256": "eeebc52ba2e8b1d2233a676746861f34c376d76f0bb58ce553dc8d441692e23c"
+  },
+  "schema": "m12-osm-poi-fixture-manifest-v1",
+  "source_pbf": {
+    "bytes": 786131673,
+    "file_name": "sweden-251214.osm.pbf",
+    "header": {
+      "generator": "osmium/1.14.0",
+      "osmosis_replication_base_url": "https://download.geofabrik.de/europe/sweden-updates",
+      "osmosis_replication_sequence_number": "4635",
+      "osmosis_replication_timestamp": "2025-12-14T21:21:45Z",
+      "timestamp": "2025-12-14T21:21:45Z"
+    },
+    "header_bbox_wgs84": [
+      10.54138,
+      55.02652,
+      24.22472,
+      69.06643
+    ],
+    "provenance_note": "Local file supplied by the user without a download receipt; the provider and release date are unverified and are not inferred from the file name.",
+    "provider_verified": false,
+    "sha256": "da92cd12c8aee40e4c7d79154e736c09598715b36f7a843257145606893394c9"
+  },
+  "study_bbox_3006": [
+    378000.0,
+    6166000.0,
+    398000.0,
+    6186000.0
+  ],
+  "tool_versions": {
+    "osmium": "4.2.0",
+    "pyproj": "3.7.1",
+    "shapely": "2.1.2"
+  }
+}

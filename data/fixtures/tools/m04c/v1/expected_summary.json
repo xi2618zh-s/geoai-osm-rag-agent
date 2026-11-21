@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "chain": [
+    "reproject_dataset",
+    "buffer_features",
+    "spatial_join",
+    "aggregate_by_region"
+  ],
+  "parameters": {
+    "target_crs": "EPSG:3857",
+    "distance_m": 75.0,
+    "quad_segs": 8,
+    "join_predicate": "intersects",
+    "region_id_field": "region_id",
+    "values_region_id_field": "left_region_id"
+  },
+  "reprojected_coordinates": {
+    "facility-a": [0.0, 0.0],
+    "facility-b": [111.31949079327357, 0.0],
+    "facility-c": [1113.1949079327358, 0.0]
+  },
+  "coordinate_abs_tolerance": 0.000001,
+  "buffer_area": 17558.128981451544,
+  "buffer_area_abs_tolerance": 0.000001,
+  "join_pairs": [
+    ["region-west", "facility-a"],
+    ["region-west", "facility-b"],
+    ["region-east", "facility-c"]
+  ],
+  "final_geometry_hausdorff_tolerance": 0.000000001,
+  "final_area_abs_tolerance": 0.000001
+}

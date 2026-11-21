@@ -1,0 +1,166 @@
+{
+  "by_type": {
+    "aggregate_by_region/supported": {
+      "dynamic_agent_secondary": 6,
+      "dynamic_agent_strict": 0,
+      "fixed_workflow_secondary": 0,
+      "fixed_workflow_strict": 0,
+      "tasks": 6,
+      "validator_replan_secondary": 6,
+      "validator_replan_strict": 6
+    },
+    "nearest/supported": {
+      "dynamic_agent_secondary": 6,
+      "dynamic_agent_strict": 0,
+      "fixed_workflow_secondary": 0,
+      "fixed_workflow_strict": 0,
+      "tasks": 6,
+      "validator_replan_secondary": 6,
+      "validator_replan_strict": 6
+    },
+    "rank/unsupported": {
+      "dynamic_agent_secondary": 3,
+      "dynamic_agent_strict": 3,
+      "fixed_workflow_secondary": 3,
+      "fixed_workflow_strict": 3,
+      "tasks": 3,
+      "validator_replan_secondary": 3,
+      "validator_replan_strict": 3
+    },
+    "search/clarification": {
+      "dynamic_agent_secondary": 0,
+      "dynamic_agent_strict": 0,
+      "fixed_workflow_secondary": 0,
+      "fixed_workflow_strict": 0,
+      "tasks": 4,
+      "validator_replan_secondary": 0,
+      "validator_replan_strict": 0
+    },
+    "search/supported": {
+      "dynamic_agent_secondary": 6,
+      "dynamic_agent_strict": 0,
+      "fixed_workflow_secondary": 6,
+      "fixed_workflow_strict": 0,
+      "tasks": 6,
+      "validator_replan_secondary": 6,
+      "validator_replan_strict": 6
+    },
+    "spatial_join/supported": {
+      "dynamic_agent_secondary": 4,
+      "dynamic_agent_strict": 0,
+      "fixed_workflow_secondary": 0,
+      "fixed_workflow_strict": 0,
+      "tasks": 6,
+      "validator_replan_secondary": 4,
+      "validator_replan_strict": 4
+    },
+    "within/supported": {
+      "dynamic_agent_secondary": 6,
+      "dynamic_agent_strict": 0,
+      "fixed_workflow_secondary": 0,
+      "fixed_workflow_strict": 0,
+      "tasks": 6,
+      "validator_replan_secondary": 6,
+      "validator_replan_strict": 6
+    },
+    "within_distance/supported": {
+      "dynamic_agent_secondary": 0,
+      "dynamic_agent_strict": 0,
+      "fixed_workflow_secondary": 0,
+      "fixed_workflow_strict": 0,
+      "tasks": 3,
+      "validator_replan_secondary": 0,
+      "validator_replan_strict": 0
+    }
+  },
+  "frontend": {
+    "attempt_outcomes": {
+      "ok": 40
+    },
+    "attempts": 40,
+    "decision_operations": {
+      "aggregate_by_region": 7,
+      "buffer": 3,
+      "nearest": 6,
+      "rank": 3,
+      "search": 9,
+      "spatial_join": 4,
+      "within": 8
+    },
+    "decision_reasons": {
+      "unknown_dataset": 1,
+      "unsupported_buffer": 3,
+      "unsupported_rank": 3
+    },
+    "decision_status": {
+      "clarification": 1,
+      "request": 33,
+      "unsupported": 6
+    },
+    "eval_tokens": 1244,
+    "failures": 0,
+    "logical_calls": 40,
+    "model_load_ms": 4732.265,
+    "model_wall_ms": 249643.812,
+    "prompt_tokens": 55505,
+    "retries": 0,
+    "seed": 11071,
+    "timeouts": 0
+  },
+  "gate_counts": {
+    "counts": {
+      "logical_calls": 40,
+      "missing_place": 0,
+      "missing_place_tasks": 4,
+      "model_failures": 0,
+      "rank_tasks": 3,
+      "rank_unsupported": 3,
+      "tasks": 40,
+      "validator_strict": 31
+    },
+    "passed": false,
+    "seed": 11071,
+    "thresholds": {
+      "missing_place_min": 7,
+      "model_failures_max": 3,
+      "rank_unsupported_required": 8,
+      "validator_strict_min": 120
+    }
+  },
+  "generated_at": "2026-10-07T07:32:13.848693+00:00",
+  "input": "dev-derived paraphrase probe m11c_v2_dev_paraphrase_probe_v1.jsonl (diagnostic only, never the gate)",
+  "label": "M11c v2 prompt-development iteration on public dev; not a formal result",
+  "model": {
+    "attempt_timeout_s": 120.0,
+    "cpu_only": true,
+    "decoding_options": {
+      "num_ctx": 4096,
+      "num_predict": 256,
+      "num_thread": 4,
+      "seed": 1107,
+      "temperature": 0,
+      "use_mmap": true
+    },
+    "digest": "357c53fb659c5076de1d65ccb0b397446227b71a42be9d1603d46168015c9e4b",
+    "endpoint": "http://127.0.0.1:11434",
+    "keep_alive": "30m",
+    "max_attempts": 2,
+    "model_id": "qwen2.5:3b",
+    "ollama_version": "0.13.5",
+    "verified_service": {
+      "digest": "357c53fb659c5076de1d65ccb0b397446227b71a42be9d1603d46168015c9e4b",
+      "model_id": "qwen2.5:3b",
+      "ollama_version": "0.13.5"
+    }
+  },
+  "prompt": {
+    "label": "m11c_frontend_v2_prompt",
+    "sha256": "81728663f4091145a8e8132352a052409ef43eb8809fec893f08188222fa4d06"
+  },
+  "seed": 11071,
+  "strict_by_config": {
+    "dynamic_agent": 3,
+    "fixed_workflow": 3,
+    "validator_replan": 31
+  }
+}

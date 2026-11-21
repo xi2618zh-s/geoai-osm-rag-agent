@@ -1,0 +1,231 @@
+{
+  "case_count": 16,
+  "cases": [
+    {
+      "accepted": true,
+      "action": "change_distance",
+      "case_id": "distance_1",
+      "comparison_delta": null,
+      "executed_steps": [
+        "step_1",
+        "step_2"
+      ],
+      "reused_steps": [],
+      "version": 2
+    },
+    {
+      "accepted": true,
+      "action": "change_distance",
+      "case_id": "distance_2",
+      "comparison_delta": null,
+      "executed_steps": [
+        "step_1",
+        "step_2"
+      ],
+      "reused_steps": [],
+      "version": 2
+    },
+    {
+      "accepted": true,
+      "action": "change_distance",
+      "case_id": "distance_3",
+      "comparison_delta": null,
+      "executed_steps": [
+        "step_1",
+        "step_2"
+      ],
+      "reused_steps": [],
+      "version": 2
+    },
+    {
+      "accepted": true,
+      "action": "change_distance",
+      "case_id": "distance_4",
+      "comparison_delta": null,
+      "executed_steps": [
+        "step_1",
+        "step_2"
+      ],
+      "reused_steps": [],
+      "version": 2
+    },
+    {
+      "accepted": true,
+      "action": "add_exclusion",
+      "case_id": "exclude_1",
+      "comparison_delta": null,
+      "executed_steps": [
+        "step_3"
+      ],
+      "reused_steps": [
+        "step_1",
+        "step_2"
+      ],
+      "version": 2
+    },
+    {
+      "accepted": true,
+      "action": "add_exclusion",
+      "case_id": "exclude_2",
+      "comparison_delta": null,
+      "executed_steps": [
+        "step_3"
+      ],
+      "reused_steps": [
+        "step_1",
+        "step_2"
+      ],
+      "version": 2
+    },
+    {
+      "accepted": true,
+      "action": "add_exclusion",
+      "case_id": "exclude_3",
+      "comparison_delta": null,
+      "executed_steps": [
+        "step_3"
+      ],
+      "reused_steps": [
+        "step_1",
+        "step_2"
+      ],
+      "version": 2
+    },
+    {
+      "accepted": true,
+      "action": "add_exclusion",
+      "case_id": "exclude_4",
+      "comparison_delta": null,
+      "executed_steps": [
+        "step_3"
+      ],
+      "reused_steps": [
+        "step_1",
+        "step_2"
+      ],
+      "version": 2
+    },
+    {
+      "accepted": true,
+      "action": "switch_city",
+      "case_id": "city_1",
+      "comparison_delta": null,
+      "executed_steps": [
+        "step_1"
+      ],
+      "reused_steps": [],
+      "version": 2
+    },
+    {
+      "accepted": true,
+      "action": "switch_city",
+      "case_id": "city_2",
+      "comparison_delta": null,
+      "executed_steps": [
+        "step_1"
+      ],
+      "reused_steps": [],
+      "version": 2
+    },
+    {
+      "accepted": true,
+      "action": "switch_city",
+      "case_id": "city_3",
+      "comparison_delta": null,
+      "executed_steps": [
+        "step_1"
+      ],
+      "reused_steps": [],
+      "version": 2
+    },
+    {
+      "accepted": true,
+      "action": "switch_city",
+      "case_id": "city_4",
+      "comparison_delta": null,
+      "executed_steps": [
+        "step_1"
+      ],
+      "reused_steps": [],
+      "version": 2
+    },
+    {
+      "accepted": true,
+      "action": "compare",
+      "case_id": "compare_1",
+      "comparison_delta": -2,
+      "executed_steps": [
+        "step_1"
+      ],
+      "reused_steps": [],
+      "version": 2
+    },
+    {
+      "accepted": true,
+      "action": "compare",
+      "case_id": "compare_2",
+      "comparison_delta": -2,
+      "executed_steps": [
+        "step_1"
+      ],
+      "reused_steps": [],
+      "version": 2
+    },
+    {
+      "accepted": true,
+      "action": "compare",
+      "case_id": "compare_3",
+      "comparison_delta": -2,
+      "executed_steps": [
+        "step_1"
+      ],
+      "reused_steps": [],
+      "version": 2
+    },
+    {
+      "accepted": true,
+      "action": "compare",
+      "case_id": "compare_4",
+      "comparison_delta": -2,
+      "executed_steps": [
+        "step_1"
+      ],
+      "reused_steps": [],
+      "version": 2
+    }
+  ],
+  "cases_sha256": "86206699500bfe6b4e64778e2df6653f7f4f8b8653cd9dacb8e8114db8525f19",
+  "evaluation_id": "m09_turn_eval_v1",
+  "limitations": "Small visible project-authored fixtures and bounded English edits; no real model, network, production city coverage, hidden set or transit isochrone. M03 Phase 2 retrieval queries are catalog-informed.",
+  "metrics": {
+    "city_source_invalidation": {
+      "passed": 4,
+      "rate": 1.0,
+      "total": 4
+    },
+    "correct_state_update": {
+      "passed": 16,
+      "rate": 1.0,
+      "total": 16
+    },
+    "unchanged_upstream_reuse": {
+      "passed": 4,
+      "rate": 1.0,
+      "total": 4
+    },
+    "verified_count_comparison": {
+      "passed": 4,
+      "rate": 1.0,
+      "total": 4
+    }
+  },
+  "passed": true,
+  "schema_version": "1.0",
+  "source": "public synthetic offline DatasetRef sessions",
+  "thresholds": {
+    "city_source_invalidation": "4/4",
+    "correct_state_update": "16/16",
+    "unchanged_upstream_reuse": "4/4",
+    "verified_count_comparison": "4/4"
+  }
+}

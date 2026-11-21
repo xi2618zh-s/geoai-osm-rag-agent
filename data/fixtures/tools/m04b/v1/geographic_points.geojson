@@ -1,0 +1,16 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "id": "geo-1",
+      "properties": {
+        "name": "Lund"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [13.191, 55.7047]
+      }
+    }
+  ]
+}

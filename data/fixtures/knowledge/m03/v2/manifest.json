@@ -1,0 +1,24 @@
+{
+  "schema_version": "1.0",
+  "fixture_id": "m03-knowledge-contract-fixture-v2",
+  "source": "Project-authored artificial data",
+  "license": "CC0-1.0",
+  "purpose": "Strict schema, duplicate, alias, URL, empty-field, language, hard-negative, hashing and deterministic-build tests",
+  "files": [
+    {
+      "path": "valid_catalog.json",
+      "sha256": "53d88265040bbbb94116f652ef695b66f04e58fd4c3b3f0a13cf935253892dc6",
+      "size_bytes": 2978
+    },
+    {
+      "path": "raw_sources.jsonl",
+      "sha256": "e8acad79a66beac0864808470559f6d0f0a863fdbf4710908f6d99b6f183acd3",
+      "size_bytes": 1834
+    },
+    {
+      "path": "invalid_cases.json",
+      "sha256": "ad4c9e3cce7103f0b5b840bcd7d81465c987988ec058f4ceaaf38e744ee9a8fb",
+      "size_bytes": 2378
+    }
+  ]
+}

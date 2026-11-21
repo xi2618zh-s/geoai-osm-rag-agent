@@ -1,0 +1,165 @@
+{
+  "by_type": {
+    "aggregate_by_region/supported": {
+      "dynamic_agent_secondary": 24,
+      "dynamic_agent_strict": 0,
+      "fixed_workflow_secondary": 0,
+      "fixed_workflow_strict": 0,
+      "tasks": 24,
+      "validator_replan_secondary": 24,
+      "validator_replan_strict": 24
+    },
+    "nearest/supported": {
+      "dynamic_agent_secondary": 23,
+      "dynamic_agent_strict": 0,
+      "fixed_workflow_secondary": 0,
+      "fixed_workflow_strict": 0,
+      "tasks": 24,
+      "validator_replan_secondary": 23,
+      "validator_replan_strict": 23
+    },
+    "rank/unsupported": {
+      "dynamic_agent_secondary": 8,
+      "dynamic_agent_strict": 8,
+      "fixed_workflow_secondary": 8,
+      "fixed_workflow_strict": 8,
+      "tasks": 8,
+      "validator_replan_secondary": 8,
+      "validator_replan_strict": 8
+    },
+    "search/clarification": {
+      "dynamic_agent_secondary": 8,
+      "dynamic_agent_strict": 8,
+      "fixed_workflow_secondary": 0,
+      "fixed_workflow_strict": 0,
+      "tasks": 8,
+      "validator_replan_secondary": 8,
+      "validator_replan_strict": 8
+    },
+    "search/supported": {
+      "dynamic_agent_secondary": 24,
+      "dynamic_agent_strict": 0,
+      "fixed_workflow_secondary": 24,
+      "fixed_workflow_strict": 0,
+      "tasks": 24,
+      "validator_replan_secondary": 24,
+      "validator_replan_strict": 24
+    },
+    "spatial_join/supported": {
+      "dynamic_agent_secondary": 14,
+      "dynamic_agent_strict": 0,
+      "fixed_workflow_secondary": 0,
+      "fixed_workflow_strict": 0,
+      "tasks": 24,
+      "validator_replan_secondary": 14,
+      "validator_replan_strict": 14
+    },
+    "within/supported": {
+      "dynamic_agent_secondary": 24,
+      "dynamic_agent_strict": 0,
+      "fixed_workflow_secondary": 0,
+      "fixed_workflow_strict": 0,
+      "tasks": 24,
+      "validator_replan_secondary": 24,
+      "validator_replan_strict": 24
+    },
+    "within_distance/supported": {
+      "dynamic_agent_secondary": 0,
+      "dynamic_agent_strict": 0,
+      "fixed_workflow_secondary": 0,
+      "fixed_workflow_strict": 0,
+      "tasks": 24,
+      "validator_replan_secondary": 0,
+      "validator_replan_strict": 0
+    }
+  },
+  "frontend": {
+    "attempt_outcomes": {
+      "ok": 160
+    },
+    "attempts": 160,
+    "decision_operations": {
+      "aggregate_by_region": 24,
+      "buffer": 24,
+      "nearest": 24,
+      "rank": 8,
+      "search": 32,
+      "spatial_join": 18,
+      "within": 30
+    },
+    "decision_reasons": {
+      "missing_place": 8,
+      "unsupported_buffer": 24,
+      "unsupported_rank": 8
+    },
+    "decision_status": {
+      "clarification": 8,
+      "request": 120,
+      "unsupported": 32
+    },
+    "eval_tokens": 4712,
+    "failures": 0,
+    "logical_calls": 160,
+    "model_load_ms": 18183.906,
+    "model_wall_ms": 966326.468,
+    "prompt_tokens": 221957,
+    "retries": 0,
+    "seed": 11071,
+    "timeouts": 0
+  },
+  "gate_counts": {
+    "counts": {
+      "logical_calls": 160,
+      "missing_place": 8,
+      "missing_place_tasks": 8,
+      "model_failures": 0,
+      "rank_tasks": 8,
+      "rank_unsupported": 8,
+      "tasks": 160,
+      "validator_strict": 125
+    },
+    "passed": true,
+    "seed": 11071,
+    "thresholds": {
+      "missing_place_min": 7,
+      "model_failures_max": 3,
+      "rank_unsupported_required": 8,
+      "validator_strict_min": 120
+    }
+  },
+  "generated_at": "2026-10-07T07:27:09.284860+00:00",
+  "label": "M11c v2 prompt-development iteration on public dev; not a formal result",
+  "model": {
+    "attempt_timeout_s": 120.0,
+    "cpu_only": true,
+    "decoding_options": {
+      "num_ctx": 4096,
+      "num_predict": 256,
+      "num_thread": 4,
+      "seed": 1107,
+      "temperature": 0,
+      "use_mmap": true
+    },
+    "digest": "357c53fb659c5076de1d65ccb0b397446227b71a42be9d1603d46168015c9e4b",
+    "endpoint": "http://127.0.0.1:11434",
+    "keep_alive": "30m",
+    "max_attempts": 2,
+    "model_id": "qwen2.5:3b",
+    "ollama_version": "0.13.5",
+    "verified_service": {
+      "digest": "357c53fb659c5076de1d65ccb0b397446227b71a42be9d1603d46168015c9e4b",
+      "model_id": "qwen2.5:3b",
+      "ollama_version": "0.13.5"
+    }
+  },
+  "prompt": {
+    "label": "m11c_frontend_v2_prompt",
+    "sha256": "81728663f4091145a8e8132352a052409ef43eb8809fec893f08188222fa4d06"
+  },
+  "seed": 11071,
+  "strict_by_config": {
+    "dynamic_agent": 16,
+    "fixed_workflow": 8,
+    "validator_replan": 125
+  }
+}

@@ -1,0 +1,71 @@
+{
+  "schema_version": "2.0",
+  "catalog_version": "fixture.m03.v2",
+  "release_phase": "m03_phase1",
+  "candidate_manifest_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+  "license_id": "CC-BY-SA-2.0",
+  "license_url": "https://creativecommons.org/licenses/by-sa/2.0/",
+  "curation_notice": "Artificial fixture with Codex-assisted project curation.",
+  "entries": [
+    {
+      "schema_version": "2.0",
+      "entry_id": "osm-tag:amenity=cafe",
+      "canonical_tag": "amenity=cafe",
+      "key": "amenity",
+      "value": "cafe",
+      "primary_category": "food",
+      "related_categories": ["public_service"],
+      "name_en": "Cafe",
+      "name_zh": "咖啡馆",
+      "aliases_en": ["coffee shop", "sit-down cafe"],
+      "aliases_zh": ["咖啡店", "可堂食咖啡馆"],
+      "description_en": "An informal place serving coffee, refreshments, and light meals.",
+      "description_zh": "提供咖啡、饮品和简餐的非正式堂食场所。",
+      "element_types": ["node", "way"],
+      "geometry_types": ["point", "area"],
+      "status": "approved",
+      "compatible_tag_patterns": ["name=*", "cuisine=*"],
+      "related_tags": ["amenity=restaurant"],
+      "hard_negatives": [
+        {
+          "canonical_tag": "amenity=restaurant",
+          "reason_en": "A restaurant primarily serves full meals rather than cafe refreshments.",
+          "reason_zh": "餐厅以完整正餐为主，不等同于以咖啡和简餐为主的咖啡馆。",
+          "source_type": "wiki_hint"
+        }
+      ],
+      "source_refs": ["osm-wiki:amenity=cafe@100"],
+      "curation_method": "codex_assisted_project_review"
+    },
+    {
+      "schema_version": "2.0",
+      "entry_id": "osm-tag:amenity=restaurant",
+      "canonical_tag": "amenity=restaurant",
+      "key": "amenity",
+      "value": "restaurant",
+      "primary_category": "food",
+      "related_categories": [],
+      "name_en": "Restaurant",
+      "name_zh": "餐厅",
+      "aliases_en": ["full-service restaurant", "sit-down dining"],
+      "aliases_zh": ["正餐餐厅", "堂食餐厅"],
+      "description_en": "A place serving prepared full meals, usually for consumption on site.",
+      "description_zh": "提供完整正餐并通常供顾客现场用餐的场所。",
+      "element_types": ["node", "way"],
+      "geometry_types": ["point", "area"],
+      "status": "de_facto",
+      "compatible_tag_patterns": ["name=*", "cuisine=*"],
+      "related_tags": ["amenity=cafe"],
+      "hard_negatives": [
+        {
+          "canonical_tag": "amenity=cafe",
+          "reason_en": "A cafe focuses on drinks and light meals rather than full restaurant service.",
+          "reason_zh": "咖啡馆以饮品和简餐为主，不等同于提供完整正餐服务的餐厅。",
+          "source_type": "manual_semantic_review"
+        }
+      ],
+      "source_refs": ["osm-wiki:amenity=restaurant@200"],
+      "curation_method": "codex_assisted_project_review"
+    }
+  ]
+}

@@ -1,0 +1,442 @@
+{
+  "assumptions": [
+    "Counts refer to current, hash-verified DatasetRef rows."
+  ],
+  "chart": {
+    "metric_ids": [
+      "source_count",
+      "result_count"
+    ],
+    "title": "Input and result counts"
+  },
+  "crs": "EPSG:3857",
+  "downloads": [
+    {
+      "byte_count": 842,
+      "filename": "result.geojson",
+      "href": "data:application/json;base64,eyJmZWF0dXJlcyI6W3siZ2VvbWV0cnkiOnsiY29vcmRpbmF0ZXMiOlswLjAsMC4wXSwidHlwZSI6IlBvaW50In0sImlkIjoiam9pbi0wLTAiLCJwcm9wZXJ0aWVzIjp7ImxlZnRfZmVhdHVyZV9pZCI6ImZhY2lsaXR5LWEiLCJsZWZ0X25hbWUiOiJBbHBoYSIsImxlZnRfd2VpZ2h0IjoxMCwicmlnaHRfZmVhdHVyZV9pZCI6InJlZ2lvbi13ZXN0IiwicmlnaHRfbGFiZWwiOiJXZXN0IiwicmlnaHRfcmVnaW9uX2lkIjoid2VzdCJ9LCJ0eXBlIjoiRmVhdHVyZSJ9LHsiZ2VvbWV0cnkiOnsiY29vcmRpbmF0ZXMiOlsxMTEuMzE5NDkwNzkzMjczNTcsMC4wXSwidHlwZSI6IlBvaW50In0sImlkIjoiam9pbi0xLTAiLCJwcm9wZXJ0aWVzIjp7ImxlZnRfZmVhdHVyZV9pZCI6ImZhY2lsaXR5LWIiLCJsZWZ0X25hbWUiOiJCZXRhIiwibGVmdF93ZWlnaHQiOjIwLCJyaWdodF9mZWF0dXJlX2lkIjoicmVnaW9uLXdlc3QiLCJyaWdodF9sYWJlbCI6Ildlc3QiLCJyaWdodF9yZWdpb25faWQiOiJ3ZXN0In0sInR5cGUiOiJGZWF0dXJlIn0seyJnZW9tZXRyeSI6eyJjb29yZGluYXRlcyI6WzExMTMuMTk0OTA3OTMyNzM1OCwwLjBdLCJ0eXBlIjoiUG9pbnQifSwiaWQiOiJqb2luLTItMSIsInByb3BlcnRpZXMiOnsibGVmdF9mZWF0dXJlX2lkIjoiZmFjaWxpdHktYyIsImxlZnRfbmFtZSI6IkdhbW1hIiwibGVmdF93ZWlnaHQiOjMwLCJyaWdodF9mZWF0dXJlX2lkIjoicmVnaW9uLWVhc3QiLCJyaWdodF9sYWJlbCI6IkVhc3QiLCJyaWdodF9yZWdpb25faWQiOiJlYXN0In0sInR5cGUiOiJGZWF0dXJlIn1dLCJnZW9haV9jcnMiOiJFUFNHOjM4NTciLCJ0eXBlIjoiRmVhdHVyZUNvbGxlY3Rpb24ifQo=",
+      "mime_type": "application/json",
+      "sha256": "35d9298909631b32dda777a95f3b4f79db71a0d48c99823784d8b748ffa9358b"
+    },
+    {
+      "byte_count": 249,
+      "filename": "result.csv",
+      "href": "data:text/csv;base64,77u/ZmVhdHVyZV9pZCxsZWZ0X2ZlYXR1cmVfaWQsbGVmdF9uYW1lLGxlZnRfd2VpZ2h0LHJpZ2h0X2ZlYXR1cmVfaWQscmlnaHRfbGFiZWwscmlnaHRfcmVnaW9uX2lkCmpvaW4tMC0wLGZhY2lsaXR5LWEsQWxwaGEsMTAscmVnaW9uLXdlc3QsV2VzdCx3ZXN0CmpvaW4tMS0wLGZhY2lsaXR5LWIsQmV0YSwyMCxyZWdpb24td2VzdCxXZXN0LHdlc3QKam9pbi0yLTEsZmFjaWxpdHktYyxHYW1tYSwzMCxyZWdpb24tZWFzdCxFYXN0LGVhc3QK",
+      "mime_type": "text/csv",
+      "sha256": "5bbe6434b4189a5504726493dfb65c010a7bf59b76660bcd1a2280e66e18467d"
+    }
+  ],
+  "headline_template": "Verified {result_count} result features.",
+  "layers": [
+    {
+      "color": "#19a7a0",
+      "crs": "EPSG:3857",
+      "dataset_id": "ds_1615a6dfee9440d4981e0e165f3cb34d",
+      "feature_count": 3,
+      "geojson": {
+        "features": [
+          {
+            "geometry": {
+              "coordinates": [
+                0.0,
+                0.0
+              ],
+              "type": "Point"
+            },
+            "id": "facility-a",
+            "properties": {
+              "name": "Alpha",
+              "weight": 10
+            },
+            "type": "Feature"
+          },
+          {
+            "geometry": {
+              "coordinates": [
+                111.31949079327357,
+                0.0
+              ],
+              "type": "Point"
+            },
+            "id": "facility-b",
+            "properties": {
+              "name": "Beta",
+              "weight": 20
+            },
+            "type": "Feature"
+          },
+          {
+            "geometry": {
+              "coordinates": [
+                1113.1949079327358,
+                0.0
+              ],
+              "type": "Point"
+            },
+            "id": "facility-c",
+            "properties": {
+              "name": "Gamma",
+              "weight": 30
+            },
+            "type": "Feature"
+          }
+        ],
+        "geoai_crs": "EPSG:3857",
+        "type": "FeatureCollection"
+      },
+      "label": "sites",
+      "layer_id": "layer_1",
+      "popup_fields": [
+        "name",
+        "weight"
+      ],
+      "preview_count": 3
+    },
+    {
+      "color": "#f1ad4e",
+      "crs": "EPSG:3857",
+      "dataset_id": "ds_385cb31f53944b4bb8946529c734f23a",
+      "feature_count": 3,
+      "geojson": {
+        "features": [
+          {
+            "geometry": {
+              "coordinates": [
+                [
+                  [
+                    -200,
+                    -200
+                  ],
+                  [
+                    200,
+                    -200
+                  ],
+                  [
+                    200,
+                    200
+                  ],
+                  [
+                    -200,
+                    200
+                  ],
+                  [
+                    -200,
+                    -200
+                  ]
+                ]
+              ],
+              "type": "Polygon"
+            },
+            "id": "region-west",
+            "properties": {
+              "label": "West",
+              "region_id": "west"
+            },
+            "type": "Feature"
+          },
+          {
+            "geometry": {
+              "coordinates": [
+                [
+                  [
+                    900,
+                    -200
+                  ],
+                  [
+                    1300,
+                    -200
+                  ],
+                  [
+                    1300,
+                    200
+                  ],
+                  [
+                    900,
+                    200
+                  ],
+                  [
+                    900,
+                    -200
+                  ]
+                ]
+              ],
+              "type": "Polygon"
+            },
+            "id": "region-east",
+            "properties": {
+              "label": "East",
+              "region_id": "east"
+            },
+            "type": "Feature"
+          },
+          {
+            "geometry": {
+              "coordinates": [
+                [
+                  [
+                    2000,
+                    -200
+                  ],
+                  [
+                    2200,
+                    -200
+                  ],
+                  [
+                    2200,
+                    200
+                  ],
+                  [
+                    2000,
+                    200
+                  ],
+                  [
+                    2000,
+                    -200
+                  ]
+                ]
+              ],
+              "type": "Polygon"
+            },
+            "id": "region-empty",
+            "properties": {
+              "label": "Empty",
+              "region_id": "empty"
+            },
+            "type": "Feature"
+          }
+        ],
+        "geoai_crs": "EPSG:3857",
+        "type": "FeatureCollection"
+      },
+      "label": "schools",
+      "layer_id": "layer_2",
+      "popup_fields": [
+        "label",
+        "region_id"
+      ],
+      "preview_count": 3
+    },
+    {
+      "color": "#6f8fe8",
+      "crs": "EPSG:3857",
+      "dataset_id": "ds_8e7f384c5c1e4ceb944381c5ccb49516",
+      "feature_count": 3,
+      "geojson": {
+        "features": [
+          {
+            "geometry": {
+              "coordinates": [
+                0.0,
+                0.0
+              ],
+              "type": "Point"
+            },
+            "id": "join-0-0",
+            "properties": {
+              "left_feature_id": "facility-a",
+              "left_name": "Alpha",
+              "left_weight": 10,
+              "right_feature_id": "region-west",
+              "right_label": "West",
+              "right_region_id": "west"
+            },
+            "type": "Feature"
+          },
+          {
+            "geometry": {
+              "coordinates": [
+                111.31949079327357,
+                0.0
+              ],
+              "type": "Point"
+            },
+            "id": "join-1-0",
+            "properties": {
+              "left_feature_id": "facility-b",
+              "left_name": "Beta",
+              "left_weight": 20,
+              "right_feature_id": "region-west",
+              "right_label": "West",
+              "right_region_id": "west"
+            },
+            "type": "Feature"
+          },
+          {
+            "geometry": {
+              "coordinates": [
+                1113.1949079327358,
+                0.0
+              ],
+              "type": "Point"
+            },
+            "id": "join-2-1",
+            "properties": {
+              "left_feature_id": "facility-c",
+              "left_name": "Gamma",
+              "left_weight": 30,
+              "right_feature_id": "region-east",
+              "right_label": "East",
+              "right_region_id": "east"
+            },
+            "type": "Feature"
+          }
+        ],
+        "geoai_crs": "EPSG:3857",
+        "type": "FeatureCollection"
+      },
+      "label": "Verified result",
+      "layer_id": "layer_3",
+      "popup_fields": [
+        "left_feature_id",
+        "left_name",
+        "left_weight",
+        "right_feature_id"
+      ],
+      "preview_count": 3
+    }
+  ],
+  "limitations": [
+    "Source identity is declared by the data provider and is not independently authenticated.",
+    "Fixed geometric buffers are not travel-time or transit isochrones."
+  ],
+  "metrics": [
+    {
+      "evidence_field": "row_count",
+      "evidence_kind": "dataset_row_count",
+      "evidence_refs": [
+        "ds_8e7f384c5c1e4ceb944381c5ccb49516"
+      ],
+      "label": "Verified result",
+      "metric_id": "result_count",
+      "unit": "features",
+      "value": 3
+    },
+    {
+      "evidence_field": "row_count",
+      "evidence_kind": "dataset_row_count",
+      "evidence_refs": [
+        "ds_1615a6dfee9440d4981e0e165f3cb34d"
+      ],
+      "label": "Source features",
+      "metric_id": "source_count",
+      "unit": "features",
+      "value": 3
+    },
+    {
+      "evidence_field": "distance_m",
+      "evidence_kind": "plan_parameter",
+      "evidence_refs": [],
+      "label": "Fixed buffer distance",
+      "metric_id": "distance_m",
+      "unit": "m",
+      "value": 75
+    }
+  ],
+  "place": "Lund",
+  "report_templates": [
+    "The fixed geometric buffer is {distance_m} m.",
+    "The verified output contains {result_count} features."
+  ],
+  "schema_version": "1.0",
+  "sources": [
+    {
+      "content_hash": "sha256:78586e612ee48f211bd17041c1a97f888d7a46635c9de59971c39e0e1077e0f8",
+      "crs": "EPSG:3857",
+      "dataset_id": "ds_1615a6dfee9440d4981e0e165f3cb34d",
+      "row_count": 3,
+      "source": "analysis:reproject_dataset",
+      "source_version": "1.0"
+    },
+    {
+      "content_hash": "sha256:91a331dcc28cb8d17026d0b226c92fb31884b792f1588a7b6b88479b236ae0fa",
+      "crs": "EPSG:3857",
+      "dataset_id": "ds_385cb31f53944b4bb8946529c734f23a",
+      "row_count": 3,
+      "source": "fixture:m04c-regions",
+      "source_version": "m04c-v1"
+    },
+    {
+      "content_hash": "sha256:269afff74cf77834038e9acf312162e6a06d897312b1e366bf48222b7c5a2964",
+      "crs": "EPSG:3857",
+      "dataset_id": "ds_8e7f384c5c1e4ceb944381c5ccb49516",
+      "row_count": 3,
+      "source": "analysis:spatial_join",
+      "source_version": "1.0"
+    },
+    {
+      "content_hash": "sha256:6805f49874e8a26b6b345b56b8795d745df86c6bc1cc7beb92b1ce9ad175d3e3",
+      "crs": "EPSG:3857",
+      "dataset_id": "ds_ab4a8ecfdd314021b6824459b8c3992a",
+      "row_count": 3,
+      "source": "analysis:buffer_features",
+      "source_version": "1.0"
+    }
+  ],
+  "steps": [
+    {
+      "attempts": 1,
+      "input_ids": [
+        "ds_385cb31f53944b4bb8946529c734f23a"
+      ],
+      "output_id": "ds_ab4a8ecfdd314021b6824459b8c3992a",
+      "reused": false,
+      "step_id": "step_1",
+      "tool": "buffer_features"
+    },
+    {
+      "attempts": 1,
+      "input_ids": [
+        "ds_1615a6dfee9440d4981e0e165f3cb34d",
+        "ds_ab4a8ecfdd314021b6824459b8c3992a"
+      ],
+      "output_id": "ds_8e7f384c5c1e4ceb944381c5ccb49516",
+      "reused": false,
+      "step_id": "step_2",
+      "tool": "spatial_join"
+    }
+  ],
+  "table": {
+    "columns": [
+      "feature_id",
+      "left_feature_id",
+      "left_name",
+      "left_weight",
+      "right_feature_id",
+      "right_label",
+      "right_region_id"
+    ],
+    "rows": [
+      [
+        "join-0-0",
+        "facility-a",
+        "Alpha",
+        "10",
+        "region-west",
+        "West",
+        "west"
+      ],
+      [
+        "join-1-0",
+        "facility-b",
+        "Beta",
+        "20",
+        "region-west",
+        "West",
+        "west"
+      ],
+      [
+        "join-2-1",
+        "facility-c",
+        "Gamma",
+        "30",
+        "region-east",
+        "East",
+        "east"
+      ]
+    ],
+    "total_rows": 3
+  },
+  "template": "coverage",
+  "title": "Verified spatial analysis",
+  "warnings": []
+}

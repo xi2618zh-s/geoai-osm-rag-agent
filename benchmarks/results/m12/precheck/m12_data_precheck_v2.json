@@ -1,0 +1,276 @@
+{
+  "amendments": [
+    "SCB feature-count maximum 400 -> 484: the WFS 1.1.0 BBOX filter returns 1 km cells intersecting or touching the BBOX (up to 22x22 for a 20x20 km BBOX on whole-km lines); 400 was a geometric estimation error.",
+    "Property check is per feature: sp_geometry is the WFS geometry element and is checked as the top-level GeoJSON geometry; every other M05 property name must be a key of every feature, with values following the M05 rules (identifiers, rutstorl 1000, 2025 reference date, unique rutid_inspire, population values null/suppression token/non-negative integer).",
+    "Edge-cell rule: all returned cells are kept unclipped; population sums describe the returned cells and are never the exact population of the 20x20 km area."
+  ],
+  "gate": {
+    "gtfs_origin_departures_min": 10,
+    "gtfs_routes_min": 10,
+    "gtfs_study_trips_min": 200,
+    "gtfs_subset_uncompressed_bytes_max": 20000000,
+    "m12a_distances_m": [
+      800,
+      1000,
+      1500
+    ],
+    "m12a_nontrivial_distances_min": 2,
+    "osm_pharmacy_min": 5,
+    "osm_school_min": 10,
+    "osm_supermarket_min": 10,
+    "scb_ald5_9_nonnull_share_min": 0.5,
+    "scb_bytes_max": 5000000,
+    "scb_feature_count_max": 484,
+    "scb_feature_count_min": 100,
+    "scb_population_sum_min": 50000
+  },
+  "gate_source": "M12 plan v2.1 section 2.2 / ADR-0024 revision 2026-10-08 (user-approved)",
+  "gate_version": "v2",
+  "gtfs": {
+    "active_service_count": 868,
+    "active_trip_count": 130616,
+    "checks": {
+      "origin_departures": true,
+      "routes": true,
+      "sha256": true,
+      "study_trips": true,
+      "subset_size": true
+    },
+    "file_name": "source.zip",
+    "origin_regular_departures": 154,
+    "origin_stop_ids": [
+      "740000120"
+    ],
+    "origin_stop_name": "Lund Centralstation",
+    "origin_window": [
+      "07:30:00",
+      "08:30:00"
+    ],
+    "service_date": "2025-10-07",
+    "sha256": "12a4a7169d8423641da7f15125092423f6f9834f3b70725719b1ce147eb48f69",
+    "sha256_matches_frozen": true,
+    "stop_time_rows_total": 7899282,
+    "study_bbox_stop_count": 331,
+    "study_route_count": 601,
+    "study_trip_count": 3976,
+    "subset_stop_count": 646,
+    "subset_uncompressed_bytes_estimate": 4358931
+  },
+  "m12a_nontriviality": {
+    "checks": {
+      "nontrivial": true
+    },
+    "rows": [
+      {
+        "cell_count": 453,
+        "distance_m": 800,
+        "gap_cell_count": 260,
+        "nontrivial": true
+      },
+      {
+        "cell_count": 453,
+        "distance_m": 1000,
+        "gap_cell_count": 224,
+        "nontrivial": true
+      },
+      {
+        "cell_count": 453,
+        "distance_m": 1500,
+        "gap_cell_count": 155,
+        "nontrivial": true
+      }
+    ],
+    "school_count_expanded_bbox": 132
+  },
+  "osm": {
+    "bytes": 786131673,
+    "checks": {
+      "pharmacy": true,
+      "school": true,
+      "supermarket": true
+    },
+    "counts": {
+      "pharmacy": {
+        "by_method": {
+          "node": 24,
+          "relation_representative_point": 0,
+          "way_representative_point": 5
+        },
+        "expanded_bbox": 29,
+        "study_bbox": 24
+      },
+      "school": {
+        "by_method": {
+          "node": 9,
+          "relation_representative_point": 2,
+          "way_representative_point": 121
+        },
+        "expanded_bbox": 132,
+        "study_bbox": 111
+      },
+      "supermarket": {
+        "by_method": {
+          "node": 32,
+          "relation_representative_point": 0,
+          "way_representative_point": 34
+        },
+        "expanded_bbox": 66,
+        "study_bbox": 50
+      }
+    },
+    "expanded_bbox_3006": [
+      375000.0,
+      6163000.0,
+      401000.0,
+      6189000.0
+    ],
+    "extraction_stats": {
+      "candidates_total_sweden_file": 9504,
+      "skipped_geometry": 0,
+      "skipped_relation_type": 0,
+      "skipped_unlocated": 0,
+      "tagged_nodes": 4072,
+      "tagged_relations": 425,
+      "tagged_ways": 5007
+    },
+    "file_name": "sweden-251214.osm.pbf",
+    "header": {
+      "generator": "osmium/1.14.0",
+      "osmosis_replication_base_url": "https://download.geofabrik.de/europe/sweden-updates",
+      "osmosis_replication_sequence_number": "4635",
+      "osmosis_replication_timestamp": "2025-12-14T21:21:45Z",
+      "timestamp": "2025-12-14T21:21:45Z"
+    },
+    "header_bbox_wgs84": [
+      10.54138,
+      55.02652,
+      24.22472,
+      69.06643
+    ],
+    "provenance_note": "Local file supplied by the user without a download receipt; the provider and release date are unverified and are not inferred from the file name.",
+    "provider_verified": false,
+    "sha256": "da92cd12c8aee40e4c7d79154e736c09598715b36f7a843257145606893394c9",
+    "study_bbox_3006": [
+      378000.0,
+      6166000.0,
+      398000.0,
+      6186000.0
+    ]
+  },
+  "passed": true,
+  "poi_margin_m": 3000.0,
+  "scb": {
+    "ald5_9_reported_count": 453,
+    "ald5_9_reported_share": 1.0,
+    "bytes": 346923,
+    "checks": {
+      "ald5_9_reported_share": true,
+      "bytes": true,
+      "feature_count": true,
+      "population_sum": true,
+      "properties_per_feature": true
+    },
+    "data_bbox_3006": [
+      376999.99774432,
+      6165000.0020788,
+      399000.00103047,
+      6187000.00404202
+    ],
+    "edge_cell_rule": {
+      "cells_touching_or_crossing_edge": 135,
+      "cells_within_study_bbox": 318,
+      "population_edge_cells": 30084,
+      "population_statement": "Reported population summed over the 453 returned SCB cells (cells intersecting or touching the study BBOX, unclipped); this is not the exact population of the 20x20 km area.",
+      "population_within_study_bbox_cells": 174956,
+      "rule": "All 1 km cells returned by the SCB WFS 1.1.0 BBOX filter are kept unclipped; this includes cells intersecting or touching the study BBOX boundary."
+    },
+    "feature_count": 453,
+    "file_name": "scb_befolkning_1km_2025_378000_6166000_398000_6186000.geojson",
+    "population_total_not_reported_count": 0,
+    "population_total_reported_sum": 205040,
+    "property_audit": {
+      "feature_count": 453,
+      "geometry_element": "sp_geometry",
+      "geometry_invalid_count": 0,
+      "geometry_rule": "top-level GeoJSON geometry is a valid non-empty Polygon/MultiPolygon",
+      "missing_key_counts": {},
+      "passed": true,
+      "population_null_or_token_counts": {
+        "ald0_4": 0,
+        "ald100w": 0,
+        "ald10_14": 0,
+        "ald15_19": 0,
+        "ald20_24": 0,
+        "ald25_29": 0,
+        "ald30_34": 0,
+        "ald35_39": 0,
+        "ald40_44": 0,
+        "ald45_49": 0,
+        "ald50_54": 0,
+        "ald55_59": 0,
+        "ald5_9": 0,
+        "ald60_64": 0,
+        "ald65_69": 0,
+        "ald70_74": 0,
+        "ald75_79": 0,
+        "ald80_84": 0,
+        "ald85_89": 0,
+        "ald90_94": 0,
+        "ald95_99": 0,
+        "beftotalt": 0,
+        "kvinna": 0,
+        "man": 0
+      },
+      "required_property_keys": [
+        "objectid",
+        "rutid_inspire",
+        "rutid_scb",
+        "rutstorl",
+        "beftotalt",
+        "man",
+        "kvinna",
+        "ald0_4",
+        "ald5_9",
+        "ald10_14",
+        "ald15_19",
+        "ald20_24",
+        "ald25_29",
+        "ald30_34",
+        "ald35_39",
+        "ald40_44",
+        "ald45_49",
+        "ald50_54",
+        "ald55_59",
+        "ald60_64",
+        "ald65_69",
+        "ald70_74",
+        "ald75_79",
+        "ald80_84",
+        "ald85_89",
+        "ald90_94",
+        "ald95_99",
+        "ald100w",
+        "referenstid"
+      ],
+      "rule_violation_counts": {}
+    },
+    "sha256": "2acc387c186a97e3a3e5481fad388f15882ed5c3d9510bd53b5befebae807998"
+  },
+  "schema": "m12-data-precheck-v2",
+  "study_bbox_3006": [
+    378000.0,
+    6166000.0,
+    398000.0,
+    6186000.0
+  ],
+  "supersedes": {
+    "file_name": "m12_data_precheck_v1.json",
+    "passed": false,
+    "sha256": "be57fba9a82ab9b219bd03ba59d12907fc1fa950c1fc73a099f063fc05db532f"
+  },
+  "tool_versions": {
+    "osmium": "4.2.0",
+    "pyproj": "3.7.1",
+    "shapely": "2.1.2"
+  }
+}

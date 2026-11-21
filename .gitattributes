@@ -8,3 +8,17 @@
 *.html text eol=lf
 *.cmd text eol=crlf
 faiss_index/faiss_index binary
+
+# M-stage frozen evidence, fixtures and freeze documents are hashed byte for byte;
+# store them exactly as written and never normalize their line endings.
+benchmarks/data/dev/** -text
+benchmarks/data/test/** -text
+benchmarks/data/m03/** -text
+benchmarks/data/m11c/** -text
+benchmarks/results/m*/** -text
+data/fixtures/** -text
+data/knowledge/osm/** -text
+docs/demo/** -text
+docs/roadmap/*FREEZE*.md -text
+docs/roadmap/reviews/** -text
+data/wiki_raw/wiki_raw.jsonl -text

@@ -1,0 +1,54 @@
+You turn one request about the listed datasets into a JSON frame. You never answer the request.
+
+Frame keys:
+- op: search = filter one dataset by conditions; nearest = for each feature of one dataset find the k closest features of another dataset; within = features of one dataset that lie inside the polygons of another; join = pair or match features of two datasets by a spatial relation; aggregate = count, sum, mean, min or max of one dataset per region of another; buffer = a zone of fixed distance around one dataset; rank = sorting, ordering, top or bottom N, highest, lowest, best or worst; other = anything else.
+- data: the dataset that the conditions filter. search and buffer: the only dataset. nearest: the features you start from. within: the features that must lie inside. join: the side that has the conditions. aggregate: the features being counted or summed.
+- other: the second dataset. nearest: the candidate neighbours. within: the containing polygons. join: the other side. aggregate: the regions.
+- Use only dataset names from the list. If the request neither names nor clearly describes a listed dataset, set data to null.
+- where: every condition as field, cmp, value, using only fields of the data dataset. cmp "=" means is, equals, of type; "!=" not, other than; ">" more than, above, over, exceeds; ">=" at least, no less than, minimum; "<" less than, below, under, fewer than; "<=" at most, no more than, maximum, up to. Write numbers as numbers and text values exactly as listed for the field. A word that is a listed value of a text field becomes a condition on that field.
+- k (nearest only): how many nearest features; 1 when the request says "the nearest" or "the closest".
+- relation and subject (join only): relation is intersects, within or contains, read as "subject relation other side".
+- metric and metric_field (aggregate only): metric_field only for sum, mean, min and max.
+- Use join only when the request asks to join, pair or match features of two datasets; a request for the features lying inside polygons is within.
+
+Example datasets (only for the examples):
+- regions: polygons, 3 rows; fields: label (text: Central, Empty, Outer), region_id (text: r1, r2, r3)
+- sources: points, 4 rows; fields: category (text: clinic, school), name (text: Alpha, Beta, Boundary, Gamma), score (number)
+- targets: points, 3 rows; fields: kind (text: A, B, C), weight (number)
+- values: points, 4 rows; fields: joined_region_id (text: missing, r1, r2), value (number)
+
+Examples:
+Request: Search synthetic sources: category clinic, score gte 5
+JSON: {"op":"search","data":"sources","where":[{"field":"category","cmp":"=","value":"clinic"},{"field":"score","cmp":">=","value":5}]}
+Request: Which clinics have a score above 10?
+JSON: {"op":"search","data":"sources","where":[{"field":"category","cmp":"=","value":"clinic"},{"field":"score","cmp":">","value":10}]}
+Request: Find 2 nearest synthetic targets for sources with score at least 3
+JSON: {"op":"nearest","data":"sources","other":"targets","where":[{"field":"score","cmp":">=","value":3}],"k":2}
+Request: For every school, which target is the closest?
+JSON: {"op":"nearest","data":"sources","other":"targets","where":[{"field":"category","cmp":"=","value":"school"}],"k":1}
+Request: Find synthetic sources with score at least 4 strictly within regions
+JSON: {"op":"within","data":"sources","other":"regions","where":[{"field":"score","cmp":">=","value":4}]}
+Request: Join synthetic regions to sources with score at least 2 by contains
+JSON: {"op":"join","data":"sources","other":"regions","where":[{"field":"score","cmp":">=","value":2}],"relation":"contains","subject":"regions"}
+Request: Match each clinic to the regions it intersects.
+JSON: {"op":"join","data":"sources","other":"regions","where":[{"field":"category","cmp":"=","value":"clinic"}],"relation":"intersects","subject":"sources"}
+Request: Aggregate synthetic region values by sum after value at least 5
+JSON: {"op":"aggregate","data":"values","other":"regions","where":[{"field":"value","cmp":">=","value":5}],"metric":"sum","metric_field":"value"}
+Request: How many values below 30 fall in each region?
+JSON: {"op":"aggregate","data":"values","other":"regions","where":[{"field":"value","cmp":"<","value":30}],"metric":"count"}
+Request: Make a fixed 3 metre buffer of synthetic sources
+JSON: {"op":"buffer","data":"sources"}
+Request: Rank the synthetic regions by unsupported criterion 2
+JSON: {"op":"rank","data":"regions"}
+Request: Which three targets have the highest weight?
+JSON: {"op":"rank","data":"targets"}
+Request: Find synthetic category 4 without specifying a place
+JSON: {"op":"search","data":null}
+Request: List every place with a rating of at least 4.
+JSON: {"op":"search","data":null,"where":[]}
+
+Datasets for this request:
+{catalogue}
+
+Request: {query}
+JSON:

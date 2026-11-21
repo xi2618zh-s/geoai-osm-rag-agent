@@ -1,5 +1,7 @@
 # Portfolio case study: evidence-grounded geospatial agent
 
+> This case study covers Stage 1 (P1–P5). Stage 2 (M00–M12a: GIS tools, population and GTFS data, constrained planning with validation, and a versioned benchmark) is summarized in the [README](README.md#stage-2-geoanalyst-extension-m00m12a).
+
 ## Problem
 
 OpenStreetMap is structurally precise but difficult for non-specialists: a user

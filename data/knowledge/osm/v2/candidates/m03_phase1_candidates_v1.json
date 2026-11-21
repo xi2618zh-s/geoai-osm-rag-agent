@@ -1,0 +1,922 @@
+{
+  "schema_version": "1.0",
+  "candidate_set_id": "m03-phase1-candidates-v1",
+  "frozen_at": "2026-10-05T00:00:00Z",
+  "source_policy": "Official OSM Wiki Tag pages only; no Taginfo, Wikidata, or third-party fallback.",
+  "selection_method": "One frozen primary category per tag; retain all 21 v1 tags and add 79 reviewed candidates.",
+  "expected_unique_tags": 100,
+  "retained_v1_tags": 21,
+  "new_candidate_tags": 79,
+  "category_quotas": {
+    "food": 14,
+    "retail": 16,
+    "healthcare": 12,
+    "education": 10,
+    "transport": 18,
+    "public_service": 12,
+    "leisure": 10,
+    "building": 8
+  },
+  "candidates": [
+    {
+      "canonical_tag": "aeroway=aerodrome",
+      "primary_category": "transport",
+      "page_title": "Tag:aeroway=aerodrome",
+      "request_url": "https://wiki.openstreetmap.org/wiki/Tag:aeroway%3Daerodrome",
+      "retained_from_v1": true,
+      "compatibility_only": false,
+      "review_state": "manually_reviewed_candidate"
+    },
+    {
+      "canonical_tag": "aeroway=airport",
+      "primary_category": "transport",
+      "page_title": "Tag:aeroway=airport",
+      "request_url": "https://wiki.openstreetmap.org/wiki/Tag:aeroway%3Dairport",
+      "retained_from_v1": true,
+      "compatibility_only": true,
+      "review_state": "manually_reviewed_candidate"
+    },
+    {
+      "canonical_tag": "aeroway=terminal",
+      "primary_category": "transport",
+      "page_title": "Tag:aeroway=terminal",
+      "request_url": "https://wiki.openstreetmap.org/wiki/Tag:aeroway%3Dterminal",
+      "retained_from_v1": true,
+      "compatibility_only": false,
+      "review_state": "manually_reviewed_candidate"
+    },
+    {
+      "canonical_tag": "amenity=bar",
+      "primary_category": "food",
+      "page_title": "Tag:amenity=bar",
+      "request_url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dbar",
+      "retained_from_v1": false,
+      "compatibility_only": false,
+      "review_state": "manually_reviewed_candidate"
+    },
+    {
+      "canonical_tag": "amenity=bicycle_parking",
+      "primary_category": "transport",
+      "page_title": "Tag:amenity=bicycle_parking",
+      "request_url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dbicycle_parking",
+      "retained_from_v1": false,
+      "compatibility_only": false,
+      "review_state": "manually_reviewed_candidate"
+    },
+    {
+      "canonical_tag": "amenity=bicycle_rental",
+      "primary_category": "transport",
+      "page_title": "Tag:amenity=bicycle_rental",
+      "request_url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dbicycle_rental",
+      "retained_from_v1": false,
+      "compatibility_only": false,
+      "review_state": "manually_reviewed_candidate"
+    },
+    {
+      "canonical_tag": "amenity=biergarten",
+      "primary_category": "food",
+      "page_title": "Tag:amenity=biergarten",
+      "request_url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dbiergarten",
+      "retained_from_v1": false,
+      "compatibility_only": false,
+      "review_state": "manually_reviewed_candidate"
+    },
+    {
+      "canonical_tag": "amenity=cafe",
+      "primary_category": "food",
+      "page_title": "Tag:amenity=cafe",
+      "request_url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dcafe",
+      "retained_from_v1": true,
+      "compatibility_only": false,
+      "review_state": "manually_reviewed_candidate"
+    },
+    {
+      "canonical_tag": "amenity=charging_station",
+      "primary_category": "transport",
+      "page_title": "Tag:amenity=charging_station",
+      "request_url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dcharging_station",
+      "retained_from_v1": false,
+      "compatibility_only": false,
+      "review_state": "manually_reviewed_candidate"
+    },
+    {
+      "canonical_tag": "amenity=cinema",
+      "primary_category": "leisure",
+      "page_title": "Tag:amenity=cinema",
+      "request_url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dcinema",
+      "retained_from_v1": true,
+      "compatibility_only": false,
+      "review_state": "manually_reviewed_candidate"
+    },
+    {
+      "canonical_tag": "amenity=clinic",
+      "primary_category": "healthcare",
+      "page_title": "Tag:amenity=clinic",
+      "request_url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dclinic",
+      "retained_from_v1": false,
+      "compatibility_only": false,
+      "review_state": "manually_reviewed_candidate"
+    },
+    {
+      "canonical_tag": "amenity=college",
+      "primary_category": "education",
+      "page_title": "Tag:amenity=college",
+      "request_url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dcollege",
+      "retained_from_v1": false,
+      "compatibility_only": false,
+      "review_state": "manually_reviewed_candidate"
+    },
+    {
+      "canonical_tag": "amenity=community_centre",
+      "primary_category": "public_service",
+      "page_title": "Tag:amenity=community_centre",
+      "request_url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dcommunity_centre",
+      "retained_from_v1": false,
+      "compatibility_only": false,
+      "review_state": "manually_reviewed_candidate"
+    },
+    {
+      "canonical_tag": "amenity=courthouse",
+      "primary_category": "public_service",
+      "page_title": "Tag:amenity=courthouse",
+      "request_url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dcourthouse",
+      "retained_from_v1": false,
+      "compatibility_only": false,
+      "review_state": "manually_reviewed_candidate"
+    },
+    {
+      "canonical_tag": "amenity=dentist",
+      "primary_category": "healthcare",
+      "page_title": "Tag:amenity=dentist",
+      "request_url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Ddentist",
+      "retained_from_v1": false,
+      "compatibility_only": false,
+      "review_state": "manually_reviewed_candidate"
+    },
+    {
+      "canonical_tag": "amenity=doctors",
+      "primary_category": "healthcare",
+      "page_title": "Tag:amenity=doctors",
+      "request_url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Ddoctors",
+      "retained_from_v1": false,
+      "compatibility_only": false,
+      "review_state": "manually_reviewed_candidate"
+    },
+    {
+      "canonical_tag": "amenity=drinking_water",
+      "primary_category": "public_service",
+      "page_title": "Tag:amenity=drinking_water",
+      "request_url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Ddrinking_water",
+      "retained_from_v1": false,
+      "compatibility_only": false,
+      "review_state": "manually_reviewed_candidate"
+    },
+    {
+      "canonical_tag": "amenity=driving_school",
+      "primary_category": "education",
+      "page_title": "Tag:amenity=driving_school",
+      "request_url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Ddriving_school",
+      "retained_from_v1": false,
+      "compatibility_only": false,
+      "review_state": "manually_reviewed_candidate"
+    },
+    {
+      "canonical_tag": "amenity=fast_food",
+      "primary_category": "food",
+      "page_title": "Tag:amenity=fast_food",
+      "request_url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dfast_food",
+      "retained_from_v1": false,
+      "compatibility_only": false,
+      "review_state": "manually_reviewed_candidate"
+    },
+    {
+      "canonical_tag": "amenity=fire_station",
+      "primary_category": "public_service",
+      "page_title": "Tag:amenity=fire_station",
+      "request_url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dfire_station",
+      "retained_from_v1": false,
+      "compatibility_only": false,
+      "review_state": "manually_reviewed_candidate"
+    },
+    {
+      "canonical_tag": "amenity=food_court",
+      "primary_category": "food",
+      "page_title": "Tag:amenity=food_court",
+      "request_url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dfood_court",
+      "retained_from_v1": false,
+      "compatibility_only": false,
+      "review_state": "manually_reviewed_candidate"
+    },
+    {
+      "canonical_tag": "amenity=fuel",
+      "primary_category": "transport",
+      "page_title": "Tag:amenity=fuel",
+      "request_url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dfuel",
+      "retained_from_v1": false,
+      "compatibility_only": false,
+      "review_state": "manually_reviewed_candidate"
+    },
+    {
+      "canonical_tag": "amenity=hospital",
+      "primary_category": "healthcare",
+      "page_title": "Tag:amenity=hospital",
+      "request_url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dhospital",
+      "retained_from_v1": true,
+      "compatibility_only": false,
+      "review_state": "manually_reviewed_candidate"
+    },
+    {
+      "canonical_tag": "amenity=ice_cream",
+      "primary_category": "food",
+      "page_title": "Tag:amenity=ice_cream",
+      "request_url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dice_cream",
+      "retained_from_v1": false,
+      "compatibility_only": false,
+      "review_state": "manually_reviewed_candidate"
+    },
+    {
+      "canonical_tag": "amenity=kindergarten",
+      "primary_category": "education",
+      "page_title": "Tag:amenity=kindergarten",
+      "request_url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dkindergarten",
+      "retained_from_v1": false,
+      "compatibility_only": false,
+      "review_state": "manually_reviewed_candidate"
+    },
+    {
+      "canonical_tag": "amenity=language_school",
+      "primary_category": "education",
+      "page_title": "Tag:amenity=language_school",
+      "request_url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dlanguage_school",
+      "retained_from_v1": false,
+      "compatibility_only": false,
+      "review_state": "manually_reviewed_candidate"
+    },
+    {
+      "canonical_tag": "amenity=library",
+      "primary_category": "public_service",
+      "page_title": "Tag:amenity=library",
+      "request_url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dlibrary",
+      "retained_from_v1": true,
+      "compatibility_only": false,
+      "review_state": "manually_reviewed_candidate"
+    },
+    {
+      "canonical_tag": "amenity=music_school",
+      "primary_category": "education",
+      "page_title": "Tag:amenity=music_school",
+      "request_url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dmusic_school",
+      "retained_from_v1": false,
+      "compatibility_only": false,
+      "review_state": "manually_reviewed_candidate"
+    },
+    {
+      "canonical_tag": "amenity=nursing_home",
+      "primary_category": "healthcare",
+      "page_title": "Tag:amenity=nursing_home",
+      "request_url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dnursing_home",
+      "retained_from_v1": false,
+      "compatibility_only": false,
+      "review_state": "manually_reviewed_candidate"
+    },
+    {
+      "canonical_tag": "amenity=parking",
+      "primary_category": "transport",
+      "page_title": "Tag:amenity=parking",
+      "request_url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dparking",
+      "retained_from_v1": true,
+      "compatibility_only": false,
+      "review_state": "manually_reviewed_candidate"
+    },
+    {
+      "canonical_tag": "amenity=pharmacy",
+      "primary_category": "healthcare",
+      "page_title": "Tag:amenity=pharmacy",
+      "request_url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dpharmacy",
+      "retained_from_v1": false,
+      "compatibility_only": false,
+      "review_state": "manually_reviewed_candidate"
+    },
+    {
+      "canonical_tag": "amenity=police",
+      "primary_category": "public_service",
+      "page_title": "Tag:amenity=police",
+      "request_url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dpolice",
+      "retained_from_v1": true,
+      "compatibility_only": false,
+      "review_state": "manually_reviewed_candidate"
+    },
+    {
+      "canonical_tag": "amenity=post_office",
+      "primary_category": "public_service",
+      "page_title": "Tag:amenity=post_office",
+      "request_url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dpost_office",
+      "retained_from_v1": false,
+      "compatibility_only": false,
+      "review_state": "manually_reviewed_candidate"
+    },
+    {
+      "canonical_tag": "amenity=pub",
+      "primary_category": "food",
+      "page_title": "Tag:amenity=pub",
+      "request_url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dpub",
+      "retained_from_v1": false,
+      "compatibility_only": false,
+      "review_state": "manually_reviewed_candidate"
+    },
+    {
+      "canonical_tag": "amenity=recycling",
+      "primary_category": "public_service",
+      "page_title": "Tag:amenity=recycling",
+      "request_url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Drecycling",
+      "retained_from_v1": false,
+      "compatibility_only": false,
+      "review_state": "manually_reviewed_candidate"
+    },
+    {
+      "canonical_tag": "amenity=restaurant",
+      "primary_category": "food",
+      "page_title": "Tag:amenity=restaurant",
+      "request_url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Drestaurant",
+      "retained_from_v1": true,
+      "compatibility_only": false,
+      "review_state": "manually_reviewed_candidate"
+    },
+    {
+      "canonical_tag": "amenity=school",
+      "primary_category": "education",
+      "page_title": "Tag:amenity=school",
+      "request_url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dschool",
+      "retained_from_v1": true,
+      "compatibility_only": false,
+      "review_state": "manually_reviewed_candidate"
+    },
+    {
+      "canonical_tag": "amenity=social_facility",
+      "primary_category": "healthcare",
+      "page_title": "Tag:amenity=social_facility",
+      "request_url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dsocial_facility",
+      "retained_from_v1": false,
+      "compatibility_only": false,
+      "review_state": "manually_reviewed_candidate"
+    },
+    {
+      "canonical_tag": "amenity=taxi",
+      "primary_category": "transport",
+      "page_title": "Tag:amenity=taxi",
+      "request_url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dtaxi",
+      "retained_from_v1": false,
+      "compatibility_only": false,
+      "review_state": "manually_reviewed_candidate"
+    },
+    {
+      "canonical_tag": "amenity=telephone",
+      "primary_category": "public_service",
+      "page_title": "Tag:amenity=telephone",
+      "request_url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dtelephone",
+      "retained_from_v1": false,
+      "compatibility_only": false,
+      "review_state": "manually_reviewed_candidate"
+    },
+    {
+      "canonical_tag": "amenity=toilets",
+      "primary_category": "public_service",
+      "page_title": "Tag:amenity=toilets",
+      "request_url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dtoilets",
+      "retained_from_v1": false,
+      "compatibility_only": false,
+      "review_state": "manually_reviewed_candidate"
+    },
+    {
+      "canonical_tag": "amenity=townhall",
+      "primary_category": "public_service",
+      "page_title": "Tag:amenity=townhall",
+      "request_url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dtownhall",
+      "retained_from_v1": false,
+      "compatibility_only": false,
+      "review_state": "manually_reviewed_candidate"
+    },
+    {
+      "canonical_tag": "amenity=training",
+      "primary_category": "education",
+      "page_title": "Tag:amenity=training",
+      "request_url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dtraining",
+      "retained_from_v1": false,
+      "compatibility_only": false,
+      "review_state": "manually_reviewed_candidate"
+    },
+    {
+      "canonical_tag": "amenity=university",
+      "primary_category": "education",
+      "page_title": "Tag:amenity=university",
+      "request_url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Duniversity",
+      "retained_from_v1": false,
+      "compatibility_only": false,
+      "review_state": "manually_reviewed_candidate"
+    },
+    {
+      "canonical_tag": "amenity=veterinary",
+      "primary_category": "healthcare",
+      "page_title": "Tag:amenity=veterinary",
+      "request_url": "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dveterinary",
+      "retained_from_v1": false,
+      "compatibility_only": false,
+      "review_state": "manually_reviewed_candidate"
+    },
+    {
+      "canonical_tag": "building=apartments",
+      "primary_category": "building",
+      "page_title": "Tag:building=apartments",
+      "request_url": "https://wiki.openstreetmap.org/wiki/Tag:building%3Dapartments",
+      "retained_from_v1": false,
+      "compatibility_only": false,
+      "review_state": "manually_reviewed_candidate"
+    },
+    {
+      "canonical_tag": "building=commercial",
+      "primary_category": "building",
+      "page_title": "Tag:building=commercial",
+      "request_url": "https://wiki.openstreetmap.org/wiki/Tag:building%3Dcommercial",
+      "retained_from_v1": false,
+      "compatibility_only": false,
+      "review_state": "manually_reviewed_candidate"
+    },
+    {
+      "canonical_tag": "building=detached",
+      "primary_category": "building",
+      "page_title": "Tag:building=detached",
+      "request_url": "https://wiki.openstreetmap.org/wiki/Tag:building%3Ddetached",
+      "retained_from_v1": false,
+      "compatibility_only": false,
+      "review_state": "manually_reviewed_candidate"
+    },
+    {
+      "canonical_tag": "building=house",
+      "primary_category": "building",
+      "page_title": "Tag:building=house",
+      "request_url": "https://wiki.openstreetmap.org/wiki/Tag:building%3Dhouse",
+      "retained_from_v1": false,
+      "compatibility_only": false,
+      "review_state": "manually_reviewed_candidate"
+    },
+    {
+      "canonical_tag": "building=industrial",
+      "primary_category": "building",
+      "page_title": "Tag:building=industrial",
+      "request_url": "https://wiki.openstreetmap.org/wiki/Tag:building%3Dindustrial",
+      "retained_from_v1": false,
+      "compatibility_only": false,
+      "review_state": "manually_reviewed_candidate"
+    },
+    {
+      "canonical_tag": "building=office",
+      "primary_category": "building",
+      "page_title": "Tag:building=office",
+      "request_url": "https://wiki.openstreetmap.org/wiki/Tag:building%3Doffice",
+      "retained_from_v1": false,
+      "compatibility_only": false,
+      "review_state": "manually_reviewed_candidate"
+    },
+    {
+      "canonical_tag": "building=residential",
+      "primary_category": "building",
+      "page_title": "Tag:building=residential",
+      "request_url": "https://wiki.openstreetmap.org/wiki/Tag:building%3Dresidential",
+      "retained_from_v1": true,
+      "compatibility_only": false,
+      "review_state": "manually_reviewed_candidate"
+    },
+    {
+      "canonical_tag": "building=retail",
+      "primary_category": "building",
+      "page_title": "Tag:building=retail",
+      "request_url": "https://wiki.openstreetmap.org/wiki/Tag:building%3Dretail",
+      "retained_from_v1": false,
+      "compatibility_only": false,
+      "review_state": "manually_reviewed_candidate"
+    },
+    {
+      "canonical_tag": "building=school",
+      "primary_category": "education",
+      "page_title": "Tag:building=school",
+      "request_url": "https://wiki.openstreetmap.org/wiki/Tag:building%3Dschool",
+      "retained_from_v1": true,
+      "compatibility_only": false,
+      "review_state": "manually_reviewed_candidate"
+    },
+    {
+      "canonical_tag": "healthcare=laboratory",
+      "primary_category": "healthcare",
+      "page_title": "Tag:healthcare=laboratory",
+      "request_url": "https://wiki.openstreetmap.org/wiki/Tag:healthcare%3Dlaboratory",
+      "retained_from_v1": false,
+      "compatibility_only": false,
+      "review_state": "manually_reviewed_candidate"
+    },
+    {
+      "canonical_tag": "healthcare=midwife",
+      "primary_category": "healthcare",
+      "page_title": "Tag:healthcare=midwife",
+      "request_url": "https://wiki.openstreetmap.org/wiki/Tag:healthcare%3Dmidwife",
+      "retained_from_v1": false,
+      "compatibility_only": false,
+      "review_state": "manually_reviewed_candidate"
+    },
+    {
+      "canonical_tag": "healthcare=physiotherapist",
+      "primary_category": "healthcare",
+      "page_title": "Tag:healthcare=physiotherapist",
+      "request_url": "https://wiki.openstreetmap.org/wiki/Tag:healthcare%3Dphysiotherapist",
+      "retained_from_v1": false,
+      "compatibility_only": false,
+      "review_state": "manually_reviewed_candidate"
+    },
+    {
+      "canonical_tag": "healthcare=psychotherapist",
+      "primary_category": "healthcare",
+      "page_title": "Tag:healthcare=psychotherapist",
+      "request_url": "https://wiki.openstreetmap.org/wiki/Tag:healthcare%3Dpsychotherapist",
+      "retained_from_v1": false,
+      "compatibility_only": false,
+      "review_state": "manually_reviewed_candidate"
+    },
+    {
+      "canonical_tag": "highway=bus_stop",
+      "primary_category": "transport",
+      "page_title": "Tag:highway=bus_stop",
+      "request_url": "https://wiki.openstreetmap.org/wiki/Tag:highway%3Dbus_stop",
+      "retained_from_v1": true,
+      "compatibility_only": false,
+      "review_state": "manually_reviewed_candidate"
+    },
+    {
+      "canonical_tag": "highway=traffic_signals",
+      "primary_category": "transport",
+      "page_title": "Tag:highway=traffic_signals",
+      "request_url": "https://wiki.openstreetmap.org/wiki/Tag:highway%3Dtraffic_signals",
+      "retained_from_v1": true,
+      "compatibility_only": false,
+      "review_state": "manually_reviewed_candidate"
+    },
+    {
+      "canonical_tag": "landuse=education",
+      "primary_category": "education",
+      "page_title": "Tag:landuse=education",
+      "request_url": "https://wiki.openstreetmap.org/wiki/Tag:landuse%3Deducation",
+      "retained_from_v1": false,
+      "compatibility_only": false,
+      "review_state": "manually_reviewed_candidate"
+    },
+    {
+      "canonical_tag": "leisure=fitness_centre",
+      "primary_category": "leisure",
+      "page_title": "Tag:leisure=fitness_centre",
+      "request_url": "https://wiki.openstreetmap.org/wiki/Tag:leisure%3Dfitness_centre",
+      "retained_from_v1": false,
+      "compatibility_only": false,
+      "review_state": "manually_reviewed_candidate"
+    },
+    {
+      "canonical_tag": "leisure=garden",
+      "primary_category": "leisure",
+      "page_title": "Tag:leisure=garden",
+      "request_url": "https://wiki.openstreetmap.org/wiki/Tag:leisure%3Dgarden",
+      "retained_from_v1": false,
+      "compatibility_only": false,
+      "review_state": "manually_reviewed_candidate"
+    },
+    {
+      "canonical_tag": "leisure=nature_reserve",
+      "primary_category": "leisure",
+      "page_title": "Tag:leisure=nature_reserve",
+      "request_url": "https://wiki.openstreetmap.org/wiki/Tag:leisure%3Dnature_reserve",
+      "retained_from_v1": false,
+      "compatibility_only": false,
+      "review_state": "manually_reviewed_candidate"
+    },
+    {
+      "canonical_tag": "leisure=park",
+      "primary_category": "leisure",
+      "page_title": "Tag:leisure=park",
+      "request_url": "https://wiki.openstreetmap.org/wiki/Tag:leisure%3Dpark",
+      "retained_from_v1": true,
+      "compatibility_only": false,
+      "review_state": "manually_reviewed_candidate"
+    },
+    {
+      "canonical_tag": "leisure=pitch",
+      "primary_category": "leisure",
+      "page_title": "Tag:leisure=pitch",
+      "request_url": "https://wiki.openstreetmap.org/wiki/Tag:leisure%3Dpitch",
+      "retained_from_v1": false,
+      "compatibility_only": false,
+      "review_state": "manually_reviewed_candidate"
+    },
+    {
+      "canonical_tag": "leisure=playground",
+      "primary_category": "leisure",
+      "page_title": "Tag:leisure=playground",
+      "request_url": "https://wiki.openstreetmap.org/wiki/Tag:leisure%3Dplayground",
+      "retained_from_v1": false,
+      "compatibility_only": false,
+      "review_state": "manually_reviewed_candidate"
+    },
+    {
+      "canonical_tag": "leisure=sports_centre",
+      "primary_category": "leisure",
+      "page_title": "Tag:leisure=sports_centre",
+      "request_url": "https://wiki.openstreetmap.org/wiki/Tag:leisure%3Dsports_centre",
+      "retained_from_v1": false,
+      "compatibility_only": false,
+      "review_state": "manually_reviewed_candidate"
+    },
+    {
+      "canonical_tag": "leisure=stadium",
+      "primary_category": "leisure",
+      "page_title": "Tag:leisure=stadium",
+      "request_url": "https://wiki.openstreetmap.org/wiki/Tag:leisure%3Dstadium",
+      "retained_from_v1": false,
+      "compatibility_only": false,
+      "review_state": "manually_reviewed_candidate"
+    },
+    {
+      "canonical_tag": "leisure=swimming_pool",
+      "primary_category": "leisure",
+      "page_title": "Tag:leisure=swimming_pool",
+      "request_url": "https://wiki.openstreetmap.org/wiki/Tag:leisure%3Dswimming_pool",
+      "retained_from_v1": true,
+      "compatibility_only": false,
+      "review_state": "manually_reviewed_candidate"
+    },
+    {
+      "canonical_tag": "office=government",
+      "primary_category": "public_service",
+      "page_title": "Tag:office=government",
+      "request_url": "https://wiki.openstreetmap.org/wiki/Tag:office%3Dgovernment",
+      "retained_from_v1": false,
+      "compatibility_only": false,
+      "review_state": "manually_reviewed_candidate"
+    },
+    {
+      "canonical_tag": "public_transport=platform",
+      "primary_category": "transport",
+      "page_title": "Tag:public_transport=platform",
+      "request_url": "https://wiki.openstreetmap.org/wiki/Tag:public_transport%3Dplatform",
+      "retained_from_v1": false,
+      "compatibility_only": false,
+      "review_state": "manually_reviewed_candidate"
+    },
+    {
+      "canonical_tag": "public_transport=station",
+      "primary_category": "transport",
+      "page_title": "Tag:public_transport=station",
+      "request_url": "https://wiki.openstreetmap.org/wiki/Tag:public_transport%3Dstation",
+      "retained_from_v1": false,
+      "compatibility_only": false,
+      "review_state": "manually_reviewed_candidate"
+    },
+    {
+      "canonical_tag": "railway=halt",
+      "primary_category": "transport",
+      "page_title": "Tag:railway=halt",
+      "request_url": "https://wiki.openstreetmap.org/wiki/Tag:railway%3Dhalt",
+      "retained_from_v1": true,
+      "compatibility_only": false,
+      "review_state": "manually_reviewed_candidate"
+    },
+    {
+      "canonical_tag": "railway=platform",
+      "primary_category": "transport",
+      "page_title": "Tag:railway=platform",
+      "request_url": "https://wiki.openstreetmap.org/wiki/Tag:railway%3Dplatform",
+      "retained_from_v1": false,
+      "compatibility_only": false,
+      "review_state": "manually_reviewed_candidate"
+    },
+    {
+      "canonical_tag": "railway=station",
+      "primary_category": "transport",
+      "page_title": "Tag:railway=station",
+      "request_url": "https://wiki.openstreetmap.org/wiki/Tag:railway%3Dstation",
+      "retained_from_v1": true,
+      "compatibility_only": false,
+      "review_state": "manually_reviewed_candidate"
+    },
+    {
+      "canonical_tag": "railway=subway_entrance",
+      "primary_category": "transport",
+      "page_title": "Tag:railway=subway_entrance",
+      "request_url": "https://wiki.openstreetmap.org/wiki/Tag:railway%3Dsubway_entrance",
+      "retained_from_v1": false,
+      "compatibility_only": false,
+      "review_state": "manually_reviewed_candidate"
+    },
+    {
+      "canonical_tag": "railway=tram_stop",
+      "primary_category": "transport",
+      "page_title": "Tag:railway=tram_stop",
+      "request_url": "https://wiki.openstreetmap.org/wiki/Tag:railway%3Dtram_stop",
+      "retained_from_v1": false,
+      "compatibility_only": false,
+      "review_state": "manually_reviewed_candidate"
+    },
+    {
+      "canonical_tag": "shop=bakery",
+      "primary_category": "food",
+      "page_title": "Tag:shop=bakery",
+      "request_url": "https://wiki.openstreetmap.org/wiki/Tag:shop%3Dbakery",
+      "retained_from_v1": false,
+      "compatibility_only": false,
+      "review_state": "manually_reviewed_candidate"
+    },
+    {
+      "canonical_tag": "shop=bicycle",
+      "primary_category": "retail",
+      "page_title": "Tag:shop=bicycle",
+      "request_url": "https://wiki.openstreetmap.org/wiki/Tag:shop%3Dbicycle",
+      "retained_from_v1": false,
+      "compatibility_only": false,
+      "review_state": "manually_reviewed_candidate"
+    },
+    {
+      "canonical_tag": "shop=books",
+      "primary_category": "retail",
+      "page_title": "Tag:shop=books",
+      "request_url": "https://wiki.openstreetmap.org/wiki/Tag:shop%3Dbooks",
+      "retained_from_v1": false,
+      "compatibility_only": false,
+      "review_state": "manually_reviewed_candidate"
+    },
+    {
+      "canonical_tag": "shop=butcher",
+      "primary_category": "food",
+      "page_title": "Tag:shop=butcher",
+      "request_url": "https://wiki.openstreetmap.org/wiki/Tag:shop%3Dbutcher",
+      "retained_from_v1": false,
+      "compatibility_only": false,
+      "review_state": "manually_reviewed_candidate"
+    },
+    {
+      "canonical_tag": "shop=car",
+      "primary_category": "retail",
+      "page_title": "Tag:shop=car",
+      "request_url": "https://wiki.openstreetmap.org/wiki/Tag:shop%3Dcar",
+      "retained_from_v1": false,
+      "compatibility_only": false,
+      "review_state": "manually_reviewed_candidate"
+    },
+    {
+      "canonical_tag": "shop=chemist",
+      "primary_category": "retail",
+      "page_title": "Tag:shop=chemist",
+      "request_url": "https://wiki.openstreetmap.org/wiki/Tag:shop%3Dchemist",
+      "retained_from_v1": false,
+      "compatibility_only": false,
+      "review_state": "manually_reviewed_candidate"
+    },
+    {
+      "canonical_tag": "shop=clothes",
+      "primary_category": "retail",
+      "page_title": "Tag:shop=clothes",
+      "request_url": "https://wiki.openstreetmap.org/wiki/Tag:shop%3Dclothes",
+      "retained_from_v1": false,
+      "compatibility_only": false,
+      "review_state": "manually_reviewed_candidate"
+    },
+    {
+      "canonical_tag": "shop=confectionery",
+      "primary_category": "food",
+      "page_title": "Tag:shop=confectionery",
+      "request_url": "https://wiki.openstreetmap.org/wiki/Tag:shop%3Dconfectionery",
+      "retained_from_v1": false,
+      "compatibility_only": false,
+      "review_state": "manually_reviewed_candidate"
+    },
+    {
+      "canonical_tag": "shop=convenience",
+      "primary_category": "retail",
+      "page_title": "Tag:shop=convenience",
+      "request_url": "https://wiki.openstreetmap.org/wiki/Tag:shop%3Dconvenience",
+      "retained_from_v1": true,
+      "compatibility_only": false,
+      "review_state": "manually_reviewed_candidate"
+    },
+    {
+      "canonical_tag": "shop=deli",
+      "primary_category": "food",
+      "page_title": "Tag:shop=deli",
+      "request_url": "https://wiki.openstreetmap.org/wiki/Tag:shop%3Ddeli",
+      "retained_from_v1": false,
+      "compatibility_only": false,
+      "review_state": "manually_reviewed_candidate"
+    },
+    {
+      "canonical_tag": "shop=department_store",
+      "primary_category": "retail",
+      "page_title": "Tag:shop=department_store",
+      "request_url": "https://wiki.openstreetmap.org/wiki/Tag:shop%3Ddepartment_store",
+      "retained_from_v1": false,
+      "compatibility_only": false,
+      "review_state": "manually_reviewed_candidate"
+    },
+    {
+      "canonical_tag": "shop=doityourself",
+      "primary_category": "retail",
+      "page_title": "Tag:shop=doityourself",
+      "request_url": "https://wiki.openstreetmap.org/wiki/Tag:shop%3Ddoityourself",
+      "retained_from_v1": false,
+      "compatibility_only": false,
+      "review_state": "manually_reviewed_candidate"
+    },
+    {
+      "canonical_tag": "shop=electronics",
+      "primary_category": "retail",
+      "page_title": "Tag:shop=electronics",
+      "request_url": "https://wiki.openstreetmap.org/wiki/Tag:shop%3Delectronics",
+      "retained_from_v1": false,
+      "compatibility_only": false,
+      "review_state": "manually_reviewed_candidate"
+    },
+    {
+      "canonical_tag": "shop=florist",
+      "primary_category": "retail",
+      "page_title": "Tag:shop=florist",
+      "request_url": "https://wiki.openstreetmap.org/wiki/Tag:shop%3Dflorist",
+      "retained_from_v1": false,
+      "compatibility_only": false,
+      "review_state": "manually_reviewed_candidate"
+    },
+    {
+      "canonical_tag": "shop=furniture",
+      "primary_category": "retail",
+      "page_title": "Tag:shop=furniture",
+      "request_url": "https://wiki.openstreetmap.org/wiki/Tag:shop%3Dfurniture",
+      "retained_from_v1": false,
+      "compatibility_only": false,
+      "review_state": "manually_reviewed_candidate"
+    },
+    {
+      "canonical_tag": "shop=hardware",
+      "primary_category": "retail",
+      "page_title": "Tag:shop=hardware",
+      "request_url": "https://wiki.openstreetmap.org/wiki/Tag:shop%3Dhardware",
+      "retained_from_v1": false,
+      "compatibility_only": false,
+      "review_state": "manually_reviewed_candidate"
+    },
+    {
+      "canonical_tag": "shop=mall",
+      "primary_category": "retail",
+      "page_title": "Tag:shop=mall",
+      "request_url": "https://wiki.openstreetmap.org/wiki/Tag:shop%3Dmall",
+      "retained_from_v1": false,
+      "compatibility_only": false,
+      "review_state": "manually_reviewed_candidate"
+    },
+    {
+      "canonical_tag": "shop=mobile_phone",
+      "primary_category": "retail",
+      "page_title": "Tag:shop=mobile_phone",
+      "request_url": "https://wiki.openstreetmap.org/wiki/Tag:shop%3Dmobile_phone",
+      "retained_from_v1": false,
+      "compatibility_only": false,
+      "review_state": "manually_reviewed_candidate"
+    },
+    {
+      "canonical_tag": "shop=pastry",
+      "primary_category": "food",
+      "page_title": "Tag:shop=pastry",
+      "request_url": "https://wiki.openstreetmap.org/wiki/Tag:shop%3Dpastry",
+      "retained_from_v1": false,
+      "compatibility_only": false,
+      "review_state": "manually_reviewed_candidate"
+    },
+    {
+      "canonical_tag": "shop=seafood",
+      "primary_category": "food",
+      "page_title": "Tag:shop=seafood",
+      "request_url": "https://wiki.openstreetmap.org/wiki/Tag:shop%3Dseafood",
+      "retained_from_v1": false,
+      "compatibility_only": false,
+      "review_state": "manually_reviewed_candidate"
+    },
+    {
+      "canonical_tag": "shop=shoes",
+      "primary_category": "retail",
+      "page_title": "Tag:shop=shoes",
+      "request_url": "https://wiki.openstreetmap.org/wiki/Tag:shop%3Dshoes",
+      "retained_from_v1": false,
+      "compatibility_only": false,
+      "review_state": "manually_reviewed_candidate"
+    },
+    {
+      "canonical_tag": "shop=supermarket",
+      "primary_category": "retail",
+      "page_title": "Tag:shop=supermarket",
+      "request_url": "https://wiki.openstreetmap.org/wiki/Tag:shop%3Dsupermarket",
+      "retained_from_v1": true,
+      "compatibility_only": false,
+      "review_state": "manually_reviewed_candidate"
+    }
+  ]
+}

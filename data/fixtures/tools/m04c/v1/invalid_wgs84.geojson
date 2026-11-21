@@ -1,0 +1,17 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "id": "invalid-bow-tie",
+      "properties": {
+        "name": "Invalid",
+        "weight": 1
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[[0.0, 0.0], [0.002, 0.002], [0.002, 0.0], [0.0, 0.002], [0.0, 0.0]]]
+      }
+    }
+  ]
+}

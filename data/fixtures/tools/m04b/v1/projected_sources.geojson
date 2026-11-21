@@ -1,0 +1,57 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "id": "source-1",
+      "properties": {
+        "category": "clinic",
+        "name": "Alpha",
+        "score": 10
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [0, 0]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "source-2",
+      "properties": {
+        "category": "school",
+        "name": "Beta",
+        "score": 20
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [10, 0]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "source-3",
+      "properties": {
+        "category": "clinic",
+        "name": "Gamma",
+        "score": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [50, 50]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "source-boundary",
+      "properties": {
+        "category": "clinic",
+        "name": "Boundary",
+        "score": 5
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [20, 0]
+      }
+    }
+  ]
+}

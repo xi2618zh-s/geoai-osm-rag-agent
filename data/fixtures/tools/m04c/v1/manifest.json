@@ -1,0 +1,45 @@
+{
+  "schema_version": 1,
+  "fixture_version": "m04c-v1",
+  "source": "Project-authored synthetic composition reference",
+  "license": "CC0-1.0",
+  "generation": "Inputs and final regions are hand-authored. Web Mercator X references use R*longitude_radians at latitude zero. Buffer area uses the analytic area of the quad_segs=8 regular 32-gon.",
+  "fixtures": {
+    "empty_wgs84.geojson": {
+      "sha256": "b3049ad7a1062091e169bd352424d59721a26b8b6229942aef26d11b0c6a96e1",
+      "row_count": 0,
+      "crs": "EPSG:4326",
+      "role": "empty source propagation"
+    },
+    "expected_final.geojson": {
+      "sha256": "8f368379ee0d114ba766d2530119fe58a4c8bf0e3588637994d12f69489c71a4",
+      "row_count": 3,
+      "crs": "EPSG:3857",
+      "role": "pre-saved final reference result"
+    },
+    "expected_summary.json": {
+      "sha256": "166943033c2da7c63be430b4c7a904adcfdf30d27a1d43c37f77a2b095394407",
+      "row_count": null,
+      "crs": null,
+      "role": "independently derived intermediate values and tolerances"
+    },
+    "facilities_wgs84.geojson": {
+      "sha256": "ab5cab88c89242ae44040b27b5fafa577634ea6325e1fc4980d8902a8c414a8f",
+      "row_count": 3,
+      "crs": "EPSG:4326",
+      "role": "weighted source points"
+    },
+    "invalid_wgs84.geojson": {
+      "sha256": "73a97f0ce152ee4681b3b20d0fabeaf33a2f074e14eb6b550a395c08045e54f4",
+      "row_count": 1,
+      "crs": "EPSG:4326",
+      "role": "invalid geometry failure propagation"
+    },
+    "regions_3857.geojson": {
+      "sha256": "91a331dcc28cb8d17026d0b226c92fb31884b792f1588a7b6b88479b236ae0fa",
+      "row_count": 3,
+      "crs": "EPSG:3857",
+      "role": "join and aggregation regions including zero-match region"
+    }
+  }
+}

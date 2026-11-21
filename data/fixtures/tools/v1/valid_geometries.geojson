@@ -1,0 +1,29 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "id": "point-1",
+      "properties": {"name": "Point fixture", "category": "point"},
+      "geometry": {"type": "Point", "coordinates": [13.19, 55.71]}
+    },
+    {
+      "type": "Feature",
+      "id": "line-1",
+      "properties": {"name": "Line fixture", "category": "line"},
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [[13.18, 55.70], [13.20, 55.72]]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "polygon-1",
+      "properties": {"name": "Polygon fixture", "category": "polygon"},
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[[13.18, 55.70], [13.20, 55.70], [13.20, 55.72], [13.18, 55.72], [13.18, 55.70]]]
+      }
+    }
+  ]
+}

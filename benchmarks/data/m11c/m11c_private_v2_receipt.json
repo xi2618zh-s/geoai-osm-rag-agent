@@ -1,0 +1,44 @@
+{
+  "builder_version": "m11c-private-v2-builder-1",
+  "catalogue_sha256": "90e36710a11667da86792581c1486f8915516a50086b8a5918d32fa4096a8e93",
+  "checks": {
+    "family_distribution_ok": true,
+    "private_v1_available_for_overlap_check": true,
+    "private_v1_query_overlap": 0,
+    "public_dev_query_overlap": 0,
+    "reference_self_check": "48/48",
+    "supported_non_empty_results": 32,
+    "supported_tasks": 36,
+    "task_count": 48,
+    "unique_ids_queries": true
+  },
+  "content_published": false,
+  "data_files_sha256": [
+    "30af08945192c7d25f8b452b9b4c0ac83a7e26957b31ebf59d1c881d5248e053",
+    "51e4bef9fe5b8502371d85dc0fba352ab931979748c4ec08ef5b1c3b0e80d7de",
+    "846f484e3906add6e9a494458be2179393b750714db020617e65a70e87bb153f",
+    "aa4c90cfd93e1da96942fb044d66dbad9ee870118140c4c5603ea792afaa3166",
+    "afd970772599422b6edfc58cf208e917528f8d2cd44722d05ce10da5bd309d0e",
+    "b02b8d75bb6263e7a7a6af951bf5b1f4ea3047045e108af92942ef0c6c0126e5",
+    "d7df81506f9f9577d586e91b8379ea123201ac03567ce7b656b197002510f55e",
+    "ea69bcb2ab2b8bc137c7a801f97affb982d4824eeb69232589f1607c2b31c071"
+  ],
+  "data_version": "m11c-private-test-v2",
+  "family_counts": {
+    "aggregate_by_region": 6,
+    "buffer": 6,
+    "missing_place": 6,
+    "nearest": 6,
+    "rank": 6,
+    "search": 6,
+    "spatial_join": 6,
+    "within": 6
+  },
+  "manifest_sha256": "9c491ce81ce77ac195a3ba6d87bca88f904129ed727dc3301b020e584dc51e28",
+  "schema_version": "1.0",
+  "sealed_at": "2026-10-06T22:42:49.957404+00:00",
+  "specs_sha256": "f63840549f6d54f5048d5f127466789f7a490fda5c00e28a15644bc0b461b1ca",
+  "storage": "outside repository; workspace path supplied at run time",
+  "task_count": 48,
+  "tasks_sha256": "23512c036e3b18671c38247b93de62a1e1472f99b7cee4cae05f08588006e9db"
+}

@@ -1,0 +1,1 @@
+{"dimension":384,"faiss_version":"1.13.2","index_sha256":"45dfbfd35d6cf0a9d0a13662900d171844402de6c1edb3226731ef51a1db7b6e","index_size_bytes":629805,"index_type":"IndexFlatIP","process_isolation_reason":"Avoid PyTorch and FAISS OpenMP runtime co-loading on Windows.","schema_version":"1.0","vector_count":410}

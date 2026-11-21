@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "source": "Project-authored synthetic fixtures; no external or personal data",
+  "crs": "EPSG:4326",
+  "fixtures": {
+    "empty.geojson": {
+      "sha256": "b3049ad7a1062091e169bd352424d59721a26b8b6229942aef26d11b0c6a96e1",
+      "row_count": 0,
+      "purpose": "Empty vector dataset boundary behavior"
+    },
+    "invalid_topology.geojson": {
+      "sha256": "508cd92123ce3f5e3a2c1f3d17f83c7f1d45b198596858b9db444af7d4b54cbb",
+      "row_count": 1,
+      "purpose": "Self-intersecting polygon topology detection"
+    },
+    "valid_geometries.geojson": {
+      "sha256": "91a5ec403a70ab507172fd5e1ebedb5a9035b8cf803b4fadfef4e51589e70d91",
+      "row_count": 3,
+      "purpose": "Valid Point, LineString, and Polygon inspection"
+    }
+  }
+}

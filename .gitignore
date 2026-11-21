@@ -18,6 +18,7 @@ output/geoai_clip_*/
 output/*.osm.pbf
 output/*.log
 *.log
+benchmarks/results/runs/
 
 # Large source data and model caches
 data/osm/*.osm.pbf
@@ -47,3 +48,9 @@ data/osm/*.osm.pbf.receipt.json
 
 # Keep the small knowledge source and index metadata by policy; move the binary
 # FAISS index to Git LFS if repository size becomes a concern.
+
+# M11b local private holdout (queries, answers, seed, source geometry)
+/benchmarks/data/test/private/
+
+# Local runtime outputs and working material
+/output/

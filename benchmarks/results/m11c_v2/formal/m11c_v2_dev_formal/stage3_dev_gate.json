@@ -1,0 +1,63 @@
+{
+  "gate_passed": true,
+  "protocol_version": "m11c-protocol-v2",
+  "result_sha256": {
+    "deterministic_receipt.json": "sha256:0c8259729fee85467d7d7fbc7ec1bc91da698dbe822d0d04551e7d564bb37875",
+    "dev_task_results.jsonl": "sha256:203969d5b8e13d4421c32e4d0b7078205b17ca1e36141856722d9ef67620be7e",
+    "frontend_calls.jsonl": "sha256:713dca7ac8e2054a48d1651d5831671161575ddf2486645c74f74e2025cd21ac",
+    "report.json": "sha256:5536b1b7d1c93938fffcdb94c9856320fb4bf1220073b1a114f186e9a2b18766",
+    "report.md": "sha256:d87bfb8efcdc466d7a4cd0d41aff9ca4aa100b4b10a330179e0782d704ac68fb"
+  },
+  "runs": [
+    {
+      "counts": {
+        "logical_calls": 160,
+        "missing_place": 8,
+        "missing_place_tasks": 8,
+        "model_failures": 0,
+        "rank_tasks": 8,
+        "rank_unsupported": 8,
+        "tasks": 160,
+        "validator_strict": 136
+      },
+      "passed": true,
+      "seed": 11071
+    },
+    {
+      "counts": {
+        "logical_calls": 160,
+        "missing_place": 8,
+        "missing_place_tasks": 8,
+        "model_failures": 0,
+        "rank_tasks": 8,
+        "rank_unsupported": 8,
+        "tasks": 160,
+        "validator_strict": 136
+      },
+      "passed": true,
+      "seed": 11072
+    },
+    {
+      "counts": {
+        "logical_calls": 160,
+        "missing_place": 8,
+        "missing_place_tasks": 8,
+        "model_failures": 0,
+        "rank_tasks": 8,
+        "rank_unsupported": 8,
+        "tasks": 160,
+        "validator_strict": 136
+      },
+      "passed": true,
+      "seed": 11073
+    }
+  ],
+  "stage": 3,
+  "stage2_manifest_sha256": "sha256:a9b1686ede22c7b6558510d9bf15d9b3f99ec5fdb6a467a64239a8fda8b96e89",
+  "thresholds": {
+    "missing_place_min": 7,
+    "model_failures_max": 3,
+    "rank_unsupported_required": 8,
+    "validator_strict_min": 120
+  }
+}

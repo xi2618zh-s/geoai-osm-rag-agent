@@ -1,0 +1,26 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "id": "poi-1",
+      "properties": {"name": "Central Cafe", "category": "cafe", "capacity": 30},
+      "geometry": {"type": "Point", "coordinates": [13.2, 55.7]}
+    },
+    {
+      "type": "Feature",
+      "id": "poi-2",
+      "properties": {"name": "North Library", "category": "library", "capacity": null},
+      "geometry": {"type": "Point", "coordinates": [13.3, 55.8]}
+    },
+    {
+      "type": "Feature",
+      "id": "area-1",
+      "properties": {"name": "South Service Area", "category": "service_area", "capacity": 100},
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[[13.1, 55.6], [13.2, 55.6], [13.2, 55.7], [13.1, 55.6]]]
+      }
+    }
+  ]
+}

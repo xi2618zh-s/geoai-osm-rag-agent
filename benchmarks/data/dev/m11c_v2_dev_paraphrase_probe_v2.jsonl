@@ -1,0 +1,40 @@
+{"task_id": "m11b_dev_002", "query": "Show me clinics scoring 5 or higher."}
+{"task_id": "m11b_dev_006", "query": "Is there any clinic with a score of at least twenty-five?"}
+{"task_id": "m11b_dev_008", "query": "Which clinics score no more than 5?"}
+{"task_id": "m11b_dev_012", "query": "Clinics scoring up to 25, please."}
+{"task_id": "m11b_dev_014", "query": "Give me the school entries among the sources with a score not below 5."}
+{"task_id": "m11b_dev_016", "query": "schools with score >= 15"}
+{"task_id": "m11b_dev_020", "query": "Pull the schools from the sources whose score is at most 5."}
+{"task_id": "m11b_dev_022", "query": "Find school sources with a score of fifteen or less."}
+{"task_id": "m11b_dev_050", "query": "Two nearest targets for each source with a score of zero or above."}
+{"task_id": "m11b_dev_054", "query": "For every source scoring 1 or more, list its 3 closest targets."}
+{"task_id": "m11b_dev_058", "query": "Closest target to each source that has a score of at least 3."}
+{"task_id": "m11b_dev_064", "query": "I need the nearest target for all sources whose score is 5 or greater."}
+{"task_id": "m11b_dev_068", "query": "Return the 2 targets nearest to each source with score at least 6."}
+{"task_id": "m11b_dev_072", "query": "Three closest targets per source, sources with a score of at least 7 only."}
+{"task_id": "m11b_dev_074", "query": "Which sources scoring at least 1 sit entirely inside the regions?"}
+{"task_id": "m11b_dev_080", "query": "Sources with score >= 7 that are inside a region."}
+{"task_id": "m11b_dev_084", "query": "Show sources located strictly within regions and scoring 11 or more."}
+{"task_id": "m11b_dev_090", "query": "Among sources with a score of at least 17, which ones lie inside regions?"}
+{"task_id": "m11b_dev_094", "query": "List sources having a score of 21 or higher that fall within the regions."}
+{"task_id": "m11b_dev_096", "query": "Which sources with scores of at least 23 are inside regions?"}
+{"task_id": "m11b_dev_098", "query": "Join regions with intersecting sources whose score is at least 1."}
+{"task_id": "m11b_dev_102", "query": "Pair up regions and sources with a score of at least 5 that intersect."}
+{"task_id": "m11b_dev_106", "query": "Match each region with sources scoring at least 1 that the region lies within."}
+{"task_id": "m11b_dev_110", "query": "Join regions to sources with a score of at least 5, keeping pairs where the region is within the source."}
+{"task_id": "m11b_dev_114", "query": "Join regions and the sources with score at least 1 that they contain."}
+{"task_id": "m11b_dev_120", "query": "Pair regions with sources scoring 7 or more contained in them."}
+{"task_id": "m11b_dev_122", "query": "Number of values that are at least 5, per region."}
+{"task_id": "m11b_dev_126", "query": "For each region, count values of 25 or more."}
+{"task_id": "m11b_dev_128", "query": "What is the total of values with value at least 5 in each region?"}
+{"task_id": "m11b_dev_134", "query": "Average value by region, counting only values of at least 5."}
+{"task_id": "m11b_dev_138", "query": "Mean of value per region where value is 25 or higher."}
+{"task_id": "m11b_dev_140", "query": "Smallest value in each region among values of at least 5."}
+{"task_id": "m11b_dev_034", "query": "Generate a buffer of 10 metres around the sources."}
+{"task_id": "m11b_dev_048", "query": "Expand every source by 24 m."}
+{"task_id": "m11b_dev_148", "query": "List the regions in order of criterion 4."}
+{"task_id": "m11b_dev_150", "query": "Which is the best region according to criterion 6?"}
+{"task_id": "m11b_dev_152", "query": "Rank regions by criterion 8 from highest to lowest."}
+{"task_id": "m11b_dev_157", "query": "Find the hospitals with more than 100 beds."}
+{"task_id": "m11b_dev_158", "query": "Which restaurants are open after midnight?"}
+{"task_id": "m11b_dev_159", "query": "Show everything rated above 4 stars."}

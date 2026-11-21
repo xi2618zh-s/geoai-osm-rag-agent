@@ -1,0 +1,41 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "id": "facility-a",
+      "properties": {
+        "name": "Alpha",
+        "weight": 10
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [0.0, 0.0]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "facility-b",
+      "properties": {
+        "name": "Beta",
+        "weight": 20
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [0.001, 0.0]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "facility-c",
+      "properties": {
+        "name": "Gamma",
+        "weight": 30
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [0.01, 0.0]
+      }
+    }
+  ]
+}

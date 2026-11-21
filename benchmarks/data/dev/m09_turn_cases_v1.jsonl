@@ -1,0 +1,16 @@
+{"case_id":"distance_1","base_class":"within_distance","turn":"change distance to 50 m","expected_action":"recompute_dependents","expected_reuse":0}
+{"case_id":"distance_2","base_class":"within_distance","turn":"change distance to 100 m","expected_action":"recompute_dependents","expected_reuse":0}
+{"case_id":"distance_3","base_class":"within_distance","turn":"change distance to 125 m","expected_action":"recompute_dependents","expected_reuse":0}
+{"case_id":"distance_4","base_class":"within_distance","turn":"change distance to 150 m","expected_action":"recompute_dependents","expected_reuse":0}
+{"case_id":"exclude_1","base_class":"within_distance","turn":"exclude name = Alpha","expected_action":"append_filter","expected_reuse":2}
+{"case_id":"exclude_2","base_class":"within_distance","turn":"exclude name = Beta","expected_action":"append_filter","expected_reuse":2}
+{"case_id":"exclude_3","base_class":"within_distance","turn":"exclude name = Gamma","expected_action":"append_filter","expected_reuse":2}
+{"case_id":"exclude_4","base_class":"within_distance","turn":"exclude name = Delta","expected_action":"append_filter","expected_reuse":2}
+{"case_id":"city_1","base_class":"search","turn":"switch city to Malmo","expected_action":"replace_source","expected_reuse":0}
+{"case_id":"city_2","base_class":"search","turn":"switch city to Uppsala","expected_action":"replace_source","expected_reuse":0}
+{"case_id":"city_3","base_class":"search","turn":"switch city to Oslo","expected_action":"replace_source","expected_reuse":0}
+{"case_id":"city_4","base_class":"search","turn":"switch city to Gothenburg","expected_action":"replace_source","expected_reuse":0}
+{"case_id":"compare_1","base_class":"search","turn":"compare with Malmo","expected_action":"compare_verified_count","expected_reuse":0}
+{"case_id":"compare_2","base_class":"search","turn":"compare with Uppsala","expected_action":"compare_verified_count","expected_reuse":0}
+{"case_id":"compare_3","base_class":"search","turn":"compare with Oslo","expected_action":"compare_verified_count","expected_reuse":0}
+{"case_id":"compare_4","base_class":"search","turn":"compare with Gothenburg","expected_action":"compare_verified_count","expected_reuse":0}

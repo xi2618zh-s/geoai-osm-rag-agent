@@ -1,0 +1,51 @@
+{
+  "schema_version": 1,
+  "fixture_version": "m04b-v1",
+  "source": "Project-authored synthetic geometries",
+  "license": "CC0-1.0",
+  "generation": "Hand-authored deterministic GeoJSON; coordinates are synthetic and identify no real person or place.",
+  "fixtures": {
+    "aggregate_values.geojson": {
+      "sha256": "4f9dd5c5c3d1d21ce1247e3f11496fbd9dbd3347d5b5b01275a65714b665b9a9",
+      "row_count": 4,
+      "crs": "EPSG:3857",
+      "purpose": "Grouped numeric aggregation, null handling, and unmatched region keys"
+    },
+    "empty.geojson": {
+      "sha256": "b3049ad7a1062091e169bd352424d59721a26b8b6229942aef26d11b0c6a96e1",
+      "row_count": 0,
+      "crs": "EPSG:3857",
+      "purpose": "Empty-result and empty-input behavior"
+    },
+    "geographic_points.geojson": {
+      "sha256": "afeb0be1553607d0a2918b6786e1f15d34a42e3141c07b76ae82ca515af58c0b",
+      "row_count": 1,
+      "crs": "EPSG:4326",
+      "purpose": "Reprojection and geographic-distance rejection"
+    },
+    "invalid_bow_tie.geojson": {
+      "sha256": "4894925c724473e377275dc898e21a5f72a6d8fe8190f27f3c88b8b88d4f6cb1",
+      "row_count": 1,
+      "crs": "EPSG:3857",
+      "purpose": "Explicit make_valid repair and invalid-geometry rejection"
+    },
+    "projected_regions.geojson": {
+      "sha256": "f1a3f665b2dd0c33ebcd83de2e02ae157b683f8618c9834cc15888be585a1e7a",
+      "row_count": 3,
+      "crs": "EPSG:3857",
+      "purpose": "Within boundary semantics, spatial joins, and zero-match regions"
+    },
+    "projected_sources.geojson": {
+      "sha256": "456a6d5cc0ab7ecc9f92efabcfe4381aab4095d1bf811832bf99a0349c42283d",
+      "row_count": 4,
+      "crs": "EPSG:3857",
+      "purpose": "Attribute filtering, buffers, nearest sources, and null numeric values"
+    },
+    "projected_targets.geojson": {
+      "sha256": "7aaf609400bbf64ae1fc85118a8371ab0d818634cce3a561e39f31a3ee7c9731",
+      "row_count": 3,
+      "crs": "EPSG:3857",
+      "purpose": "Nearest target ordering and namespaced join attributes"
+    }
+  }
+}

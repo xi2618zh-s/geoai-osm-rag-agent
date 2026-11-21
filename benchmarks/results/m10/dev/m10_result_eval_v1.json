@@ -1,0 +1,176 @@
+{
+  "case_count": 12,
+  "cases": [
+    {
+      "case_id": "search_all",
+      "contract_complete": true,
+      "download_count": 2,
+      "exports_valid": true,
+      "layer_count": 2,
+      "map_valid": true,
+      "numeric_traceable": true,
+      "result_count": 3,
+      "template": "search"
+    },
+    {
+      "case_id": "search_alpha",
+      "contract_complete": true,
+      "download_count": 2,
+      "exports_valid": true,
+      "layer_count": 2,
+      "map_valid": true,
+      "numeric_traceable": true,
+      "result_count": 1,
+      "template": "search"
+    },
+    {
+      "case_id": "search_beta",
+      "contract_complete": true,
+      "download_count": 2,
+      "exports_valid": true,
+      "layer_count": 2,
+      "map_valid": true,
+      "numeric_traceable": true,
+      "result_count": 1,
+      "template": "search"
+    },
+    {
+      "case_id": "search_gamma",
+      "contract_complete": true,
+      "download_count": 2,
+      "exports_valid": true,
+      "layer_count": 2,
+      "map_valid": true,
+      "numeric_traceable": true,
+      "result_count": 1,
+      "template": "search"
+    },
+    {
+      "case_id": "coverage_1",
+      "contract_complete": true,
+      "download_count": 2,
+      "exports_valid": true,
+      "layer_count": 3,
+      "map_valid": true,
+      "numeric_traceable": true,
+      "result_count": 3,
+      "template": "coverage"
+    },
+    {
+      "case_id": "coverage_2",
+      "contract_complete": true,
+      "download_count": 2,
+      "exports_valid": true,
+      "layer_count": 3,
+      "map_valid": true,
+      "numeric_traceable": true,
+      "result_count": 3,
+      "template": "coverage"
+    },
+    {
+      "case_id": "coverage_3",
+      "contract_complete": true,
+      "download_count": 2,
+      "exports_valid": true,
+      "layer_count": 3,
+      "map_valid": true,
+      "numeric_traceable": true,
+      "result_count": 3,
+      "template": "coverage"
+    },
+    {
+      "case_id": "coverage_4",
+      "contract_complete": true,
+      "download_count": 2,
+      "exports_valid": true,
+      "layer_count": 3,
+      "map_valid": true,
+      "numeric_traceable": true,
+      "result_count": 3,
+      "template": "coverage"
+    },
+    {
+      "case_id": "compare_1",
+      "contract_complete": true,
+      "download_count": 4,
+      "exports_valid": true,
+      "layer_count": 2,
+      "map_valid": true,
+      "numeric_traceable": true,
+      "result_count": 3,
+      "template": "comparison"
+    },
+    {
+      "case_id": "compare_2",
+      "contract_complete": true,
+      "download_count": 4,
+      "exports_valid": true,
+      "layer_count": 2,
+      "map_valid": true,
+      "numeric_traceable": true,
+      "result_count": 3,
+      "template": "comparison"
+    },
+    {
+      "case_id": "compare_3",
+      "contract_complete": true,
+      "download_count": 4,
+      "exports_valid": true,
+      "layer_count": 2,
+      "map_valid": true,
+      "numeric_traceable": true,
+      "result_count": 3,
+      "template": "comparison"
+    },
+    {
+      "case_id": "compare_4",
+      "contract_complete": true,
+      "download_count": 4,
+      "exports_valid": true,
+      "layer_count": 2,
+      "map_valid": true,
+      "numeric_traceable": true,
+      "result_count": 3,
+      "template": "comparison"
+    }
+  ],
+  "cases_sha256": "5cea7142f425213039cc485ab291b1532d20e4cd7328a90bedb08fab3b1b651d",
+  "evaluation_id": "m10_result_eval_v1",
+  "limitations": "Visible small fixtures and bounded presentation templates; no live model, hidden set, real city coverage, transport isochrone or production browser evidence. M03 Phase 2 retrieval queries are catalog-informed.",
+  "metrics": {
+    "contract_complete": {
+      "passed": 12,
+      "rate": 1.0,
+      "total": 12
+    },
+    "multilayer_map": {
+      "passed": 12,
+      "rate": 1.0,
+      "total": 12
+    },
+    "numeric_traceable": {
+      "passed": 12,
+      "rate": 1.0,
+      "total": 12
+    },
+    "verified_downloads": {
+      "passed": 12,
+      "rate": 1.0,
+      "total": 12
+    }
+  },
+  "passed": true,
+  "schema_version": "1.0",
+  "source": "public synthetic offline M04c DatasetRefs and M07/M08 verified outcomes",
+  "template_counts": {
+    "comparison": 4,
+    "coverage": 4,
+    "search": 4
+  },
+  "thresholds": {
+    "contract_complete": "12/12",
+    "multilayer_map": "12/12",
+    "numeric_traceable": "12/12",
+    "verified_downloads": "12/12"
+  }
+}

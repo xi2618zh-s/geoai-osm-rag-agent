@@ -13,6 +13,8 @@ from src.agent.contracts import (
     WorkflowSuccessResponse,
 )
 from src.agent.workflow import available_workflow_tools, run_agent_workflow
+from src.agent.dynamic_planner import (M07PlanRequest, PlanError, resume_clarification, plan_request, validate_model_plan_json)
+from src.geodsl import ClarificationRequest
 from src.config import (
     FAISS_INDEX,
     FAISS_META,
@@ -79,6 +81,9 @@ def home():
                 "POST /chat": "Natural-language query",
                 "POST /chat_simple": "Explicit place/key/value query",
                 "POST /workflow": "Constrained multi-tag union/intersection workflow",
+                "POST /plan-preview": "M07 static plan preview; never executes tools",
+                "GET /plan-ui": "M07 plan preview UI",
+                "GET /analysis-ui": "M10 verified offline analysis demo",
                 "GET /output/<filename>": "Generated GeoJSON",
                 "GET /ui": "Leaflet UI",
                 "GET /status": "Dependency readiness",
@@ -315,6 +320,49 @@ def workflow():
     )
     return jsonify(body.model_dump())
 
+
+@app.post("/plan-preview")
+def plan_preview():
+    trace_id = request.headers.get("X-Trace-ID") or new_trace_id()
+    body = request.get_json(silent=True)
+    if not isinstance(body, dict) or set(body) - {"request", "model_plan_json", "clarification", "answer"} or "request" not in body:
+        return jsonify({"status": "error", "error_code": "INVALID_REQUEST", "trace_id": trace_id}), 400
+    try:
+        payload = M07PlanRequest.model_validate(body["request"])
+        if "answer" in body or "clarification" in body:
+            if "answer" not in body or "clarification" not in body:
+                return jsonify({"status": "error", "error_code": "INVALID_REQUEST", "trace_id": trace_id}), 400
+            if not isinstance(body["answer"], str):
+                return jsonify({"status": "error", "error_code": "INVALID_REQUEST", "trace_id": trace_id}), 400
+            clarification = ClarificationRequest.model_validate(body["clarification"])
+            result = resume_clarification(payload, clarification, body["answer"])
+        elif "model_plan_json" in body:
+            if not isinstance(body["model_plan_json"], str):
+                return jsonify({"status": "error", "error_code": "INVALID_REQUEST", "trace_id": trace_id}), 400
+            result = validate_model_plan_json(body["model_plan_json"], payload)
+        else:
+            result = plan_request(payload)
+    except ValidationError as error:
+        return _validation_error(trace_id, error)
+    except PlanError as error:
+        return jsonify({"status": "error", "error_code": error.code, "message": str(error), "trace_id": trace_id}), 422
+    response = result.model_dump(mode="json", exclude_none=True)
+    response["trace_id"] = trace_id
+    return jsonify(response), (422 if result.status == "unsupported" else 200)
+
+
+@app.get("/plan-ui")
+def plan_ui():
+    return send_file(Path(__file__).with_name("plan_preview.html"))
+
+
+@app.get("/analysis-ui")
+def analysis_ui():
+    """Serve the released, self-contained M10 evidence-backed demo."""
+    return send_file(
+        Path(__file__).resolve().parent / "docs/demo/m10_analysis_result_v2.html",
+        mimetype="text/html",
+    )
 
 @app.get("/output/<path:filename>")
 def output_files(filename):

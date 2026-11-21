@@ -1,0 +1,217 @@
+{
+  "case_count": 13,
+  "hashes": {
+    "benchmarks/data/dev/m12a_scenario_cases_v1.jsonl": "2f0d9b1508f43794b4ebd89a9efaf2abe625c58bdb1dfcac3af43827ab92089e",
+    "benchmarks/m12a_oracle.py": "23480397c6788233d5cb4e8a141bc0435957d8caadf987f7f082852d54ee7707",
+    "data/fixtures/osm/m12_lund_poi_v1/lund_poi_points_v1.geojson": "65640faa539e5337ce4cc3ce87656b9cdcd9319116b6e6df36607d0ce80b6d2f",
+    "data/fixtures/osm/m12_lund_poi_v1/manifest.json": "e393add766314a47c54c501390e26d27a1a99617ef8a4fd11a9a756b7f2a21f6",
+    "data/fixtures/population/scb/m12_lund_v1/manifest.json": "134a177aa715eca0ef37eb32c33b5978f0b87bab0fcd77d5481c628f6fcac2cb",
+    "data/fixtures/population/scb/m12_lund_v1/scb_population_grid_2025_lund_20km_raw.geojson": "2acc387c186a97e3a3e5481fad388f15882ed5c3d9510bd53b5befebae807998"
+  },
+  "oracle": "benchmarks/m12a_oracle.py",
+  "references": {
+    "d1000_b5-9_n10": {
+      "band_not_reported_cells": 0,
+      "gap_cell_count": 11,
+      "gap_children": 178,
+      "gap_children_share": 0.015502525692388086,
+      "gap_grid_ids": [
+        "SE_CRS3006RES1000mN6165000E382000",
+        "SE_CRS3006RES1000mN6165000E393000",
+        "SE_CRS3006RES1000mN6172000E380000",
+        "SE_CRS3006RES1000mN6173000E377000",
+        "SE_CRS3006RES1000mN6173000E379000",
+        "SE_CRS3006RES1000mN6174000E377000",
+        "SE_CRS3006RES1000mN6181000E377000",
+        "SE_CRS3006RES1000mN6184000E379000",
+        "SE_CRS3006RES1000mN6184000E387000",
+        "SE_CRS3006RES1000mN6186000E377000",
+        "SE_CRS3006RES1000mN6186000E381000"
+      ],
+      "gaps": [
+        {
+          "children": 16,
+          "distance_m": 1720.0804670559596,
+          "grid_id": "SE_CRS3006RES1000mN6165000E382000",
+          "nearest_poi_id": "way/1051834226",
+          "population_total": 111
+        },
+        {
+          "children": 11,
+          "distance_m": 2798.0847863668764,
+          "grid_id": "SE_CRS3006RES1000mN6165000E393000",
+          "nearest_poi_id": "way/53766212",
+          "population_total": 82
+        },
+        {
+          "children": 14,
+          "distance_m": 1074.9827209794971,
+          "grid_id": "SE_CRS3006RES1000mN6172000E380000",
+          "nearest_poi_id": "way/49257274",
+          "population_total": 300
+        },
+        {
+          "children": 10,
+          "distance_m": 1403.8115462587457,
+          "grid_id": "SE_CRS3006RES1000mN6173000E377000",
+          "nearest_poi_id": "way/165024503",
+          "population_total": 123
+        },
+        {
+          "children": 23,
+          "distance_m": 1234.9249442468001,
+          "grid_id": "SE_CRS3006RES1000mN6173000E379000",
+          "nearest_poi_id": "way/165024503",
+          "population_total": 415
+        },
+        {
+          "children": 13,
+          "distance_m": 1365.5542957740586,
+          "grid_id": "SE_CRS3006RES1000mN6174000E377000",
+          "nearest_poi_id": "way/291718502",
+          "population_total": 251
+        },
+        {
+          "children": 14,
+          "distance_m": 1759.3001216275734,
+          "grid_id": "SE_CRS3006RES1000mN6181000E377000",
+          "nearest_poi_id": "way/235286856",
+          "population_total": 150
+        },
+        {
+          "children": 19,
+          "distance_m": 1046.9877240346977,
+          "grid_id": "SE_CRS3006RES1000mN6184000E379000",
+          "nearest_poi_id": "way/51358746",
+          "population_total": 150
+        },
+        {
+          "children": 26,
+          "distance_m": 1803.943254746663,
+          "grid_id": "SE_CRS3006RES1000mN6184000E387000",
+          "nearest_poi_id": "way/195748979",
+          "population_total": 308
+        },
+        {
+          "children": 10,
+          "distance_m": 1354.6395108383376,
+          "grid_id": "SE_CRS3006RES1000mN6186000E377000",
+          "nearest_poi_id": "way/233386237",
+          "population_total": 176
+        },
+        {
+          "children": 22,
+          "distance_m": 1163.868667486462,
+          "grid_id": "SE_CRS3006RES1000mN6186000E381000",
+          "nearest_poi_id": "way/60164379",
+          "population_total": 431
+        }
+      ],
+      "grid_cell_count": 453,
+      "max_gap_distance_m": 2798.0847863668764,
+      "min_distance_margin_m": 0.9830751658884083,
+      "parameters": {
+        "age_band": "5-9",
+        "distance_m": 1000,
+        "threshold": 10
+      },
+      "school_count": 132,
+      "total_children": 11482
+    },
+    "d1500_b10-14_n10": {
+      "band_not_reported_cells": 0,
+      "gap_cell_count": 7,
+      "gap_children": 97,
+      "gap_children_share": 0.007683168316831683,
+      "gap_grid_ids": [
+        "SE_CRS3006RES1000mN6165000E382000",
+        "SE_CRS3006RES1000mN6177000E378000",
+        "SE_CRS3006RES1000mN6177000E379000",
+        "SE_CRS3006RES1000mN6177000E381000",
+        "SE_CRS3006RES1000mN6181000E377000",
+        "SE_CRS3006RES1000mN6181000E394000",
+        "SE_CRS3006RES1000mN6184000E387000"
+      ],
+      "gaps": [
+        {
+          "children": 11,
+          "distance_m": 1720.0804670559596,
+          "grid_id": "SE_CRS3006RES1000mN6165000E382000",
+          "nearest_poi_id": "way/1051834226",
+          "population_total": 111
+        },
+        {
+          "children": 10,
+          "distance_m": 1656.5399887176884,
+          "grid_id": "SE_CRS3006RES1000mN6177000E378000",
+          "nearest_poi_id": "way/291718502",
+          "population_total": 112
+        },
+        {
+          "children": 14,
+          "distance_m": 2592.8617318225643,
+          "grid_id": "SE_CRS3006RES1000mN6177000E379000",
+          "nearest_poi_id": "way/291718502",
+          "population_total": 131
+        },
+        {
+          "children": 11,
+          "distance_m": 2770.1369956329017,
+          "grid_id": "SE_CRS3006RES1000mN6177000E381000",
+          "nearest_poi_id": "way/93523289",
+          "population_total": 94
+        },
+        {
+          "children": 14,
+          "distance_m": 1759.3001216275734,
+          "grid_id": "SE_CRS3006RES1000mN6181000E377000",
+          "nearest_poi_id": "way/235286856",
+          "population_total": 150
+        },
+        {
+          "children": 20,
+          "distance_m": 2812.6202886704646,
+          "grid_id": "SE_CRS3006RES1000mN6181000E394000",
+          "nearest_poi_id": "way/105203024",
+          "population_total": 170
+        },
+        {
+          "children": 17,
+          "distance_m": 1803.943254746663,
+          "grid_id": "SE_CRS3006RES1000mN6184000E387000",
+          "nearest_poi_id": "way/195748979",
+          "population_total": 308
+        }
+      ],
+      "grid_cell_count": 453,
+      "max_gap_distance_m": 2812.6202886704646,
+      "min_distance_margin_m": 10.612620650150348,
+      "parameters": {
+        "age_band": "10-14",
+        "distance_m": 1500,
+        "threshold": 10
+      },
+      "school_count": 132,
+      "total_children": 12625
+    },
+    "d2000_b5-9_n20": {
+      "band_not_reported_cells": 0,
+      "gap_cell_count": 0,
+      "gap_children": 0,
+      "gap_children_share": 0.0,
+      "gap_grid_ids": [],
+      "gaps": [],
+      "grid_cell_count": 453,
+      "max_gap_distance_m": null,
+      "min_distance_margin_m": 0.48463180151520646,
+      "parameters": {
+        "age_band": "5-9",
+        "distance_m": 2000,
+        "threshold": 20
+      },
+      "school_count": 132,
+      "total_children": 11482
+    }
+  },
+  "schema": "m12a-references-v1"
+}

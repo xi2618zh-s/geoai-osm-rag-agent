@@ -1,0 +1,14 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "id": "bow-tie-1",
+      "properties": {"name": "Self-intersecting polygon"},
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[[0.0, 0.0], [2.0, 2.0], [2.0, 0.0], [0.0, 2.0], [0.0, 0.0]]]
+      }
+    }
+  ]
+}

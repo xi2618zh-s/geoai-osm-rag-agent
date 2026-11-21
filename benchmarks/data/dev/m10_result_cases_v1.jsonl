@@ -1,0 +1,12 @@
+{"case_id":"search_all","template":"search","query":"search sites in Lund","expected_count":3}
+{"case_id":"search_alpha","template":"search","query":"search sites where name = Alpha in Lund","expected_count":1}
+{"case_id":"search_beta","template":"search","query":"search sites where name = Beta in Lund","expected_count":1}
+{"case_id":"search_gamma","template":"search","query":"search sites where name = Gamma in Lund","expected_count":1}
+{"case_id":"coverage_1","template":"coverage","query":"find sites within 25 m of schools in Lund","distance_m":25}
+{"case_id":"coverage_2","template":"coverage","query":"find sites within 75 m of schools in Lund","distance_m":75}
+{"case_id":"coverage_3","template":"coverage","query":"find sites within 125 m of schools in Lund","distance_m":125}
+{"case_id":"coverage_4","template":"coverage","query":"find sites within 250 m of schools in Lund","distance_m":250}
+{"case_id":"compare_1","template":"comparison","query":"search sites in Lund","compare_query":"search sites where name = Alpha in Lund","baseline_count":3}
+{"case_id":"compare_2","template":"comparison","query":"search sites in Lund","compare_query":"search sites where name = Beta in Lund","baseline_count":3}
+{"case_id":"compare_3","template":"comparison","query":"search sites in Lund","compare_query":"search sites where name = Gamma in Lund","baseline_count":3}
+{"case_id":"compare_4","template":"comparison","query":"search sites in Lund","compare_query":"search sites where name = Delta in Lund","baseline_count":3}

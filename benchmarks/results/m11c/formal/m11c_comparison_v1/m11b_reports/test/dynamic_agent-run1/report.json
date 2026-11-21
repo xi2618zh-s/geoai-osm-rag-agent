@@ -1,0 +1,48 @@
+{
+  "metadata": {
+    "config_hash": "sha256:8a59e8de7f2c2590d289e6dd9edd50d1272e0b2ce7f0c2d621203eb775f906f4",
+    "data_version": "m11b-private-test-v1",
+    "generated_at": "2026-10-06T21:05:23.810337+00:00",
+    "git_commit": "cb17d605bbb42eb755acea332b898d2939186574",
+    "model_id": null,
+    "official_release_verified": true,
+    "predictions_hash": "sha256:46cb28fe23d6c09840d9a0d706199844eab8ecb5911b7306728ac7400158fe16",
+    "private_seed_recorded_in_ignored_manifest": true,
+    "prompt_version": null,
+    "random_seeds": null,
+    "reference_calibration": false,
+    "run_id": "dynamic_agent-run1",
+    "schema_version": "2.0",
+    "scorer_version": "m11b-v2.0",
+    "split": "test",
+    "system_id": "dynamic_agent",
+    "tasks_hash": "sha256:e0f9d97fc68f22f1c75e3e861b5d8b8370530ae4a634cae21d72a6f8aa2121fd",
+    "working_tree_dirty": true
+  },
+  "summary": {
+    "failure_category_counts": {
+      "crs_mismatch": 40,
+      "feature_set_mismatch": 39,
+      "field_mismatch": 40,
+      "geometry_mismatch": 40,
+      "numeric_tolerance_exceeded": 40,
+      "operation_mismatch": 40,
+      "required_step_mismatch": 40,
+      "status_mismatch": 40,
+      "tool_sequence_mismatch": 40
+    },
+    "latency_mean_ms": 25.459600000000002,
+    "latency_p50_ms": 24.985500000000002,
+    "latency_p95_ms": 28.596399999999996,
+    "mean_llm_calls": 0.0,
+    "mean_tool_calls": 0.0,
+    "pass_rate": 0.0,
+    "passed_count": 0,
+    "score_mean": 0.0027777777777777775,
+    "score_p50": 0.0,
+    "score_p95": 0.0,
+    "score_stdev": 0.017347216662217772,
+    "task_count": 40,
+    "total_estimated_cost_usd": 0.0
+  }
+}

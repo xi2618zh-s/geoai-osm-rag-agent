@@ -1,0 +1,1785 @@
+{
+  "schema_version": "draft-review-1",
+  "status": "REVIEW_ONLY_REVISED_NOT_FROZEN",
+  "warning": "No URL or oldid; not a fetch allow-list. Official page, license and status checks pending after review.",
+  "expected_total": 205,
+  "retained_phase1": 100,
+  "new_phase2": 105,
+  "category_counts": {
+    "accessibility": 8,
+    "building": 12,
+    "education": 14,
+    "food": 24,
+    "healthcare": 23,
+    "land_use": 7,
+    "leisure": 21,
+    "public_service": 22,
+    "retail": 31,
+    "transport": 43
+  },
+  "role_counts": {
+    "attribute": 8,
+    "feature": 190,
+    "land_use": 7
+  },
+  "candidates": [
+    {
+      "canonical_tag": "access=private",
+      "primary_category": "accessibility",
+      "tag_role": "attribute",
+      "cohort": "phase2_new",
+      "applicability_and_combination": "法律/管理访问限制；与道路、设施或入口主标签组合；不表示轮椅无障碍。 不能作为轮椅无障碍的正面证据。",
+      "review_state": "draft_unverified",
+      "semantic_kind": "legal_access",
+      "wheelchair_positive_evidence": false
+    },
+    {
+      "canonical_tag": "aeroway=aerodrome",
+      "primary_category": "transport",
+      "tag_role": "feature",
+      "cohort": "phase1_retained",
+      "applicability_and_combination": "独立设施/对象主标签；可与适用的名称、开放时间、无障碍属性组合。",
+      "review_state": "draft_unverified",
+      "phase1_category": "transport"
+    },
+    {
+      "canonical_tag": "aeroway=airport",
+      "primary_category": "transport",
+      "tag_role": "feature",
+      "cohort": "phase1_retained",
+      "applicability_and_combination": "Phase 1 已核实为 obsolete；仅为兼容旧标签保留，不得作为优先推荐标签。",
+      "review_state": "draft_unverified",
+      "phase1_category": "transport",
+      "status_note": "obsolete; compatibility_only; not_preferred"
+    },
+    {
+      "canonical_tag": "aeroway=terminal",
+      "primary_category": "transport",
+      "tag_role": "feature",
+      "cohort": "phase1_retained",
+      "applicability_and_combination": "独立设施/对象主标签；可与适用的名称、开放时间、无障碍属性组合。",
+      "review_state": "draft_unverified",
+      "phase1_category": "transport"
+    },
+    {
+      "canonical_tag": "amenity=atm",
+      "primary_category": "public_service",
+      "tag_role": "feature",
+      "cohort": "phase2_new",
+      "applicability_and_combination": "独立设施/对象主标签；可与适用的名称、开放时间、无障碍属性组合。",
+      "review_state": "draft_unverified"
+    },
+    {
+      "canonical_tag": "amenity=bank",
+      "primary_category": "public_service",
+      "tag_role": "feature",
+      "cohort": "phase2_new",
+      "applicability_and_combination": "独立设施/对象主标签；可与适用的名称、开放时间、无障碍属性组合。",
+      "review_state": "draft_unverified"
+    },
+    {
+      "canonical_tag": "amenity=bar",
+      "primary_category": "food",
+      "tag_role": "feature",
+      "cohort": "phase1_retained",
+      "applicability_and_combination": "独立设施/对象主标签；可与适用的名称、开放时间、无障碍属性组合。",
+      "review_state": "draft_unverified",
+      "phase1_category": "food"
+    },
+    {
+      "canonical_tag": "amenity=bench",
+      "primary_category": "public_service",
+      "tag_role": "feature",
+      "cohort": "phase2_new",
+      "applicability_and_combination": "独立设施/对象主标签；可与适用的名称、开放时间、无障碍属性组合。",
+      "review_state": "draft_unverified"
+    },
+    {
+      "canonical_tag": "amenity=bicycle_parking",
+      "primary_category": "transport",
+      "tag_role": "feature",
+      "cohort": "phase1_retained",
+      "applicability_and_combination": "独立设施/对象主标签；可与适用的名称、开放时间、无障碍属性组合。",
+      "review_state": "draft_unverified",
+      "phase1_category": "transport"
+    },
+    {
+      "canonical_tag": "amenity=bicycle_rental",
+      "primary_category": "transport",
+      "tag_role": "feature",
+      "cohort": "phase1_retained",
+      "applicability_and_combination": "独立设施/对象主标签；可与适用的名称、开放时间、无障碍属性组合。",
+      "review_state": "draft_unverified",
+      "phase1_category": "transport"
+    },
+    {
+      "canonical_tag": "amenity=biergarten",
+      "primary_category": "food",
+      "tag_role": "feature",
+      "cohort": "phase1_retained",
+      "applicability_and_combination": "独立设施/对象主标签；可与适用的名称、开放时间、无障碍属性组合。",
+      "review_state": "draft_unverified",
+      "phase1_category": "food"
+    },
+    {
+      "canonical_tag": "amenity=bus_station",
+      "primary_category": "transport",
+      "tag_role": "feature",
+      "cohort": "phase2_new",
+      "applicability_and_combination": "独立设施/对象主标签；可与适用的名称、开放时间、无障碍属性组合。",
+      "review_state": "draft_unverified"
+    },
+    {
+      "canonical_tag": "amenity=cafe",
+      "primary_category": "food",
+      "tag_role": "feature",
+      "cohort": "phase1_retained",
+      "applicability_and_combination": "独立设施/对象主标签；可与适用的名称、开放时间、无障碍属性组合。",
+      "review_state": "draft_unverified",
+      "phase1_category": "food"
+    },
+    {
+      "canonical_tag": "amenity=car_rental",
+      "primary_category": "transport",
+      "tag_role": "feature",
+      "cohort": "phase2_new",
+      "applicability_and_combination": "独立设施/对象主标签；可与适用的名称、开放时间、无障碍属性组合。",
+      "review_state": "draft_unverified"
+    },
+    {
+      "canonical_tag": "amenity=car_sharing",
+      "primary_category": "transport",
+      "tag_role": "feature",
+      "cohort": "phase2_new",
+      "applicability_and_combination": "独立设施/对象主标签；可与适用的名称、开放时间、无障碍属性组合。",
+      "review_state": "draft_unverified"
+    },
+    {
+      "canonical_tag": "amenity=charging_station",
+      "primary_category": "transport",
+      "tag_role": "feature",
+      "cohort": "phase1_retained",
+      "applicability_and_combination": "独立设施/对象主标签；可与适用的名称、开放时间、无障碍属性组合。",
+      "review_state": "draft_unverified",
+      "phase1_category": "transport"
+    },
+    {
+      "canonical_tag": "amenity=childcare",
+      "primary_category": "education",
+      "tag_role": "feature",
+      "cohort": "phase2_new",
+      "applicability_and_combination": "独立设施/对象主标签；可与适用的名称、开放时间、无障碍属性组合。",
+      "review_state": "draft_unverified"
+    },
+    {
+      "canonical_tag": "amenity=cinema",
+      "primary_category": "leisure",
+      "tag_role": "feature",
+      "cohort": "phase1_retained",
+      "applicability_and_combination": "独立设施/对象主标签；可与适用的名称、开放时间、无障碍属性组合。",
+      "review_state": "draft_unverified",
+      "phase1_category": "leisure"
+    },
+    {
+      "canonical_tag": "amenity=clinic",
+      "primary_category": "healthcare",
+      "tag_role": "feature",
+      "cohort": "phase1_retained",
+      "applicability_and_combination": "独立设施/对象主标签；可与适用的名称、开放时间、无障碍属性组合。",
+      "review_state": "draft_unverified",
+      "phase1_category": "healthcare"
+    },
+    {
+      "canonical_tag": "amenity=college",
+      "primary_category": "education",
+      "tag_role": "feature",
+      "cohort": "phase1_retained",
+      "applicability_and_combination": "独立设施/对象主标签；可与适用的名称、开放时间、无障碍属性组合。",
+      "review_state": "draft_unverified",
+      "phase1_category": "education"
+    },
+    {
+      "canonical_tag": "amenity=community_centre",
+      "primary_category": "public_service",
+      "tag_role": "feature",
+      "cohort": "phase1_retained",
+      "applicability_and_combination": "独立设施/对象主标签；可与适用的名称、开放时间、无障碍属性组合。",
+      "review_state": "draft_unverified",
+      "phase1_category": "public_service"
+    },
+    {
+      "canonical_tag": "amenity=courthouse",
+      "primary_category": "public_service",
+      "tag_role": "feature",
+      "cohort": "phase1_retained",
+      "applicability_and_combination": "独立设施/对象主标签；可与适用的名称、开放时间、无障碍属性组合。",
+      "review_state": "draft_unverified",
+      "phase1_category": "public_service"
+    },
+    {
+      "canonical_tag": "amenity=dentist",
+      "primary_category": "healthcare",
+      "tag_role": "feature",
+      "cohort": "phase1_retained",
+      "applicability_and_combination": "独立设施/对象主标签；可与适用的名称、开放时间、无障碍属性组合。",
+      "review_state": "draft_unverified",
+      "phase1_category": "healthcare"
+    },
+    {
+      "canonical_tag": "amenity=doctors",
+      "primary_category": "healthcare",
+      "tag_role": "feature",
+      "cohort": "phase1_retained",
+      "applicability_and_combination": "独立设施/对象主标签；可与适用的名称、开放时间、无障碍属性组合。",
+      "review_state": "draft_unverified",
+      "phase1_category": "healthcare"
+    },
+    {
+      "canonical_tag": "amenity=drinking_water",
+      "primary_category": "public_service",
+      "tag_role": "feature",
+      "cohort": "phase1_retained",
+      "applicability_and_combination": "独立设施/对象主标签；可与适用的名称、开放时间、无障碍属性组合。",
+      "review_state": "draft_unverified",
+      "phase1_category": "public_service"
+    },
+    {
+      "canonical_tag": "amenity=driving_school",
+      "primary_category": "education",
+      "tag_role": "feature",
+      "cohort": "phase1_retained",
+      "applicability_and_combination": "独立设施/对象主标签；可与适用的名称、开放时间、无障碍属性组合。",
+      "review_state": "draft_unverified",
+      "phase1_category": "education"
+    },
+    {
+      "canonical_tag": "amenity=fast_food",
+      "primary_category": "food",
+      "tag_role": "feature",
+      "cohort": "phase1_retained",
+      "applicability_and_combination": "独立设施/对象主标签；可与适用的名称、开放时间、无障碍属性组合。",
+      "review_state": "draft_unverified",
+      "phase1_category": "food"
+    },
+    {
+      "canonical_tag": "amenity=fire_station",
+      "primary_category": "public_service",
+      "tag_role": "feature",
+      "cohort": "phase1_retained",
+      "applicability_and_combination": "独立设施/对象主标签；可与适用的名称、开放时间、无障碍属性组合。",
+      "review_state": "draft_unverified",
+      "phase1_category": "public_service"
+    },
+    {
+      "canonical_tag": "amenity=food_court",
+      "primary_category": "food",
+      "tag_role": "feature",
+      "cohort": "phase1_retained",
+      "applicability_and_combination": "独立设施/对象主标签；可与适用的名称、开放时间、无障碍属性组合。",
+      "review_state": "draft_unverified",
+      "phase1_category": "food"
+    },
+    {
+      "canonical_tag": "amenity=fuel",
+      "primary_category": "transport",
+      "tag_role": "feature",
+      "cohort": "phase1_retained",
+      "applicability_and_combination": "独立设施/对象主标签；可与适用的名称、开放时间、无障碍属性组合。",
+      "review_state": "draft_unverified",
+      "phase1_category": "transport"
+    },
+    {
+      "canonical_tag": "amenity=hospital",
+      "primary_category": "healthcare",
+      "tag_role": "feature",
+      "cohort": "phase1_retained",
+      "applicability_and_combination": "独立设施/对象主标签；可与适用的名称、开放时间、无障碍属性组合。",
+      "review_state": "draft_unverified",
+      "phase1_category": "healthcare"
+    },
+    {
+      "canonical_tag": "amenity=ice_cream",
+      "primary_category": "food",
+      "tag_role": "feature",
+      "cohort": "phase1_retained",
+      "applicability_and_combination": "独立设施/对象主标签；可与适用的名称、开放时间、无障碍属性组合。",
+      "review_state": "draft_unverified",
+      "phase1_category": "food"
+    },
+    {
+      "canonical_tag": "amenity=kindergarten",
+      "primary_category": "education",
+      "tag_role": "feature",
+      "cohort": "phase1_retained",
+      "applicability_and_combination": "独立设施/对象主标签；可与适用的名称、开放时间、无障碍属性组合。",
+      "review_state": "draft_unverified",
+      "phase1_category": "education"
+    },
+    {
+      "canonical_tag": "amenity=language_school",
+      "primary_category": "education",
+      "tag_role": "feature",
+      "cohort": "phase1_retained",
+      "applicability_and_combination": "独立设施/对象主标签；可与适用的名称、开放时间、无障碍属性组合。",
+      "review_state": "draft_unverified",
+      "phase1_category": "education"
+    },
+    {
+      "canonical_tag": "amenity=library",
+      "primary_category": "public_service",
+      "tag_role": "feature",
+      "cohort": "phase1_retained",
+      "applicability_and_combination": "独立设施/对象主标签；可与适用的名称、开放时间、无障碍属性组合。",
+      "review_state": "draft_unverified",
+      "phase1_category": "public_service"
+    },
+    {
+      "canonical_tag": "amenity=music_school",
+      "primary_category": "education",
+      "tag_role": "feature",
+      "cohort": "phase1_retained",
+      "applicability_and_combination": "独立设施/对象主标签；可与适用的名称、开放时间、无障碍属性组合。",
+      "review_state": "draft_unverified",
+      "phase1_category": "education"
+    },
+    {
+      "canonical_tag": "amenity=nursing_home",
+      "primary_category": "healthcare",
+      "tag_role": "feature",
+      "cohort": "phase1_retained",
+      "applicability_and_combination": "独立设施/对象主标签；可与适用的名称、开放时间、无障碍属性组合。",
+      "review_state": "draft_unverified",
+      "phase1_category": "healthcare"
+    },
+    {
+      "canonical_tag": "amenity=parcel_locker",
+      "primary_category": "public_service",
+      "tag_role": "feature",
+      "cohort": "phase2_new",
+      "applicability_and_combination": "独立设施/对象主标签；可与适用的名称、开放时间、无障碍属性组合。",
+      "review_state": "draft_unverified"
+    },
+    {
+      "canonical_tag": "amenity=parking",
+      "primary_category": "transport",
+      "tag_role": "feature",
+      "cohort": "phase1_retained",
+      "applicability_and_combination": "独立设施/对象主标签；可与适用的名称、开放时间、无障碍属性组合。",
+      "review_state": "draft_unverified",
+      "phase1_category": "transport"
+    },
+    {
+      "canonical_tag": "amenity=parking_entrance",
+      "primary_category": "transport",
+      "tag_role": "feature",
+      "cohort": "phase2_new",
+      "applicability_and_combination": "独立设施/对象主标签；可与适用的名称、开放时间、无障碍属性组合。",
+      "review_state": "draft_unverified"
+    },
+    {
+      "canonical_tag": "amenity=parking_space",
+      "primary_category": "transport",
+      "tag_role": "feature",
+      "cohort": "phase2_new",
+      "applicability_and_combination": "独立设施/对象主标签；可与适用的名称、开放时间、无障碍属性组合。",
+      "review_state": "draft_unverified"
+    },
+    {
+      "canonical_tag": "amenity=pharmacy",
+      "primary_category": "healthcare",
+      "tag_role": "feature",
+      "cohort": "phase1_retained",
+      "applicability_and_combination": "独立设施/对象主标签；可与适用的名称、开放时间、无障碍属性组合。",
+      "review_state": "draft_unverified",
+      "phase1_category": "healthcare"
+    },
+    {
+      "canonical_tag": "amenity=place_of_worship",
+      "primary_category": "public_service",
+      "tag_role": "feature",
+      "cohort": "phase2_new",
+      "applicability_and_combination": "独立设施/对象主标签；可与适用的名称、开放时间、无障碍属性组合。",
+      "review_state": "draft_unverified"
+    },
+    {
+      "canonical_tag": "amenity=police",
+      "primary_category": "public_service",
+      "tag_role": "feature",
+      "cohort": "phase1_retained",
+      "applicability_and_combination": "独立设施/对象主标签；可与适用的名称、开放时间、无障碍属性组合。",
+      "review_state": "draft_unverified",
+      "phase1_category": "public_service"
+    },
+    {
+      "canonical_tag": "amenity=post_box",
+      "primary_category": "public_service",
+      "tag_role": "feature",
+      "cohort": "phase2_new",
+      "applicability_and_combination": "独立设施/对象主标签；可与适用的名称、开放时间、无障碍属性组合。",
+      "review_state": "draft_unverified"
+    },
+    {
+      "canonical_tag": "amenity=post_office",
+      "primary_category": "public_service",
+      "tag_role": "feature",
+      "cohort": "phase1_retained",
+      "applicability_and_combination": "独立设施/对象主标签；可与适用的名称、开放时间、无障碍属性组合。",
+      "review_state": "draft_unverified",
+      "phase1_category": "public_service"
+    },
+    {
+      "canonical_tag": "amenity=pub",
+      "primary_category": "food",
+      "tag_role": "feature",
+      "cohort": "phase1_retained",
+      "applicability_and_combination": "独立设施/对象主标签；可与适用的名称、开放时间、无障碍属性组合。",
+      "review_state": "draft_unverified",
+      "phase1_category": "food"
+    },
+    {
+      "canonical_tag": "amenity=public_bath",
+      "primary_category": "public_service",
+      "tag_role": "feature",
+      "cohort": "phase2_new",
+      "applicability_and_combination": "独立设施/对象主标签；可与适用的名称、开放时间、无障碍属性组合。",
+      "review_state": "draft_unverified"
+    },
+    {
+      "canonical_tag": "amenity=recycling",
+      "primary_category": "public_service",
+      "tag_role": "feature",
+      "cohort": "phase1_retained",
+      "applicability_and_combination": "独立设施/对象主标签；可与适用的名称、开放时间、无障碍属性组合。",
+      "review_state": "draft_unverified",
+      "phase1_category": "public_service"
+    },
+    {
+      "canonical_tag": "amenity=research_institute",
+      "primary_category": "education",
+      "tag_role": "feature",
+      "cohort": "phase2_new",
+      "applicability_and_combination": "独立设施/对象主标签；可与适用的名称、开放时间、无障碍属性组合。",
+      "review_state": "draft_unverified"
+    },
+    {
+      "canonical_tag": "amenity=restaurant",
+      "primary_category": "food",
+      "tag_role": "feature",
+      "cohort": "phase1_retained",
+      "applicability_and_combination": "独立设施/对象主标签；可与适用的名称、开放时间、无障碍属性组合。",
+      "review_state": "draft_unverified",
+      "phase1_category": "food"
+    },
+    {
+      "canonical_tag": "amenity=school",
+      "primary_category": "education",
+      "tag_role": "feature",
+      "cohort": "phase1_retained",
+      "applicability_and_combination": "独立设施/对象主标签；可与适用的名称、开放时间、无障碍属性组合。",
+      "review_state": "draft_unverified",
+      "phase1_category": "education"
+    },
+    {
+      "canonical_tag": "amenity=shelter",
+      "primary_category": "public_service",
+      "tag_role": "feature",
+      "cohort": "phase2_new",
+      "applicability_and_combination": "独立设施/对象主标签；可与适用的名称、开放时间、无障碍属性组合。",
+      "review_state": "draft_unverified"
+    },
+    {
+      "canonical_tag": "amenity=social_facility",
+      "primary_category": "healthcare",
+      "tag_role": "feature",
+      "cohort": "phase1_retained",
+      "applicability_and_combination": "独立设施/对象主标签；可与适用的名称、开放时间、无障碍属性组合。",
+      "review_state": "draft_unverified",
+      "phase1_category": "healthcare"
+    },
+    {
+      "canonical_tag": "amenity=taxi",
+      "primary_category": "transport",
+      "tag_role": "feature",
+      "cohort": "phase1_retained",
+      "applicability_and_combination": "独立设施/对象主标签；可与适用的名称、开放时间、无障碍属性组合。",
+      "review_state": "draft_unverified",
+      "phase1_category": "transport"
+    },
+    {
+      "canonical_tag": "amenity=telephone",
+      "primary_category": "public_service",
+      "tag_role": "feature",
+      "cohort": "phase1_retained",
+      "applicability_and_combination": "独立设施/对象主标签；可与适用的名称、开放时间、无障碍属性组合。",
+      "review_state": "draft_unverified",
+      "phase1_category": "public_service"
+    },
+    {
+      "canonical_tag": "amenity=toilets",
+      "primary_category": "public_service",
+      "tag_role": "feature",
+      "cohort": "phase1_retained",
+      "applicability_and_combination": "独立设施/对象主标签；可与适用的名称、开放时间、无障碍属性组合。",
+      "review_state": "draft_unverified",
+      "phase1_category": "public_service"
+    },
+    {
+      "canonical_tag": "amenity=townhall",
+      "primary_category": "public_service",
+      "tag_role": "feature",
+      "cohort": "phase1_retained",
+      "applicability_and_combination": "独立设施/对象主标签；可与适用的名称、开放时间、无障碍属性组合。",
+      "review_state": "draft_unverified",
+      "phase1_category": "public_service"
+    },
+    {
+      "canonical_tag": "amenity=training",
+      "primary_category": "education",
+      "tag_role": "feature",
+      "cohort": "phase1_retained",
+      "applicability_and_combination": "独立设施/对象主标签；可与适用的名称、开放时间、无障碍属性组合。",
+      "review_state": "draft_unverified",
+      "phase1_category": "education"
+    },
+    {
+      "canonical_tag": "amenity=university",
+      "primary_category": "education",
+      "tag_role": "feature",
+      "cohort": "phase1_retained",
+      "applicability_and_combination": "独立设施/对象主标签；可与适用的名称、开放时间、无障碍属性组合。",
+      "review_state": "draft_unverified",
+      "phase1_category": "education"
+    },
+    {
+      "canonical_tag": "amenity=veterinary",
+      "primary_category": "healthcare",
+      "tag_role": "feature",
+      "cohort": "phase1_retained",
+      "applicability_and_combination": "独立设施/对象主标签；可与适用的名称、开放时间、无障碍属性组合。",
+      "review_state": "draft_unverified",
+      "phase1_category": "healthcare"
+    },
+    {
+      "canonical_tag": "amenity=waste_basket",
+      "primary_category": "public_service",
+      "tag_role": "feature",
+      "cohort": "phase2_new",
+      "applicability_and_combination": "独立设施/对象主标签；可与适用的名称、开放时间、无障碍属性组合。",
+      "review_state": "draft_unverified"
+    },
+    {
+      "canonical_tag": "amenity=waste_disposal",
+      "primary_category": "public_service",
+      "tag_role": "feature",
+      "cohort": "phase2_new",
+      "applicability_and_combination": "独立设施/对象主标签；可与适用的名称、开放时间、无障碍属性组合。",
+      "review_state": "draft_unverified"
+    },
+    {
+      "canonical_tag": "bicycle=designated",
+      "primary_category": "accessibility",
+      "tag_role": "attribute",
+      "cohort": "phase2_new",
+      "applicability_and_combination": "自行车指定通行属性；与道路/路径主标签组合；不单独构成自行车道。 不能作为轮椅无障碍的正面证据。",
+      "review_state": "draft_unverified",
+      "semantic_kind": "mode_access",
+      "wheelchair_positive_evidence": false
+    },
+    {
+      "canonical_tag": "building=apartments",
+      "primary_category": "building",
+      "tag_role": "feature",
+      "cohort": "phase1_retained",
+      "applicability_and_combination": "建筑类型主标签；可与设施标签共存；建筑用途不证明服务正在提供。",
+      "review_state": "draft_unverified",
+      "phase1_category": "building"
+    },
+    {
+      "canonical_tag": "building=civic",
+      "primary_category": "building",
+      "tag_role": "feature",
+      "cohort": "phase2_new",
+      "applicability_and_combination": "建筑类型主标签；可与设施标签共存；建筑用途不证明服务正在提供。",
+      "review_state": "draft_unverified"
+    },
+    {
+      "canonical_tag": "building=college",
+      "primary_category": "education",
+      "tag_role": "feature",
+      "cohort": "phase2_new",
+      "applicability_and_combination": "建筑类型主标签；可与设施标签共存；建筑用途不证明服务正在提供。",
+      "review_state": "draft_unverified"
+    },
+    {
+      "canonical_tag": "building=commercial",
+      "primary_category": "building",
+      "tag_role": "feature",
+      "cohort": "phase1_retained",
+      "applicability_and_combination": "建筑类型主标签；可与设施标签共存；建筑用途不证明服务正在提供。",
+      "review_state": "draft_unverified",
+      "phase1_category": "building"
+    },
+    {
+      "canonical_tag": "building=detached",
+      "primary_category": "building",
+      "tag_role": "feature",
+      "cohort": "phase1_retained",
+      "applicability_and_combination": "建筑类型主标签；可与设施标签共存；建筑用途不证明服务正在提供。",
+      "review_state": "draft_unverified",
+      "phase1_category": "building"
+    },
+    {
+      "canonical_tag": "building=garage",
+      "primary_category": "building",
+      "tag_role": "feature",
+      "cohort": "phase2_new",
+      "applicability_and_combination": "建筑类型主标签；可与设施标签共存；建筑用途不证明服务正在提供。",
+      "review_state": "draft_unverified"
+    },
+    {
+      "canonical_tag": "building=garages",
+      "primary_category": "building",
+      "tag_role": "feature",
+      "cohort": "phase2_new",
+      "applicability_and_combination": "建筑类型主标签；可与设施标签共存；建筑用途不证明服务正在提供。",
+      "review_state": "draft_unverified"
+    },
+    {
+      "canonical_tag": "building=hospital",
+      "primary_category": "healthcare",
+      "tag_role": "feature",
+      "cohort": "phase2_new",
+      "applicability_and_combination": "专用建筑类型主标签；可与设施或站点标签共存；建筑类型不证明相应服务正在提供。",
+      "review_state": "draft_unverified"
+    },
+    {
+      "canonical_tag": "building=hotel",
+      "primary_category": "leisure",
+      "tag_role": "feature",
+      "cohort": "phase2_new",
+      "applicability_and_combination": "专用建筑类型主标签；可与设施或站点标签共存；建筑类型不证明相应服务正在提供。",
+      "review_state": "draft_unverified"
+    },
+    {
+      "canonical_tag": "building=house",
+      "primary_category": "building",
+      "tag_role": "feature",
+      "cohort": "phase1_retained",
+      "applicability_and_combination": "建筑类型主标签；可与设施标签共存；建筑用途不证明服务正在提供。",
+      "review_state": "draft_unverified",
+      "phase1_category": "building"
+    },
+    {
+      "canonical_tag": "building=industrial",
+      "primary_category": "building",
+      "tag_role": "feature",
+      "cohort": "phase1_retained",
+      "applicability_and_combination": "建筑类型主标签；可与设施标签共存；建筑用途不证明服务正在提供。",
+      "review_state": "draft_unverified",
+      "phase1_category": "building"
+    },
+    {
+      "canonical_tag": "building=kindergarten",
+      "primary_category": "education",
+      "tag_role": "feature",
+      "cohort": "phase2_new",
+      "applicability_and_combination": "建筑类型主标签；可与设施标签共存；建筑用途不证明服务正在提供。",
+      "review_state": "draft_unverified"
+    },
+    {
+      "canonical_tag": "building=office",
+      "primary_category": "building",
+      "tag_role": "feature",
+      "cohort": "phase1_retained",
+      "applicability_and_combination": "建筑类型主标签；可与设施标签共存；建筑用途不证明服务正在提供。",
+      "review_state": "draft_unverified",
+      "phase1_category": "building"
+    },
+    {
+      "canonical_tag": "building=residential",
+      "primary_category": "building",
+      "tag_role": "feature",
+      "cohort": "phase1_retained",
+      "applicability_and_combination": "建筑类型主标签；可与设施标签共存；建筑用途不证明服务正在提供。",
+      "review_state": "draft_unverified",
+      "phase1_category": "building"
+    },
+    {
+      "canonical_tag": "building=retail",
+      "primary_category": "building",
+      "tag_role": "feature",
+      "cohort": "phase1_retained",
+      "applicability_and_combination": "建筑类型主标签；可与设施标签共存；建筑用途不证明服务正在提供。",
+      "review_state": "draft_unverified",
+      "phase1_category": "building"
+    },
+    {
+      "canonical_tag": "building=school",
+      "primary_category": "education",
+      "tag_role": "feature",
+      "cohort": "phase1_retained",
+      "applicability_and_combination": "建筑类型主标签；可与设施标签共存；建筑用途不证明服务正在提供。",
+      "review_state": "draft_unverified",
+      "phase1_category": "education"
+    },
+    {
+      "canonical_tag": "building=train_station",
+      "primary_category": "transport",
+      "tag_role": "feature",
+      "cohort": "phase2_new",
+      "applicability_and_combination": "专用建筑类型主标签；可与设施或站点标签共存；建筑类型不证明相应服务正在提供。",
+      "review_state": "draft_unverified"
+    },
+    {
+      "canonical_tag": "building=university",
+      "primary_category": "education",
+      "tag_role": "feature",
+      "cohort": "phase2_new",
+      "applicability_and_combination": "建筑类型主标签；可与设施标签共存；建筑用途不证明服务正在提供。",
+      "review_state": "draft_unverified"
+    },
+    {
+      "canonical_tag": "building=warehouse",
+      "primary_category": "building",
+      "tag_role": "feature",
+      "cohort": "phase2_new",
+      "applicability_and_combination": "建筑类型主标签；可与设施标签共存；建筑用途不证明服务正在提供。",
+      "review_state": "draft_unverified"
+    },
+    {
+      "canonical_tag": "foot=designated",
+      "primary_category": "accessibility",
+      "tag_role": "attribute",
+      "cohort": "phase2_new",
+      "applicability_and_combination": "步行指定通行属性；与道路/路径主标签组合；不单独构成步行设施。 不能作为轮椅无障碍的正面证据。",
+      "review_state": "draft_unverified",
+      "semantic_kind": "mode_access",
+      "wheelchair_positive_evidence": false
+    },
+    {
+      "canonical_tag": "healthcare=alternative",
+      "primary_category": "healthcare",
+      "tag_role": "feature",
+      "cohort": "phase2_new",
+      "applicability_and_combination": "独立设施/对象主标签；可与适用的名称、开放时间、无障碍属性组合。",
+      "review_state": "draft_unverified"
+    },
+    {
+      "canonical_tag": "healthcare=centre",
+      "primary_category": "healthcare",
+      "tag_role": "feature",
+      "cohort": "phase2_new",
+      "applicability_and_combination": "独立设施/对象主标签；可与适用的名称、开放时间、无障碍属性组合。",
+      "review_state": "draft_unverified"
+    },
+    {
+      "canonical_tag": "healthcare=clinic",
+      "primary_category": "healthcare",
+      "tag_role": "feature",
+      "cohort": "phase2_new",
+      "applicability_and_combination": "独立设施/对象主标签；可与适用的名称、开放时间、无障碍属性组合。",
+      "review_state": "draft_unverified"
+    },
+    {
+      "canonical_tag": "healthcare=dentist",
+      "primary_category": "healthcare",
+      "tag_role": "feature",
+      "cohort": "phase2_new",
+      "applicability_and_combination": "独立设施/对象主标签；可与适用的名称、开放时间、无障碍属性组合。",
+      "review_state": "draft_unverified"
+    },
+    {
+      "canonical_tag": "healthcare=doctor",
+      "primary_category": "healthcare",
+      "tag_role": "feature",
+      "cohort": "phase2_new",
+      "applicability_and_combination": "独立设施/对象主标签；可与适用的名称、开放时间、无障碍属性组合。",
+      "review_state": "draft_unverified"
+    },
+    {
+      "canonical_tag": "healthcare=hospital",
+      "primary_category": "healthcare",
+      "tag_role": "feature",
+      "cohort": "phase2_new",
+      "applicability_and_combination": "独立设施/对象主标签；可与适用的名称、开放时间、无障碍属性组合。",
+      "review_state": "draft_unverified"
+    },
+    {
+      "canonical_tag": "healthcare=laboratory",
+      "primary_category": "healthcare",
+      "tag_role": "feature",
+      "cohort": "phase1_retained",
+      "applicability_and_combination": "独立设施/对象主标签；可与适用的名称、开放时间、无障碍属性组合。",
+      "review_state": "draft_unverified",
+      "phase1_category": "healthcare"
+    },
+    {
+      "canonical_tag": "healthcare=midwife",
+      "primary_category": "healthcare",
+      "tag_role": "feature",
+      "cohort": "phase1_retained",
+      "applicability_and_combination": "独立设施/对象主标签；可与适用的名称、开放时间、无障碍属性组合。",
+      "review_state": "draft_unverified",
+      "phase1_category": "healthcare"
+    },
+    {
+      "canonical_tag": "healthcare=nurse",
+      "primary_category": "healthcare",
+      "tag_role": "feature",
+      "cohort": "phase2_new",
+      "applicability_and_combination": "独立设施/对象主标签；可与适用的名称、开放时间、无障碍属性组合。",
+      "review_state": "draft_unverified"
+    },
+    {
+      "canonical_tag": "healthcare=optometrist",
+      "primary_category": "healthcare",
+      "tag_role": "feature",
+      "cohort": "phase2_new",
+      "applicability_and_combination": "独立设施/对象主标签；可与适用的名称、开放时间、无障碍属性组合。",
+      "review_state": "draft_unverified"
+    },
+    {
+      "canonical_tag": "healthcare=pharmacy",
+      "primary_category": "healthcare",
+      "tag_role": "feature",
+      "cohort": "phase2_new",
+      "applicability_and_combination": "独立设施/对象主标签；可与适用的名称、开放时间、无障碍属性组合。",
+      "review_state": "draft_unverified"
+    },
+    {
+      "canonical_tag": "healthcare=physiotherapist",
+      "primary_category": "healthcare",
+      "tag_role": "feature",
+      "cohort": "phase1_retained",
+      "applicability_and_combination": "独立设施/对象主标签；可与适用的名称、开放时间、无障碍属性组合。",
+      "review_state": "draft_unverified",
+      "phase1_category": "healthcare"
+    },
+    {
+      "canonical_tag": "healthcare=psychotherapist",
+      "primary_category": "healthcare",
+      "tag_role": "feature",
+      "cohort": "phase1_retained",
+      "applicability_and_combination": "独立设施/对象主标签；可与适用的名称、开放时间、无障碍属性组合。",
+      "review_state": "draft_unverified",
+      "phase1_category": "healthcare"
+    },
+    {
+      "canonical_tag": "healthcare=rehabilitation",
+      "primary_category": "healthcare",
+      "tag_role": "feature",
+      "cohort": "phase2_new",
+      "applicability_and_combination": "独立设施/对象主标签；可与适用的名称、开放时间、无障碍属性组合。",
+      "review_state": "draft_unverified"
+    },
+    {
+      "canonical_tag": "highway=bus_stop",
+      "primary_category": "transport",
+      "tag_role": "feature",
+      "cohort": "phase1_retained",
+      "applicability_and_combination": "道路/通行设施主标签；可叠加适用的通行属性；不推断步行时间。",
+      "review_state": "draft_unverified",
+      "phase1_category": "transport"
+    },
+    {
+      "canonical_tag": "highway=crossing",
+      "primary_category": "transport",
+      "tag_role": "feature",
+      "cohort": "phase2_new",
+      "applicability_and_combination": "道路/通行设施主标签；可叠加适用的通行属性；不推断步行时间。",
+      "review_state": "draft_unverified"
+    },
+    {
+      "canonical_tag": "highway=cycleway",
+      "primary_category": "transport",
+      "tag_role": "feature",
+      "cohort": "phase2_new",
+      "applicability_and_combination": "道路/通行设施主标签；可叠加适用的通行属性；不推断步行时间。",
+      "review_state": "draft_unverified"
+    },
+    {
+      "canonical_tag": "highway=footway",
+      "primary_category": "transport",
+      "tag_role": "feature",
+      "cohort": "phase2_new",
+      "applicability_and_combination": "道路/通行设施主标签；可叠加适用的通行属性；不推断步行时间。",
+      "review_state": "draft_unverified"
+    },
+    {
+      "canonical_tag": "highway=living_street",
+      "primary_category": "transport",
+      "tag_role": "feature",
+      "cohort": "phase2_new",
+      "applicability_and_combination": "道路/通行设施主标签；可叠加适用的通行属性；不推断步行时间。",
+      "review_state": "draft_unverified"
+    },
+    {
+      "canonical_tag": "highway=path",
+      "primary_category": "transport",
+      "tag_role": "feature",
+      "cohort": "phase2_new",
+      "applicability_and_combination": "道路/通行设施主标签；可叠加适用的通行属性；不推断步行时间。",
+      "review_state": "draft_unverified"
+    },
+    {
+      "canonical_tag": "highway=pedestrian",
+      "primary_category": "transport",
+      "tag_role": "feature",
+      "cohort": "phase2_new",
+      "applicability_and_combination": "道路/通行设施主标签；可叠加适用的通行属性；不推断步行时间。",
+      "review_state": "draft_unverified"
+    },
+    {
+      "canonical_tag": "highway=primary",
+      "primary_category": "transport",
+      "tag_role": "feature",
+      "cohort": "phase2_new",
+      "applicability_and_combination": "道路/通行设施主标签；可叠加适用的通行属性；不推断步行时间。",
+      "review_state": "draft_unverified"
+    },
+    {
+      "canonical_tag": "highway=residential",
+      "primary_category": "transport",
+      "tag_role": "feature",
+      "cohort": "phase2_new",
+      "applicability_and_combination": "道路/通行设施主标签；可叠加适用的通行属性；不推断步行时间。",
+      "review_state": "draft_unverified"
+    },
+    {
+      "canonical_tag": "highway=secondary",
+      "primary_category": "transport",
+      "tag_role": "feature",
+      "cohort": "phase2_new",
+      "applicability_and_combination": "道路/通行设施主标签；可叠加适用的通行属性；不推断步行时间。",
+      "review_state": "draft_unverified"
+    },
+    {
+      "canonical_tag": "highway=service",
+      "primary_category": "transport",
+      "tag_role": "feature",
+      "cohort": "phase2_new",
+      "applicability_and_combination": "道路/通行设施主标签；可叠加适用的通行属性；不推断步行时间。",
+      "review_state": "draft_unverified"
+    },
+    {
+      "canonical_tag": "highway=steps",
+      "primary_category": "transport",
+      "tag_role": "feature",
+      "cohort": "phase2_new",
+      "applicability_and_combination": "道路/通行设施主标签；可叠加适用的通行属性；不推断步行时间。",
+      "review_state": "draft_unverified"
+    },
+    {
+      "canonical_tag": "highway=tertiary",
+      "primary_category": "transport",
+      "tag_role": "feature",
+      "cohort": "phase2_new",
+      "applicability_and_combination": "道路/通行设施主标签；可叠加适用的通行属性；不推断步行时间。",
+      "review_state": "draft_unverified"
+    },
+    {
+      "canonical_tag": "highway=track",
+      "primary_category": "transport",
+      "tag_role": "feature",
+      "cohort": "phase2_new",
+      "applicability_and_combination": "道路/通行设施主标签；可叠加适用的通行属性；不推断步行时间。",
+      "review_state": "draft_unverified"
+    },
+    {
+      "canonical_tag": "highway=traffic_signals",
+      "primary_category": "transport",
+      "tag_role": "feature",
+      "cohort": "phase1_retained",
+      "applicability_and_combination": "道路/通行设施主标签；可叠加适用的通行属性；不推断步行时间。",
+      "review_state": "draft_unverified",
+      "phase1_category": "transport"
+    },
+    {
+      "canonical_tag": "kerb=lowered",
+      "primary_category": "accessibility",
+      "tag_role": "attribute",
+      "cohort": "phase2_new",
+      "applicability_and_combination": "降低路缘属性；与过街点或路缘节点主对象组合；不能证明整条路径无障碍。",
+      "review_state": "draft_unverified",
+      "semantic_kind": "kerb_profile",
+      "wheelchair_positive_evidence": false
+    },
+    {
+      "canonical_tag": "landuse=commercial",
+      "primary_category": "land_use",
+      "tag_role": "land_use",
+      "cohort": "phase2_new",
+      "applicability_and_combination": "面状用地主标签；与建筑/设施独立共存；不等同于建筑、人口或服务供给。",
+      "review_state": "draft_unverified"
+    },
+    {
+      "canonical_tag": "landuse=construction",
+      "primary_category": "land_use",
+      "tag_role": "land_use",
+      "cohort": "phase2_new",
+      "applicability_and_combination": "面状用地主标签；与建筑/设施独立共存；不等同于建筑、人口或服务供给。",
+      "review_state": "draft_unverified"
+    },
+    {
+      "canonical_tag": "landuse=education",
+      "primary_category": "land_use",
+      "tag_role": "land_use",
+      "cohort": "phase1_retained",
+      "applicability_and_combination": "面状用地主标签；与建筑/设施独立共存；不等同于建筑、人口或服务供给。",
+      "review_state": "draft_unverified",
+      "phase1_category": "education"
+    },
+    {
+      "canonical_tag": "landuse=industrial",
+      "primary_category": "land_use",
+      "tag_role": "land_use",
+      "cohort": "phase2_new",
+      "applicability_and_combination": "面状用地主标签；与建筑/设施独立共存；不等同于建筑、人口或服务供给。",
+      "review_state": "draft_unverified"
+    },
+    {
+      "canonical_tag": "landuse=railway",
+      "primary_category": "land_use",
+      "tag_role": "land_use",
+      "cohort": "phase2_new",
+      "applicability_and_combination": "面状用地主标签；与建筑/设施独立共存；不等同于建筑、人口或服务供给。",
+      "review_state": "draft_unverified"
+    },
+    {
+      "canonical_tag": "landuse=residential",
+      "primary_category": "land_use",
+      "tag_role": "land_use",
+      "cohort": "phase2_new",
+      "applicability_and_combination": "面状用地主标签；与建筑/设施独立共存；不等同于建筑、人口或服务供给。",
+      "review_state": "draft_unverified"
+    },
+    {
+      "canonical_tag": "landuse=retail",
+      "primary_category": "land_use",
+      "tag_role": "land_use",
+      "cohort": "phase2_new",
+      "applicability_and_combination": "面状用地主标签；与建筑/设施独立共存；不等同于建筑、人口或服务供给。",
+      "review_state": "draft_unverified"
+    },
+    {
+      "canonical_tag": "leisure=dog_park",
+      "primary_category": "leisure",
+      "tag_role": "feature",
+      "cohort": "phase2_new",
+      "applicability_and_combination": "独立设施/对象主标签；可与适用的名称、开放时间、无障碍属性组合。",
+      "review_state": "draft_unverified"
+    },
+    {
+      "canonical_tag": "leisure=fitness_centre",
+      "primary_category": "leisure",
+      "tag_role": "feature",
+      "cohort": "phase1_retained",
+      "applicability_and_combination": "独立设施/对象主标签；可与适用的名称、开放时间、无障碍属性组合。",
+      "review_state": "draft_unverified",
+      "phase1_category": "leisure"
+    },
+    {
+      "canonical_tag": "leisure=garden",
+      "primary_category": "leisure",
+      "tag_role": "feature",
+      "cohort": "phase1_retained",
+      "applicability_and_combination": "独立设施/对象主标签；可与适用的名称、开放时间、无障碍属性组合。",
+      "review_state": "draft_unverified",
+      "phase1_category": "leisure"
+    },
+    {
+      "canonical_tag": "leisure=nature_reserve",
+      "primary_category": "leisure",
+      "tag_role": "feature",
+      "cohort": "phase1_retained",
+      "applicability_and_combination": "独立设施/对象主标签；可与适用的名称、开放时间、无障碍属性组合。",
+      "review_state": "draft_unverified",
+      "phase1_category": "leisure"
+    },
+    {
+      "canonical_tag": "leisure=park",
+      "primary_category": "leisure",
+      "tag_role": "feature",
+      "cohort": "phase1_retained",
+      "applicability_and_combination": "独立设施/对象主标签；可与适用的名称、开放时间、无障碍属性组合。",
+      "review_state": "draft_unverified",
+      "phase1_category": "leisure"
+    },
+    {
+      "canonical_tag": "leisure=picnic_table",
+      "primary_category": "leisure",
+      "tag_role": "feature",
+      "cohort": "phase2_new",
+      "applicability_and_combination": "独立设施/对象主标签；可与适用的名称、开放时间、无障碍属性组合。",
+      "review_state": "draft_unverified"
+    },
+    {
+      "canonical_tag": "leisure=pitch",
+      "primary_category": "leisure",
+      "tag_role": "feature",
+      "cohort": "phase1_retained",
+      "applicability_and_combination": "独立设施/对象主标签；可与适用的名称、开放时间、无障碍属性组合。",
+      "review_state": "draft_unverified",
+      "phase1_category": "leisure"
+    },
+    {
+      "canonical_tag": "leisure=playground",
+      "primary_category": "leisure",
+      "tag_role": "feature",
+      "cohort": "phase1_retained",
+      "applicability_and_combination": "独立设施/对象主标签；可与适用的名称、开放时间、无障碍属性组合。",
+      "review_state": "draft_unverified",
+      "phase1_category": "leisure"
+    },
+    {
+      "canonical_tag": "leisure=sports_centre",
+      "primary_category": "leisure",
+      "tag_role": "feature",
+      "cohort": "phase1_retained",
+      "applicability_and_combination": "独立设施/对象主标签；可与适用的名称、开放时间、无障碍属性组合。",
+      "review_state": "draft_unverified",
+      "phase1_category": "leisure"
+    },
+    {
+      "canonical_tag": "leisure=stadium",
+      "primary_category": "leisure",
+      "tag_role": "feature",
+      "cohort": "phase1_retained",
+      "applicability_and_combination": "独立设施/对象主标签；可与适用的名称、开放时间、无障碍属性组合。",
+      "review_state": "draft_unverified",
+      "phase1_category": "leisure"
+    },
+    {
+      "canonical_tag": "leisure=swimming_area",
+      "primary_category": "leisure",
+      "tag_role": "feature",
+      "cohort": "phase2_new",
+      "applicability_and_combination": "独立设施/对象主标签；可与适用的名称、开放时间、无障碍属性组合。",
+      "review_state": "draft_unverified"
+    },
+    {
+      "canonical_tag": "leisure=swimming_pool",
+      "primary_category": "leisure",
+      "tag_role": "feature",
+      "cohort": "phase1_retained",
+      "applicability_and_combination": "独立设施/对象主标签；可与适用的名称、开放时间、无障碍属性组合。",
+      "review_state": "draft_unverified",
+      "phase1_category": "leisure"
+    },
+    {
+      "canonical_tag": "leisure=track",
+      "primary_category": "leisure",
+      "tag_role": "feature",
+      "cohort": "phase2_new",
+      "applicability_and_combination": "独立设施/对象主标签；可与适用的名称、开放时间、无障碍属性组合。",
+      "review_state": "draft_unverified"
+    },
+    {
+      "canonical_tag": "office=government",
+      "primary_category": "public_service",
+      "tag_role": "feature",
+      "cohort": "phase1_retained",
+      "applicability_and_combination": "独立设施/对象主标签；可与适用的名称、开放时间、无障碍属性组合。",
+      "review_state": "draft_unverified",
+      "phase1_category": "public_service"
+    },
+    {
+      "canonical_tag": "public_transport=platform",
+      "primary_category": "transport",
+      "tag_role": "feature",
+      "cohort": "phase1_retained",
+      "applicability_and_combination": "交通设施主标签；不从 OSM 标签推断班次频次。",
+      "review_state": "draft_unverified",
+      "phase1_category": "transport"
+    },
+    {
+      "canonical_tag": "public_transport=station",
+      "primary_category": "transport",
+      "tag_role": "feature",
+      "cohort": "phase1_retained",
+      "applicability_and_combination": "交通设施主标签；不从 OSM 标签推断班次频次。",
+      "review_state": "draft_unverified",
+      "phase1_category": "transport"
+    },
+    {
+      "canonical_tag": "public_transport=stop_position",
+      "primary_category": "transport",
+      "tag_role": "feature",
+      "cohort": "phase2_new",
+      "applicability_and_combination": "交通设施主标签；不从 OSM 标签推断班次频次。",
+      "review_state": "draft_unverified"
+    },
+    {
+      "canonical_tag": "railway=halt",
+      "primary_category": "transport",
+      "tag_role": "feature",
+      "cohort": "phase1_retained",
+      "applicability_and_combination": "交通设施主标签；不从 OSM 标签推断班次频次。",
+      "review_state": "draft_unverified",
+      "phase1_category": "transport"
+    },
+    {
+      "canonical_tag": "railway=light_rail",
+      "primary_category": "transport",
+      "tag_role": "feature",
+      "cohort": "phase2_new",
+      "applicability_and_combination": "轨道线路要素主标签；描述轨道本体，区别于车站、站台和 GTFS 班次；不推断可乘坐服务。",
+      "review_state": "draft_unverified"
+    },
+    {
+      "canonical_tag": "railway=platform",
+      "primary_category": "transport",
+      "tag_role": "feature",
+      "cohort": "phase1_retained",
+      "applicability_and_combination": "交通设施主标签；不从 OSM 标签推断班次频次。",
+      "review_state": "draft_unverified",
+      "phase1_category": "transport"
+    },
+    {
+      "canonical_tag": "railway=rail",
+      "primary_category": "transport",
+      "tag_role": "feature",
+      "cohort": "phase2_new",
+      "applicability_and_combination": "轨道线路要素主标签；描述轨道本体，区别于车站、站台和 GTFS 班次；不推断可乘坐服务。",
+      "review_state": "draft_unverified"
+    },
+    {
+      "canonical_tag": "railway=station",
+      "primary_category": "transport",
+      "tag_role": "feature",
+      "cohort": "phase1_retained",
+      "applicability_and_combination": "交通设施主标签；不从 OSM 标签推断班次频次。",
+      "review_state": "draft_unverified",
+      "phase1_category": "transport"
+    },
+    {
+      "canonical_tag": "railway=subway",
+      "primary_category": "transport",
+      "tag_role": "feature",
+      "cohort": "phase2_new",
+      "applicability_and_combination": "轨道线路要素主标签；描述轨道本体，区别于车站、站台和 GTFS 班次；不推断可乘坐服务。",
+      "review_state": "draft_unverified"
+    },
+    {
+      "canonical_tag": "railway=subway_entrance",
+      "primary_category": "transport",
+      "tag_role": "feature",
+      "cohort": "phase1_retained",
+      "applicability_and_combination": "交通设施主标签；不从 OSM 标签推断班次频次。",
+      "review_state": "draft_unverified",
+      "phase1_category": "transport"
+    },
+    {
+      "canonical_tag": "railway=tram",
+      "primary_category": "transport",
+      "tag_role": "feature",
+      "cohort": "phase2_new",
+      "applicability_and_combination": "轨道线路要素主标签；描述轨道本体，区别于车站、站台和 GTFS 班次；不推断可乘坐服务。",
+      "review_state": "draft_unverified"
+    },
+    {
+      "canonical_tag": "railway=tram_stop",
+      "primary_category": "transport",
+      "tag_role": "feature",
+      "cohort": "phase1_retained",
+      "applicability_and_combination": "交通设施主标签；不从 OSM 标签推断班次频次。",
+      "review_state": "draft_unverified",
+      "phase1_category": "transport"
+    },
+    {
+      "canonical_tag": "route=bus",
+      "primary_category": "transport",
+      "tag_role": "feature",
+      "cohort": "phase2_new",
+      "applicability_and_combination": "路线关系主标签；不等同于 GTFS 班次或换乘路由。",
+      "review_state": "draft_unverified"
+    },
+    {
+      "canonical_tag": "shop=alcohol",
+      "primary_category": "food",
+      "tag_role": "feature",
+      "cohort": "phase2_new",
+      "applicability_and_combination": "独立设施/对象主标签；可与适用的名称、开放时间、无障碍属性组合。",
+      "review_state": "draft_unverified"
+    },
+    {
+      "canonical_tag": "shop=bakery",
+      "primary_category": "food",
+      "tag_role": "feature",
+      "cohort": "phase1_retained",
+      "applicability_and_combination": "独立设施/对象主标签；可与适用的名称、开放时间、无障碍属性组合。",
+      "review_state": "draft_unverified",
+      "phase1_category": "food"
+    },
+    {
+      "canonical_tag": "shop=beauty",
+      "primary_category": "retail",
+      "tag_role": "feature",
+      "cohort": "phase2_new",
+      "applicability_and_combination": "独立设施/对象主标签；可与适用的名称、开放时间、无障碍属性组合。",
+      "review_state": "draft_unverified"
+    },
+    {
+      "canonical_tag": "shop=beverages",
+      "primary_category": "food",
+      "tag_role": "feature",
+      "cohort": "phase2_new",
+      "applicability_and_combination": "独立设施/对象主标签；可与适用的名称、开放时间、无障碍属性组合。",
+      "review_state": "draft_unverified"
+    },
+    {
+      "canonical_tag": "shop=bicycle",
+      "primary_category": "retail",
+      "tag_role": "feature",
+      "cohort": "phase1_retained",
+      "applicability_and_combination": "独立设施/对象主标签；可与适用的名称、开放时间、无障碍属性组合。",
+      "review_state": "draft_unverified",
+      "phase1_category": "retail"
+    },
+    {
+      "canonical_tag": "shop=books",
+      "primary_category": "retail",
+      "tag_role": "feature",
+      "cohort": "phase1_retained",
+      "applicability_and_combination": "独立设施/对象主标签；可与适用的名称、开放时间、无障碍属性组合。",
+      "review_state": "draft_unverified",
+      "phase1_category": "retail"
+    },
+    {
+      "canonical_tag": "shop=butcher",
+      "primary_category": "food",
+      "tag_role": "feature",
+      "cohort": "phase1_retained",
+      "applicability_and_combination": "独立设施/对象主标签；可与适用的名称、开放时间、无障碍属性组合。",
+      "review_state": "draft_unverified",
+      "phase1_category": "food"
+    },
+    {
+      "canonical_tag": "shop=car",
+      "primary_category": "retail",
+      "tag_role": "feature",
+      "cohort": "phase1_retained",
+      "applicability_and_combination": "独立设施/对象主标签；可与适用的名称、开放时间、无障碍属性组合。",
+      "review_state": "draft_unverified",
+      "phase1_category": "retail"
+    },
+    {
+      "canonical_tag": "shop=car_repair",
+      "primary_category": "retail",
+      "tag_role": "feature",
+      "cohort": "phase2_new",
+      "applicability_and_combination": "独立设施/对象主标签；可与适用的名称、开放时间、无障碍属性组合。",
+      "review_state": "draft_unverified"
+    },
+    {
+      "canonical_tag": "shop=cheese",
+      "primary_category": "food",
+      "tag_role": "feature",
+      "cohort": "phase2_new",
+      "applicability_and_combination": "独立设施/对象主标签；可与适用的名称、开放时间、无障碍属性组合。",
+      "review_state": "draft_unverified"
+    },
+    {
+      "canonical_tag": "shop=chemist",
+      "primary_category": "retail",
+      "tag_role": "feature",
+      "cohort": "phase1_retained",
+      "applicability_and_combination": "独立设施/对象主标签；可与适用的名称、开放时间、无障碍属性组合。",
+      "review_state": "draft_unverified",
+      "phase1_category": "retail"
+    },
+    {
+      "canonical_tag": "shop=chocolate",
+      "primary_category": "food",
+      "tag_role": "feature",
+      "cohort": "phase2_new",
+      "applicability_and_combination": "独立设施/对象主标签；可与适用的名称、开放时间、无障碍属性组合。",
+      "review_state": "draft_unverified"
+    },
+    {
+      "canonical_tag": "shop=clothes",
+      "primary_category": "retail",
+      "tag_role": "feature",
+      "cohort": "phase1_retained",
+      "applicability_and_combination": "独立设施/对象主标签；可与适用的名称、开放时间、无障碍属性组合。",
+      "review_state": "draft_unverified",
+      "phase1_category": "retail"
+    },
+    {
+      "canonical_tag": "shop=coffee",
+      "primary_category": "food",
+      "tag_role": "feature",
+      "cohort": "phase2_new",
+      "applicability_and_combination": "独立设施/对象主标签；可与适用的名称、开放时间、无障碍属性组合。",
+      "review_state": "draft_unverified"
+    },
+    {
+      "canonical_tag": "shop=confectionery",
+      "primary_category": "food",
+      "tag_role": "feature",
+      "cohort": "phase1_retained",
+      "applicability_and_combination": "独立设施/对象主标签；可与适用的名称、开放时间、无障碍属性组合。",
+      "review_state": "draft_unverified",
+      "phase1_category": "food"
+    },
+    {
+      "canonical_tag": "shop=convenience",
+      "primary_category": "retail",
+      "tag_role": "feature",
+      "cohort": "phase1_retained",
+      "applicability_and_combination": "独立设施/对象主标签；可与适用的名称、开放时间、无障碍属性组合。",
+      "review_state": "draft_unverified",
+      "phase1_category": "retail"
+    },
+    {
+      "canonical_tag": "shop=copyshop",
+      "primary_category": "retail",
+      "tag_role": "feature",
+      "cohort": "phase2_new",
+      "applicability_and_combination": "独立设施/对象主标签；可与适用的名称、开放时间、无障碍属性组合。",
+      "review_state": "draft_unverified"
+    },
+    {
+      "canonical_tag": "shop=deli",
+      "primary_category": "food",
+      "tag_role": "feature",
+      "cohort": "phase1_retained",
+      "applicability_and_combination": "独立设施/对象主标签；可与适用的名称、开放时间、无障碍属性组合。",
+      "review_state": "draft_unverified",
+      "phase1_category": "food"
+    },
+    {
+      "canonical_tag": "shop=department_store",
+      "primary_category": "retail",
+      "tag_role": "feature",
+      "cohort": "phase1_retained",
+      "applicability_and_combination": "独立设施/对象主标签；可与适用的名称、开放时间、无障碍属性组合。",
+      "review_state": "draft_unverified",
+      "phase1_category": "retail"
+    },
+    {
+      "canonical_tag": "shop=doityourself",
+      "primary_category": "retail",
+      "tag_role": "feature",
+      "cohort": "phase1_retained",
+      "applicability_and_combination": "独立设施/对象主标签；可与适用的名称、开放时间、无障碍属性组合。",
+      "review_state": "draft_unverified",
+      "phase1_category": "retail"
+    },
+    {
+      "canonical_tag": "shop=electronics",
+      "primary_category": "retail",
+      "tag_role": "feature",
+      "cohort": "phase1_retained",
+      "applicability_and_combination": "独立设施/对象主标签；可与适用的名称、开放时间、无障碍属性组合。",
+      "review_state": "draft_unverified",
+      "phase1_category": "retail"
+    },
+    {
+      "canonical_tag": "shop=farm",
+      "primary_category": "food",
+      "tag_role": "feature",
+      "cohort": "phase2_new",
+      "applicability_and_combination": "独立设施/对象主标签；可与适用的名称、开放时间、无障碍属性组合。",
+      "review_state": "draft_unverified"
+    },
+    {
+      "canonical_tag": "shop=florist",
+      "primary_category": "retail",
+      "tag_role": "feature",
+      "cohort": "phase1_retained",
+      "applicability_and_combination": "独立设施/对象主标签；可与适用的名称、开放时间、无障碍属性组合。",
+      "review_state": "draft_unverified",
+      "phase1_category": "retail"
+    },
+    {
+      "canonical_tag": "shop=food",
+      "primary_category": "food",
+      "tag_role": "feature",
+      "cohort": "phase2_new",
+      "applicability_and_combination": "独立设施/对象主标签；可与适用的名称、开放时间、无障碍属性组合。",
+      "review_state": "draft_unverified"
+    },
+    {
+      "canonical_tag": "shop=frozen_food",
+      "primary_category": "food",
+      "tag_role": "feature",
+      "cohort": "phase2_new",
+      "applicability_and_combination": "独立设施/对象主标签；可与适用的名称、开放时间、无障碍属性组合。",
+      "review_state": "draft_unverified"
+    },
+    {
+      "canonical_tag": "shop=furniture",
+      "primary_category": "retail",
+      "tag_role": "feature",
+      "cohort": "phase1_retained",
+      "applicability_and_combination": "独立设施/对象主标签；可与适用的名称、开放时间、无障碍属性组合。",
+      "review_state": "draft_unverified",
+      "phase1_category": "retail"
+    },
+    {
+      "canonical_tag": "shop=garden_centre",
+      "primary_category": "retail",
+      "tag_role": "feature",
+      "cohort": "phase2_new",
+      "applicability_and_combination": "独立设施/对象主标签；可与适用的名称、开放时间、无障碍属性组合。",
+      "review_state": "draft_unverified"
+    },
+    {
+      "canonical_tag": "shop=greengrocer",
+      "primary_category": "food",
+      "tag_role": "feature",
+      "cohort": "phase2_new",
+      "applicability_and_combination": "独立设施/对象主标签；可与适用的名称、开放时间、无障碍属性组合。",
+      "review_state": "draft_unverified"
+    },
+    {
+      "canonical_tag": "shop=hairdresser",
+      "primary_category": "retail",
+      "tag_role": "feature",
+      "cohort": "phase2_new",
+      "applicability_and_combination": "独立设施/对象主标签；可与适用的名称、开放时间、无障碍属性组合。",
+      "review_state": "draft_unverified"
+    },
+    {
+      "canonical_tag": "shop=hardware",
+      "primary_category": "retail",
+      "tag_role": "feature",
+      "cohort": "phase1_retained",
+      "applicability_and_combination": "独立设施/对象主标签；可与适用的名称、开放时间、无障碍属性组合。",
+      "review_state": "draft_unverified",
+      "phase1_category": "retail"
+    },
+    {
+      "canonical_tag": "shop=jewelry",
+      "primary_category": "retail",
+      "tag_role": "feature",
+      "cohort": "phase2_new",
+      "applicability_and_combination": "独立设施/对象主标签；可与适用的名称、开放时间、无障碍属性组合。",
+      "review_state": "draft_unverified"
+    },
+    {
+      "canonical_tag": "shop=laundry",
+      "primary_category": "retail",
+      "tag_role": "feature",
+      "cohort": "phase2_new",
+      "applicability_and_combination": "独立设施/对象主标签；可与适用的名称、开放时间、无障碍属性组合。",
+      "review_state": "draft_unverified"
+    },
+    {
+      "canonical_tag": "shop=mall",
+      "primary_category": "retail",
+      "tag_role": "feature",
+      "cohort": "phase1_retained",
+      "applicability_and_combination": "独立设施/对象主标签；可与适用的名称、开放时间、无障碍属性组合。",
+      "review_state": "draft_unverified",
+      "phase1_category": "retail"
+    },
+    {
+      "canonical_tag": "shop=mobile_phone",
+      "primary_category": "retail",
+      "tag_role": "feature",
+      "cohort": "phase1_retained",
+      "applicability_and_combination": "独立设施/对象主标签；可与适用的名称、开放时间、无障碍属性组合。",
+      "review_state": "draft_unverified",
+      "phase1_category": "retail"
+    },
+    {
+      "canonical_tag": "shop=optician",
+      "primary_category": "retail",
+      "tag_role": "feature",
+      "cohort": "phase2_new",
+      "applicability_and_combination": "独立设施/对象主标签；可与适用的名称、开放时间、无障碍属性组合。",
+      "review_state": "draft_unverified"
+    },
+    {
+      "canonical_tag": "shop=pastry",
+      "primary_category": "food",
+      "tag_role": "feature",
+      "cohort": "phase1_retained",
+      "applicability_and_combination": "独立设施/对象主标签；可与适用的名称、开放时间、无障碍属性组合。",
+      "review_state": "draft_unverified",
+      "phase1_category": "food"
+    },
+    {
+      "canonical_tag": "shop=pet",
+      "primary_category": "retail",
+      "tag_role": "feature",
+      "cohort": "phase2_new",
+      "applicability_and_combination": "独立设施/对象主标签；可与适用的名称、开放时间、无障碍属性组合。",
+      "review_state": "draft_unverified"
+    },
+    {
+      "canonical_tag": "shop=seafood",
+      "primary_category": "food",
+      "tag_role": "feature",
+      "cohort": "phase1_retained",
+      "applicability_and_combination": "独立设施/对象主标签；可与适用的名称、开放时间、无障碍属性组合。",
+      "review_state": "draft_unverified",
+      "phase1_category": "food"
+    },
+    {
+      "canonical_tag": "shop=second_hand",
+      "primary_category": "retail",
+      "tag_role": "feature",
+      "cohort": "phase2_new",
+      "applicability_and_combination": "独立设施/对象主标签；可与适用的名称、开放时间、无障碍属性组合。",
+      "review_state": "draft_unverified"
+    },
+    {
+      "canonical_tag": "shop=shoes",
+      "primary_category": "retail",
+      "tag_role": "feature",
+      "cohort": "phase1_retained",
+      "applicability_and_combination": "独立设施/对象主标签；可与适用的名称、开放时间、无障碍属性组合。",
+      "review_state": "draft_unverified",
+      "phase1_category": "retail"
+    },
+    {
+      "canonical_tag": "shop=sports",
+      "primary_category": "retail",
+      "tag_role": "feature",
+      "cohort": "phase2_new",
+      "applicability_and_combination": "独立设施/对象主标签；可与适用的名称、开放时间、无障碍属性组合。",
+      "review_state": "draft_unverified"
+    },
+    {
+      "canonical_tag": "shop=stationery",
+      "primary_category": "retail",
+      "tag_role": "feature",
+      "cohort": "phase2_new",
+      "applicability_and_combination": "独立设施/对象主标签；可与适用的名称、开放时间、无障碍属性组合。",
+      "review_state": "draft_unverified"
+    },
+    {
+      "canonical_tag": "shop=supermarket",
+      "primary_category": "retail",
+      "tag_role": "feature",
+      "cohort": "phase1_retained",
+      "applicability_and_combination": "独立设施/对象主标签；可与适用的名称、开放时间、无障碍属性组合。",
+      "review_state": "draft_unverified",
+      "phase1_category": "retail"
+    },
+    {
+      "canonical_tag": "shop=tea",
+      "primary_category": "food",
+      "tag_role": "feature",
+      "cohort": "phase2_new",
+      "applicability_and_combination": "独立设施/对象主标签；可与适用的名称、开放时间、无障碍属性组合。",
+      "review_state": "draft_unverified"
+    },
+    {
+      "canonical_tag": "shop=toys",
+      "primary_category": "retail",
+      "tag_role": "feature",
+      "cohort": "phase2_new",
+      "applicability_and_combination": "独立设施/对象主标签；可与适用的名称、开放时间、无障碍属性组合。",
+      "review_state": "draft_unverified"
+    },
+    {
+      "canonical_tag": "shop=travel_agency",
+      "primary_category": "retail",
+      "tag_role": "feature",
+      "cohort": "phase2_new",
+      "applicability_and_combination": "独立设施/对象主标签；可与适用的名称、开放时间、无障碍属性组合。",
+      "review_state": "draft_unverified"
+    },
+    {
+      "canonical_tag": "shop=variety_store",
+      "primary_category": "retail",
+      "tag_role": "feature",
+      "cohort": "phase2_new",
+      "applicability_and_combination": "独立设施/对象主标签；可与适用的名称、开放时间、无障碍属性组合。",
+      "review_state": "draft_unverified"
+    },
+    {
+      "canonical_tag": "sidewalk=both",
+      "primary_category": "accessibility",
+      "tag_role": "attribute",
+      "cohort": "phase2_new",
+      "applicability_and_combination": "道路两侧人行道属性；与 highway 道路主标签组合；不是独立 footway。 不能作为轮椅无障碍的正面证据。",
+      "review_state": "draft_unverified",
+      "semantic_kind": "sidewalk_presence",
+      "wheelchair_positive_evidence": false
+    },
+    {
+      "canonical_tag": "tourism=attraction",
+      "primary_category": "leisure",
+      "tag_role": "feature",
+      "cohort": "phase2_new",
+      "applicability_and_combination": "独立设施/对象主标签；可与适用的名称、开放时间、无障碍属性组合。",
+      "review_state": "draft_unverified"
+    },
+    {
+      "canonical_tag": "tourism=camp_site",
+      "primary_category": "leisure",
+      "tag_role": "feature",
+      "cohort": "phase2_new",
+      "applicability_and_combination": "独立设施/对象主标签；可与适用的名称、开放时间、无障碍属性组合。",
+      "review_state": "draft_unverified"
+    },
+    {
+      "canonical_tag": "tourism=guest_house",
+      "primary_category": "leisure",
+      "tag_role": "feature",
+      "cohort": "phase2_new",
+      "applicability_and_combination": "独立设施/对象主标签；可与适用的名称、开放时间、无障碍属性组合。",
+      "review_state": "draft_unverified"
+    },
+    {
+      "canonical_tag": "tourism=hotel",
+      "primary_category": "leisure",
+      "tag_role": "feature",
+      "cohort": "phase2_new",
+      "applicability_and_combination": "独立设施/对象主标签；可与适用的名称、开放时间、无障碍属性组合。",
+      "review_state": "draft_unverified"
+    },
+    {
+      "canonical_tag": "tourism=museum",
+      "primary_category": "leisure",
+      "tag_role": "feature",
+      "cohort": "phase2_new",
+      "applicability_and_combination": "独立设施/对象主标签；可与适用的名称、开放时间、无障碍属性组合。",
+      "review_state": "draft_unverified"
+    },
+    {
+      "canonical_tag": "tourism=viewpoint",
+      "primary_category": "leisure",
+      "tag_role": "feature",
+      "cohort": "phase2_new",
+      "applicability_and_combination": "独立设施/对象主标签；可与适用的名称、开放时间、无障碍属性组合。",
+      "review_state": "draft_unverified"
+    },
+    {
+      "canonical_tag": "wheelchair=limited",
+      "primary_category": "accessibility",
+      "tag_role": "attribute",
+      "cohort": "phase2_new",
+      "applicability_and_combination": "轮椅可达性有限，具体可达范围不能仅凭此标签确定；须与设施、入口或站台主标签组合。",
+      "review_state": "draft_unverified",
+      "semantic_kind": "wheelchair_access",
+      "wheelchair_positive_evidence": false
+    },
+    {
+      "canonical_tag": "wheelchair=no",
+      "primary_category": "accessibility",
+      "tag_role": "attribute",
+      "cohort": "phase2_new",
+      "applicability_and_combination": "轮椅不可进入/使用属性；与设施、入口或站台主标签组合；与法律通行限制区分。",
+      "review_state": "draft_unverified",
+      "semantic_kind": "wheelchair_access",
+      "wheelchair_positive_evidence": false
+    },
+    {
+      "canonical_tag": "wheelchair=yes",
+      "primary_category": "accessibility",
+      "tag_role": "attribute",
+      "cohort": "phase2_new",
+      "applicability_and_combination": "轮椅可进入/使用属性；与设施、入口或站台主标签组合；不能推断全程无障碍。",
+      "review_state": "draft_unverified",
+      "semantic_kind": "wheelchair_access",
+      "wheelchair_positive_evidence": true
+    }
+  ],
+  "review_revision": 2
+}

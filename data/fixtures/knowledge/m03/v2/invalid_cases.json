@@ -1,0 +1,22 @@
+{
+  "schema_version": "1.0",
+  "cases": [
+    {"id":"empty_canonical_tag","target":"entry","path":"canonical_tag","value":"","expected_code":"OSM_KB_CANONICAL_TAG_INVALID"},
+    {"id":"malformed_canonical_tag","target":"entry","path":"canonical_tag","value":"amenity=cafe=extra","expected_code":"OSM_KB_CANONICAL_TAG_INVALID"},
+    {"id":"duplicate_canonical_tag","target":"catalog","mutation":"duplicate_first_entry","expected_code":"OSM_KB_CANONICAL_TAG_DUPLICATE"},
+    {"id":"invalid_source_url","target":"source","path":"request_url","value":"file:///tmp/wiki.html","expected_code":"OSM_KB_SOURCE_URL_INVALID"},
+    {"id":"missing_source_version","target":"source","path":"revision","value":"","expected_code":"OSM_KB_SOURCE_VERSION_MISSING"},
+    {"id":"missing_license","target":"source","path":"license_id","value":"","expected_code":"OSM_KB_LICENSE_MISSING"},
+    {"id":"empty_name","target":"entry","path":"name_en","value":"","expected_code":"OSM_KB_REQUIRED_TEXT_EMPTY"},
+    {"id":"empty_description","target":"entry","path":"description_zh","value":"","expected_code":"OSM_KB_REQUIRED_TEXT_EMPTY"},
+    {"id":"intra_alias_duplicate","target":"entry","path":"aliases_en","value":["coffee shop"," Coffee   Shop "],"expected_code":"OSM_KB_ALIAS_DUPLICATE"},
+    {"id":"cross_tag_alias_conflict","target":"catalog","mutation":"copy_first_alias_to_second","expected_code":"OSM_KB_ALIAS_CROSS_TAG_CONFLICT"},
+    {"id":"alias_canonical_conflict","target":"entry","path":"aliases_en","value":["amenity=cafe"],"expected_code":"OSM_KB_ALIAS_CANONICAL_CONFLICT"},
+    {"id":"english_language_mismatch","target":"entry","path":"name_en","value":"咖啡馆","expected_code":"OSM_KB_LANGUAGE_MISMATCH"},
+    {"id":"chinese_language_mismatch","target":"entry","path":"name_zh","value":"coffee shop","expected_code":"OSM_KB_LANGUAGE_MISMATCH"},
+    {"id":"no_element_types","target":"entry","path":"element_types","value":[],"expected_code":"OSM_KB_OBJECT_TYPES_EMPTY"},
+    {"id":"invalid_status","target":"entry","path":"status","value":"widely_used","expected_code":"OSM_KB_STATUS_INVALID"},
+    {"id":"hard_negative_self","target":"entry","mutation":"hard_negative_self","expected_code":"OSM_KB_HARD_NEGATIVE_SELF_REFERENCE"},
+    {"id":"hard_negative_unknown","target":"entry","mutation":"hard_negative_unknown","expected_code":"OSM_KB_HARD_NEGATIVE_TARGET_UNKNOWN"}
+  ]
+}

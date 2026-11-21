@@ -1,0 +1,50 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "id": "region-west",
+      "properties": {
+        "label": "West",
+        "region_id": "west",
+        "agg_count": 2,
+        "agg_sum_right_weight": 30,
+        "agg_mean_right_weight": 15.0
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[[-200, -200], [200, -200], [200, 200], [-200, 200], [-200, -200]]]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "region-east",
+      "properties": {
+        "label": "East",
+        "region_id": "east",
+        "agg_count": 1,
+        "agg_sum_right_weight": 30,
+        "agg_mean_right_weight": 30.0
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[[900, -200], [1300, -200], [1300, 200], [900, 200], [900, -200]]]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "region-empty",
+      "properties": {
+        "label": "Empty",
+        "region_id": "empty",
+        "agg_count": 0,
+        "agg_sum_right_weight": null,
+        "agg_mean_right_weight": null
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[[2000, -200], [2200, -200], [2200, 200], [2000, 200], [2000, -200]]]
+      }
+    }
+  ]
+}

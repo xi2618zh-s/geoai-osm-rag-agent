@@ -1,0 +1,1609 @@
+{
+  "schema_version": "1.0",
+  "curation_set_id": "m03-phase1-curation-v1",
+  "created_at": "2026-10-05T00:00:00Z",
+  "license_id": "CC-BY-SA-2.0",
+  "curation_notice": "Concise project-authored bilingual labels, aliases, summaries, and semantic confusion pairs; Codex-assisted and manually reviewed against fixed official OSM Wiki Tag pages.",
+  "entries": [
+    {
+      "canonical_tag": "aeroway=aerodrome",
+      "name_en": "Aerodrome",
+      "name_zh": "航空场",
+      "aliases_en": [
+        "airfield facility"
+      ],
+      "aliases_zh": [
+        "机场飞行区"
+      ],
+      "description_en": "An aerodrome, airport, or airfield facility.",
+      "description_zh": "机场、航空站或供航空器起降的场地。",
+      "hard_negative_tag": "aeroway=terminal",
+      "construction_method": "codex_assisted_project_review",
+      "license_id": "CC-BY-SA-2.0"
+    },
+    {
+      "canonical_tag": "aeroway=airport",
+      "name_en": "Airport (legacy tag)",
+      "name_zh": "机场（旧标签）",
+      "aliases_en": [
+        "deprecated airport tag"
+      ],
+      "aliases_zh": [
+        "旧版机场标记"
+      ],
+      "description_en": "An obsolete compatibility tag; use aeroway=aerodrome for an airport.",
+      "description_zh": "已废弃的兼容标签；机场应使用 aeroway=aerodrome。",
+      "hard_negative_tag": "aeroway=aerodrome",
+      "construction_method": "codex_assisted_project_review",
+      "license_id": "CC-BY-SA-2.0"
+    },
+    {
+      "canonical_tag": "aeroway=terminal",
+      "name_en": "Airport terminal",
+      "name_zh": "机场航站楼",
+      "aliases_en": [
+        "passenger terminal building"
+      ],
+      "aliases_zh": [
+        "航空旅客航站楼"
+      ],
+      "description_en": "A passenger building at an airport.",
+      "description_zh": "机场内供旅客办理出发、到达和换乘的建筑。",
+      "hard_negative_tag": "aeroway=aerodrome",
+      "construction_method": "codex_assisted_project_review",
+      "license_id": "CC-BY-SA-2.0"
+    },
+    {
+      "canonical_tag": "amenity=bar",
+      "name_en": "Bar",
+      "name_zh": "酒吧",
+      "aliases_en": [
+        "drinks bar"
+      ],
+      "aliases_zh": [
+        "饮酒酒吧"
+      ],
+      "description_en": "A venue focused on serving alcoholic drinks, usually without a full meal service.",
+      "description_zh": "以供应酒精饮品为主、通常不提供完整正餐服务的场所。",
+      "hard_negative_tag": "amenity=pub",
+      "construction_method": "codex_assisted_project_review",
+      "license_id": "CC-BY-SA-2.0"
+    },
+    {
+      "canonical_tag": "amenity=bicycle_parking",
+      "name_en": "Bicycle parking",
+      "name_zh": "自行车停车处",
+      "aliases_en": [
+        "cycle parking area"
+      ],
+      "aliases_zh": [
+        "单车停放点"
+      ],
+      "description_en": "A designated place for parking bicycles.",
+      "description_zh": "专门用于停放自行车的地点或设施。",
+      "hard_negative_tag": "amenity=bicycle_rental",
+      "construction_method": "codex_assisted_project_review",
+      "license_id": "CC-BY-SA-2.0"
+    },
+    {
+      "canonical_tag": "amenity=bicycle_rental",
+      "name_en": "Bicycle rental",
+      "name_zh": "自行车租赁点",
+      "aliases_en": [
+        "cycle hire station"
+      ],
+      "aliases_zh": [
+        "单车出租点"
+      ],
+      "description_en": "A place where bicycles can be rented.",
+      "description_zh": "提供自行车租赁服务的地点。",
+      "hard_negative_tag": "amenity=bicycle_parking",
+      "construction_method": "codex_assisted_project_review",
+      "license_id": "CC-BY-SA-2.0"
+    },
+    {
+      "canonical_tag": "amenity=biergarten",
+      "name_en": "Beer garden",
+      "name_zh": "露天啤酒园",
+      "aliases_en": [
+        "outdoor beer garden"
+      ],
+      "aliases_zh": [
+        "户外啤酒园"
+      ],
+      "description_en": "An outdoor area where beer and food are served at shared tables.",
+      "description_zh": "在户外公共桌位供应啤酒和餐食的场所。",
+      "hard_negative_tag": "amenity=pub",
+      "construction_method": "codex_assisted_project_review",
+      "license_id": "CC-BY-SA-2.0"
+    },
+    {
+      "canonical_tag": "amenity=cafe",
+      "name_en": "Cafe",
+      "name_zh": "咖啡馆",
+      "aliases_en": [
+        "coffee shop"
+      ],
+      "aliases_zh": [
+        "咖啡店"
+      ],
+      "description_en": "An informal place serving coffee, refreshments, and light meals.",
+      "description_zh": "提供咖啡、饮品和简餐的非正式堂食场所。",
+      "hard_negative_tag": "amenity=restaurant",
+      "construction_method": "codex_assisted_project_review",
+      "license_id": "CC-BY-SA-2.0"
+    },
+    {
+      "canonical_tag": "amenity=charging_station",
+      "name_en": "Vehicle charging station",
+      "name_zh": "车辆充电站",
+      "aliases_en": [
+        "EV charging point"
+      ],
+      "aliases_zh": [
+        "电动车充电点"
+      ],
+      "description_en": "A facility where electric vehicles can recharge.",
+      "description_zh": "供电动车辆补充电能的设施。",
+      "hard_negative_tag": "amenity=fuel",
+      "construction_method": "codex_assisted_project_review",
+      "license_id": "CC-BY-SA-2.0"
+    },
+    {
+      "canonical_tag": "amenity=cinema",
+      "name_en": "Cinema",
+      "name_zh": "电影院",
+      "aliases_en": [
+        "movie theatre"
+      ],
+      "aliases_zh": [
+        "电影放映影院"
+      ],
+      "description_en": "A place showing films to an audience.",
+      "description_zh": "面向观众放映电影的场所。",
+      "hard_negative_tag": "leisure=stadium",
+      "construction_method": "codex_assisted_project_review",
+      "license_id": "CC-BY-SA-2.0"
+    },
+    {
+      "canonical_tag": "amenity=clinic",
+      "name_en": "Clinic",
+      "name_zh": "诊所",
+      "aliases_en": [
+        "outpatient clinic"
+      ],
+      "aliases_zh": [
+        "门诊医疗机构"
+      ],
+      "description_en": "A medical facility providing outpatient diagnosis or treatment.",
+      "description_zh": "提供门诊诊断或治疗的医疗机构。",
+      "hard_negative_tag": "amenity=hospital",
+      "construction_method": "codex_assisted_project_review",
+      "license_id": "CC-BY-SA-2.0"
+    },
+    {
+      "canonical_tag": "amenity=college",
+      "name_en": "College",
+      "name_zh": "学院",
+      "aliases_en": [
+        "further education college"
+      ],
+      "aliases_zh": [
+        "高等专科学院"
+      ],
+      "description_en": "An institution providing further or higher education.",
+      "description_zh": "提供继续教育或高等教育的院校。",
+      "hard_negative_tag": "amenity=university",
+      "construction_method": "codex_assisted_project_review",
+      "license_id": "CC-BY-SA-2.0"
+    },
+    {
+      "canonical_tag": "amenity=community_centre",
+      "name_en": "Community centre",
+      "name_zh": "社区活动中心",
+      "aliases_en": [
+        "local community hall"
+      ],
+      "aliases_zh": [
+        "社区公共活动场所"
+      ],
+      "description_en": "A public venue used for local community activities and services.",
+      "description_zh": "用于社区活动和公共服务的场所。",
+      "hard_negative_tag": "amenity=townhall",
+      "construction_method": "codex_assisted_project_review",
+      "license_id": "CC-BY-SA-2.0"
+    },
+    {
+      "canonical_tag": "amenity=courthouse",
+      "name_en": "Courthouse",
+      "name_zh": "法院",
+      "aliases_en": [
+        "court building"
+      ],
+      "aliases_zh": [
+        "司法审判场所"
+      ],
+      "description_en": "A building where courts of law operate.",
+      "description_zh": "法院开展审判活动的建筑。",
+      "hard_negative_tag": "amenity=townhall",
+      "construction_method": "codex_assisted_project_review",
+      "license_id": "CC-BY-SA-2.0"
+    },
+    {
+      "canonical_tag": "amenity=dentist",
+      "name_en": "Dentist",
+      "name_zh": "牙科诊所",
+      "aliases_en": [
+        "dental practice"
+      ],
+      "aliases_zh": [
+        "口腔门诊"
+      ],
+      "description_en": "A practice providing dental examination and treatment.",
+      "description_zh": "提供牙科检查与治疗的医疗场所。",
+      "hard_negative_tag": "amenity=doctors",
+      "construction_method": "codex_assisted_project_review",
+      "license_id": "CC-BY-SA-2.0"
+    },
+    {
+      "canonical_tag": "amenity=doctors",
+      "name_en": "Doctors' office",
+      "name_zh": "医生诊所",
+      "aliases_en": [
+        "general medical practice"
+      ],
+      "aliases_zh": [
+        "全科医生门诊"
+      ],
+      "description_en": "A medical practice where physicians consult and treat patients.",
+      "description_zh": "医生为患者提供诊疗服务的门诊场所。",
+      "hard_negative_tag": "amenity=clinic",
+      "construction_method": "codex_assisted_project_review",
+      "license_id": "CC-BY-SA-2.0"
+    },
+    {
+      "canonical_tag": "amenity=drinking_water",
+      "name_en": "Drinking water",
+      "name_zh": "饮用水点",
+      "aliases_en": [
+        "potable water point"
+      ],
+      "aliases_zh": [
+        "直饮水供应点"
+      ],
+      "description_en": "A place where potable water is available.",
+      "description_zh": "可获取安全饮用水的地点或设施。",
+      "hard_negative_tag": "amenity=toilets",
+      "construction_method": "codex_assisted_project_review",
+      "license_id": "CC-BY-SA-2.0"
+    },
+    {
+      "canonical_tag": "amenity=driving_school",
+      "name_en": "Driving school",
+      "name_zh": "驾驶学校",
+      "aliases_en": [
+        "driver training school"
+      ],
+      "aliases_zh": [
+        "机动车驾驶培训点"
+      ],
+      "description_en": "A facility offering instruction for driving motor vehicles.",
+      "description_zh": "提供机动车驾驶教学的培训场所。",
+      "hard_negative_tag": "amenity=training",
+      "construction_method": "codex_assisted_project_review",
+      "license_id": "CC-BY-SA-2.0"
+    },
+    {
+      "canonical_tag": "amenity=fast_food",
+      "name_en": "Fast-food restaurant",
+      "name_zh": "快餐店",
+      "aliases_en": [
+        "quick service restaurant"
+      ],
+      "aliases_zh": [
+        "快速餐饮店"
+      ],
+      "description_en": "A place serving prepared food quickly, usually with limited table service.",
+      "description_zh": "快速供应预制餐食、通常桌边服务有限的餐饮场所。",
+      "hard_negative_tag": "amenity=restaurant",
+      "construction_method": "codex_assisted_project_review",
+      "license_id": "CC-BY-SA-2.0"
+    },
+    {
+      "canonical_tag": "amenity=fire_station",
+      "name_en": "Fire station",
+      "name_zh": "消防站",
+      "aliases_en": [
+        "fire brigade station"
+      ],
+      "aliases_zh": [
+        "消防救援站"
+      ],
+      "description_en": "A station housing firefighters and emergency response equipment.",
+      "description_zh": "驻有消防人员及应急设备的站点。",
+      "hard_negative_tag": "amenity=police",
+      "construction_method": "codex_assisted_project_review",
+      "license_id": "CC-BY-SA-2.0"
+    },
+    {
+      "canonical_tag": "amenity=food_court",
+      "name_en": "Food court",
+      "name_zh": "美食广场",
+      "aliases_en": [
+        "shared dining hall"
+      ],
+      "aliases_zh": [
+        "集中餐饮区"
+      ],
+      "description_en": "A shared seating area served by multiple food vendors.",
+      "description_zh": "由多家餐饮摊位共同服务的集中就餐区。",
+      "hard_negative_tag": "amenity=fast_food",
+      "construction_method": "codex_assisted_project_review",
+      "license_id": "CC-BY-SA-2.0"
+    },
+    {
+      "canonical_tag": "amenity=fuel",
+      "name_en": "Fuel station",
+      "name_zh": "加油站",
+      "aliases_en": [
+        "petrol station"
+      ],
+      "aliases_zh": [
+        "机动车加油点"
+      ],
+      "description_en": "A facility selling fuel for motor vehicles.",
+      "description_zh": "向机动车提供燃油的设施。",
+      "hard_negative_tag": "amenity=charging_station",
+      "construction_method": "codex_assisted_project_review",
+      "license_id": "CC-BY-SA-2.0"
+    },
+    {
+      "canonical_tag": "amenity=hospital",
+      "name_en": "Hospital",
+      "name_zh": "医院",
+      "aliases_en": [
+        "inpatient hospital"
+      ],
+      "aliases_zh": [
+        "住院综合医院"
+      ],
+      "description_en": "A medical institution with facilities for inpatient treatment.",
+      "description_zh": "具备住院治疗能力的医疗机构。",
+      "hard_negative_tag": "amenity=clinic",
+      "construction_method": "codex_assisted_project_review",
+      "license_id": "CC-BY-SA-2.0"
+    },
+    {
+      "canonical_tag": "amenity=ice_cream",
+      "name_en": "Ice-cream shop",
+      "name_zh": "冰淇淋店",
+      "aliases_en": [
+        "gelato shop"
+      ],
+      "aliases_zh": [
+        "冰激凌甜品店"
+      ],
+      "description_en": "A place primarily selling ice cream or gelato for immediate consumption.",
+      "description_zh": "以销售即食冰淇淋或意式冰淇淋为主的店铺。",
+      "hard_negative_tag": "shop=confectionery",
+      "construction_method": "codex_assisted_project_review",
+      "license_id": "CC-BY-SA-2.0"
+    },
+    {
+      "canonical_tag": "amenity=kindergarten",
+      "name_en": "Kindergarten",
+      "name_zh": "幼儿园",
+      "aliases_en": [
+        "preschool centre"
+      ],
+      "aliases_zh": [
+        "学前儿童园所"
+      ],
+      "description_en": "An educational facility for young children before compulsory schooling.",
+      "description_zh": "为义务教育前幼儿提供教育与照护的机构。",
+      "hard_negative_tag": "amenity=school",
+      "construction_method": "codex_assisted_project_review",
+      "license_id": "CC-BY-SA-2.0"
+    },
+    {
+      "canonical_tag": "amenity=language_school",
+      "name_en": "Language school",
+      "name_zh": "语言学校",
+      "aliases_en": [
+        "language learning centre"
+      ],
+      "aliases_zh": [
+        "外语培训学校"
+      ],
+      "description_en": "A school primarily teaching languages.",
+      "description_zh": "以语言教学为主的教育机构。",
+      "hard_negative_tag": "amenity=training",
+      "construction_method": "codex_assisted_project_review",
+      "license_id": "CC-BY-SA-2.0"
+    },
+    {
+      "canonical_tag": "amenity=library",
+      "name_en": "Library",
+      "name_zh": "图书馆",
+      "aliases_en": [
+        "public lending library"
+      ],
+      "aliases_zh": [
+        "公共借阅馆"
+      ],
+      "description_en": "A place where books and other media can be read or borrowed.",
+      "description_zh": "提供图书及其他资料阅览或借阅服务的场所。",
+      "hard_negative_tag": "amenity=community_centre",
+      "construction_method": "codex_assisted_project_review",
+      "license_id": "CC-BY-SA-2.0"
+    },
+    {
+      "canonical_tag": "amenity=music_school",
+      "name_en": "Music school",
+      "name_zh": "音乐学校",
+      "aliases_en": [
+        "music education centre"
+      ],
+      "aliases_zh": [
+        "音乐培训学校"
+      ],
+      "description_en": "A school primarily teaching music.",
+      "description_zh": "以音乐教学为主的教育机构。",
+      "hard_negative_tag": "amenity=training",
+      "construction_method": "codex_assisted_project_review",
+      "license_id": "CC-BY-SA-2.0"
+    },
+    {
+      "canonical_tag": "amenity=nursing_home",
+      "name_en": "Nursing home",
+      "name_zh": "护理院",
+      "aliases_en": [
+        "residential nursing facility"
+      ],
+      "aliases_zh": [
+        "长期照护院"
+      ],
+      "description_en": "A residential facility providing continuous nursing care.",
+      "description_zh": "为住户提供持续护理的居住型机构。",
+      "hard_negative_tag": "amenity=social_facility",
+      "construction_method": "codex_assisted_project_review",
+      "license_id": "CC-BY-SA-2.0"
+    },
+    {
+      "canonical_tag": "amenity=parking",
+      "name_en": "Parking facility",
+      "name_zh": "停车设施",
+      "aliases_en": [
+        "vehicle parking area"
+      ],
+      "aliases_zh": [
+        "机动车停车场"
+      ],
+      "description_en": "A designated facility or area for parking vehicles.",
+      "description_zh": "供机动车停放的指定场地或设施。",
+      "hard_negative_tag": "amenity=bicycle_parking",
+      "construction_method": "codex_assisted_project_review",
+      "license_id": "CC-BY-SA-2.0"
+    },
+    {
+      "canonical_tag": "amenity=pharmacy",
+      "name_en": "Pharmacy",
+      "name_zh": "药房",
+      "aliases_en": [
+        "dispensing pharmacy"
+      ],
+      "aliases_zh": [
+        "处方药店"
+      ],
+      "description_en": "A place dispensing prescription medicines and selling health products.",
+      "description_zh": "配发处方药并销售健康用品的场所。",
+      "hard_negative_tag": "shop=chemist",
+      "construction_method": "codex_assisted_project_review",
+      "license_id": "CC-BY-SA-2.0"
+    },
+    {
+      "canonical_tag": "amenity=police",
+      "name_en": "Police facility",
+      "name_zh": "警务设施",
+      "aliases_en": [
+        "police station"
+      ],
+      "aliases_zh": [
+        "公安警务站"
+      ],
+      "description_en": "A facility used by police services.",
+      "description_zh": "警察或公安部门开展工作的设施。",
+      "hard_negative_tag": "amenity=fire_station",
+      "construction_method": "codex_assisted_project_review",
+      "license_id": "CC-BY-SA-2.0"
+    },
+    {
+      "canonical_tag": "amenity=post_office",
+      "name_en": "Post office",
+      "name_zh": "邮局",
+      "aliases_en": [
+        "postal service branch"
+      ],
+      "aliases_zh": [
+        "邮政营业网点"
+      ],
+      "description_en": "A public branch providing postal services.",
+      "description_zh": "提供寄递等邮政服务的营业场所。",
+      "hard_negative_tag": "office=government",
+      "construction_method": "codex_assisted_project_review",
+      "license_id": "CC-BY-SA-2.0"
+    },
+    {
+      "canonical_tag": "amenity=pub",
+      "name_en": "Pub",
+      "name_zh": "酒馆",
+      "aliases_en": [
+        "public house"
+      ],
+      "aliases_zh": [
+        "英式酒馆"
+      ],
+      "description_en": "A venue serving alcoholic drinks in a social setting, often with food.",
+      "description_zh": "在社交环境中供应酒精饮品并常提供餐食的场所。",
+      "hard_negative_tag": "amenity=bar",
+      "construction_method": "codex_assisted_project_review",
+      "license_id": "CC-BY-SA-2.0"
+    },
+    {
+      "canonical_tag": "amenity=recycling",
+      "name_en": "Recycling facility",
+      "name_zh": "回收设施",
+      "aliases_en": [
+        "recycling collection point"
+      ],
+      "aliases_zh": [
+        "可回收物投放点"
+      ],
+      "description_en": "A place for depositing recyclable materials.",
+      "description_zh": "用于投放或收集可回收材料的地点。",
+      "hard_negative_tag": "amenity=drinking_water",
+      "construction_method": "codex_assisted_project_review",
+      "license_id": "CC-BY-SA-2.0"
+    },
+    {
+      "canonical_tag": "amenity=restaurant",
+      "name_en": "Restaurant",
+      "name_zh": "餐厅",
+      "aliases_en": [
+        "full-service restaurant"
+      ],
+      "aliases_zh": [
+        "正餐餐馆"
+      ],
+      "description_en": "A place serving prepared full meals, usually for consumption on site.",
+      "description_zh": "提供完整正餐并通常供顾客现场用餐的场所。",
+      "hard_negative_tag": "amenity=cafe",
+      "construction_method": "codex_assisted_project_review",
+      "license_id": "CC-BY-SA-2.0"
+    },
+    {
+      "canonical_tag": "amenity=school",
+      "name_en": "School",
+      "name_zh": "学校",
+      "aliases_en": [
+        "primary or secondary school"
+      ],
+      "aliases_zh": [
+        "中小学教育机构"
+      ],
+      "description_en": "An institution providing primary or secondary education.",
+      "description_zh": "提供小学或中学阶段教育的机构。",
+      "hard_negative_tag": "building=school",
+      "construction_method": "codex_assisted_project_review",
+      "license_id": "CC-BY-SA-2.0"
+    },
+    {
+      "canonical_tag": "amenity=social_facility",
+      "name_en": "Social facility",
+      "name_zh": "社会服务机构",
+      "aliases_en": [
+        "social care facility"
+      ],
+      "aliases_zh": [
+        "社会照护服务点"
+      ],
+      "description_en": "A facility providing social care, support, or welfare services.",
+      "description_zh": "提供社会照护、援助或福利服务的机构。",
+      "hard_negative_tag": "amenity=nursing_home",
+      "construction_method": "codex_assisted_project_review",
+      "license_id": "CC-BY-SA-2.0"
+    },
+    {
+      "canonical_tag": "amenity=taxi",
+      "name_en": "Taxi rank",
+      "name_zh": "出租车候客点",
+      "aliases_en": [
+        "taxi waiting rank"
+      ],
+      "aliases_zh": [
+        "出租车排队上客点"
+      ],
+      "description_en": "A designated place where taxis wait for passengers.",
+      "description_zh": "出租车集中等候乘客的指定地点。",
+      "hard_negative_tag": "highway=bus_stop",
+      "construction_method": "codex_assisted_project_review",
+      "license_id": "CC-BY-SA-2.0"
+    },
+    {
+      "canonical_tag": "amenity=telephone",
+      "name_en": "Public telephone",
+      "name_zh": "公共电话",
+      "aliases_en": [
+        "public call box"
+      ],
+      "aliases_zh": [
+        "公用电话亭"
+      ],
+      "description_en": "A publicly accessible telephone facility.",
+      "description_zh": "公众可使用的电话设施。",
+      "hard_negative_tag": "amenity=post_office",
+      "construction_method": "codex_assisted_project_review",
+      "license_id": "CC-BY-SA-2.0"
+    },
+    {
+      "canonical_tag": "amenity=toilets",
+      "name_en": "Public toilets",
+      "name_zh": "公共厕所",
+      "aliases_en": [
+        "public restroom"
+      ],
+      "aliases_zh": [
+        "公共卫生间"
+      ],
+      "description_en": "A publicly accessible toilet facility.",
+      "description_zh": "公众可使用的厕所设施。",
+      "hard_negative_tag": "amenity=drinking_water",
+      "construction_method": "codex_assisted_project_review",
+      "license_id": "CC-BY-SA-2.0"
+    },
+    {
+      "canonical_tag": "amenity=townhall",
+      "name_en": "Town hall",
+      "name_zh": "市政厅",
+      "aliases_en": [
+        "municipal hall"
+      ],
+      "aliases_zh": [
+        "地方政府办公厅"
+      ],
+      "description_en": "A building housing local government administration or civic functions.",
+      "description_zh": "承载地方政府行政或公共事务功能的建筑。",
+      "hard_negative_tag": "office=government",
+      "construction_method": "codex_assisted_project_review",
+      "license_id": "CC-BY-SA-2.0"
+    },
+    {
+      "canonical_tag": "amenity=training",
+      "name_en": "Training centre",
+      "name_zh": "培训中心",
+      "aliases_en": [
+        "vocational training facility"
+      ],
+      "aliases_zh": [
+        "职业技能培训点"
+      ],
+      "description_en": "A facility providing non-school vocational or specialist training.",
+      "description_zh": "提供非学校制职业或专业培训的机构。",
+      "hard_negative_tag": "amenity=language_school",
+      "construction_method": "codex_assisted_project_review",
+      "license_id": "CC-BY-SA-2.0"
+    },
+    {
+      "canonical_tag": "amenity=university",
+      "name_en": "University",
+      "name_zh": "大学",
+      "aliases_en": [
+        "higher education university"
+      ],
+      "aliases_zh": [
+        "综合高等院校"
+      ],
+      "description_en": "An institution providing university-level higher education and research.",
+      "description_zh": "提供大学层次高等教育与科研的机构。",
+      "hard_negative_tag": "amenity=college",
+      "construction_method": "codex_assisted_project_review",
+      "license_id": "CC-BY-SA-2.0"
+    },
+    {
+      "canonical_tag": "amenity=veterinary",
+      "name_en": "Veterinary clinic",
+      "name_zh": "兽医诊所",
+      "aliases_en": [
+        "animal medical clinic"
+      ],
+      "aliases_zh": [
+        "宠物医疗门诊"
+      ],
+      "description_en": "A medical practice treating animals.",
+      "description_zh": "为动物提供诊疗服务的医疗场所。",
+      "hard_negative_tag": "amenity=clinic",
+      "construction_method": "codex_assisted_project_review",
+      "license_id": "CC-BY-SA-2.0"
+    },
+    {
+      "canonical_tag": "building=apartments",
+      "name_en": "Apartment building",
+      "name_zh": "公寓楼",
+      "aliases_en": [
+        "multi-unit apartment block"
+      ],
+      "aliases_zh": [
+        "多户住宅楼"
+      ],
+      "description_en": "A residential building divided into multiple apartments.",
+      "description_zh": "划分为多个独立公寓单元的住宅建筑。",
+      "hard_negative_tag": "building=residential",
+      "construction_method": "codex_assisted_project_review",
+      "license_id": "CC-BY-SA-2.0"
+    },
+    {
+      "canonical_tag": "building=commercial",
+      "name_en": "Commercial building",
+      "name_zh": "商业建筑",
+      "aliases_en": [
+        "general commercial premises"
+      ],
+      "aliases_zh": [
+        "综合商业用房"
+      ],
+      "description_en": "A building used mainly for commercial activities.",
+      "description_zh": "主要用于商业活动的建筑。",
+      "hard_negative_tag": "building=retail",
+      "construction_method": "codex_assisted_project_review",
+      "license_id": "CC-BY-SA-2.0"
+    },
+    {
+      "canonical_tag": "building=detached",
+      "name_en": "Detached house",
+      "name_zh": "独立式住宅",
+      "aliases_en": [
+        "standalone family house"
+      ],
+      "aliases_zh": [
+        "独栋家庭住宅"
+      ],
+      "description_en": "A free-standing residential house not joined to another dwelling.",
+      "description_zh": "不与其他住宅相连的独立居住建筑。",
+      "hard_negative_tag": "building=house",
+      "construction_method": "codex_assisted_project_review",
+      "license_id": "CC-BY-SA-2.0"
+    },
+    {
+      "canonical_tag": "building=house",
+      "name_en": "House",
+      "name_zh": "住宅房屋",
+      "aliases_en": [
+        "single household house"
+      ],
+      "aliases_zh": [
+        "单户居住房屋"
+      ],
+      "description_en": "A building designed as a house for one household or family.",
+      "description_zh": "为一个家庭或住户设计的住宅建筑。",
+      "hard_negative_tag": "building=detached",
+      "construction_method": "codex_assisted_project_review",
+      "license_id": "CC-BY-SA-2.0"
+    },
+    {
+      "canonical_tag": "building=industrial",
+      "name_en": "Industrial building",
+      "name_zh": "工业建筑",
+      "aliases_en": [
+        "industrial production building"
+      ],
+      "aliases_zh": [
+        "工业生产厂房"
+      ],
+      "description_en": "A building used mainly for industrial production or processing.",
+      "description_zh": "主要用于工业生产或加工的建筑。",
+      "hard_negative_tag": "building=commercial",
+      "construction_method": "codex_assisted_project_review",
+      "license_id": "CC-BY-SA-2.0"
+    },
+    {
+      "canonical_tag": "building=office",
+      "name_en": "Office building",
+      "name_zh": "办公楼",
+      "aliases_en": [
+        "administrative office building"
+      ],
+      "aliases_zh": [
+        "行政办公建筑"
+      ],
+      "description_en": "A building used mainly for offices.",
+      "description_zh": "主要作为办公室使用的建筑。",
+      "hard_negative_tag": "building=commercial",
+      "construction_method": "codex_assisted_project_review",
+      "license_id": "CC-BY-SA-2.0"
+    },
+    {
+      "canonical_tag": "building=residential",
+      "name_en": "Residential building",
+      "name_zh": "住宅建筑",
+      "aliases_en": [
+        "general residential building"
+      ],
+      "aliases_zh": [
+        "一般居住建筑"
+      ],
+      "description_en": "A building used predominantly for residential purposes.",
+      "description_zh": "主要用于居住用途的建筑。",
+      "hard_negative_tag": "building=apartments",
+      "construction_method": "codex_assisted_project_review",
+      "license_id": "CC-BY-SA-2.0"
+    },
+    {
+      "canonical_tag": "building=retail",
+      "name_en": "Retail building",
+      "name_zh": "零售商业建筑",
+      "aliases_en": [
+        "shop building"
+      ],
+      "aliases_zh": [
+        "商店用途建筑"
+      ],
+      "description_en": "A building used mainly for selling goods directly to consumers.",
+      "description_zh": "主要用于面向消费者零售商品的建筑。",
+      "hard_negative_tag": "building=commercial",
+      "construction_method": "codex_assisted_project_review",
+      "license_id": "CC-BY-SA-2.0"
+    },
+    {
+      "canonical_tag": "building=school",
+      "name_en": "School building",
+      "name_zh": "学校建筑",
+      "aliases_en": [
+        "education school building"
+      ],
+      "aliases_zh": [
+        "校园教学建筑"
+      ],
+      "description_en": "A building constructed or used as part of a school.",
+      "description_zh": "作为学校组成部分使用的建筑。",
+      "hard_negative_tag": "amenity=school",
+      "construction_method": "codex_assisted_project_review",
+      "license_id": "CC-BY-SA-2.0"
+    },
+    {
+      "canonical_tag": "healthcare=laboratory",
+      "name_en": "Medical laboratory",
+      "name_zh": "医学检验室",
+      "aliases_en": [
+        "clinical testing laboratory"
+      ],
+      "aliases_zh": [
+        "临床检测实验室"
+      ],
+      "description_en": "A healthcare laboratory performing diagnostic tests on clinical samples.",
+      "description_zh": "对临床样本进行诊断检测的医疗实验室。",
+      "hard_negative_tag": "amenity=clinic",
+      "construction_method": "codex_assisted_project_review",
+      "license_id": "CC-BY-SA-2.0"
+    },
+    {
+      "canonical_tag": "healthcare=midwife",
+      "name_en": "Midwife practice",
+      "name_zh": "助产服务点",
+      "aliases_en": [
+        "midwifery practice"
+      ],
+      "aliases_zh": [
+        "孕产助产门诊"
+      ],
+      "description_en": "A healthcare practice providing pregnancy and childbirth support by midwives.",
+      "description_zh": "由助产士提供孕产和分娩支持的医疗服务点。",
+      "hard_negative_tag": "amenity=doctors",
+      "construction_method": "codex_assisted_project_review",
+      "license_id": "CC-BY-SA-2.0"
+    },
+    {
+      "canonical_tag": "healthcare=physiotherapist",
+      "name_en": "Physiotherapist",
+      "name_zh": "物理治疗诊所",
+      "aliases_en": [
+        "physical therapy practice"
+      ],
+      "aliases_zh": [
+        "康复物理治疗门诊"
+      ],
+      "description_en": "A healthcare practice providing physical therapy and rehabilitation.",
+      "description_zh": "提供物理治疗与康复服务的医疗机构。",
+      "hard_negative_tag": "amenity=clinic",
+      "construction_method": "codex_assisted_project_review",
+      "license_id": "CC-BY-SA-2.0"
+    },
+    {
+      "canonical_tag": "healthcare=psychotherapist",
+      "name_en": "Psychotherapist",
+      "name_zh": "心理治疗诊所",
+      "aliases_en": [
+        "psychotherapy practice"
+      ],
+      "aliases_zh": [
+        "心理治疗门诊"
+      ],
+      "description_en": "A healthcare practice providing psychotherapy.",
+      "description_zh": "提供心理治疗服务的医疗机构。",
+      "hard_negative_tag": "amenity=doctors",
+      "construction_method": "codex_assisted_project_review",
+      "license_id": "CC-BY-SA-2.0"
+    },
+    {
+      "canonical_tag": "highway=bus_stop",
+      "name_en": "Bus stop",
+      "name_zh": "公交车站",
+      "aliases_en": [
+        "roadside bus stop"
+      ],
+      "aliases_zh": [
+        "路侧公交停靠站"
+      ],
+      "description_en": "A point where buses stop to pick up or set down passengers.",
+      "description_zh": "公交车辆上下乘客的停靠点。",
+      "hard_negative_tag": "public_transport=platform",
+      "construction_method": "codex_assisted_project_review",
+      "license_id": "CC-BY-SA-2.0"
+    },
+    {
+      "canonical_tag": "highway=traffic_signals",
+      "name_en": "Traffic signals",
+      "name_zh": "交通信号灯",
+      "aliases_en": [
+        "road traffic lights"
+      ],
+      "aliases_zh": [
+        "道路红绿灯"
+      ],
+      "description_en": "Signals controlling traffic movements at a road location.",
+      "description_zh": "在道路节点控制车辆或行人通行的信号设施。",
+      "hard_negative_tag": "highway=bus_stop",
+      "construction_method": "codex_assisted_project_review",
+      "license_id": "CC-BY-SA-2.0"
+    },
+    {
+      "canonical_tag": "landuse=education",
+      "name_en": "Education land use",
+      "name_zh": "教育用地",
+      "aliases_en": [
+        "educational campus land"
+      ],
+      "aliases_zh": [
+        "校园教育用地"
+      ],
+      "description_en": "An area predominantly used by educational institutions and facilities.",
+      "description_zh": "主要由教育机构及其设施占用的区域。",
+      "hard_negative_tag": "amenity=school",
+      "construction_method": "codex_assisted_project_review",
+      "license_id": "CC-BY-SA-2.0"
+    },
+    {
+      "canonical_tag": "leisure=fitness_centre",
+      "name_en": "Fitness centre",
+      "name_zh": "健身中心",
+      "aliases_en": [
+        "indoor gym centre"
+      ],
+      "aliases_zh": [
+        "室内健身场馆"
+      ],
+      "description_en": "A facility offering exercise and physical fitness activities.",
+      "description_zh": "提供锻炼和体适能活动的场所。",
+      "hard_negative_tag": "leisure=sports_centre",
+      "construction_method": "codex_assisted_project_review",
+      "license_id": "CC-BY-SA-2.0"
+    },
+    {
+      "canonical_tag": "leisure=garden",
+      "name_en": "Garden",
+      "name_zh": "花园",
+      "aliases_en": [
+        "managed public garden"
+      ],
+      "aliases_zh": [
+        "人工园艺花园"
+      ],
+      "description_en": "A managed area where plants are cultivated or displayed for leisure.",
+      "description_zh": "为休闲而栽培或展示植物的管理区域。",
+      "hard_negative_tag": "leisure=park",
+      "construction_method": "codex_assisted_project_review",
+      "license_id": "CC-BY-SA-2.0"
+    },
+    {
+      "canonical_tag": "leisure=nature_reserve",
+      "name_en": "Nature reserve",
+      "name_zh": "自然保护区",
+      "aliases_en": [
+        "protected nature area"
+      ],
+      "aliases_zh": [
+        "自然生态保护地"
+      ],
+      "description_en": "A protected area managed primarily for nature conservation.",
+      "description_zh": "主要以自然保护为目的进行管理的区域。",
+      "hard_negative_tag": "leisure=park",
+      "construction_method": "codex_assisted_project_review",
+      "license_id": "CC-BY-SA-2.0"
+    },
+    {
+      "canonical_tag": "leisure=park",
+      "name_en": "Park",
+      "name_zh": "公园",
+      "aliases_en": [
+        "public green park"
+      ],
+      "aliases_zh": [
+        "城市公共绿地"
+      ],
+      "description_en": "An open green area for recreation, usually managed for public use.",
+      "description_zh": "供公众休闲使用并通常经过管理的开放绿地。",
+      "hard_negative_tag": "leisure=garden",
+      "construction_method": "codex_assisted_project_review",
+      "license_id": "CC-BY-SA-2.0"
+    },
+    {
+      "canonical_tag": "leisure=pitch",
+      "name_en": "Sports pitch",
+      "name_zh": "运动场地",
+      "aliases_en": [
+        "marked playing pitch"
+      ],
+      "aliases_zh": [
+        "划线球类场地"
+      ],
+      "description_en": "A marked outdoor area for playing a particular sport.",
+      "description_zh": "用于特定运动并有明确边界的室外场地。",
+      "hard_negative_tag": "leisure=stadium",
+      "construction_method": "codex_assisted_project_review",
+      "license_id": "CC-BY-SA-2.0"
+    },
+    {
+      "canonical_tag": "leisure=playground",
+      "name_en": "Playground",
+      "name_zh": "游乐场",
+      "aliases_en": [
+        "children's play area"
+      ],
+      "aliases_zh": [
+        "儿童户外游乐区"
+      ],
+      "description_en": "An outdoor or indoor area equipped for children's play.",
+      "description_zh": "配有儿童游乐设施的室内或室外区域。",
+      "hard_negative_tag": "leisure=park",
+      "construction_method": "codex_assisted_project_review",
+      "license_id": "CC-BY-SA-2.0"
+    },
+    {
+      "canonical_tag": "leisure=sports_centre",
+      "name_en": "Sports centre",
+      "name_zh": "体育中心",
+      "aliases_en": [
+        "multi-sport facility"
+      ],
+      "aliases_zh": [
+        "综合体育活动中心"
+      ],
+      "description_en": "A facility offering one or more organised sports activities.",
+      "description_zh": "提供一种或多种有组织体育活动的设施。",
+      "hard_negative_tag": "leisure=fitness_centre",
+      "construction_method": "codex_assisted_project_review",
+      "license_id": "CC-BY-SA-2.0"
+    },
+    {
+      "canonical_tag": "leisure=stadium",
+      "name_en": "Stadium",
+      "name_zh": "体育场",
+      "aliases_en": [
+        "spectator sports stadium"
+      ],
+      "aliases_zh": [
+        "观众席体育场馆"
+      ],
+      "description_en": "A major sports venue with spectator facilities around a field or track.",
+      "description_zh": "围绕比赛场地或跑道设有观众设施的大型体育场馆。",
+      "hard_negative_tag": "leisure=pitch",
+      "construction_method": "codex_assisted_project_review",
+      "license_id": "CC-BY-SA-2.0"
+    },
+    {
+      "canonical_tag": "leisure=swimming_pool",
+      "name_en": "Swimming pool",
+      "name_zh": "游泳池",
+      "aliases_en": [
+        "public swimming basin"
+      ],
+      "aliases_zh": [
+        "游泳水池"
+      ],
+      "description_en": "A water basin designed for swimming.",
+      "description_zh": "专门供游泳使用的人工水池。",
+      "hard_negative_tag": "leisure=sports_centre",
+      "construction_method": "codex_assisted_project_review",
+      "license_id": "CC-BY-SA-2.0"
+    },
+    {
+      "canonical_tag": "office=government",
+      "name_en": "Government office",
+      "name_zh": "政府办公室",
+      "aliases_en": [
+        "public administration office"
+      ],
+      "aliases_zh": [
+        "政府行政办公点"
+      ],
+      "description_en": "An office used by a government or public administration body.",
+      "description_zh": "政府或公共行政机构使用的办公场所。",
+      "hard_negative_tag": "amenity=townhall",
+      "construction_method": "codex_assisted_project_review",
+      "license_id": "CC-BY-SA-2.0"
+    },
+    {
+      "canonical_tag": "public_transport=platform",
+      "name_en": "Public transport platform",
+      "name_zh": "公共交通站台",
+      "aliases_en": [
+        "transit boarding platform"
+      ],
+      "aliases_zh": [
+        "公共交通上下客站台"
+      ],
+      "description_en": "A place where passengers wait and board public transport vehicles.",
+      "description_zh": "乘客等候并上下公共交通车辆的站台。",
+      "hard_negative_tag": "highway=bus_stop",
+      "construction_method": "codex_assisted_project_review",
+      "license_id": "CC-BY-SA-2.0"
+    },
+    {
+      "canonical_tag": "public_transport=station",
+      "name_en": "Public transport station",
+      "name_zh": "公共交通枢纽站",
+      "aliases_en": [
+        "transit station complex"
+      ],
+      "aliases_zh": [
+        "综合公共交通车站"
+      ],
+      "description_en": "A station serving public transport passengers and services.",
+      "description_zh": "为公共交通乘客及线路服务的车站设施。",
+      "hard_negative_tag": "railway=station",
+      "construction_method": "codex_assisted_project_review",
+      "license_id": "CC-BY-SA-2.0"
+    },
+    {
+      "canonical_tag": "railway=halt",
+      "name_en": "Railway halt",
+      "name_zh": "铁路乘降所",
+      "aliases_en": [
+        "minor rail halt"
+      ],
+      "aliases_zh": [
+        "小型铁路停靠站"
+      ],
+      "description_en": "A small railway stop with limited facilities.",
+      "description_zh": "设施较少的小型铁路停靠站。",
+      "hard_negative_tag": "railway=station",
+      "construction_method": "codex_assisted_project_review",
+      "license_id": "CC-BY-SA-2.0"
+    },
+    {
+      "canonical_tag": "railway=platform",
+      "name_en": "Railway platform",
+      "name_zh": "铁路站台",
+      "aliases_en": [
+        "train boarding platform"
+      ],
+      "aliases_zh": [
+        "列车上下客站台"
+      ],
+      "description_en": "A platform beside railway tracks for passengers to board or leave trains.",
+      "description_zh": "位于铁路轨道旁供乘客上下列车的站台。",
+      "hard_negative_tag": "public_transport=platform",
+      "construction_method": "codex_assisted_project_review",
+      "license_id": "CC-BY-SA-2.0"
+    },
+    {
+      "canonical_tag": "railway=station",
+      "name_en": "Railway station",
+      "name_zh": "铁路车站",
+      "aliases_en": [
+        "train station"
+      ],
+      "aliases_zh": [
+        "客运火车站"
+      ],
+      "description_en": "A railway facility where trains stop for passengers or goods.",
+      "description_zh": "列车停靠并服务乘客或货物的铁路设施。",
+      "hard_negative_tag": "railway=halt",
+      "construction_method": "codex_assisted_project_review",
+      "license_id": "CC-BY-SA-2.0"
+    },
+    {
+      "canonical_tag": "railway=subway_entrance",
+      "name_en": "Subway entrance",
+      "name_zh": "地铁出入口",
+      "aliases_en": [
+        "metro station entrance"
+      ],
+      "aliases_zh": [
+        "轨道交通进出口"
+      ],
+      "description_en": "An entrance giving access to a subway or metro station.",
+      "description_zh": "通往地铁或城市轨道交通车站的出入口。",
+      "hard_negative_tag": "public_transport=station",
+      "construction_method": "codex_assisted_project_review",
+      "license_id": "CC-BY-SA-2.0"
+    },
+    {
+      "canonical_tag": "railway=tram_stop",
+      "name_en": "Tram stop",
+      "name_zh": "有轨电车站",
+      "aliases_en": [
+        "street tram stop"
+      ],
+      "aliases_zh": [
+        "路面电车停靠站"
+      ],
+      "description_en": "A point where trams stop for passengers.",
+      "description_zh": "有轨电车上下乘客的停靠点。",
+      "hard_negative_tag": "highway=bus_stop",
+      "construction_method": "codex_assisted_project_review",
+      "license_id": "CC-BY-SA-2.0"
+    },
+    {
+      "canonical_tag": "shop=bakery",
+      "name_en": "Bakery",
+      "name_zh": "面包店",
+      "aliases_en": [
+        "bread bakery shop"
+      ],
+      "aliases_zh": [
+        "烘焙面包店"
+      ],
+      "description_en": "A shop primarily selling bread and baked goods.",
+      "description_zh": "主要销售面包及烘焙食品的店铺。",
+      "hard_negative_tag": "shop=pastry",
+      "construction_method": "codex_assisted_project_review",
+      "license_id": "CC-BY-SA-2.0"
+    },
+    {
+      "canonical_tag": "shop=bicycle",
+      "name_en": "Bicycle shop",
+      "name_zh": "自行车店",
+      "aliases_en": [
+        "cycle retail shop"
+      ],
+      "aliases_zh": [
+        "单车销售维修店"
+      ],
+      "description_en": "A shop selling bicycles, parts, or bicycle repair services.",
+      "description_zh": "销售自行车及配件或提供维修服务的店铺。",
+      "hard_negative_tag": "amenity=bicycle_rental",
+      "construction_method": "codex_assisted_project_review",
+      "license_id": "CC-BY-SA-2.0"
+    },
+    {
+      "canonical_tag": "shop=books",
+      "name_en": "Bookshop",
+      "name_zh": "书店",
+      "aliases_en": [
+        "book retail store"
+      ],
+      "aliases_zh": [
+        "图书零售店"
+      ],
+      "description_en": "A shop selling books.",
+      "description_zh": "以销售图书为主的零售店。",
+      "hard_negative_tag": "amenity=library",
+      "construction_method": "codex_assisted_project_review",
+      "license_id": "CC-BY-SA-2.0"
+    },
+    {
+      "canonical_tag": "shop=butcher",
+      "name_en": "Butcher shop",
+      "name_zh": "肉铺",
+      "aliases_en": [
+        "fresh meat shop"
+      ],
+      "aliases_zh": [
+        "鲜肉零售店"
+      ],
+      "description_en": "A shop selling fresh meat and meat products.",
+      "description_zh": "销售鲜肉及肉制品的店铺。",
+      "hard_negative_tag": "shop=deli",
+      "construction_method": "codex_assisted_project_review",
+      "license_id": "CC-BY-SA-2.0"
+    },
+    {
+      "canonical_tag": "shop=car",
+      "name_en": "Car dealer",
+      "name_zh": "汽车销售店",
+      "aliases_en": [
+        "motor vehicle dealership"
+      ],
+      "aliases_zh": [
+        "机动车经销门店"
+      ],
+      "description_en": "A shop or dealership selling motor vehicles.",
+      "description_zh": "销售机动车的门店或经销场所。",
+      "hard_negative_tag": "shop=bicycle",
+      "construction_method": "codex_assisted_project_review",
+      "license_id": "CC-BY-SA-2.0"
+    },
+    {
+      "canonical_tag": "shop=chemist",
+      "name_en": "Chemist shop",
+      "name_zh": "日化保健品店",
+      "aliases_en": [
+        "health and beauty retailer"
+      ],
+      "aliases_zh": [
+        "日化健康用品店"
+      ],
+      "description_en": "A shop selling health, hygiene, and beauty products without dispensing prescriptions.",
+      "description_zh": "销售健康、卫生和美容用品但不配发处方药的店铺。",
+      "hard_negative_tag": "amenity=pharmacy",
+      "construction_method": "codex_assisted_project_review",
+      "license_id": "CC-BY-SA-2.0"
+    },
+    {
+      "canonical_tag": "shop=clothes",
+      "name_en": "Clothing shop",
+      "name_zh": "服装店",
+      "aliases_en": [
+        "fashion clothing store"
+      ],
+      "aliases_zh": [
+        "成衣零售店"
+      ],
+      "description_en": "A shop selling clothing.",
+      "description_zh": "以销售服装为主的零售店。",
+      "hard_negative_tag": "shop=shoes",
+      "construction_method": "codex_assisted_project_review",
+      "license_id": "CC-BY-SA-2.0"
+    },
+    {
+      "canonical_tag": "shop=confectionery",
+      "name_en": "Confectionery shop",
+      "name_zh": "糖果店",
+      "aliases_en": [
+        "sweets and candy shop"
+      ],
+      "aliases_zh": [
+        "糖果甜食店"
+      ],
+      "description_en": "A shop selling sweets, candy, and confectionery.",
+      "description_zh": "销售糖果及甜食制品的店铺。",
+      "hard_negative_tag": "shop=pastry",
+      "construction_method": "codex_assisted_project_review",
+      "license_id": "CC-BY-SA-2.0"
+    },
+    {
+      "canonical_tag": "shop=convenience",
+      "name_en": "Convenience store",
+      "name_zh": "便利店",
+      "aliases_en": [
+        "neighbourhood mini market"
+      ],
+      "aliases_zh": [
+        "社区便民小店"
+      ],
+      "description_en": "A small local shop selling everyday goods and groceries.",
+      "description_zh": "销售日常用品和食品的小型社区商店。",
+      "hard_negative_tag": "shop=supermarket",
+      "construction_method": "codex_assisted_project_review",
+      "license_id": "CC-BY-SA-2.0"
+    },
+    {
+      "canonical_tag": "shop=deli",
+      "name_en": "Delicatessen",
+      "name_zh": "熟食店",
+      "aliases_en": [
+        "prepared food deli"
+      ],
+      "aliases_zh": [
+        "即食熟食铺"
+      ],
+      "description_en": "A shop selling prepared foods, cold cuts, and speciality groceries.",
+      "description_zh": "销售熟食、冷切肉及特色食品的店铺。",
+      "hard_negative_tag": "shop=butcher",
+      "construction_method": "codex_assisted_project_review",
+      "license_id": "CC-BY-SA-2.0"
+    },
+    {
+      "canonical_tag": "shop=department_store",
+      "name_en": "Department store",
+      "name_zh": "百货商店",
+      "aliases_en": [
+        "multi-department retailer"
+      ],
+      "aliases_zh": [
+        "综合百货卖场"
+      ],
+      "description_en": "A large shop divided into departments selling many types of goods.",
+      "description_zh": "按部门销售多类商品的大型零售商店。",
+      "hard_negative_tag": "shop=mall",
+      "construction_method": "codex_assisted_project_review",
+      "license_id": "CC-BY-SA-2.0"
+    },
+    {
+      "canonical_tag": "shop=doityourself",
+      "name_en": "Do-it-yourself shop",
+      "name_zh": "家装建材店",
+      "aliases_en": [
+        "DIY home improvement store"
+      ],
+      "aliases_zh": [
+        "家庭装修材料店"
+      ],
+      "description_en": "A large shop selling home-improvement materials and tools.",
+      "description_zh": "销售家装材料和工具的大型店铺。",
+      "hard_negative_tag": "shop=hardware",
+      "construction_method": "codex_assisted_project_review",
+      "license_id": "CC-BY-SA-2.0"
+    },
+    {
+      "canonical_tag": "shop=electronics",
+      "name_en": "Electronics shop",
+      "name_zh": "电子产品店",
+      "aliases_en": [
+        "consumer electronics store"
+      ],
+      "aliases_zh": [
+        "数码电子零售店"
+      ],
+      "description_en": "A shop selling consumer electronic devices.",
+      "description_zh": "销售消费电子设备的店铺。",
+      "hard_negative_tag": "shop=mobile_phone",
+      "construction_method": "codex_assisted_project_review",
+      "license_id": "CC-BY-SA-2.0"
+    },
+    {
+      "canonical_tag": "shop=florist",
+      "name_en": "Florist",
+      "name_zh": "花店",
+      "aliases_en": [
+        "flower retail shop"
+      ],
+      "aliases_zh": [
+        "鲜花零售店"
+      ],
+      "description_en": "A shop selling cut flowers and floral arrangements.",
+      "description_zh": "销售鲜花及花艺制品的店铺。",
+      "hard_negative_tag": "shop=garden_centre",
+      "construction_method": "codex_assisted_project_review",
+      "license_id": "CC-BY-SA-2.0"
+    },
+    {
+      "canonical_tag": "shop=furniture",
+      "name_en": "Furniture shop",
+      "name_zh": "家具店",
+      "aliases_en": [
+        "home furniture store"
+      ],
+      "aliases_zh": [
+        "家居家具卖场"
+      ],
+      "description_en": "A shop selling furniture.",
+      "description_zh": "以销售家具为主的零售店。",
+      "hard_negative_tag": "shop=doityourself",
+      "construction_method": "codex_assisted_project_review",
+      "license_id": "CC-BY-SA-2.0"
+    },
+    {
+      "canonical_tag": "shop=hardware",
+      "name_en": "Hardware shop",
+      "name_zh": "五金店",
+      "aliases_en": [
+        "tools and hardware store"
+      ],
+      "aliases_zh": [
+        "工具五金门店"
+      ],
+      "description_en": "A shop selling tools, fasteners, and household hardware.",
+      "description_zh": "销售工具、紧固件及家用五金的店铺。",
+      "hard_negative_tag": "shop=doityourself",
+      "construction_method": "codex_assisted_project_review",
+      "license_id": "CC-BY-SA-2.0"
+    },
+    {
+      "canonical_tag": "shop=mall",
+      "name_en": "Shopping mall",
+      "name_zh": "购物中心",
+      "aliases_en": [
+        "enclosed shopping centre"
+      ],
+      "aliases_zh": [
+        "综合商业购物中心"
+      ],
+      "description_en": "A shopping complex containing multiple shops and shared facilities.",
+      "description_zh": "包含多家商店及公共设施的商业综合体。",
+      "hard_negative_tag": "shop=department_store",
+      "construction_method": "codex_assisted_project_review",
+      "license_id": "CC-BY-SA-2.0"
+    },
+    {
+      "canonical_tag": "shop=mobile_phone",
+      "name_en": "Mobile phone shop",
+      "name_zh": "手机店",
+      "aliases_en": [
+        "cellphone retail store"
+      ],
+      "aliases_zh": [
+        "移动通信终端店"
+      ],
+      "description_en": "A shop selling mobile phones and related services or accessories.",
+      "description_zh": "销售手机及相关服务或配件的店铺。",
+      "hard_negative_tag": "shop=electronics",
+      "construction_method": "codex_assisted_project_review",
+      "license_id": "CC-BY-SA-2.0"
+    },
+    {
+      "canonical_tag": "shop=pastry",
+      "name_en": "Pastry shop",
+      "name_zh": "糕点店",
+      "aliases_en": [
+        "cake and pastry shop"
+      ],
+      "aliases_zh": [
+        "西式糕点门店"
+      ],
+      "description_en": "A shop primarily selling cakes and pastries.",
+      "description_zh": "主要销售蛋糕和糕点的店铺。",
+      "hard_negative_tag": "shop=bakery",
+      "construction_method": "codex_assisted_project_review",
+      "license_id": "CC-BY-SA-2.0"
+    },
+    {
+      "canonical_tag": "shop=seafood",
+      "name_en": "Seafood shop",
+      "name_zh": "水产店",
+      "aliases_en": [
+        "fish and seafood market"
+      ],
+      "aliases_zh": [
+        "鲜活水产零售店"
+      ],
+      "description_en": "A shop selling fish and other seafood.",
+      "description_zh": "销售鱼类及其他水产品的店铺。",
+      "hard_negative_tag": "shop=butcher",
+      "construction_method": "codex_assisted_project_review",
+      "license_id": "CC-BY-SA-2.0"
+    },
+    {
+      "canonical_tag": "shop=shoes",
+      "name_en": "Shoe shop",
+      "name_zh": "鞋店",
+      "aliases_en": [
+        "footwear retail store"
+      ],
+      "aliases_zh": [
+        "鞋履零售店"
+      ],
+      "description_en": "A shop selling footwear.",
+      "description_zh": "以销售鞋类为主的零售店。",
+      "hard_negative_tag": "shop=clothes",
+      "construction_method": "codex_assisted_project_review",
+      "license_id": "CC-BY-SA-2.0"
+    },
+    {
+      "canonical_tag": "shop=supermarket",
+      "name_en": "Supermarket",
+      "name_zh": "超市",
+      "aliases_en": [
+        "full grocery supermarket"
+      ],
+      "aliases_zh": [
+        "综合食品超市"
+      ],
+      "description_en": "A large self-service shop selling groceries and everyday goods.",
+      "description_zh": "自助销售食品和日常用品的大型商店。",
+      "hard_negative_tag": "shop=convenience",
+      "construction_method": "codex_assisted_project_review",
+      "license_id": "CC-BY-SA-2.0"
+    }
+  ]
+}

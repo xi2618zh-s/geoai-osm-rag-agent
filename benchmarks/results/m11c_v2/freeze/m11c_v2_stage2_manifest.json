@@ -1,0 +1,249 @@
+{
+  "definitions": {
+    "aggregate_values": "M11b v2.0 references and scorer do not record or check per-region aggregate values.",
+    "executable": "Reached tool execution in every run of the configuration.",
+    "frontend_round": "Per run, one logical model call per task in seeded order; decisions shared by every model-using configuration; validator_no_frontend makes no model call.",
+    "latency_ms": "System time plus the task's front-end wall time.",
+    "llm_calls": "HTTP attempts of the task's logical call (at most 2); identical across model configs.",
+    "model_failure": "Logical call without a schema-valid frame after 2 attempts; denominator = logical calls.",
+    "secondary_pass": "Diagnostic, non-official: every component passed except required_steps.",
+    "strict_pass": "Official M11b v2.0 TaskScore.passed (scorer unchanged); primary metric."
+  },
+  "dev": {
+    "catalogue": {
+      "files": {
+        "empty": {
+          "crs": "EPSG:3857",
+          "file": "empty.geojson",
+          "sha256": "b3049ad7a1062091e169bd352424d59721a26b8b6229942aef26d11b0c6a96e1"
+        },
+        "points": {
+          "crs": "EPSG:4326",
+          "file": "geographic_points.geojson",
+          "sha256": "afeb0be1553607d0a2918b6786e1f15d34a42e3141c07b76ae82ca515af58c0b"
+        },
+        "regions": {
+          "crs": "EPSG:3857",
+          "file": "projected_regions.geojson",
+          "sha256": "f1a3f665b2dd0c33ebcd83de2e02ae157b683f8618c9834cc15888be585a1e7a"
+        },
+        "sources": {
+          "crs": "EPSG:3857",
+          "file": "projected_sources.geojson",
+          "sha256": "456a6d5cc0ab7ecc9f92efabcfe4381aab4095d1bf811832bf99a0349c42283d"
+        },
+        "targets": {
+          "crs": "EPSG:3857",
+          "file": "projected_targets.geojson",
+          "sha256": "7aaf609400bbf64ae1fc85118a8371ab0d818634cce3a561e39f31a3ee7c9731"
+        },
+        "tie": {
+          "crs": "EPSG:3857",
+          "file": "invalid_bow_tie.geojson",
+          "sha256": "4894925c724473e377275dc898e21a5f72a6d8fe8190f27f3c88b8b88d4f6cb1"
+        },
+        "values": {
+          "crs": "EPSG:3857",
+          "file": "aggregate_values.geojson",
+          "sha256": "4f9dd5c5c3d1d21ce1247e3f11496fbd9dbd3347d5b5b01275a65714b665b9a9"
+        }
+      },
+      "name": "m04b-v1",
+      "scope": "Synthetic dev catalogue"
+    },
+    "profile_sha256": "e1e56e80b50ba98f94a641e13e6d706b9d6019a0d254b821d05b23ecbddf9686",
+    "task_count": 160,
+    "task_ids_sha256": "sha256:f0362d3f23e0344aabd20026297dffe2fab32d46b96fa42b8eb45806bc54f487",
+    "tasks_sha256": "sha256:6c7f2ab5d09581642918ccda6f0f7cba90cbcb25ab9b7427d6c68596dc2d94fb"
+  },
+  "frame_schema": {
+    "dev_instance_sha256": "sha256:f72182eb4230e9706251bb39d287b01b295adcd61c98384cc93c820d42744fbc",
+    "structure": "frozen; role and field enums filled from the declared catalogue"
+  },
+  "frontend_identity": {
+    "frontend_version": "m11c-frontend-v2",
+    "model_digest": "357c53fb659c5076de1d65ccb0b397446227b71a42be9d1603d46168015c9e4b",
+    "model_id": "qwen2.5:3b",
+    "prompt_sha256": "be9ea50f10e5cb50c3a9c6af001c2b0fe27b86b1e0596688fef4f80ebfcda51f",
+    "prompt_version": "m11c_frontend_v2_prompt"
+  },
+  "gate": {
+    "missing_place_min": 7,
+    "model_failures_max": 3,
+    "rank_unsupported_required": 8,
+    "validator_strict_min": 120
+  },
+  "model": {
+    "attempt_timeout_s": 120.0,
+    "cpu_only": true,
+    "decoding_options": {
+      "num_ctx": 4096,
+      "num_predict": 256,
+      "num_thread": 4,
+      "seed": 1107,
+      "temperature": 0,
+      "use_mmap": true
+    },
+    "digest": "357c53fb659c5076de1d65ccb0b397446227b71a42be9d1603d46168015c9e4b",
+    "endpoint": "http://127.0.0.1:11434",
+    "keep_alive": "30m",
+    "max_attempts": 2,
+    "model_id": "qwen2.5:3b",
+    "ollama_version": "0.13.5",
+    "verified_service": {
+      "digest": "357c53fb659c5076de1d65ccb0b397446227b71a42be9d1603d46168015c9e4b",
+      "model_id": "qwen2.5:3b",
+      "ollama_version": "0.13.5"
+    }
+  },
+  "private_v2_receipt_sha256": "sha256:5e474b3afe14c67362899a2fe5744b2ea0b4fa33818a7abb51fffbaf5c43b13d",
+  "prompt": {
+    "file": "src/agent/prompts/m11c_frontend_v2_prompt.txt",
+    "label": "m11c_frontend_v2_prompt",
+    "sha256": "be9ea50f10e5cb50c3a9c6af001c2b0fe27b86b1e0596688fef4f80ebfcda51f"
+  },
+  "protocol_version": "m11c-protocol-v2",
+  "schema_version": "1.0",
+  "seeds": [
+    11071,
+    11072,
+    11073
+  ],
+  "source_fingerprint": "sha256:47118196a78b701d4654581dd01576e0dff6c29def485043aae2f3ca4c23ab1a",
+  "stage": 2,
+  "stage1_document_sha256": "sha256:9f656487ef943bced4a63606b61652116f24c9962a9b65a746615b4d14c7d102",
+  "systems": [
+    {
+      "clarification": null,
+      "frontend_version": "m11c-frontend-v2",
+      "model_digest": "357c53fb659c5076de1d65ccb0b397446227b71a42be9d1603d46168015c9e4b",
+      "model_id": "qwen2.5:3b",
+      "planner_grammar": null,
+      "prompt_sha256": "be9ea50f10e5cb50c3a9c6af001c2b0fe27b86b1e0596688fef4f80ebfcda51f",
+      "prompt_version": "m11c_frontend_v2_prompt",
+      "replan": null,
+      "system_id": "fixed_workflow",
+      "systems_version": "m11c-baselines-v1",
+      "templates": [
+        "search"
+      ],
+      "validation": null
+    },
+    {
+      "frontend_version": "m11c-frontend-v2",
+      "model_digest": "357c53fb659c5076de1d65ccb0b397446227b71a42be9d1603d46168015c9e4b",
+      "model_id": "qwen2.5:3b",
+      "planner_grammar": "m07.2",
+      "prompt_sha256": "be9ea50f10e5cb50c3a9c6af001c2b0fe27b86b1e0596688fef4f80ebfcda51f",
+      "prompt_version": "m11c_frontend_v2_prompt",
+      "system_id": "dynamic_agent",
+      "systems_version": "m11c-baselines-v1"
+    },
+    {
+      "frontend_version": "m11c-frontend-v2",
+      "model_digest": "357c53fb659c5076de1d65ccb0b397446227b71a42be9d1603d46168015c9e4b",
+      "model_id": "qwen2.5:3b",
+      "planner_grammar": "m07.2",
+      "prompt_sha256": "be9ea50f10e5cb50c3a9c6af001c2b0fe27b86b1e0596688fef4f80ebfcda51f",
+      "prompt_version": "m11c_frontend_v2_prompt",
+      "replan": "regrounded_once",
+      "system_id": "validator_replan",
+      "systems_version": "m11c-baselines-v1",
+      "validation_policy": {
+        "allow_crs_repair": false,
+        "allow_empty": true,
+        "allow_geometry_repair": false,
+        "alternate_sources": {},
+        "expected_max_count": null,
+        "expected_min_count": null,
+        "max_features": 10000,
+        "required_final_fields": [],
+        "schema_version": "1.0"
+      }
+    },
+    {
+      "clarification": null,
+      "frontend_version": "m11c-frontend-v2",
+      "model_digest": "357c53fb659c5076de1d65ccb0b397446227b71a42be9d1603d46168015c9e4b",
+      "model_id": "qwen2.5:3b",
+      "planner_grammar": null,
+      "prompt_sha256": "be9ea50f10e5cb50c3a9c6af001c2b0fe27b86b1e0596688fef4f80ebfcda51f",
+      "prompt_version": "m11c_frontend_v2_prompt",
+      "replan": null,
+      "system_id": "template_workflow",
+      "systems_version": "m11c-baselines-v1",
+      "templates": [
+        "search",
+        "nearest",
+        "within",
+        "spatial_join",
+        "aggregate_by_region"
+      ],
+      "validation": null
+    },
+    {
+      "frontend_version": null,
+      "model_id": null,
+      "planner_grammar": "m07.2",
+      "prompt_version": null,
+      "replan": "regrounded_once",
+      "system_id": "validator_no_frontend",
+      "systems_version": "m11c-baselines-v1",
+      "validation_policy": {
+        "allow_crs_repair": false,
+        "allow_empty": true,
+        "allow_geometry_repair": false,
+        "alternate_sources": {},
+        "expected_max_count": null,
+        "expected_min_count": null,
+        "max_features": 10000,
+        "required_final_fields": [],
+        "schema_version": "1.0"
+      }
+    },
+    {
+      "frontend_version": "m11c-frontend-v2",
+      "model_digest": "357c53fb659c5076de1d65ccb0b397446227b71a42be9d1603d46168015c9e4b",
+      "model_id": "qwen2.5:3b",
+      "planner_grammar": "m07.2",
+      "prompt_sha256": "be9ea50f10e5cb50c3a9c6af001c2b0fe27b86b1e0596688fef4f80ebfcda51f",
+      "prompt_version": "m11c_frontend_v2_prompt",
+      "replan": "regrounded_once",
+      "system_id": "validator_strict_empty",
+      "systems_version": "m11c-baselines-v1",
+      "validation_policy": {
+        "allow_crs_repair": false,
+        "allow_empty": false,
+        "allow_geometry_repair": false,
+        "alternate_sources": {},
+        "expected_max_count": null,
+        "expected_min_count": null,
+        "max_features": 10000,
+        "required_final_fields": [],
+        "schema_version": "1.0"
+      }
+    },
+    {
+      "frontend_version": "m11c-frontend-v2",
+      "model_digest": "357c53fb659c5076de1d65ccb0b397446227b71a42be9d1603d46168015c9e4b",
+      "model_id": "qwen2.5:3b",
+      "planner_grammar": "m07.2",
+      "prompt_sha256": "be9ea50f10e5cb50c3a9c6af001c2b0fe27b86b1e0596688fef4f80ebfcda51f",
+      "prompt_version": "m11c_frontend_v2_prompt",
+      "replan": null,
+      "system_id": "validator_no_replan",
+      "systems_version": "m11c-baselines-v1",
+      "validation_policy": {
+        "allow_crs_repair": false,
+        "allow_empty": true,
+        "allow_geometry_repair": false,
+        "alternate_sources": {},
+        "expected_max_count": null,
+        "expected_min_count": null,
+        "max_features": 10000,
+        "required_final_fields": [],
+        "schema_version": "1.0"
+      }
+    }
+  ]
+}

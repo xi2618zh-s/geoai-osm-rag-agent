@@ -1,0 +1,16 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "id": "poi-lund-reference",
+      "properties": {
+        "poi_id": "lund-reference"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [386000.0, 6175000.0]
+      }
+    }
+  ]
+}

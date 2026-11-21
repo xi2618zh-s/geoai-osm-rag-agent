@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>GeoAI Plan preview</title>
+<style>
+body{font:16px/1.5 system-ui,sans-serif;max-width:900px;margin:2rem auto;padding:0 1rem;color:#16243a}
+label{display:block;font-weight:600;margin:1rem 0 .3rem} input,textarea{width:100%;padding:.65rem;border:1px solid #aebacc;border-radius:6px;font:inherit}
+textarea{height:10rem}button{padding:.7rem 1rem;border:0;border-radius:6px;background:#3156b8;color:white;font:inherit;cursor:pointer;margin-top:1rem}
+section{background:#f5f7fb;border:1px solid #d9e0ec;border-radius:8px;padding:1rem;margin-top:1.5rem;white-space:pre-wrap}
+small{color:#526074} .row{display:grid;grid-template-columns:repeat(3,1fr);gap:.8rem}
+@media(max-width:650px){.row{grid-template-columns:1fr}}
+</style>
+</head><body>
+<h1>Plan preview</h1>
+<p>Preview a constrained geospatial plan over declared datasets. This does not run tools or create a result map. The sample roles below are synthetic fixtures.</p>
+<label for="query">Task</label><input id="query" value="search sites in Lund">
+<div class="row"><div><label for="place_crs">Place CRS</label><input id="place_crs" value="EPSG:4326"></div><div><label for="analysis_crs">Analysis CRS</label><input id="analysis_crs" value="EPSG:3006"></div><div><label for="output_crs">Output CRS</label><input id="output_crs" value="EPSG:3006"></div></div>
+<label for="datasets">Dataset roles (JSON metadata)</label>
+<textarea id="datasets">{"sites":{"kind":"vector","source":"fixture:sites","crs":"EPSG:3006","required_fields":["category","region_id"]},"schools":{"kind":"vector","source":"fixture:schools","crs":"EPSG:3006","required_fields":[]},"regions":{"kind":"vector","source":"fixture:regions","crs":"EPSG:3006","required_fields":["region_id","population"]}}</textarea>
+<small>Try: find sites within 250 m of schools in Lund; find 2 nearest schools to sites in Lund; join sites with regions on intersects in Lund.</small><br>
+<button id="preview">Preview plan</button>
+<section id="result" aria-live="polite">Enter a task and preview it.</section>
+<script>
+document.getElementById("preview").addEventListener("click",async()=>{
+ const out=document.getElementById("result");
+ try{
+  const request={query:document.getElementById("query").value,datasets:JSON.parse(document.getElementById("datasets").value),place_crs:document.getElementById("place_crs").value,analysis_crs:document.getElementById("analysis_crs").value,output_crs:document.getElementById("output_crs").value};
+  const res=await fetch("/plan-preview",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({request})});
+  const data=await res.json();
+  if(data.status==="plan") out.textContent="Plan: "+data.task_class+"\nConfidence (grammar match): "+data.confidence+"\n\n"+data.plan_preview.join("\n")+"\n\nEvidence:\n"+data.evidence.join("\n");
+  else if(data.status==="clarification") out.textContent="Clarification needed: "+data.clarification.question+"\nMissing: "+data.clarification.missing_fields.join(", ");
+  else out.textContent="Cannot plan: "+(data.error_code||"unknown")+"\n"+(data.message||"");
+ }catch(err){out.textContent="Invalid input: "+err.message}
+});
+</script>
+</body></html>

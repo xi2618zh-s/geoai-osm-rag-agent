@@ -1,0 +1,1626 @@
+{
+  "frontend": {
+    "dev": [
+      {
+        "attempt_outcomes": {
+          "ok": 160
+        },
+        "attempts": 160,
+        "decision_reasons": {
+          "missing_place": 8,
+          "unsupported_buffer": 24,
+          "unsupported_rank": 8
+        },
+        "decision_status": {
+          "clarification": 8,
+          "request": 120,
+          "unsupported": 32
+        },
+        "decisions_sha256": "03d0266d4a9fb7bc2fee06a24d404df4add9cd5c396a6561ae8ee137c096758d",
+        "eval_tokens": 4712,
+        "failures": 0,
+        "logical_calls": 160,
+        "profile_sha256": "e1e56e80b50ba98f94a641e13e6d706b9d6019a0d254b821d05b23ecbddf9686",
+        "prompt_tokens": 234917,
+        "retries": 0,
+        "seed": 11071,
+        "timeouts": 0
+      },
+      {
+        "attempt_outcomes": {
+          "ok": 160
+        },
+        "attempts": 160,
+        "decision_reasons": {
+          "missing_place": 8,
+          "unsupported_buffer": 24,
+          "unsupported_rank": 8
+        },
+        "decision_status": {
+          "clarification": 8,
+          "request": 120,
+          "unsupported": 32
+        },
+        "decisions_sha256": "36cbb9d2f130de5ba8ac446f3c15f28923b87070a5183ec0846f6e5fc9a1100c",
+        "eval_tokens": 4712,
+        "failures": 0,
+        "logical_calls": 160,
+        "profile_sha256": "e1e56e80b50ba98f94a641e13e6d706b9d6019a0d254b821d05b23ecbddf9686",
+        "prompt_tokens": 234917,
+        "retries": 0,
+        "seed": 11072,
+        "timeouts": 0
+      },
+      {
+        "attempt_outcomes": {
+          "ok": 160
+        },
+        "attempts": 160,
+        "decision_reasons": {
+          "missing_place": 8,
+          "unsupported_buffer": 24,
+          "unsupported_rank": 8
+        },
+        "decision_status": {
+          "clarification": 8,
+          "request": 120,
+          "unsupported": 32
+        },
+        "decisions_sha256": "52ee49101667b0440f64800fa51a0811875a072ce75904fd4891704d2bc28720",
+        "eval_tokens": 4712,
+        "failures": 0,
+        "logical_calls": 160,
+        "profile_sha256": "e1e56e80b50ba98f94a641e13e6d706b9d6019a0d254b821d05b23ecbddf9686",
+        "prompt_tokens": 234917,
+        "retries": 0,
+        "seed": 11073,
+        "timeouts": 0
+      }
+    ]
+  },
+  "gate": [
+    {
+      "counts": {
+        "logical_calls": 160,
+        "missing_place": 8,
+        "missing_place_tasks": 8,
+        "model_failures": 0,
+        "rank_tasks": 8,
+        "rank_unsupported": 8,
+        "tasks": 160,
+        "validator_strict": 136
+      },
+      "passed": true,
+      "seed": 11071
+    },
+    {
+      "counts": {
+        "logical_calls": 160,
+        "missing_place": 8,
+        "missing_place_tasks": 8,
+        "model_failures": 0,
+        "rank_tasks": 8,
+        "rank_unsupported": 8,
+        "tasks": 160,
+        "validator_strict": 136
+      },
+      "passed": true,
+      "seed": 11072
+    },
+    {
+      "counts": {
+        "logical_calls": 160,
+        "missing_place": 8,
+        "missing_place_tasks": 8,
+        "model_failures": 0,
+        "rank_tasks": 8,
+        "rank_unsupported": 8,
+        "tasks": 160,
+        "validator_strict": 136
+      },
+      "passed": true,
+      "seed": 11073
+    }
+  ],
+  "protocol_version": "m11c-protocol-v2",
+  "seeds": [
+    11071,
+    11072,
+    11073
+  ],
+  "splits": {
+    "dev": {
+      "dynamic_agent": [
+        {
+          "components": {
+            "crs_match": {
+              "applicable": 144,
+              "passed": 120
+            },
+            "exact_fields": {
+              "applicable": 144,
+              "passed": 120
+            },
+            "feature_f1": {
+              "applicable": 144,
+              "passed": 120
+            },
+            "geometry_equivalence": {
+              "applicable": 144,
+              "passed": 120
+            },
+            "numeric_tolerance": {
+              "applicable": 144,
+              "passed": 120
+            },
+            "operation_match": {
+              "applicable": 144,
+              "passed": 120
+            },
+            "required_steps": {
+              "applicable": 160,
+              "passed": 16
+            },
+            "status_reason": {
+              "applicable": 160,
+              "passed": 136
+            },
+            "tool_sequence": {
+              "applicable": 160,
+              "passed": 136
+            }
+          },
+          "executable": 120,
+          "failure_category_counts": {
+            "crs_mismatch": 24,
+            "feature_set_mismatch": 24,
+            "field_mismatch": 24,
+            "geometry_mismatch": 24,
+            "numeric_tolerance_exceeded": 24,
+            "operation_mismatch": 24,
+            "required_step_mismatch": 144,
+            "status_mismatch": 24,
+            "tool_sequence_mismatch": 24
+          },
+          "llm_calls_total": 160,
+          "reason_counts": {
+            "missing_place": 8,
+            "unsupported_buffer": 24,
+            "unsupported_rank": 8
+          },
+          "run": 1,
+          "secondary_pass": 136,
+          "seed": 11071,
+          "signatures_sha256": "sha256:2a374dc197ba5cd604298bae298fc4f794be7ae16712e0362dd52e1f3c4ff4e3",
+          "status_counts": {
+            "clarification": 8,
+            "error": 32,
+            "success": 120
+          },
+          "strict_pass": 16,
+          "tasks": 160,
+          "tool_calls_total": 216
+        },
+        {
+          "components": {
+            "crs_match": {
+              "applicable": 144,
+              "passed": 120
+            },
+            "exact_fields": {
+              "applicable": 144,
+              "passed": 120
+            },
+            "feature_f1": {
+              "applicable": 144,
+              "passed": 120
+            },
+            "geometry_equivalence": {
+              "applicable": 144,
+              "passed": 120
+            },
+            "numeric_tolerance": {
+              "applicable": 144,
+              "passed": 120
+            },
+            "operation_match": {
+              "applicable": 144,
+              "passed": 120
+            },
+            "required_steps": {
+              "applicable": 160,
+              "passed": 16
+            },
+            "status_reason": {
+              "applicable": 160,
+              "passed": 136
+            },
+            "tool_sequence": {
+              "applicable": 160,
+              "passed": 136
+            }
+          },
+          "executable": 120,
+          "failure_category_counts": {
+            "crs_mismatch": 24,
+            "feature_set_mismatch": 24,
+            "field_mismatch": 24,
+            "geometry_mismatch": 24,
+            "numeric_tolerance_exceeded": 24,
+            "operation_mismatch": 24,
+            "required_step_mismatch": 144,
+            "status_mismatch": 24,
+            "tool_sequence_mismatch": 24
+          },
+          "llm_calls_total": 160,
+          "reason_counts": {
+            "missing_place": 8,
+            "unsupported_buffer": 24,
+            "unsupported_rank": 8
+          },
+          "run": 2,
+          "secondary_pass": 136,
+          "seed": 11072,
+          "signatures_sha256": "sha256:2a374dc197ba5cd604298bae298fc4f794be7ae16712e0362dd52e1f3c4ff4e3",
+          "status_counts": {
+            "clarification": 8,
+            "error": 32,
+            "success": 120
+          },
+          "strict_pass": 16,
+          "tasks": 160,
+          "tool_calls_total": 216
+        },
+        {
+          "components": {
+            "crs_match": {
+              "applicable": 144,
+              "passed": 120
+            },
+            "exact_fields": {
+              "applicable": 144,
+              "passed": 120
+            },
+            "feature_f1": {
+              "applicable": 144,
+              "passed": 120
+            },
+            "geometry_equivalence": {
+              "applicable": 144,
+              "passed": 120
+            },
+            "numeric_tolerance": {
+              "applicable": 144,
+              "passed": 120
+            },
+            "operation_match": {
+              "applicable": 144,
+              "passed": 120
+            },
+            "required_steps": {
+              "applicable": 160,
+              "passed": 16
+            },
+            "status_reason": {
+              "applicable": 160,
+              "passed": 136
+            },
+            "tool_sequence": {
+              "applicable": 160,
+              "passed": 136
+            }
+          },
+          "executable": 120,
+          "failure_category_counts": {
+            "crs_mismatch": 24,
+            "feature_set_mismatch": 24,
+            "field_mismatch": 24,
+            "geometry_mismatch": 24,
+            "numeric_tolerance_exceeded": 24,
+            "operation_mismatch": 24,
+            "required_step_mismatch": 144,
+            "status_mismatch": 24,
+            "tool_sequence_mismatch": 24
+          },
+          "llm_calls_total": 160,
+          "reason_counts": {
+            "missing_place": 8,
+            "unsupported_buffer": 24,
+            "unsupported_rank": 8
+          },
+          "run": 3,
+          "secondary_pass": 136,
+          "seed": 11073,
+          "signatures_sha256": "sha256:2a374dc197ba5cd604298bae298fc4f794be7ae16712e0362dd52e1f3c4ff4e3",
+          "status_counts": {
+            "clarification": 8,
+            "error": 32,
+            "success": 120
+          },
+          "strict_pass": 16,
+          "tasks": 160,
+          "tool_calls_total": 216
+        }
+      ],
+      "fixed_workflow": [
+        {
+          "components": {
+            "crs_match": {
+              "applicable": 144,
+              "passed": 24
+            },
+            "exact_fields": {
+              "applicable": 144,
+              "passed": 24
+            },
+            "feature_f1": {
+              "applicable": 144,
+              "passed": 35
+            },
+            "geometry_equivalence": {
+              "applicable": 144,
+              "passed": 24
+            },
+            "numeric_tolerance": {
+              "applicable": 144,
+              "passed": 24
+            },
+            "operation_match": {
+              "applicable": 144,
+              "passed": 24
+            },
+            "required_steps": {
+              "applicable": 160,
+              "passed": 8
+            },
+            "status_reason": {
+              "applicable": 160,
+              "passed": 32
+            },
+            "tool_sequence": {
+              "applicable": 160,
+              "passed": 40
+            }
+          },
+          "executable": 24,
+          "failure_category_counts": {
+            "crs_mismatch": 120,
+            "feature_set_mismatch": 109,
+            "field_mismatch": 120,
+            "geometry_mismatch": 120,
+            "numeric_tolerance_exceeded": 120,
+            "operation_mismatch": 120,
+            "required_step_mismatch": 152,
+            "status_mismatch": 128,
+            "tool_sequence_mismatch": 120
+          },
+          "llm_calls_total": 160,
+          "reason_counts": {
+            "missing_place": 8,
+            "unsupported_aggregate_by_region": 24,
+            "unsupported_buffer": 24,
+            "unsupported_nearest": 24,
+            "unsupported_rank": 8,
+            "unsupported_spatial_join": 24,
+            "unsupported_within": 24
+          },
+          "run": 1,
+          "secondary_pass": 32,
+          "seed": 11071,
+          "signatures_sha256": "sha256:0dcef47e57532e4aae105559ca95fac595c6371701762e7f5c68680168b54151",
+          "status_counts": {
+            "error": 136,
+            "success": 24
+          },
+          "strict_pass": 8,
+          "tasks": 160,
+          "tool_calls_total": 24
+        },
+        {
+          "components": {
+            "crs_match": {
+              "applicable": 144,
+              "passed": 24
+            },
+            "exact_fields": {
+              "applicable": 144,
+              "passed": 24
+            },
+            "feature_f1": {
+              "applicable": 144,
+              "passed": 35
+            },
+            "geometry_equivalence": {
+              "applicable": 144,
+              "passed": 24
+            },
+            "numeric_tolerance": {
+              "applicable": 144,
+              "passed": 24
+            },
+            "operation_match": {
+              "applicable": 144,
+              "passed": 24
+            },
+            "required_steps": {
+              "applicable": 160,
+              "passed": 8
+            },
+            "status_reason": {
+              "applicable": 160,
+              "passed": 32
+            },
+            "tool_sequence": {
+              "applicable": 160,
+              "passed": 40
+            }
+          },
+          "executable": 24,
+          "failure_category_counts": {
+            "crs_mismatch": 120,
+            "feature_set_mismatch": 109,
+            "field_mismatch": 120,
+            "geometry_mismatch": 120,
+            "numeric_tolerance_exceeded": 120,
+            "operation_mismatch": 120,
+            "required_step_mismatch": 152,
+            "status_mismatch": 128,
+            "tool_sequence_mismatch": 120
+          },
+          "llm_calls_total": 160,
+          "reason_counts": {
+            "missing_place": 8,
+            "unsupported_aggregate_by_region": 24,
+            "unsupported_buffer": 24,
+            "unsupported_nearest": 24,
+            "unsupported_rank": 8,
+            "unsupported_spatial_join": 24,
+            "unsupported_within": 24
+          },
+          "run": 2,
+          "secondary_pass": 32,
+          "seed": 11072,
+          "signatures_sha256": "sha256:0dcef47e57532e4aae105559ca95fac595c6371701762e7f5c68680168b54151",
+          "status_counts": {
+            "error": 136,
+            "success": 24
+          },
+          "strict_pass": 8,
+          "tasks": 160,
+          "tool_calls_total": 24
+        },
+        {
+          "components": {
+            "crs_match": {
+              "applicable": 144,
+              "passed": 24
+            },
+            "exact_fields": {
+              "applicable": 144,
+              "passed": 24
+            },
+            "feature_f1": {
+              "applicable": 144,
+              "passed": 35
+            },
+            "geometry_equivalence": {
+              "applicable": 144,
+              "passed": 24
+            },
+            "numeric_tolerance": {
+              "applicable": 144,
+              "passed": 24
+            },
+            "operation_match": {
+              "applicable": 144,
+              "passed": 24
+            },
+            "required_steps": {
+              "applicable": 160,
+              "passed": 8
+            },
+            "status_reason": {
+              "applicable": 160,
+              "passed": 32
+            },
+            "tool_sequence": {
+              "applicable": 160,
+              "passed": 40
+            }
+          },
+          "executable": 24,
+          "failure_category_counts": {
+            "crs_mismatch": 120,
+            "feature_set_mismatch": 109,
+            "field_mismatch": 120,
+            "geometry_mismatch": 120,
+            "numeric_tolerance_exceeded": 120,
+            "operation_mismatch": 120,
+            "required_step_mismatch": 152,
+            "status_mismatch": 128,
+            "tool_sequence_mismatch": 120
+          },
+          "llm_calls_total": 160,
+          "reason_counts": {
+            "missing_place": 8,
+            "unsupported_aggregate_by_region": 24,
+            "unsupported_buffer": 24,
+            "unsupported_nearest": 24,
+            "unsupported_rank": 8,
+            "unsupported_spatial_join": 24,
+            "unsupported_within": 24
+          },
+          "run": 3,
+          "secondary_pass": 32,
+          "seed": 11073,
+          "signatures_sha256": "sha256:0dcef47e57532e4aae105559ca95fac595c6371701762e7f5c68680168b54151",
+          "status_counts": {
+            "error": 136,
+            "success": 24
+          },
+          "strict_pass": 8,
+          "tasks": 160,
+          "tool_calls_total": 24
+        }
+      ],
+      "template_workflow": [
+        {
+          "components": {
+            "crs_match": {
+              "applicable": 144,
+              "passed": 120
+            },
+            "exact_fields": {
+              "applicable": 144,
+              "passed": 120
+            },
+            "feature_f1": {
+              "applicable": 144,
+              "passed": 120
+            },
+            "geometry_equivalence": {
+              "applicable": 144,
+              "passed": 120
+            },
+            "numeric_tolerance": {
+              "applicable": 144,
+              "passed": 120
+            },
+            "operation_match": {
+              "applicable": 144,
+              "passed": 120
+            },
+            "required_steps": {
+              "applicable": 160,
+              "passed": 8
+            },
+            "status_reason": {
+              "applicable": 160,
+              "passed": 128
+            },
+            "tool_sequence": {
+              "applicable": 160,
+              "passed": 136
+            }
+          },
+          "executable": 120,
+          "failure_category_counts": {
+            "crs_mismatch": 24,
+            "feature_set_mismatch": 24,
+            "field_mismatch": 24,
+            "geometry_mismatch": 24,
+            "numeric_tolerance_exceeded": 24,
+            "operation_mismatch": 24,
+            "required_step_mismatch": 152,
+            "status_mismatch": 32,
+            "tool_sequence_mismatch": 24
+          },
+          "llm_calls_total": 160,
+          "reason_counts": {
+            "missing_place": 8,
+            "unsupported_buffer": 24,
+            "unsupported_rank": 8
+          },
+          "run": 1,
+          "secondary_pass": 128,
+          "seed": 11071,
+          "signatures_sha256": "sha256:5d95273752a400224e234cc8e37c7beb9b85603fdd744ffeab935d22eb3b4a1c",
+          "status_counts": {
+            "error": 40,
+            "success": 120
+          },
+          "strict_pass": 8,
+          "tasks": 160,
+          "tool_calls_total": 216
+        },
+        {
+          "components": {
+            "crs_match": {
+              "applicable": 144,
+              "passed": 120
+            },
+            "exact_fields": {
+              "applicable": 144,
+              "passed": 120
+            },
+            "feature_f1": {
+              "applicable": 144,
+              "passed": 120
+            },
+            "geometry_equivalence": {
+              "applicable": 144,
+              "passed": 120
+            },
+            "numeric_tolerance": {
+              "applicable": 144,
+              "passed": 120
+            },
+            "operation_match": {
+              "applicable": 144,
+              "passed": 120
+            },
+            "required_steps": {
+              "applicable": 160,
+              "passed": 8
+            },
+            "status_reason": {
+              "applicable": 160,
+              "passed": 128
+            },
+            "tool_sequence": {
+              "applicable": 160,
+              "passed": 136
+            }
+          },
+          "executable": 120,
+          "failure_category_counts": {
+            "crs_mismatch": 24,
+            "feature_set_mismatch": 24,
+            "field_mismatch": 24,
+            "geometry_mismatch": 24,
+            "numeric_tolerance_exceeded": 24,
+            "operation_mismatch": 24,
+            "required_step_mismatch": 152,
+            "status_mismatch": 32,
+            "tool_sequence_mismatch": 24
+          },
+          "llm_calls_total": 160,
+          "reason_counts": {
+            "missing_place": 8,
+            "unsupported_buffer": 24,
+            "unsupported_rank": 8
+          },
+          "run": 2,
+          "secondary_pass": 128,
+          "seed": 11072,
+          "signatures_sha256": "sha256:5d95273752a400224e234cc8e37c7beb9b85603fdd744ffeab935d22eb3b4a1c",
+          "status_counts": {
+            "error": 40,
+            "success": 120
+          },
+          "strict_pass": 8,
+          "tasks": 160,
+          "tool_calls_total": 216
+        },
+        {
+          "components": {
+            "crs_match": {
+              "applicable": 144,
+              "passed": 120
+            },
+            "exact_fields": {
+              "applicable": 144,
+              "passed": 120
+            },
+            "feature_f1": {
+              "applicable": 144,
+              "passed": 120
+            },
+            "geometry_equivalence": {
+              "applicable": 144,
+              "passed": 120
+            },
+            "numeric_tolerance": {
+              "applicable": 144,
+              "passed": 120
+            },
+            "operation_match": {
+              "applicable": 144,
+              "passed": 120
+            },
+            "required_steps": {
+              "applicable": 160,
+              "passed": 8
+            },
+            "status_reason": {
+              "applicable": 160,
+              "passed": 128
+            },
+            "tool_sequence": {
+              "applicable": 160,
+              "passed": 136
+            }
+          },
+          "executable": 120,
+          "failure_category_counts": {
+            "crs_mismatch": 24,
+            "feature_set_mismatch": 24,
+            "field_mismatch": 24,
+            "geometry_mismatch": 24,
+            "numeric_tolerance_exceeded": 24,
+            "operation_mismatch": 24,
+            "required_step_mismatch": 152,
+            "status_mismatch": 32,
+            "tool_sequence_mismatch": 24
+          },
+          "llm_calls_total": 160,
+          "reason_counts": {
+            "missing_place": 8,
+            "unsupported_buffer": 24,
+            "unsupported_rank": 8
+          },
+          "run": 3,
+          "secondary_pass": 128,
+          "seed": 11073,
+          "signatures_sha256": "sha256:5d95273752a400224e234cc8e37c7beb9b85603fdd744ffeab935d22eb3b4a1c",
+          "status_counts": {
+            "error": 40,
+            "success": 120
+          },
+          "strict_pass": 8,
+          "tasks": 160,
+          "tool_calls_total": 216
+        }
+      ],
+      "validator_no_frontend": [
+        {
+          "components": {
+            "crs_match": {
+              "applicable": 144,
+              "passed": 0
+            },
+            "exact_fields": {
+              "applicable": 144,
+              "passed": 0
+            },
+            "feature_f1": {
+              "applicable": 144,
+              "passed": 20
+            },
+            "geometry_equivalence": {
+              "applicable": 144,
+              "passed": 0
+            },
+            "numeric_tolerance": {
+              "applicable": 144,
+              "passed": 0
+            },
+            "operation_match": {
+              "applicable": 144,
+              "passed": 0
+            },
+            "required_steps": {
+              "applicable": 160,
+              "passed": 8
+            },
+            "status_reason": {
+              "applicable": 160,
+              "passed": 8
+            },
+            "tool_sequence": {
+              "applicable": 160,
+              "passed": 16
+            }
+          },
+          "executable": 0,
+          "failure_category_counts": {
+            "crs_mismatch": 144,
+            "feature_set_mismatch": 124,
+            "field_mismatch": 144,
+            "geometry_mismatch": 144,
+            "numeric_tolerance_exceeded": 144,
+            "operation_mismatch": 144,
+            "required_step_mismatch": 152,
+            "status_mismatch": 152,
+            "tool_sequence_mismatch": 144
+          },
+          "llm_calls_total": 0,
+          "reason_counts": {
+            "missing_place": 136,
+            "unsupported_unknown": 24
+          },
+          "run": 1,
+          "secondary_pass": 8,
+          "seed": 11071,
+          "signatures_sha256": "sha256:a25193f0a6b6373bc985b97fb04830abb8d2bd54ee798fcdce5731860f53fbbb",
+          "status_counts": {
+            "clarification": 136,
+            "error": 24
+          },
+          "strict_pass": 8,
+          "tasks": 160,
+          "tool_calls_total": 0
+        },
+        {
+          "components": {
+            "crs_match": {
+              "applicable": 144,
+              "passed": 0
+            },
+            "exact_fields": {
+              "applicable": 144,
+              "passed": 0
+            },
+            "feature_f1": {
+              "applicable": 144,
+              "passed": 20
+            },
+            "geometry_equivalence": {
+              "applicable": 144,
+              "passed": 0
+            },
+            "numeric_tolerance": {
+              "applicable": 144,
+              "passed": 0
+            },
+            "operation_match": {
+              "applicable": 144,
+              "passed": 0
+            },
+            "required_steps": {
+              "applicable": 160,
+              "passed": 8
+            },
+            "status_reason": {
+              "applicable": 160,
+              "passed": 8
+            },
+            "tool_sequence": {
+              "applicable": 160,
+              "passed": 16
+            }
+          },
+          "executable": 0,
+          "failure_category_counts": {
+            "crs_mismatch": 144,
+            "feature_set_mismatch": 124,
+            "field_mismatch": 144,
+            "geometry_mismatch": 144,
+            "numeric_tolerance_exceeded": 144,
+            "operation_mismatch": 144,
+            "required_step_mismatch": 152,
+            "status_mismatch": 152,
+            "tool_sequence_mismatch": 144
+          },
+          "llm_calls_total": 0,
+          "reason_counts": {
+            "missing_place": 136,
+            "unsupported_unknown": 24
+          },
+          "run": 2,
+          "secondary_pass": 8,
+          "seed": 11072,
+          "signatures_sha256": "sha256:a25193f0a6b6373bc985b97fb04830abb8d2bd54ee798fcdce5731860f53fbbb",
+          "status_counts": {
+            "clarification": 136,
+            "error": 24
+          },
+          "strict_pass": 8,
+          "tasks": 160,
+          "tool_calls_total": 0
+        },
+        {
+          "components": {
+            "crs_match": {
+              "applicable": 144,
+              "passed": 0
+            },
+            "exact_fields": {
+              "applicable": 144,
+              "passed": 0
+            },
+            "feature_f1": {
+              "applicable": 144,
+              "passed": 20
+            },
+            "geometry_equivalence": {
+              "applicable": 144,
+              "passed": 0
+            },
+            "numeric_tolerance": {
+              "applicable": 144,
+              "passed": 0
+            },
+            "operation_match": {
+              "applicable": 144,
+              "passed": 0
+            },
+            "required_steps": {
+              "applicable": 160,
+              "passed": 8
+            },
+            "status_reason": {
+              "applicable": 160,
+              "passed": 8
+            },
+            "tool_sequence": {
+              "applicable": 160,
+              "passed": 16
+            }
+          },
+          "executable": 0,
+          "failure_category_counts": {
+            "crs_mismatch": 144,
+            "feature_set_mismatch": 124,
+            "field_mismatch": 144,
+            "geometry_mismatch": 144,
+            "numeric_tolerance_exceeded": 144,
+            "operation_mismatch": 144,
+            "required_step_mismatch": 152,
+            "status_mismatch": 152,
+            "tool_sequence_mismatch": 144
+          },
+          "llm_calls_total": 0,
+          "reason_counts": {
+            "missing_place": 136,
+            "unsupported_unknown": 24
+          },
+          "run": 3,
+          "secondary_pass": 8,
+          "seed": 11073,
+          "signatures_sha256": "sha256:a25193f0a6b6373bc985b97fb04830abb8d2bd54ee798fcdce5731860f53fbbb",
+          "status_counts": {
+            "clarification": 136,
+            "error": 24
+          },
+          "strict_pass": 8,
+          "tasks": 160,
+          "tool_calls_total": 0
+        }
+      ],
+      "validator_no_replan": [
+        {
+          "components": {
+            "crs_match": {
+              "applicable": 144,
+              "passed": 120
+            },
+            "exact_fields": {
+              "applicable": 144,
+              "passed": 120
+            },
+            "feature_f1": {
+              "applicable": 144,
+              "passed": 120
+            },
+            "geometry_equivalence": {
+              "applicable": 144,
+              "passed": 120
+            },
+            "numeric_tolerance": {
+              "applicable": 144,
+              "passed": 120
+            },
+            "operation_match": {
+              "applicable": 144,
+              "passed": 120
+            },
+            "required_steps": {
+              "applicable": 160,
+              "passed": 136
+            },
+            "status_reason": {
+              "applicable": 160,
+              "passed": 136
+            },
+            "tool_sequence": {
+              "applicable": 160,
+              "passed": 136
+            }
+          },
+          "executable": 120,
+          "failure_category_counts": {
+            "crs_mismatch": 24,
+            "feature_set_mismatch": 24,
+            "field_mismatch": 24,
+            "geometry_mismatch": 24,
+            "numeric_tolerance_exceeded": 24,
+            "operation_mismatch": 24,
+            "required_step_mismatch": 24,
+            "status_mismatch": 24,
+            "tool_sequence_mismatch": 24
+          },
+          "llm_calls_total": 160,
+          "reason_counts": {
+            "missing_place": 8,
+            "unsupported_buffer": 24,
+            "unsupported_rank": 8
+          },
+          "run": 1,
+          "secondary_pass": 136,
+          "seed": 11071,
+          "signatures_sha256": "sha256:30bb723d516e8539318bbe8a6d3a3cf7829d65d5a094c9f61cbadf1e653a0f1a",
+          "status_counts": {
+            "clarification": 8,
+            "error": 32,
+            "success": 120
+          },
+          "strict_pass": 136,
+          "tasks": 160,
+          "tool_calls_total": 744
+        },
+        {
+          "components": {
+            "crs_match": {
+              "applicable": 144,
+              "passed": 120
+            },
+            "exact_fields": {
+              "applicable": 144,
+              "passed": 120
+            },
+            "feature_f1": {
+              "applicable": 144,
+              "passed": 120
+            },
+            "geometry_equivalence": {
+              "applicable": 144,
+              "passed": 120
+            },
+            "numeric_tolerance": {
+              "applicable": 144,
+              "passed": 120
+            },
+            "operation_match": {
+              "applicable": 144,
+              "passed": 120
+            },
+            "required_steps": {
+              "applicable": 160,
+              "passed": 136
+            },
+            "status_reason": {
+              "applicable": 160,
+              "passed": 136
+            },
+            "tool_sequence": {
+              "applicable": 160,
+              "passed": 136
+            }
+          },
+          "executable": 120,
+          "failure_category_counts": {
+            "crs_mismatch": 24,
+            "feature_set_mismatch": 24,
+            "field_mismatch": 24,
+            "geometry_mismatch": 24,
+            "numeric_tolerance_exceeded": 24,
+            "operation_mismatch": 24,
+            "required_step_mismatch": 24,
+            "status_mismatch": 24,
+            "tool_sequence_mismatch": 24
+          },
+          "llm_calls_total": 160,
+          "reason_counts": {
+            "missing_place": 8,
+            "unsupported_buffer": 24,
+            "unsupported_rank": 8
+          },
+          "run": 2,
+          "secondary_pass": 136,
+          "seed": 11072,
+          "signatures_sha256": "sha256:30bb723d516e8539318bbe8a6d3a3cf7829d65d5a094c9f61cbadf1e653a0f1a",
+          "status_counts": {
+            "clarification": 8,
+            "error": 32,
+            "success": 120
+          },
+          "strict_pass": 136,
+          "tasks": 160,
+          "tool_calls_total": 744
+        },
+        {
+          "components": {
+            "crs_match": {
+              "applicable": 144,
+              "passed": 120
+            },
+            "exact_fields": {
+              "applicable": 144,
+              "passed": 120
+            },
+            "feature_f1": {
+              "applicable": 144,
+              "passed": 120
+            },
+            "geometry_equivalence": {
+              "applicable": 144,
+              "passed": 120
+            },
+            "numeric_tolerance": {
+              "applicable": 144,
+              "passed": 120
+            },
+            "operation_match": {
+              "applicable": 144,
+              "passed": 120
+            },
+            "required_steps": {
+              "applicable": 160,
+              "passed": 136
+            },
+            "status_reason": {
+              "applicable": 160,
+              "passed": 136
+            },
+            "tool_sequence": {
+              "applicable": 160,
+              "passed": 136
+            }
+          },
+          "executable": 120,
+          "failure_category_counts": {
+            "crs_mismatch": 24,
+            "feature_set_mismatch": 24,
+            "field_mismatch": 24,
+            "geometry_mismatch": 24,
+            "numeric_tolerance_exceeded": 24,
+            "operation_mismatch": 24,
+            "required_step_mismatch": 24,
+            "status_mismatch": 24,
+            "tool_sequence_mismatch": 24
+          },
+          "llm_calls_total": 160,
+          "reason_counts": {
+            "missing_place": 8,
+            "unsupported_buffer": 24,
+            "unsupported_rank": 8
+          },
+          "run": 3,
+          "secondary_pass": 136,
+          "seed": 11073,
+          "signatures_sha256": "sha256:30bb723d516e8539318bbe8a6d3a3cf7829d65d5a094c9f61cbadf1e653a0f1a",
+          "status_counts": {
+            "clarification": 8,
+            "error": 32,
+            "success": 120
+          },
+          "strict_pass": 136,
+          "tasks": 160,
+          "tool_calls_total": 744
+        }
+      ],
+      "validator_replan": [
+        {
+          "components": {
+            "crs_match": {
+              "applicable": 144,
+              "passed": 120
+            },
+            "exact_fields": {
+              "applicable": 144,
+              "passed": 120
+            },
+            "feature_f1": {
+              "applicable": 144,
+              "passed": 120
+            },
+            "geometry_equivalence": {
+              "applicable": 144,
+              "passed": 120
+            },
+            "numeric_tolerance": {
+              "applicable": 144,
+              "passed": 120
+            },
+            "operation_match": {
+              "applicable": 144,
+              "passed": 120
+            },
+            "required_steps": {
+              "applicable": 160,
+              "passed": 136
+            },
+            "status_reason": {
+              "applicable": 160,
+              "passed": 136
+            },
+            "tool_sequence": {
+              "applicable": 160,
+              "passed": 136
+            }
+          },
+          "executable": 120,
+          "failure_category_counts": {
+            "crs_mismatch": 24,
+            "feature_set_mismatch": 24,
+            "field_mismatch": 24,
+            "geometry_mismatch": 24,
+            "numeric_tolerance_exceeded": 24,
+            "operation_mismatch": 24,
+            "required_step_mismatch": 24,
+            "status_mismatch": 24,
+            "tool_sequence_mismatch": 24
+          },
+          "llm_calls_total": 160,
+          "reason_counts": {
+            "missing_place": 8,
+            "unsupported_buffer": 24,
+            "unsupported_rank": 8
+          },
+          "run": 1,
+          "secondary_pass": 136,
+          "seed": 11071,
+          "signatures_sha256": "sha256:30bb723d516e8539318bbe8a6d3a3cf7829d65d5a094c9f61cbadf1e653a0f1a",
+          "status_counts": {
+            "clarification": 8,
+            "error": 32,
+            "success": 120
+          },
+          "strict_pass": 136,
+          "tasks": 160,
+          "tool_calls_total": 744
+        },
+        {
+          "components": {
+            "crs_match": {
+              "applicable": 144,
+              "passed": 120
+            },
+            "exact_fields": {
+              "applicable": 144,
+              "passed": 120
+            },
+            "feature_f1": {
+              "applicable": 144,
+              "passed": 120
+            },
+            "geometry_equivalence": {
+              "applicable": 144,
+              "passed": 120
+            },
+            "numeric_tolerance": {
+              "applicable": 144,
+              "passed": 120
+            },
+            "operation_match": {
+              "applicable": 144,
+              "passed": 120
+            },
+            "required_steps": {
+              "applicable": 160,
+              "passed": 136
+            },
+            "status_reason": {
+              "applicable": 160,
+              "passed": 136
+            },
+            "tool_sequence": {
+              "applicable": 160,
+              "passed": 136
+            }
+          },
+          "executable": 120,
+          "failure_category_counts": {
+            "crs_mismatch": 24,
+            "feature_set_mismatch": 24,
+            "field_mismatch": 24,
+            "geometry_mismatch": 24,
+            "numeric_tolerance_exceeded": 24,
+            "operation_mismatch": 24,
+            "required_step_mismatch": 24,
+            "status_mismatch": 24,
+            "tool_sequence_mismatch": 24
+          },
+          "llm_calls_total": 160,
+          "reason_counts": {
+            "missing_place": 8,
+            "unsupported_buffer": 24,
+            "unsupported_rank": 8
+          },
+          "run": 2,
+          "secondary_pass": 136,
+          "seed": 11072,
+          "signatures_sha256": "sha256:30bb723d516e8539318bbe8a6d3a3cf7829d65d5a094c9f61cbadf1e653a0f1a",
+          "status_counts": {
+            "clarification": 8,
+            "error": 32,
+            "success": 120
+          },
+          "strict_pass": 136,
+          "tasks": 160,
+          "tool_calls_total": 744
+        },
+        {
+          "components": {
+            "crs_match": {
+              "applicable": 144,
+              "passed": 120
+            },
+            "exact_fields": {
+              "applicable": 144,
+              "passed": 120
+            },
+            "feature_f1": {
+              "applicable": 144,
+              "passed": 120
+            },
+            "geometry_equivalence": {
+              "applicable": 144,
+              "passed": 120
+            },
+            "numeric_tolerance": {
+              "applicable": 144,
+              "passed": 120
+            },
+            "operation_match": {
+              "applicable": 144,
+              "passed": 120
+            },
+            "required_steps": {
+              "applicable": 160,
+              "passed": 136
+            },
+            "status_reason": {
+              "applicable": 160,
+              "passed": 136
+            },
+            "tool_sequence": {
+              "applicable": 160,
+              "passed": 136
+            }
+          },
+          "executable": 120,
+          "failure_category_counts": {
+            "crs_mismatch": 24,
+            "feature_set_mismatch": 24,
+            "field_mismatch": 24,
+            "geometry_mismatch": 24,
+            "numeric_tolerance_exceeded": 24,
+            "operation_mismatch": 24,
+            "required_step_mismatch": 24,
+            "status_mismatch": 24,
+            "tool_sequence_mismatch": 24
+          },
+          "llm_calls_total": 160,
+          "reason_counts": {
+            "missing_place": 8,
+            "unsupported_buffer": 24,
+            "unsupported_rank": 8
+          },
+          "run": 3,
+          "secondary_pass": 136,
+          "seed": 11073,
+          "signatures_sha256": "sha256:30bb723d516e8539318bbe8a6d3a3cf7829d65d5a094c9f61cbadf1e653a0f1a",
+          "status_counts": {
+            "clarification": 8,
+            "error": 32,
+            "success": 120
+          },
+          "strict_pass": 136,
+          "tasks": 160,
+          "tool_calls_total": 744
+        }
+      ],
+      "validator_strict_empty": [
+        {
+          "components": {
+            "crs_match": {
+              "applicable": 144,
+              "passed": 100
+            },
+            "exact_fields": {
+              "applicable": 144,
+              "passed": 100
+            },
+            "feature_f1": {
+              "applicable": 144,
+              "passed": 120
+            },
+            "geometry_equivalence": {
+              "applicable": 144,
+              "passed": 100
+            },
+            "numeric_tolerance": {
+              "applicable": 144,
+              "passed": 100
+            },
+            "operation_match": {
+              "applicable": 144,
+              "passed": 120
+            },
+            "required_steps": {
+              "applicable": 160,
+              "passed": 116
+            },
+            "status_reason": {
+              "applicable": 160,
+              "passed": 116
+            },
+            "tool_sequence": {
+              "applicable": 160,
+              "passed": 116
+            }
+          },
+          "executable": 120,
+          "failure_category_counts": {
+            "crs_mismatch": 44,
+            "feature_set_mismatch": 24,
+            "field_mismatch": 44,
+            "geometry_mismatch": 44,
+            "numeric_tolerance_exceeded": 44,
+            "operation_mismatch": 24,
+            "required_step_mismatch": 44,
+            "status_mismatch": 44,
+            "tool_sequence_mismatch": 44
+          },
+          "llm_calls_total": 160,
+          "reason_counts": {
+            "M08_EMPTY_UNEXPECTED": 20,
+            "missing_place": 8,
+            "unsupported_buffer": 24,
+            "unsupported_rank": 8
+          },
+          "run": 1,
+          "secondary_pass": 116,
+          "seed": 11071,
+          "signatures_sha256": "sha256:5cb2b713b44817669908e4cd7f6db96bde7ca2de5db3a65a745f0d76d4da404f",
+          "status_counts": {
+            "clarification": 8,
+            "error": 32,
+            "partial": 20,
+            "success": 100
+          },
+          "strict_pass": 116,
+          "tasks": 160,
+          "tool_calls_total": 824
+        },
+        {
+          "components": {
+            "crs_match": {
+              "applicable": 144,
+              "passed": 100
+            },
+            "exact_fields": {
+              "applicable": 144,
+              "passed": 100
+            },
+            "feature_f1": {
+              "applicable": 144,
+              "passed": 120
+            },
+            "geometry_equivalence": {
+              "applicable": 144,
+              "passed": 100
+            },
+            "numeric_tolerance": {
+              "applicable": 144,
+              "passed": 100
+            },
+            "operation_match": {
+              "applicable": 144,
+              "passed": 120
+            },
+            "required_steps": {
+              "applicable": 160,
+              "passed": 116
+            },
+            "status_reason": {
+              "applicable": 160,
+              "passed": 116
+            },
+            "tool_sequence": {
+              "applicable": 160,
+              "passed": 116
+            }
+          },
+          "executable": 120,
+          "failure_category_counts": {
+            "crs_mismatch": 44,
+            "feature_set_mismatch": 24,
+            "field_mismatch": 44,
+            "geometry_mismatch": 44,
+            "numeric_tolerance_exceeded": 44,
+            "operation_mismatch": 24,
+            "required_step_mismatch": 44,
+            "status_mismatch": 44,
+            "tool_sequence_mismatch": 44
+          },
+          "llm_calls_total": 160,
+          "reason_counts": {
+            "M08_EMPTY_UNEXPECTED": 20,
+            "missing_place": 8,
+            "unsupported_buffer": 24,
+            "unsupported_rank": 8
+          },
+          "run": 2,
+          "secondary_pass": 116,
+          "seed": 11072,
+          "signatures_sha256": "sha256:5cb2b713b44817669908e4cd7f6db96bde7ca2de5db3a65a745f0d76d4da404f",
+          "status_counts": {
+            "clarification": 8,
+            "error": 32,
+            "partial": 20,
+            "success": 100
+          },
+          "strict_pass": 116,
+          "tasks": 160,
+          "tool_calls_total": 824
+        },
+        {
+          "components": {
+            "crs_match": {
+              "applicable": 144,
+              "passed": 100
+            },
+            "exact_fields": {
+              "applicable": 144,
+              "passed": 100
+            },
+            "feature_f1": {
+              "applicable": 144,
+              "passed": 120
+            },
+            "geometry_equivalence": {
+              "applicable": 144,
+              "passed": 100
+            },
+            "numeric_tolerance": {
+              "applicable": 144,
+              "passed": 100
+            },
+            "operation_match": {
+              "applicable": 144,
+              "passed": 120
+            },
+            "required_steps": {
+              "applicable": 160,
+              "passed": 116
+            },
+            "status_reason": {
+              "applicable": 160,
+              "passed": 116
+            },
+            "tool_sequence": {
+              "applicable": 160,
+              "passed": 116
+            }
+          },
+          "executable": 120,
+          "failure_category_counts": {
+            "crs_mismatch": 44,
+            "feature_set_mismatch": 24,
+            "field_mismatch": 44,
+            "geometry_mismatch": 44,
+            "numeric_tolerance_exceeded": 44,
+            "operation_mismatch": 24,
+            "required_step_mismatch": 44,
+            "status_mismatch": 44,
+            "tool_sequence_mismatch": 44
+          },
+          "llm_calls_total": 160,
+          "reason_counts": {
+            "M08_EMPTY_UNEXPECTED": 20,
+            "missing_place": 8,
+            "unsupported_buffer": 24,
+            "unsupported_rank": 8
+          },
+          "run": 3,
+          "secondary_pass": 116,
+          "seed": 11073,
+          "signatures_sha256": "sha256:5cb2b713b44817669908e4cd7f6db96bde7ca2de5db3a65a745f0d76d4da404f",
+          "status_counts": {
+            "clarification": 8,
+            "error": 32,
+            "partial": 20,
+            "success": 100
+          },
+          "strict_pass": 116,
+          "tasks": 160,
+          "tool_calls_total": 824
+        }
+      ]
+    }
+  },
+  "stage2_manifest_sha256": "sha256:a9b1686ede22c7b6558510d9bf15d9b3f99ec5fdb6a467a64239a8fda8b96e89"
+}

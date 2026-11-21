@@ -1,0 +1,34 @@
+{
+  "files": {
+    "benchmarks/data/dev/m12a_references_v1.json": "b82799c7d514fcc75bb020b2f2816db527b967a1943a36a9286624a10f108f92",
+    "benchmarks/data/dev/m12a_scenario_cases_v1.jsonl": "2f0d9b1508f43794b4ebd89a9efaf2abe625c58bdb1dfcac3af43827ab92089e",
+    "benchmarks/m12a_oracle.py": "23480397c6788233d5cb4e8a141bc0435957d8caadf987f7f082852d54ee7707",
+    "benchmarks/results/m12/precheck/m12_data_precheck_v1.json": "be57fba9a82ab9b219bd03ba59d12907fc1fa950c1fc73a099f063fc05db532f",
+    "benchmarks/results/m12/precheck/m12_data_precheck_v2.json": "eeebc52ba2e8b1d2233a676746861f34c376d76f0bb58ce553dc8d441692e23c",
+    "data/fixtures/osm/m12_lund_poi_v1/README.md": "aabbcac9faed59b51ee5c2afb928c2ff98588f048e4cf80da8a12837e8ae6ba8",
+    "data/fixtures/osm/m12_lund_poi_v1/lund_poi_points_v1.geojson": "65640faa539e5337ce4cc3ce87656b9cdcd9319116b6e6df36607d0ce80b6d2f",
+    "data/fixtures/osm/m12_lund_poi_v1/manifest.json": "e393add766314a47c54c501390e26d27a1a99617ef8a4fd11a9a756b7f2a21f6",
+    "data/fixtures/population/scb/m12_lund_v1/download_receipt.json": "9fdc704fcf2f841ba6af606e4afe7bd36101dbb2f2f1dac2fc4f6ba48476d3aa",
+    "data/fixtures/population/scb/m12_lund_v1/manifest.json": "134a177aa715eca0ef37eb32c33b5978f0b87bab0fcd77d5481c628f6fcac2cb",
+    "data/fixtures/population/scb/m12_lund_v1/scb_population_grid_2025_lund_20km_raw.geojson": "2acc387c186a97e3a3e5481fad388f15882ed5c3d9510bd53b5befebae807998",
+    "docs/roadmap/M12A_EVALUATION_FREEZE.md": "1b1d1cfc62c9d013d4991e941a6d13c614b58f1bbe92e609fcd46edfb1c39001",
+    "scripts/build_m12_lund_data.py": "691f6200b0bc3f8423db3047cfd2a3954df571f4d46bc63245733538727c3a00",
+    "scripts/build_m12a_references.py": "a4f6e00e52325033776e61827efa0c7bc8e9ee3ebfc05e8ba1807b0f2d50f4b3"
+  },
+  "frozen_on": "2026-10-08",
+  "grammar": "m12a-grammar-v1",
+  "note": "Frozen after precheck gate v2, fixtures and the independent oracle, before any src/scenarios code.",
+  "plan": "m12a-plan-v1",
+  "protocol": "m12a-protocol-v1",
+  "schema": "m12a-freeze-manifest-v1",
+  "thresholds": {
+    "case_count": 13,
+    "cases_passed": 13,
+    "deterministic_runs": 2,
+    "max_plan_steps": 12,
+    "max_tool_calls": 64,
+    "min_success_analysis_steps": 5,
+    "share_relative_tolerance": 1e-06,
+    "share_zero_absolute_tolerance": 1e-12
+  }
+}

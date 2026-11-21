@@ -1,0 +1,193 @@
+{
+  "gate": {
+    "gtfs_origin_departures_min": 10,
+    "gtfs_routes_min": 10,
+    "gtfs_study_trips_min": 200,
+    "gtfs_subset_uncompressed_bytes_max": 20000000,
+    "m12a_distances_m": [
+      800,
+      1000,
+      1500
+    ],
+    "m12a_nontrivial_distances_min": 2,
+    "osm_pharmacy_min": 5,
+    "osm_school_min": 10,
+    "osm_supermarket_min": 10,
+    "scb_ald5_9_nonnull_share_min": 0.5,
+    "scb_bytes_max": 5000000,
+    "scb_feature_count_max": 400,
+    "scb_feature_count_min": 100,
+    "scb_population_sum_min": 50000
+  },
+  "gate_source": "M12 plan v2 section 2.1 / ADR-0024",
+  "gtfs": {
+    "active_service_count": 868,
+    "active_trip_count": 130616,
+    "checks": {
+      "origin_departures": true,
+      "routes": true,
+      "sha256": true,
+      "study_trips": true,
+      "subset_size": true
+    },
+    "file_name": "source.zip",
+    "origin_regular_departures": 154,
+    "origin_stop_ids": [
+      "740000120"
+    ],
+    "origin_stop_name": "Lund Centralstation",
+    "origin_window": [
+      "07:30:00",
+      "08:30:00"
+    ],
+    "service_date": "2025-10-07",
+    "sha256": "12a4a7169d8423641da7f15125092423f6f9834f3b70725719b1ce147eb48f69",
+    "sha256_matches_frozen": true,
+    "stop_time_rows_total": 7899282,
+    "study_bbox_stop_count": 331,
+    "study_route_count": 601,
+    "study_trip_count": 3976,
+    "subset_stop_count": 646,
+    "subset_uncompressed_bytes_estimate": 4358931
+  },
+  "m12a_nontriviality": {
+    "checks": {
+      "nontrivial": true
+    },
+    "rows": [
+      {
+        "cell_count": 453,
+        "distance_m": 800,
+        "gap_cell_count": 260,
+        "nontrivial": true
+      },
+      {
+        "cell_count": 453,
+        "distance_m": 1000,
+        "gap_cell_count": 224,
+        "nontrivial": true
+      },
+      {
+        "cell_count": 453,
+        "distance_m": 1500,
+        "gap_cell_count": 155,
+        "nontrivial": true
+      }
+    ],
+    "school_count_expanded_bbox": 132
+  },
+  "osm": {
+    "bytes": 786131673,
+    "checks": {
+      "pharmacy": true,
+      "school": true,
+      "supermarket": true
+    },
+    "counts": {
+      "pharmacy": {
+        "by_method": {
+          "node": 24,
+          "relation_representative_point": 0,
+          "way_representative_point": 5
+        },
+        "expanded_bbox": 29,
+        "study_bbox": 24
+      },
+      "school": {
+        "by_method": {
+          "node": 9,
+          "relation_representative_point": 2,
+          "way_representative_point": 121
+        },
+        "expanded_bbox": 132,
+        "study_bbox": 111
+      },
+      "supermarket": {
+        "by_method": {
+          "node": 32,
+          "relation_representative_point": 0,
+          "way_representative_point": 34
+        },
+        "expanded_bbox": 66,
+        "study_bbox": 50
+      }
+    },
+    "expanded_bbox_3006": [
+      375000.0,
+      6163000.0,
+      401000.0,
+      6189000.0
+    ],
+    "extraction_stats": {
+      "candidates_total_sweden_file": 9504,
+      "skipped_geometry": 0,
+      "skipped_relation_type": 0,
+      "skipped_unlocated": 0,
+      "tagged_nodes": 4072,
+      "tagged_relations": 425,
+      "tagged_ways": 5007
+    },
+    "file_name": "sweden-251214.osm.pbf",
+    "header": {
+      "generator": "osmium/1.14.0",
+      "osmosis_replication_base_url": "https://download.geofabrik.de/europe/sweden-updates",
+      "osmosis_replication_sequence_number": "4635",
+      "osmosis_replication_timestamp": "2025-12-14T21:21:45Z",
+      "timestamp": "2025-12-14T21:21:45Z"
+    },
+    "header_bbox_wgs84": [
+      10.54138,
+      55.02652,
+      24.22472,
+      69.06643
+    ],
+    "provenance_note": "Local file supplied by the user without a download receipt; the provider and release date are unverified and are not inferred from the file name.",
+    "provider_verified": false,
+    "sha256": "da92cd12c8aee40e4c7d79154e736c09598715b36f7a843257145606893394c9",
+    "study_bbox_3006": [
+      378000.0,
+      6166000.0,
+      398000.0,
+      6186000.0
+    ]
+  },
+  "passed": false,
+  "scb": {
+    "ald5_9_nonnull_count": 453,
+    "ald5_9_nonnull_share": 1.0,
+    "bytes": 346923,
+    "checks": {
+      "ald5_9_nonnull_share": true,
+      "bytes": true,
+      "feature_count": false,
+      "population_sum": true,
+      "properties_complete": false
+    },
+    "data_bbox_3006": [
+      376999.99774432,
+      6165000.0020788,
+      399000.00103047,
+      6187000.00404202
+    ],
+    "feature_count": 453,
+    "file_name": "scb_befolkning_1km_2025_378000_6166000_398000_6186000.geojson",
+    "missing_properties": [
+      "sp_geometry"
+    ],
+    "population_total_nonnull_sum": 205040,
+    "population_total_null_count": 0,
+    "sha256": "2acc387c186a97e3a3e5481fad388f15882ed5c3d9510bd53b5befebae807998"
+  },
+  "schema": "m12-data-precheck-v1",
+  "study_bbox_3006": [
+    378000.0,
+    6166000.0,
+    398000.0,
+    6186000.0
+  ],
+  "tool_versions": {
+    "osmium": "4.2.0",
+    "pyproj": "3.7.1",
+    "shapely": "2.1.2"
+  }
+}

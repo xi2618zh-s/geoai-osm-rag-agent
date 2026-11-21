@@ -1,0 +1,16 @@
+{"case_id":"clean_search","task":"search","fault":"none","expected_status":"success","expected_error":null}
+{"case_id":"clean_filtered","task":"filtered_search","fault":"none","expected_status":"success","expected_error":null}
+{"case_id":"clean_distance","task":"within_distance","fault":"none","expected_status":"success","expected_error":null}
+{"case_id":"clean_aggregate","task":"aggregate_by_region","fault":"none","expected_status":"success","expected_error":null}
+{"case_id":"recover_timeout","task":"search","fault":"transient_timeout","expected_status":"success","expected_error":"M08_TOOL_TIMEOUT"}
+{"case_id":"recover_crs","task":"search","fault":"wrong_crs","expected_status":"success","expected_error":"M08_CRS_MISMATCH"}
+{"case_id":"recover_geometry","task":"search","fault":"invalid_geometry","expected_status":"success","expected_error":"M08_GEOMETRY_INVALID"}
+{"case_id":"recover_alternate","task":"search","fault":"missing_primary_with_alternate","expected_status":"success","expected_error":"M08_DATASET_UNAVAILABLE"}
+{"case_id":"guard_missing_output","task":"search","fault":"missing_output","expected_status":"partial","expected_error":"M08_OUTPUT_UNREADABLE"}
+{"case_id":"guard_corrupt_output","task":"search","fault":"corrupt_output","expected_status":"partial","expected_error":"M08_OUTPUT_UNREADABLE"}
+{"case_id":"guard_empty","task":"search","fault":"empty_result","expected_status":"partial","expected_error":"M08_EMPTY_UNEXPECTED"}
+{"case_id":"guard_invalid_geometry","task":"search","fault":"invalid_geometry_no_repair","expected_status":"partial","expected_error":"M08_GEOMETRY_INVALID"}
+{"case_id":"guard_excessive","task":"search","fault":"feature_cap","expected_status":"partial","expected_error":"M08_LIMIT_EXCEEDED"}
+{"case_id":"guard_tool_unavailable","task":"search","fault":"tool_unavailable","expected_status":"partial","expected_error":"M08_TOOL_UNAVAILABLE"}
+{"case_id":"guard_replan","task":"search","fault":"invalid_replan","expected_status":"partial","expected_error":"M08_REPLAN_INVALID"}
+{"case_id":"guard_false_conclusion","task":"search","fault":"false_conclusion","expected_status":"partial","expected_error":"M08_CONCLUSION_MISMATCH"}

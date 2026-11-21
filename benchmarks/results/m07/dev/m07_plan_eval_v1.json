@@ -1,0 +1,35 @@
+{
+  "case_count": 80,
+  "cases_sha256": "81fe96d28953c8ec99d1eb999905b2e13b0854bad2f92a7f6623a39bf5df9ad8",
+  "evaluation_id": "m07_plan_eval_v1",
+  "failures": [],
+  "limitation": "Constrained command grammar and declared fixture metadata; no unrestricted language, real model, hidden set, or tool execution. M03 Phase 2 retrieval queries are catalog-informed.",
+  "metrics": {
+    "parameter_accuracy": {
+      "passed": 70,
+      "rate": 1.0,
+      "total": 70
+    },
+    "plan_legality": {
+      "passed": 70,
+      "rate": 1.0,
+      "total": 70
+    },
+    "tool_selection_accuracy": {
+      "passed": 70,
+      "rate": 1.0,
+      "total": 70
+    },
+    "unsupported_rejection": {
+      "passed": 10,
+      "rate": 1.0,
+      "total": 10
+    }
+  },
+  "passed": true,
+  "schema_version": "1.0",
+  "source": "public synthetic offline development cases",
+  "supported_count": 70,
+  "threshold": 0.95,
+  "unsupported_count": 10
+}

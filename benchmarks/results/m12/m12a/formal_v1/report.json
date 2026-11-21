@@ -1,0 +1,257 @@
+{
+  "accepted": true,
+  "case_count": 13,
+  "cases": [
+    {
+      "case_id": "m12a_A1",
+      "category": "success",
+      "components": {
+        "forbidden_tools": true,
+        "frontend": true,
+        "gap_ids": true,
+        "invoked_tools": true,
+        "metrics": true,
+        "outcome": true,
+        "planned_tools": true,
+        "reconfirmation": true,
+        "recoveries": true,
+        "report": true
+      },
+      "passed": true
+    },
+    {
+      "case_id": "m12a_A2",
+      "category": "success",
+      "components": {
+        "forbidden_tools": true,
+        "frontend": true,
+        "gap_ids": true,
+        "invoked_tools": true,
+        "metrics": true,
+        "outcome": true,
+        "planned_tools": true,
+        "reconfirmation": true,
+        "recoveries": true,
+        "report": true
+      },
+      "passed": true
+    },
+    {
+      "case_id": "m12a_A3",
+      "category": "legit_empty",
+      "components": {
+        "forbidden_tools": true,
+        "frontend": true,
+        "gap_ids": true,
+        "invoked_tools": true,
+        "metrics": true,
+        "outcome": true,
+        "planned_tools": true,
+        "reconfirmation": true,
+        "recoveries": true,
+        "report": true
+      },
+      "passed": true
+    },
+    {
+      "case_id": "m12a_B1",
+      "category": "clarification",
+      "components": {
+        "forbidden_tools": true,
+        "frontend": true,
+        "gap_ids": true,
+        "invoked_tools": true,
+        "metrics": true,
+        "outcome": true,
+        "planned_tools": true,
+        "reconfirmation": true,
+        "recoveries": true,
+        "report": true
+      },
+      "passed": true
+    },
+    {
+      "case_id": "m12a_B2",
+      "category": "clarification",
+      "components": {
+        "forbidden_tools": true,
+        "frontend": true,
+        "gap_ids": true,
+        "invoked_tools": true,
+        "metrics": true,
+        "outcome": true,
+        "planned_tools": true,
+        "reconfirmation": true,
+        "recoveries": true,
+        "report": true
+      },
+      "passed": true
+    },
+    {
+      "case_id": "m12a_B3",
+      "category": "clarification",
+      "components": {
+        "forbidden_tools": true,
+        "frontend": true,
+        "gap_ids": true,
+        "invoked_tools": true,
+        "metrics": true,
+        "outcome": true,
+        "planned_tools": true,
+        "reconfirmation": true,
+        "recoveries": true,
+        "report": true
+      },
+      "passed": true
+    },
+    {
+      "case_id": "m12a_B4",
+      "category": "clarification",
+      "components": {
+        "forbidden_tools": true,
+        "frontend": true,
+        "gap_ids": true,
+        "invoked_tools": true,
+        "metrics": true,
+        "outcome": true,
+        "planned_tools": true,
+        "reconfirmation": true,
+        "recoveries": true,
+        "report": true
+      },
+      "passed": true
+    },
+    {
+      "case_id": "m12a_B5",
+      "category": "unsupported",
+      "components": {
+        "forbidden_tools": true,
+        "frontend": true,
+        "gap_ids": true,
+        "invoked_tools": true,
+        "metrics": true,
+        "outcome": true,
+        "planned_tools": true,
+        "reconfirmation": true,
+        "recoveries": true,
+        "report": true
+      },
+      "passed": true
+    },
+    {
+      "case_id": "m12a_C1",
+      "category": "crs_reject",
+      "components": {
+        "forbidden_tools": true,
+        "frontend": true,
+        "gap_ids": true,
+        "invoked_tools": true,
+        "metrics": true,
+        "outcome": true,
+        "planned_tools": true,
+        "reconfirmation": true,
+        "recoveries": true,
+        "report": true
+      },
+      "passed": true
+    },
+    {
+      "case_id": "m12a_C2",
+      "category": "crs_alternate_snapshot",
+      "components": {
+        "forbidden_tools": true,
+        "frontend": true,
+        "gap_ids": true,
+        "invoked_tools": true,
+        "metrics": true,
+        "outcome": true,
+        "planned_tools": true,
+        "reconfirmation": true,
+        "recoveries": true,
+        "report": true
+      },
+      "passed": true
+    },
+    {
+      "case_id": "m12a_C3",
+      "category": "crs_reconfirmed",
+      "components": {
+        "forbidden_tools": true,
+        "frontend": true,
+        "gap_ids": true,
+        "invoked_tools": true,
+        "metrics": true,
+        "outcome": true,
+        "planned_tools": true,
+        "reconfirmation": true,
+        "recoveries": true,
+        "report": true
+      },
+      "passed": true
+    },
+    {
+      "case_id": "m12a_C4",
+      "category": "crs_evidence_invalid",
+      "components": {
+        "forbidden_tools": true,
+        "frontend": true,
+        "gap_ids": true,
+        "invoked_tools": true,
+        "metrics": true,
+        "outcome": true,
+        "planned_tools": true,
+        "reconfirmation": true,
+        "recoveries": true,
+        "report": true
+      },
+      "passed": true
+    },
+    {
+      "case_id": "m12a_C5",
+      "category": "empty_unexpected",
+      "components": {
+        "forbidden_tools": true,
+        "frontend": true,
+        "gap_ids": true,
+        "invoked_tools": true,
+        "metrics": true,
+        "outcome": true,
+        "planned_tools": true,
+        "reconfirmation": true,
+        "recoveries": true,
+        "report": true
+      },
+      "passed": true
+    }
+  ],
+  "cases_passed": 13,
+  "deterministic": true,
+  "environment": {
+    "packages": {
+      "pydantic": "2.12.5",
+      "pyproj": "3.7.1",
+      "shapely": "2.1.2"
+    },
+    "python": "3.10.19"
+  },
+  "freeze_manifest_sha256": "601968b7b759f58da581b898a08774375e1519b30d64cba8e3279bab086906c8",
+  "git": {
+    "commit": "cb17d605bbb42eb755acea332b898d2939186574",
+    "dirty": true
+  },
+  "llm_calls": 0,
+  "protocol": "m12a-protocol-v1",
+  "receipt_sha256": "bf46afbabf8fa0cb2ef9dd0d7d9c13c95d6e9d57056c4af3d71a2300261fda4a",
+  "schema": "m12a-formal-report-v1",
+  "source_fingerprint": "sha256:6a2d2025963dc8cba83eea70811f5ef1cd4e450ef2b1d1ec8825d4ac31efedd7",
+  "thresholds": {
+    "case_count": 13,
+    "cases_passed": 13,
+    "deterministic_runs": 2,
+    "max_plan_steps": 12,
+    "max_tool_calls": 64,
+    "min_success_analysis_steps": 5,
+    "share_relative_tolerance": 1e-06,
+    "share_zero_absolute_tolerance": 1e-12
+  }
+}

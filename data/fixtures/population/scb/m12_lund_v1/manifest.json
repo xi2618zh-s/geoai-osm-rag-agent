@@ -1,0 +1,52 @@
+{
+  "attribution": "Statistics Sweden (SCB), 1 km population grid 2025",
+  "bbox_3006": [
+    378000.0,
+    6166000.0,
+    398000.0,
+    6186000.0
+  ],
+  "build_command": "python scripts/build_m12_lund_data.py build-scb --source <downloaded geojson> --receipt <receipt> --precheck-report benchmarks/results/m12/precheck/m12_data_precheck_v2.json --output-dir data/fixtures/population/scb/m12_lund_v1",
+  "crs": "EPSG:3006",
+  "dataset": "stat:befolkning_1km_2025",
+  "edge_cell_rule": {
+    "cells_touching_or_crossing_edge": 135,
+    "cells_within_study_bbox": 318,
+    "population_edge_cells": 30084,
+    "population_statement": "Reported population summed over the 453 returned SCB cells (cells intersecting or touching the study BBOX, unclipped); this is not the exact population of the 20x20 km area.",
+    "population_within_study_bbox_cells": 174956,
+    "rule": "All 1 km cells returned by the SCB WFS 1.1.0 BBOX filter are kept unclipped; this includes cells intersecting or touching the study BBOX boundary."
+  },
+  "files": {
+    "download_receipt.json": {
+      "bytes": 2435,
+      "sha256": "9fdc704fcf2f841ba6af606e4afe7bd36101dbb2f2f1dac2fc4f6ba48476d3aa"
+    },
+    "scb_population_grid_2025_lund_20km_raw.geojson": {
+      "bytes": 346923,
+      "content": "unaltered WFS response bytes",
+      "feature_count": 453,
+      "sha256": "2acc387c186a97e3a3e5481fad388f15882ed5c3d9510bd53b5befebae807998"
+    }
+  },
+  "fixture_id": "scb-population-grid-2025-lund-20km-v1",
+  "license": "CC0-1.0",
+  "precheck": {
+    "ald5_9_reported_count": 453,
+    "data_bbox_3006": [
+      376999.99774432,
+      6165000.0020788,
+      399000.00103047,
+      6187000.00404202
+    ],
+    "gate_version": "v2",
+    "population_total_not_reported_count": 0,
+    "population_total_reported_sum": 205040,
+    "report": "m12_data_precheck_v2.json",
+    "report_sha256": "eeebc52ba2e8b1d2233a676746861f34c376d76f0bb58ce553dc8d441692e23c"
+  },
+  "provider": "Statistics Sweden (SCB)",
+  "purpose": "M12 scenario population demand and children age bands (CC0; kept separate from ODbL data).",
+  "receipt_response_sha256": "2acc387c186a97e3a3e5481fad388f15882ed5c3d9510bd53b5befebae807998",
+  "schema": "m12-scb-fixture-manifest-v1"
+}

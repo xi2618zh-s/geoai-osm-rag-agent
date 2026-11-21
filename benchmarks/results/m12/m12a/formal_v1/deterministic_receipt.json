@@ -1,0 +1,1155 @@
+{
+  "case_count": 13,
+  "cases": [
+    {
+      "record": {
+        "after_resume_status": null,
+        "all_tool_calls": [
+          "load_population_dataset",
+          "validate_geometry",
+          "reproject_dataset",
+          "validate_geometry",
+          "filter_attributes",
+          "validate_geometry",
+          "buffer_features",
+          "validate_geometry",
+          "nearest_features",
+          "validate_geometry",
+          "filter_attributes",
+          "validate_geometry"
+        ],
+        "analysis_steps": 6,
+        "case_id": "m12a_A1",
+        "choices": [],
+        "error_code": null,
+        "failed_step": null,
+        "final_content_hash": "sha256:d7e15605f41ca42ad2db285a8fdc2bd47e22290e0fd95dca5353daac52cc056f",
+        "frontend_reason": null,
+        "frontend_status": "plan",
+        "gap_grid_ids": [
+          "SE_CRS3006RES1000mN6165000E382000",
+          "SE_CRS3006RES1000mN6165000E393000",
+          "SE_CRS3006RES1000mN6172000E380000",
+          "SE_CRS3006RES1000mN6173000E377000",
+          "SE_CRS3006RES1000mN6173000E379000",
+          "SE_CRS3006RES1000mN6174000E377000",
+          "SE_CRS3006RES1000mN6181000E377000",
+          "SE_CRS3006RES1000mN6184000E379000",
+          "SE_CRS3006RES1000mN6184000E387000",
+          "SE_CRS3006RES1000mN6186000E377000",
+          "SE_CRS3006RES1000mN6186000E381000"
+        ],
+        "invoked_tools": [
+          "load_population_dataset",
+          "reproject_dataset",
+          "filter_attributes",
+          "buffer_features",
+          "nearest_features",
+          "filter_attributes"
+        ],
+        "metrics": {
+          "age_band_max": 9,
+          "age_band_min": 5,
+          "band_not_reported_cells": 0,
+          "children_threshold": 10,
+          "distance_threshold_m": 1000,
+          "gap_cell_count": 11,
+          "gap_children": 178,
+          "gap_children_share": 0.015502525692388086,
+          "grid_cell_count": 453,
+          "school_count": 132,
+          "total_children": 11482
+        },
+        "missing_fields": [],
+        "outcome_status": "success",
+        "planned_tools": [
+          "load_population_dataset",
+          "reproject_dataset",
+          "filter_attributes",
+          "buffer_features",
+          "nearest_features",
+          "filter_attributes"
+        ],
+        "reconfirm_error_code": null,
+        "reconfirm_lineage_ok": null,
+        "reconfirmed_crs": null,
+        "recoveries": [],
+        "replan_count": 0,
+        "report_checks": {
+          "download_geojson_features": 11,
+          "forbidden_phrase": null,
+          "grammar_note": true,
+          "html_has_layers_and_licenses": true,
+          "html_self_contained": true,
+          "layer_count": 4,
+          "licenses": true,
+          "population_statement": true,
+          "validated": true
+        },
+        "stage1_error_code": null
+      },
+      "score": {
+        "case_id": "m12a_A1",
+        "components": {
+          "forbidden_tools": true,
+          "frontend": true,
+          "gap_ids": true,
+          "invoked_tools": true,
+          "metrics": true,
+          "outcome": true,
+          "planned_tools": true,
+          "reconfirmation": true,
+          "recoveries": true,
+          "report": true
+        },
+        "passed": true
+      }
+    },
+    {
+      "record": {
+        "after_resume_status": null,
+        "all_tool_calls": [
+          "load_population_dataset",
+          "validate_geometry",
+          "reproject_dataset",
+          "validate_geometry",
+          "filter_attributes",
+          "validate_geometry",
+          "buffer_features",
+          "validate_geometry",
+          "nearest_features",
+          "validate_geometry",
+          "filter_attributes",
+          "validate_geometry"
+        ],
+        "analysis_steps": 6,
+        "case_id": "m12a_A2",
+        "choices": [],
+        "error_code": null,
+        "failed_step": null,
+        "final_content_hash": "sha256:213951ca385a99264c28eae0fdad27e54aef3109de4fc5dd72f25349d2a0350b",
+        "frontend_reason": null,
+        "frontend_status": "plan",
+        "gap_grid_ids": [
+          "SE_CRS3006RES1000mN6165000E382000",
+          "SE_CRS3006RES1000mN6177000E378000",
+          "SE_CRS3006RES1000mN6177000E379000",
+          "SE_CRS3006RES1000mN6177000E381000",
+          "SE_CRS3006RES1000mN6181000E377000",
+          "SE_CRS3006RES1000mN6181000E394000",
+          "SE_CRS3006RES1000mN6184000E387000"
+        ],
+        "invoked_tools": [
+          "load_population_dataset",
+          "reproject_dataset",
+          "filter_attributes",
+          "buffer_features",
+          "nearest_features",
+          "filter_attributes"
+        ],
+        "metrics": {
+          "age_band_max": 14,
+          "age_band_min": 10,
+          "band_not_reported_cells": 0,
+          "children_threshold": 10,
+          "distance_threshold_m": 1500,
+          "gap_cell_count": 7,
+          "gap_children": 97,
+          "gap_children_share": 0.007683168316831683,
+          "grid_cell_count": 453,
+          "school_count": 132,
+          "total_children": 12625
+        },
+        "missing_fields": [],
+        "outcome_status": "success",
+        "planned_tools": [
+          "load_population_dataset",
+          "reproject_dataset",
+          "filter_attributes",
+          "buffer_features",
+          "nearest_features",
+          "filter_attributes"
+        ],
+        "reconfirm_error_code": null,
+        "reconfirm_lineage_ok": null,
+        "reconfirmed_crs": null,
+        "recoveries": [],
+        "replan_count": 0,
+        "report_checks": {
+          "download_geojson_features": 7,
+          "forbidden_phrase": null,
+          "grammar_note": true,
+          "html_has_layers_and_licenses": true,
+          "html_self_contained": true,
+          "layer_count": 4,
+          "licenses": true,
+          "population_statement": true,
+          "validated": true
+        },
+        "stage1_error_code": null
+      },
+      "score": {
+        "case_id": "m12a_A2",
+        "components": {
+          "forbidden_tools": true,
+          "frontend": true,
+          "gap_ids": true,
+          "invoked_tools": true,
+          "metrics": true,
+          "outcome": true,
+          "planned_tools": true,
+          "reconfirmation": true,
+          "recoveries": true,
+          "report": true
+        },
+        "passed": true
+      }
+    },
+    {
+      "record": {
+        "after_resume_status": null,
+        "all_tool_calls": [
+          "load_population_dataset",
+          "validate_geometry",
+          "reproject_dataset",
+          "validate_geometry",
+          "filter_attributes",
+          "validate_geometry",
+          "buffer_features",
+          "validate_geometry",
+          "nearest_features",
+          "validate_geometry",
+          "filter_attributes",
+          "validate_geometry"
+        ],
+        "analysis_steps": 6,
+        "case_id": "m12a_A3",
+        "choices": [],
+        "error_code": null,
+        "failed_step": null,
+        "final_content_hash": "sha256:ad37fe6278e0c7caf3b77c1c5068a56e18a6c87b78ed5a840ee22a0f961ea7a8",
+        "frontend_reason": null,
+        "frontend_status": "plan",
+        "gap_grid_ids": [],
+        "invoked_tools": [
+          "load_population_dataset",
+          "reproject_dataset",
+          "filter_attributes",
+          "buffer_features",
+          "nearest_features",
+          "filter_attributes"
+        ],
+        "metrics": {
+          "age_band_max": 9,
+          "age_band_min": 5,
+          "band_not_reported_cells": 0,
+          "children_threshold": 20,
+          "distance_threshold_m": 2000,
+          "gap_cell_count": 0,
+          "gap_children": 0,
+          "gap_children_share": 0.0,
+          "grid_cell_count": 453,
+          "school_count": 132,
+          "total_children": 11482
+        },
+        "missing_fields": [],
+        "outcome_status": "success",
+        "planned_tools": [
+          "load_population_dataset",
+          "reproject_dataset",
+          "filter_attributes",
+          "buffer_features",
+          "nearest_features",
+          "filter_attributes"
+        ],
+        "reconfirm_error_code": null,
+        "reconfirm_lineage_ok": null,
+        "reconfirmed_crs": null,
+        "recoveries": [],
+        "replan_count": 0,
+        "report_checks": {
+          "download_geojson_features": 0,
+          "forbidden_phrase": null,
+          "grammar_note": true,
+          "html_has_layers_and_licenses": true,
+          "html_self_contained": true,
+          "layer_count": 4,
+          "licenses": true,
+          "population_statement": true,
+          "validated": true
+        },
+        "stage1_error_code": null
+      },
+      "score": {
+        "case_id": "m12a_A3",
+        "components": {
+          "forbidden_tools": true,
+          "frontend": true,
+          "gap_ids": true,
+          "invoked_tools": true,
+          "metrics": true,
+          "outcome": true,
+          "planned_tools": true,
+          "reconfirmation": true,
+          "recoveries": true,
+          "report": true
+        },
+        "passed": true
+      }
+    },
+    {
+      "record": {
+        "after_resume_status": "plan",
+        "all_tool_calls": [
+          "load_population_dataset",
+          "validate_geometry",
+          "reproject_dataset",
+          "validate_geometry",
+          "filter_attributes",
+          "validate_geometry",
+          "buffer_features",
+          "validate_geometry",
+          "nearest_features",
+          "validate_geometry",
+          "filter_attributes",
+          "validate_geometry"
+        ],
+        "analysis_steps": 6,
+        "case_id": "m12a_B1",
+        "choices": [],
+        "error_code": null,
+        "failed_step": null,
+        "final_content_hash": "sha256:d7e15605f41ca42ad2db285a8fdc2bd47e22290e0fd95dca5353daac52cc056f",
+        "frontend_reason": "missing_parameters",
+        "frontend_status": "clarification",
+        "gap_grid_ids": [
+          "SE_CRS3006RES1000mN6165000E382000",
+          "SE_CRS3006RES1000mN6165000E393000",
+          "SE_CRS3006RES1000mN6172000E380000",
+          "SE_CRS3006RES1000mN6173000E377000",
+          "SE_CRS3006RES1000mN6173000E379000",
+          "SE_CRS3006RES1000mN6174000E377000",
+          "SE_CRS3006RES1000mN6181000E377000",
+          "SE_CRS3006RES1000mN6184000E379000",
+          "SE_CRS3006RES1000mN6184000E387000",
+          "SE_CRS3006RES1000mN6186000E377000",
+          "SE_CRS3006RES1000mN6186000E381000"
+        ],
+        "invoked_tools": [
+          "load_population_dataset",
+          "reproject_dataset",
+          "filter_attributes",
+          "buffer_features",
+          "nearest_features",
+          "filter_attributes"
+        ],
+        "metrics": {
+          "age_band_max": 9,
+          "age_band_min": 5,
+          "band_not_reported_cells": 0,
+          "children_threshold": 10,
+          "distance_threshold_m": 1000,
+          "gap_cell_count": 11,
+          "gap_children": 178,
+          "gap_children_share": 0.015502525692388086,
+          "grid_cell_count": 453,
+          "school_count": 132,
+          "total_children": 11482
+        },
+        "missing_fields": [
+          "distance",
+          "age_band",
+          "threshold"
+        ],
+        "outcome_status": "success",
+        "planned_tools": [
+          "load_population_dataset",
+          "reproject_dataset",
+          "filter_attributes",
+          "buffer_features",
+          "nearest_features",
+          "filter_attributes"
+        ],
+        "reconfirm_error_code": null,
+        "reconfirm_lineage_ok": null,
+        "reconfirmed_crs": null,
+        "recoveries": [],
+        "replan_count": 0,
+        "report_checks": {
+          "download_geojson_features": 11,
+          "forbidden_phrase": null,
+          "grammar_note": true,
+          "html_has_layers_and_licenses": true,
+          "html_self_contained": true,
+          "layer_count": 4,
+          "licenses": true,
+          "population_statement": true,
+          "validated": true
+        },
+        "stage1_error_code": null
+      },
+      "score": {
+        "case_id": "m12a_B1",
+        "components": {
+          "forbidden_tools": true,
+          "frontend": true,
+          "gap_ids": true,
+          "invoked_tools": true,
+          "metrics": true,
+          "outcome": true,
+          "planned_tools": true,
+          "reconfirmation": true,
+          "recoveries": true,
+          "report": true
+        },
+        "passed": true
+      }
+    },
+    {
+      "record": {
+        "after_resume_status": "plan",
+        "all_tool_calls": [
+          "load_population_dataset",
+          "validate_geometry",
+          "reproject_dataset",
+          "validate_geometry",
+          "filter_attributes",
+          "validate_geometry",
+          "buffer_features",
+          "validate_geometry",
+          "nearest_features",
+          "validate_geometry",
+          "filter_attributes",
+          "validate_geometry"
+        ],
+        "analysis_steps": 6,
+        "case_id": "m12a_B2",
+        "choices": [
+          "0-4",
+          "5-9",
+          "10-14",
+          "15-19"
+        ],
+        "error_code": null,
+        "failed_step": null,
+        "final_content_hash": "sha256:d7e15605f41ca42ad2db285a8fdc2bd47e22290e0fd95dca5353daac52cc056f",
+        "frontend_reason": "age_band_unsupported",
+        "frontend_status": "clarification",
+        "gap_grid_ids": [
+          "SE_CRS3006RES1000mN6165000E382000",
+          "SE_CRS3006RES1000mN6165000E393000",
+          "SE_CRS3006RES1000mN6172000E380000",
+          "SE_CRS3006RES1000mN6173000E377000",
+          "SE_CRS3006RES1000mN6173000E379000",
+          "SE_CRS3006RES1000mN6174000E377000",
+          "SE_CRS3006RES1000mN6181000E377000",
+          "SE_CRS3006RES1000mN6184000E379000",
+          "SE_CRS3006RES1000mN6184000E387000",
+          "SE_CRS3006RES1000mN6186000E377000",
+          "SE_CRS3006RES1000mN6186000E381000"
+        ],
+        "invoked_tools": [
+          "load_population_dataset",
+          "reproject_dataset",
+          "filter_attributes",
+          "buffer_features",
+          "nearest_features",
+          "filter_attributes"
+        ],
+        "metrics": {
+          "age_band_max": 9,
+          "age_band_min": 5,
+          "band_not_reported_cells": 0,
+          "children_threshold": 10,
+          "distance_threshold_m": 1000,
+          "gap_cell_count": 11,
+          "gap_children": 178,
+          "gap_children_share": 0.015502525692388086,
+          "grid_cell_count": 453,
+          "school_count": 132,
+          "total_children": 11482
+        },
+        "missing_fields": [
+          "age_band"
+        ],
+        "outcome_status": "success",
+        "planned_tools": [
+          "load_population_dataset",
+          "reproject_dataset",
+          "filter_attributes",
+          "buffer_features",
+          "nearest_features",
+          "filter_attributes"
+        ],
+        "reconfirm_error_code": null,
+        "reconfirm_lineage_ok": null,
+        "reconfirmed_crs": null,
+        "recoveries": [],
+        "replan_count": 0,
+        "report_checks": {
+          "download_geojson_features": 11,
+          "forbidden_phrase": null,
+          "grammar_note": true,
+          "html_has_layers_and_licenses": true,
+          "html_self_contained": true,
+          "layer_count": 4,
+          "licenses": true,
+          "population_statement": true,
+          "validated": true
+        },
+        "stage1_error_code": null
+      },
+      "score": {
+        "case_id": "m12a_B2",
+        "components": {
+          "forbidden_tools": true,
+          "frontend": true,
+          "gap_ids": true,
+          "invoked_tools": true,
+          "metrics": true,
+          "outcome": true,
+          "planned_tools": true,
+          "reconfirmation": true,
+          "recoveries": true,
+          "report": true
+        },
+        "passed": true
+      }
+    },
+    {
+      "record": {
+        "after_resume_status": "plan",
+        "all_tool_calls": [
+          "load_population_dataset",
+          "validate_geometry",
+          "reproject_dataset",
+          "validate_geometry",
+          "filter_attributes",
+          "validate_geometry",
+          "buffer_features",
+          "validate_geometry",
+          "nearest_features",
+          "validate_geometry",
+          "filter_attributes",
+          "validate_geometry"
+        ],
+        "analysis_steps": 6,
+        "case_id": "m12a_B3",
+        "choices": [
+          "Lund"
+        ],
+        "error_code": null,
+        "failed_step": null,
+        "final_content_hash": "sha256:d7e15605f41ca42ad2db285a8fdc2bd47e22290e0fd95dca5353daac52cc056f",
+        "frontend_reason": "place_not_covered",
+        "frontend_status": "clarification",
+        "gap_grid_ids": [
+          "SE_CRS3006RES1000mN6165000E382000",
+          "SE_CRS3006RES1000mN6165000E393000",
+          "SE_CRS3006RES1000mN6172000E380000",
+          "SE_CRS3006RES1000mN6173000E377000",
+          "SE_CRS3006RES1000mN6173000E379000",
+          "SE_CRS3006RES1000mN6174000E377000",
+          "SE_CRS3006RES1000mN6181000E377000",
+          "SE_CRS3006RES1000mN6184000E379000",
+          "SE_CRS3006RES1000mN6184000E387000",
+          "SE_CRS3006RES1000mN6186000E377000",
+          "SE_CRS3006RES1000mN6186000E381000"
+        ],
+        "invoked_tools": [
+          "load_population_dataset",
+          "reproject_dataset",
+          "filter_attributes",
+          "buffer_features",
+          "nearest_features",
+          "filter_attributes"
+        ],
+        "metrics": {
+          "age_band_max": 9,
+          "age_band_min": 5,
+          "band_not_reported_cells": 0,
+          "children_threshold": 10,
+          "distance_threshold_m": 1000,
+          "gap_cell_count": 11,
+          "gap_children": 178,
+          "gap_children_share": 0.015502525692388086,
+          "grid_cell_count": 453,
+          "school_count": 132,
+          "total_children": 11482
+        },
+        "missing_fields": [
+          "place"
+        ],
+        "outcome_status": "success",
+        "planned_tools": [
+          "load_population_dataset",
+          "reproject_dataset",
+          "filter_attributes",
+          "buffer_features",
+          "nearest_features",
+          "filter_attributes"
+        ],
+        "reconfirm_error_code": null,
+        "reconfirm_lineage_ok": null,
+        "reconfirmed_crs": null,
+        "recoveries": [],
+        "replan_count": 0,
+        "report_checks": {
+          "download_geojson_features": 11,
+          "forbidden_phrase": null,
+          "grammar_note": true,
+          "html_has_layers_and_licenses": true,
+          "html_self_contained": true,
+          "layer_count": 4,
+          "licenses": true,
+          "population_statement": true,
+          "validated": true
+        },
+        "stage1_error_code": null
+      },
+      "score": {
+        "case_id": "m12a_B3",
+        "components": {
+          "forbidden_tools": true,
+          "frontend": true,
+          "gap_ids": true,
+          "invoked_tools": true,
+          "metrics": true,
+          "outcome": true,
+          "planned_tools": true,
+          "reconfirmation": true,
+          "recoveries": true,
+          "report": true
+        },
+        "passed": true
+      }
+    },
+    {
+      "record": {
+        "after_resume_status": "plan",
+        "all_tool_calls": [
+          "load_population_dataset",
+          "validate_geometry",
+          "reproject_dataset",
+          "validate_geometry",
+          "filter_attributes",
+          "validate_geometry",
+          "buffer_features",
+          "validate_geometry",
+          "nearest_features",
+          "validate_geometry",
+          "filter_attributes",
+          "validate_geometry"
+        ],
+        "analysis_steps": 6,
+        "case_id": "m12a_B4",
+        "choices": [],
+        "error_code": null,
+        "failed_step": null,
+        "final_content_hash": "sha256:d7e15605f41ca42ad2db285a8fdc2bd47e22290e0fd95dca5353daac52cc056f",
+        "frontend_reason": "distance_out_of_range",
+        "frontend_status": "clarification",
+        "gap_grid_ids": [
+          "SE_CRS3006RES1000mN6165000E382000",
+          "SE_CRS3006RES1000mN6165000E393000",
+          "SE_CRS3006RES1000mN6172000E380000",
+          "SE_CRS3006RES1000mN6173000E377000",
+          "SE_CRS3006RES1000mN6173000E379000",
+          "SE_CRS3006RES1000mN6174000E377000",
+          "SE_CRS3006RES1000mN6181000E377000",
+          "SE_CRS3006RES1000mN6184000E379000",
+          "SE_CRS3006RES1000mN6184000E387000",
+          "SE_CRS3006RES1000mN6186000E377000",
+          "SE_CRS3006RES1000mN6186000E381000"
+        ],
+        "invoked_tools": [
+          "load_population_dataset",
+          "reproject_dataset",
+          "filter_attributes",
+          "buffer_features",
+          "nearest_features",
+          "filter_attributes"
+        ],
+        "metrics": {
+          "age_band_max": 9,
+          "age_band_min": 5,
+          "band_not_reported_cells": 0,
+          "children_threshold": 10,
+          "distance_threshold_m": 1000,
+          "gap_cell_count": 11,
+          "gap_children": 178,
+          "gap_children_share": 0.015502525692388086,
+          "grid_cell_count": 453,
+          "school_count": 132,
+          "total_children": 11482
+        },
+        "missing_fields": [
+          "distance"
+        ],
+        "outcome_status": "success",
+        "planned_tools": [
+          "load_population_dataset",
+          "reproject_dataset",
+          "filter_attributes",
+          "buffer_features",
+          "nearest_features",
+          "filter_attributes"
+        ],
+        "reconfirm_error_code": null,
+        "reconfirm_lineage_ok": null,
+        "reconfirmed_crs": null,
+        "recoveries": [],
+        "replan_count": 0,
+        "report_checks": {
+          "download_geojson_features": 11,
+          "forbidden_phrase": null,
+          "grammar_note": true,
+          "html_has_layers_and_licenses": true,
+          "html_self_contained": true,
+          "layer_count": 4,
+          "licenses": true,
+          "population_statement": true,
+          "validated": true
+        },
+        "stage1_error_code": null
+      },
+      "score": {
+        "case_id": "m12a_B4",
+        "components": {
+          "forbidden_tools": true,
+          "frontend": true,
+          "gap_ids": true,
+          "invoked_tools": true,
+          "metrics": true,
+          "outcome": true,
+          "planned_tools": true,
+          "reconfirmation": true,
+          "recoveries": true,
+          "report": true
+        },
+        "passed": true
+      }
+    },
+    {
+      "record": {
+        "after_resume_status": null,
+        "all_tool_calls": [],
+        "analysis_steps": 0,
+        "case_id": "m12a_B5",
+        "choices": [],
+        "error_code": null,
+        "failed_step": null,
+        "final_content_hash": null,
+        "frontend_reason": "command_not_recognized",
+        "frontend_status": "unsupported",
+        "gap_grid_ids": null,
+        "invoked_tools": [],
+        "metrics": null,
+        "missing_fields": [],
+        "outcome_status": null,
+        "planned_tools": [],
+        "reconfirm_error_code": null,
+        "reconfirm_lineage_ok": null,
+        "reconfirmed_crs": null,
+        "recoveries": [],
+        "replan_count": 0,
+        "report_checks": null,
+        "stage1_error_code": null
+      },
+      "score": {
+        "case_id": "m12a_B5",
+        "components": {
+          "forbidden_tools": true,
+          "frontend": true,
+          "gap_ids": true,
+          "invoked_tools": true,
+          "metrics": true,
+          "outcome": true,
+          "planned_tools": true,
+          "reconfirmation": true,
+          "recoveries": true,
+          "report": true
+        },
+        "passed": true
+      }
+    },
+    {
+      "record": {
+        "after_resume_status": null,
+        "all_tool_calls": [],
+        "analysis_steps": 0,
+        "case_id": "m12a_C1",
+        "choices": [],
+        "error_code": "SCENARIO_CRS_IMPLAUSIBLE",
+        "failed_step": null,
+        "final_content_hash": null,
+        "frontend_reason": null,
+        "frontend_status": "plan",
+        "gap_grid_ids": null,
+        "invoked_tools": [],
+        "metrics": null,
+        "missing_fields": [],
+        "outcome_status": "partial",
+        "planned_tools": [
+          "load_population_dataset",
+          "filter_attributes",
+          "buffer_features",
+          "nearest_features",
+          "filter_attributes"
+        ],
+        "reconfirm_error_code": null,
+        "reconfirm_lineage_ok": null,
+        "reconfirmed_crs": null,
+        "recoveries": [],
+        "replan_count": 0,
+        "report_checks": null,
+        "stage1_error_code": null
+      },
+      "score": {
+        "case_id": "m12a_C1",
+        "components": {
+          "forbidden_tools": true,
+          "frontend": true,
+          "gap_ids": true,
+          "invoked_tools": true,
+          "metrics": true,
+          "outcome": true,
+          "planned_tools": true,
+          "reconfirmation": true,
+          "recoveries": true,
+          "report": true
+        },
+        "passed": true
+      }
+    },
+    {
+      "record": {
+        "after_resume_status": null,
+        "all_tool_calls": [
+          "load_population_dataset",
+          "validate_geometry",
+          "reproject_dataset",
+          "validate_geometry",
+          "filter_attributes",
+          "validate_geometry",
+          "buffer_features",
+          "validate_geometry",
+          "nearest_features",
+          "validate_geometry",
+          "filter_attributes",
+          "validate_geometry"
+        ],
+        "analysis_steps": 6,
+        "case_id": "m12a_C2",
+        "choices": [],
+        "error_code": null,
+        "failed_step": null,
+        "final_content_hash": "sha256:d7e15605f41ca42ad2db285a8fdc2bd47e22290e0fd95dca5353daac52cc056f",
+        "frontend_reason": null,
+        "frontend_status": "plan",
+        "gap_grid_ids": [
+          "SE_CRS3006RES1000mN6165000E382000",
+          "SE_CRS3006RES1000mN6165000E393000",
+          "SE_CRS3006RES1000mN6172000E380000",
+          "SE_CRS3006RES1000mN6173000E377000",
+          "SE_CRS3006RES1000mN6173000E379000",
+          "SE_CRS3006RES1000mN6174000E377000",
+          "SE_CRS3006RES1000mN6181000E377000",
+          "SE_CRS3006RES1000mN6184000E379000",
+          "SE_CRS3006RES1000mN6184000E387000",
+          "SE_CRS3006RES1000mN6186000E377000",
+          "SE_CRS3006RES1000mN6186000E381000"
+        ],
+        "invoked_tools": [
+          "load_population_dataset",
+          "reproject_dataset",
+          "filter_attributes",
+          "buffer_features",
+          "nearest_features",
+          "filter_attributes"
+        ],
+        "metrics": {
+          "age_band_max": 9,
+          "age_band_min": 5,
+          "band_not_reported_cells": 0,
+          "children_threshold": 10,
+          "distance_threshold_m": 1000,
+          "gap_cell_count": 11,
+          "gap_children": 178,
+          "gap_children_share": 0.015502525692388086,
+          "grid_cell_count": 453,
+          "school_count": 132,
+          "total_children": 11482
+        },
+        "missing_fields": [],
+        "outcome_status": "success",
+        "planned_tools": [
+          "load_population_dataset",
+          "filter_attributes",
+          "buffer_features",
+          "nearest_features",
+          "filter_attributes"
+        ],
+        "reconfirm_error_code": null,
+        "reconfirm_lineage_ok": null,
+        "reconfirmed_crs": null,
+        "recoveries": [
+          [
+            "alternate_source",
+            "succeeded"
+          ],
+          [
+            "replan_once",
+            "succeeded"
+          ]
+        ],
+        "replan_count": 1,
+        "report_checks": {
+          "download_geojson_features": 11,
+          "forbidden_phrase": null,
+          "grammar_note": true,
+          "html_has_layers_and_licenses": true,
+          "html_self_contained": true,
+          "layer_count": 4,
+          "licenses": true,
+          "population_statement": true,
+          "validated": true
+        },
+        "stage1_error_code": null
+      },
+      "score": {
+        "case_id": "m12a_C2",
+        "components": {
+          "forbidden_tools": true,
+          "frontend": true,
+          "gap_ids": true,
+          "invoked_tools": true,
+          "metrics": true,
+          "outcome": true,
+          "planned_tools": true,
+          "reconfirmation": true,
+          "recoveries": true,
+          "report": true
+        },
+        "passed": true
+      }
+    },
+    {
+      "record": {
+        "after_resume_status": null,
+        "all_tool_calls": [
+          "load_population_dataset",
+          "validate_geometry",
+          "reproject_dataset",
+          "validate_geometry",
+          "filter_attributes",
+          "validate_geometry",
+          "buffer_features",
+          "validate_geometry",
+          "nearest_features",
+          "validate_geometry",
+          "filter_attributes",
+          "validate_geometry"
+        ],
+        "analysis_steps": 6,
+        "case_id": "m12a_C3",
+        "choices": [],
+        "error_code": null,
+        "failed_step": null,
+        "final_content_hash": "sha256:d7e15605f41ca42ad2db285a8fdc2bd47e22290e0fd95dca5353daac52cc056f",
+        "frontend_reason": null,
+        "frontend_status": "plan",
+        "gap_grid_ids": [
+          "SE_CRS3006RES1000mN6165000E382000",
+          "SE_CRS3006RES1000mN6165000E393000",
+          "SE_CRS3006RES1000mN6172000E380000",
+          "SE_CRS3006RES1000mN6173000E377000",
+          "SE_CRS3006RES1000mN6173000E379000",
+          "SE_CRS3006RES1000mN6174000E377000",
+          "SE_CRS3006RES1000mN6181000E377000",
+          "SE_CRS3006RES1000mN6184000E379000",
+          "SE_CRS3006RES1000mN6184000E387000",
+          "SE_CRS3006RES1000mN6186000E377000",
+          "SE_CRS3006RES1000mN6186000E381000"
+        ],
+        "invoked_tools": [
+          "load_population_dataset",
+          "reproject_dataset",
+          "filter_attributes",
+          "buffer_features",
+          "nearest_features",
+          "filter_attributes"
+        ],
+        "metrics": {
+          "age_band_max": 9,
+          "age_band_min": 5,
+          "band_not_reported_cells": 0,
+          "children_threshold": 10,
+          "distance_threshold_m": 1000,
+          "gap_cell_count": 11,
+          "gap_children": 178,
+          "gap_children_share": 0.015502525692388086,
+          "grid_cell_count": 453,
+          "school_count": 132,
+          "total_children": 11482
+        },
+        "missing_fields": [],
+        "outcome_status": "success",
+        "planned_tools": [
+          "load_population_dataset",
+          "reproject_dataset",
+          "filter_attributes",
+          "buffer_features",
+          "nearest_features",
+          "filter_attributes"
+        ],
+        "reconfirm_error_code": null,
+        "reconfirm_lineage_ok": true,
+        "reconfirmed_crs": "EPSG:4326",
+        "recoveries": [],
+        "replan_count": 0,
+        "report_checks": {
+          "download_geojson_features": 11,
+          "forbidden_phrase": null,
+          "grammar_note": true,
+          "html_has_layers_and_licenses": true,
+          "html_self_contained": true,
+          "layer_count": 4,
+          "licenses": true,
+          "population_statement": true,
+          "validated": true
+        },
+        "stage1_error_code": "SCENARIO_CRS_IMPLAUSIBLE"
+      },
+      "score": {
+        "case_id": "m12a_C3",
+        "components": {
+          "forbidden_tools": true,
+          "frontend": true,
+          "gap_ids": true,
+          "invoked_tools": true,
+          "metrics": true,
+          "outcome": true,
+          "planned_tools": true,
+          "reconfirmation": true,
+          "recoveries": true,
+          "report": true
+        },
+        "passed": true
+      }
+    },
+    {
+      "record": {
+        "after_resume_status": null,
+        "all_tool_calls": [],
+        "analysis_steps": 0,
+        "case_id": "m12a_C4",
+        "choices": [],
+        "error_code": "SCENARIO_CRS_IMPLAUSIBLE",
+        "failed_step": null,
+        "final_content_hash": null,
+        "frontend_reason": null,
+        "frontend_status": "plan",
+        "gap_grid_ids": null,
+        "invoked_tools": [],
+        "metrics": null,
+        "missing_fields": [],
+        "outcome_status": "partial",
+        "planned_tools": [
+          "load_population_dataset",
+          "filter_attributes",
+          "buffer_features",
+          "nearest_features",
+          "filter_attributes"
+        ],
+        "reconfirm_error_code": "SCENARIO_CRS_EVIDENCE_INVALID",
+        "reconfirm_lineage_ok": null,
+        "reconfirmed_crs": null,
+        "recoveries": [],
+        "replan_count": 0,
+        "report_checks": null,
+        "stage1_error_code": "SCENARIO_CRS_IMPLAUSIBLE"
+      },
+      "score": {
+        "case_id": "m12a_C4",
+        "components": {
+          "forbidden_tools": true,
+          "frontend": true,
+          "gap_ids": true,
+          "invoked_tools": true,
+          "metrics": true,
+          "outcome": true,
+          "planned_tools": true,
+          "reconfirmation": true,
+          "recoveries": true,
+          "report": true
+        },
+        "passed": true
+      }
+    },
+    {
+      "record": {
+        "after_resume_status": null,
+        "all_tool_calls": [
+          "load_population_dataset",
+          "validate_geometry",
+          "reproject_dataset",
+          "validate_geometry",
+          "filter_attributes",
+          "validate_geometry"
+        ],
+        "analysis_steps": 0,
+        "case_id": "m12a_C5",
+        "choices": [],
+        "error_code": "SCENARIO_EMPTY_UNEXPECTED",
+        "failed_step": "step_3",
+        "final_content_hash": null,
+        "frontend_reason": null,
+        "frontend_status": "plan",
+        "gap_grid_ids": null,
+        "invoked_tools": [
+          "load_population_dataset",
+          "reproject_dataset",
+          "filter_attributes"
+        ],
+        "metrics": null,
+        "missing_fields": [],
+        "outcome_status": "partial",
+        "planned_tools": [
+          "load_population_dataset",
+          "reproject_dataset",
+          "filter_attributes",
+          "buffer_features",
+          "nearest_features",
+          "filter_attributes"
+        ],
+        "reconfirm_error_code": null,
+        "reconfirm_lineage_ok": null,
+        "reconfirmed_crs": null,
+        "recoveries": [],
+        "replan_count": 0,
+        "report_checks": null,
+        "stage1_error_code": null
+      },
+      "score": {
+        "case_id": "m12a_C5",
+        "components": {
+          "forbidden_tools": true,
+          "frontend": true,
+          "gap_ids": true,
+          "invoked_tools": true,
+          "metrics": true,
+          "outcome": true,
+          "planned_tools": true,
+          "reconfirmation": true,
+          "recoveries": true,
+          "report": true
+        },
+        "passed": true
+      }
+    }
+  ],
+  "cases_passed": 13,
+  "protocol": "m12a-protocol-v1",
+  "schema": "m12a-deterministic-receipt-v1"
+}

@@ -1,0 +1,105 @@
+access=private|Private access restriction|私人通行限制|non-public access|非公众通行|Legal or managed access is restricted to private users; it does not describe physical wheelchair access.|法律或管理规定仅私人可通行，不说明轮椅能否通过。|wheelchair=yes
+amenity=atm|Cash machine|自动取款机|bank cash dispenser|银行取款设备|A self-service machine for financial transactions, distinct from a staffed bank branch.|提供金融自助交易的设备，不等同于有人值守的银行网点。|amenity=bank
+amenity=bank|Bank branch|银行网点|staffed bank office|银行营业厅|A financial establishment offering customer services such as deposits and loans.|提供存款、贷款等服务的金融机构网点。|amenity=atm
+amenity=bench|Public bench|公共长椅|outdoor sitting bench|户外坐凳|A fixed place for one or more people to sit, without implying weather protection.|供一人或多人坐下休息的设施，不表示可遮风避雨。|amenity=shelter
+amenity=bus_station|Bus station|公交客运站|bus terminal|公交总站|A larger bus facility where routes start, end or connect; a single roadside stop is different.|多条巴士线路始发、终到或换乘的场站，区别于单个路边站点。|highway=bus_stop
+amenity=car_rental|Car rental location|汽车租赁点|rental car counter|租车营业点|A place where customers rent cars, distinct from a shared-car pickup station.|向顾客出租汽车的营业地点，区别于共享汽车取还站。|amenity=car_sharing
+amenity=car_sharing|Car sharing station|共享汽车站点|shared car pickup|分时租车取车点|A station for collecting a booked shared car, often in a marked parking area.|领取预订共享汽车的站点，常设在划定停车区域。|amenity=car_rental
+amenity=childcare|Childcare facility|托育照护机构|child day care|儿童日间照护|A place where children are cared for that is not a kindergarten school.|照看儿童的机构，不等同于幼儿园教育设施。|amenity=kindergarten
+amenity=parcel_locker|Parcel locker|快递自提柜|automated parcel cabinet|包裹自取柜|A machine for collecting or sending parcels without a staffed post office counter.|供自助领取或寄出包裹的柜机，不等同于邮局柜台。|amenity=post_office
+amenity=parking_entrance|Parking facility entrance|停车场出入口|garage vehicle entrance|车库车辆入口|An entrance to an underground or multi-storey parking facility, not an individual parking bay.|地下或多层停车设施的出入口，不是一处停车位。|amenity=parking_space
+amenity=parking_space|Individual parking space|单个停车位|single parking bay|独立车位|One marked parking place within a larger facility, distinct from the parking lot as a whole.|停车设施中的单个车位，区别于整个停车场。|amenity=parking
+amenity=place_of_worship|Place of worship|宗教礼拜场所|religious worship venue|礼拜场所|A place used for religious services, not a general community meeting centre.|举行宗教礼拜活动的场所，不是普通社区活动中心。|amenity=community_centre
+amenity=post_box|Postal collection box|邮筒|mail drop box|投信箱|A box for depositing outgoing mail, not a staffed postal office.|供投递待寄邮件的箱体，不提供邮局柜台服务。|amenity=post_office
+amenity=public_bath|Public bath facility|公共浴场|communal bathing venue|公众洗浴场所|A facility open to the public for communal bathing, distinct from a swimming pool for sport.|面向公众提供集体洗浴的设施，区别于用于游泳的泳池。|leisure=swimming_pool
+amenity=research_institute|Research institute|科研机构|scientific research centre|研究所|An establishment dedicated to research, distinct from a university campus as a whole.|专门开展科研的机构，不等同于整座大学校园。|amenity=university
+amenity=shelter|Weather shelter|避雨棚|protective shelter|遮风避雨棚|A small structure protecting people from bad weather, without implying seating.|用于遮挡恶劣天气的小型构筑物，不必然有座椅。|amenity=bench
+amenity=waste_basket|Pedestrian litter bin|街头垃圾桶|small public trash bin|路边废物箱|A small, pedestrian-accessible container for litter, not a large household waste container.|供行人丢弃零散垃圾的小容器，不是大型生活垃圾收集箱。|amenity=waste_disposal
+amenity=waste_disposal|Waste disposal container|垃圾收集箱|large refuse bin|大型废物收集容器|A medium or large bin for bagged household or industrial waste, distinct from a litter basket.|收集袋装家庭或工业废物的中大型容器，区别于行人垃圾桶。|amenity=waste_basket
+bicycle=designated|Designated bicycle access|指定骑行通行|signed bicycle route access|自行车指定通行|Indicates a road or object is designated for cyclists; it says nothing about wheelchair access.|表示道路或对象指定供骑行者使用，不说明轮椅可达性。|foot=designated
+building=civic|Civic-purpose building|公共事务建筑|civic building type|市政公共建筑|A building constructed for civic functions; its type does not prove a service is currently operating.|为公共事务用途建造的建筑，其建筑类型不能证明服务仍在提供。|office=government
+building=college|College building|学院建筑|college premises building|高等学院楼宇|A building constructed to house a college; the building tag does not prove active teaching.|为学院建造的楼宇，建筑标签不能证明当前正在教学。|amenity=college
+building=garage|Single garage building|独立车库建筑|private garage structure|单间车库|One private garage building, distinct from a block of separate garages.|单间私人车库建筑，区别于成排独立车库。|building=garages
+building=garages|Garage block building|联排车库建筑|row of garages|多间车库排屋|A block of private garages with separate units or owners, not one garage.|由多间独立车库构成的建筑，区别于单间车库。|building=garage
+building=hospital|Hospital building|医院建筑|hospital-purpose building|医院楼宇|A building forming part of a hospital; its structure alone does not prove medical services operate there.|医院组成部分的建筑，其建筑类型不能单独证明正在提供医疗服务。|amenity=hospital
+building=hotel|Hotel-type building|酒店建筑|hotel-purpose building|旅馆楼宇|A building designed for overnight rooms; its form does not prove lodging is currently offered.|设计用于提供住宿客房的建筑，不能仅凭建筑类型断定当前营业。|tourism=hotel
+building=kindergarten|Kindergarten building|幼儿园建筑|preschool-purpose building|幼儿园楼宇|A building constructed as a kindergarten; the tag does not establish current childcare operation.|作为幼儿园建造的楼宇，不能据此确定当前仍在提供托育服务。|amenity=kindergarten
+building=train_station|Railway station building|火车站建筑|train station structure|铁路车站楼宇|The building type of a train station, distinct from the station transport feature or timetable service.|铁路车站的建筑类型，区别于车站交通要素及实际班次。|railway=station
+building=university|University building|大学建筑|university premises building|高校楼宇|A building constructed for a university; its type does not prove active education on site.|为大学建造的楼宇，其类型不能单独证明当前教学活动。|amenity=university
+building=warehouse|Warehouse building|仓库建筑|goods storage building|货物储存楼宇|A building constructed for storage of goods, distinct from a whole industrial land-use area.|用于储存货物的建筑，区别于整片工业用地区域。|landuse=industrial
+foot=designated|Designated pedestrian access|指定步行通行|signed foot access|行人指定通行|Indicates a route or object is designated for pedestrians; it does not prove wheelchair access.|表示路线或对象指定供行人通行，不能据此认定轮椅可达。|bicycle=designated
+healthcare=alternative|Alternative healthcare practice|替代疗法机构|complementary medicine facility|补充医疗场所|A facility practising complementary or alternative care such as acupuncture, distinct from a general clinic.|开展针灸等补充或替代疗法的机构，区别于普通诊所。|healthcare=clinic
+healthcare=centre|Unspecified healthcare centre|未细分医疗中心|general healthcare centre|综合医疗中心|A healthcare facility without a more specific service type; use a precise tag when known.|未说明具体服务类型的医疗机构，已知服务时应使用更精确标签。|healthcare=clinic
+healthcare=clinic|Healthcare clinic|医疗诊所|outpatient medical clinic|临床门诊服务|An outpatient medical facility with more staff than a doctor office and without inpatient admission.|人员多于普通医生诊所、通常不收住院病人的门诊医疗机构。|amenity=clinic
+healthcare=dentist|Dental practice service|牙科医疗机构|dentist healthcare service|口腔诊疗机构|A dental practice service tag, often paired with the amenity dentist facility tag.|表示牙科诊疗服务，常与牙医设施主标签并用。|amenity=dentist
+healthcare=doctor|Physician healthcare service|医生医疗服务|doctor practice service|医师诊疗服务|A physician consultation or check-up service, often added to a doctors facility.|表示医师问诊或体检服务，常附加在医生诊所设施上。|amenity=doctors
+healthcare=hospital|Hospital healthcare service|医院医疗服务|inpatient hospital care|住院医院服务|Inpatient hospital treatment service, often paired with the hospital facility tag.|表示提供住院治疗的医院医疗服务，常与医院设施标签并用。|amenity=hospital
+healthcare=nurse|Nursing healthcare facility|护理医疗机构|nurse-led care place|护士照护场所|A facility where a nurse provides healthcare without being a physician practice.|由护士提供医疗照护的机构，不是医师诊所。|healthcare=doctor
+healthcare=optometrist|Optometrist healthcare service|验光医疗服务|vision examination practice|视力检查诊所|An optometrist office providing vision examination, distinct from a shop selling eyewear.|提供视力检查的验光机构，区别于销售眼镜的商店。|shop=optician
+healthcare=pharmacy|Pharmacist healthcare service|药剂师医疗服务|prescription dispensing service|处方配药服务|A pharmacist-led medicine dispensing service, often paired with a pharmacy facility tag.|由药剂师提供的药品配发服务，常与药房设施标签并用。|amenity=pharmacy
+healthcare=rehabilitation|Medical rehabilitation facility|康复医疗机构|inpatient rehabilitation centre|医疗康复中心|A medical rehabilitation facility, often offering inpatient or residential care.|提供医疗康复的机构，通常含住院或住宿照护。|healthcare=hospital
+highway=crossing|Street crossing point|道路过街点|pedestrian crossing location|行人过街位置|A point where people walking or cycling cross a road, not the entire footway.|行人或骑行者穿越道路的位置，不表示整条步道。|highway=footway
+highway=cycleway|Cycleway|自行车专用道|designated bike path|骑行专用路径|A way designated mainly for cycling, distinct from a pedestrian footway.|主要指定供自行车行驶的道路，区别于步行道。|highway=footway
+highway=footway|Footway|步行道|pedestrian footpath|行人专用路径|A path mainly or exclusively for people on foot, rather than a generic mixed-use path.|主要或专供步行者通行的路径，区别于一般混合用途小路。|highway=path
+highway=living_street|Living street|生活街道|shared low-speed street|低速共享街道|A street with very low speeds and pedestrian-friendly traffic rules, unlike an ordinary residential road.|实行低速和行人友好交通规则的街道，区别于普通居住区道路。|highway=residential
+highway=path|General path|一般小路|mixed-use trail|混合通行路径|A generic path for walking, cycling or animals, without the exclusive footway meaning.|可供步行、骑行或动物通行的一般小路，不表示专供行人。|highway=footway
+highway=pedestrian|Pedestrian road|步行街道路|pedestrian-priority street|行人优先街道|A road mainly or exclusively for pedestrians, distinct from a narrow footway path.|主要或专供行人的道路，区别于狭窄步行小径。|highway=footway
+highway=primary|Primary road|一级干道|major intertown road|主要城际道路|A major road linking large towns or serving as an important urban arterial.|连接较大城镇或承担城市主干交通的主要道路。|highway=secondary
+highway=residential|Residential road|居住区道路|neighbourhood street|住宅街道|A road serving a residential area, without the special low-speed rules of a living street.|服务住宅区的道路，不自动具有生活街道的特殊低速规则。|highway=living_street
+highway=secondary|Secondary road|二级干道|secondary arterial road|次要城际道路|An arterial road linking towns, below a primary road in road hierarchy.|连接城镇的次要干道，道路等级低于一级干道。|highway=primary
+highway=service|Service access road|服务通道|property access road|地块出入道路|A road providing access to buildings or facilities, rather than a neighbourhood through road.|通向建筑或设施的接入道路，不是普通住宅区贯通道路。|highway=residential
+highway=steps|Steps way|阶梯道路|stairway path|楼梯通道|A flight of steps on a path or footway; steps alone do not imply wheelchair access.|道路或步道上的台阶通道，不能据此认定轮椅可通行。|highway=footway
+highway=tertiary|Tertiary road|三级道路|local connector road|小城镇连接道路|A road linking smaller settlements or local centres, below secondary roads.|连接较小聚落或本地中心的道路，等级低于二级道路。|highway=secondary
+highway=track|Land-access track|农林通行路|farm or forest access track|农林作业道路|A minor access road such as a farm or forest track, distinct from a general path.|服务农田或林地等地块的次要通行路，区别于一般小路。|highway=path
+kerb=lowered|Lowered kerb attribute|降低路缘属性|dropped curb condition|下沉路缘状况|A lowered kerb at a crossing or driveway; it does not prove a complete wheelchair-accessible route.|过街处或车道口降低的路缘，不足以证明整条路线轮椅无障碍。|wheelchair=yes
+landuse=commercial|Commercial land use|商业办公用地|business district land|商业服务用地区|An area mainly occupied by offices or commercial services, not specifically a shop cluster.|主要用于办公或商业服务的区域，不专指商店集中区。|landuse=retail
+landuse=construction|Construction land use|建设中用地|building work area|施工开发地块|An area currently being built on, distinct from an established industrial district.|正在建设施工的区域，区别于已投入使用的工业区。|landuse=industrial
+landuse=industrial|Industrial land use|工业用地|factory district land|工厂园区土地|An area mainly used by workshops, factories or warehouses, not just one warehouse building.|主要用于车间、工厂或仓库的区域，不是单栋仓库建筑。|building=warehouse
+landuse=railway|Railway operation land|铁路运营用地|rail yard land area|铁路场站用地区|Land dedicated to rail operation and support, including yards and corridors, not a single track line.|用于铁路运营及配套的区域，包括编组场和廊道，不是单条轨道线。|railway=rail
+landuse=residential|Residential land use|居住用地|housing district land|住宅片区用地|An area predominantly used for housing, distinct from one residential road or building.|主要用于居住的区域，区别于单条住宅道路或单栋住宅建筑。|highway=residential
+landuse=retail|Retail land use|零售商业用地|shopping district land|商店集聚用地|An area dominated by shops, more specific than general commercial office land.|以商店为主的区域，比一般商业办公用地更具体。|landuse=commercial
+leisure=dog_park|Dog park|遛狗公园|off-leash dog area|犬只活动区|A designated area for dogs to exercise, distinct from a general public park.|专供犬只活动的划定区域，区别于普通公共公园。|leisure=park
+leisure=picnic_table|Picnic table|野餐桌|outdoor eating table|户外餐桌|A table with seats for eating outdoors, distinct from a simple bench.|供户外用餐并带座位的桌子，区别于普通长椅。|amenity=bench
+leisure=swimming_area|Open-water swimming area|天然水域游泳区|marked bathing area|划定开放水域泳区|A marked swimming area within a lake, river or sea, not a built swimming pool.|湖泊、河流或海中划定的游泳区域，不是人工泳池。|leisure=swimming_pool
+leisure=track|Sport racing track|运动竞赛跑道|non-motor racing circuit|非机动车竞赛轨道|A track for running, cycling or animal racing, distinct from a railway track.|供跑步、骑行或动物竞赛的跑道，区别于铁路轨道。|railway=rail
+public_transport=stop_position|Vehicle stop position|公交车辆停靠位置|on-road transit stop point|车辆实际停靠点|The point on road or rail where a transit vehicle stops, distinct from passenger platform space.|公共交通车辆在道路或轨道上的实际停靠位置，区别于乘客站台。|public_transport=platform
+railway=light_rail|Light-rail track|轻轨线路|light rail rails|轻轨轨道|Rails carrying light rail vehicles; a track element, not a station, platform or scheduled service.|轻轨车辆行驶的轨道线路要素，不是车站、站台或班次。|railway=tram
+railway=rail|Conventional railway track|常规铁路线路|mainline rail tracks|普通铁路轨道|Typical-gauge railway rails; a line feature rather than a station or timetable service.|常规轨距铁路的轨道线路，不是车站或时刻表班次。|railway=light_rail
+railway=subway|Metro track|地铁线路|segregated urban rail|地铁轨道|Rails for grade-separated urban rapid transit; a track feature rather than a subway entrance.|与其他交通分隔的城市轨道线路，区别于地铁出入口。|railway=subway_entrance
+railway=tram|Tram track|有轨电车线路|streetcar rails|路面电车轨道|Rails used by trams, often in streets; a line feature rather than a tram stop.|有轨电车行驶的轨道线路，不是电车站点。|railway=tram_stop
+route=bus|Bus route relation|公交线路关系|scheduled bus route path|巴士线路关系|A mapped relation for a public bus route, not an individual stop or proof of a specific day's service.|表示公共巴士路线的关系要素，不是单个站点，也不能证明某日有班次。|highway=bus_stop
+shop=alcohol|Alcohol shop|酒类专卖店|liquor retailer|酒水专卖商店|A shop chiefly selling alcoholic drinks, more specific than a general beverage shop.|主要销售酒精饮料的商店，比普通饮料店更具体。|shop=beverages
+shop=beauty|Beauty service shop|美容服务店|nail and beauty salon|美容美甲店|A beauty treatment business other than a hairdresser, such as nails or skin care.|提供美甲或皮肤护理等非理发美容服务的店铺。|shop=hairdresser
+shop=beverages|Beverage shop|饮料专营店|drinks retailer|饮品零售店|A shop selling packaged drinks, possibly both alcoholic and non-alcoholic.|销售包装饮料的商店，可同时经营含酒精和不含酒精饮品。|shop=alcohol
+shop=car_repair|Car repair workshop|汽车修理店|auto repair shop|车辆维修店|A business repairing cars, distinct from a place that rents or sells vehicles.|维修汽车的营业场所，区别于汽车租赁或销售点。|amenity=car_rental
+shop=cheese|Cheese shop|奶酪专卖店|specialist cheese retailer|乳酪商店|A shop mainly selling cheese rather than a broad range of foods.|主要销售奶酪的商店，而不是经营多种食品的综合店。|shop=deli
+shop=chocolate|Chocolate shop|巧克力专卖店|chocolatier retailer|巧克力零售店|A shop focused on chocolate products, distinct from a general confectionery store.|主要销售巧克力制品的商店，区别于综合糖果店。|shop=confectionery
+shop=coffee|Packaged coffee shop|咖啡豆零售店|coffee bean retailer|咖啡粉专卖店|A shop mainly selling packaged coffee beans or grounds, not a cafe serving drinks.|主要销售包装咖啡豆或咖啡粉的店铺，不是提供现制饮品的咖啡馆。|amenity=cafe
+shop=copyshop|Copy and print shop|复印打印店|photocopy centre|文印服务店|A business providing photocopying and printing, rather than selling office supplies.|提供复印和打印服务的店铺，区别于售卖办公用品的商店。|shop=stationery
+shop=farm|Farm produce shop|农场直销店|farm-gate store|农产品农场店|A shop on a farm selling its produce, distinct from a general fruit and vegetable retailer.|设在农场并出售农产品的店铺，区别于一般果蔬零售店。|shop=greengrocer
+shop=food|General food shop|食品商店|miscellaneous food retailer|综合食品店|A shop selling food without a more specific product type; a supermarket is a distinct format.|销售食品但未细分品类的店铺，超市是另一种具体业态。|shop=supermarket
+shop=frozen_food|Frozen food shop|冷冻食品店|frozen groceries retailer|冰冻食材商店|A retailer mainly selling frozen food, more specific than a general food shop.|主要销售冷冻食品的店铺，比一般食品店更具体。|shop=food
+shop=garden_centre|Garden centre shop|园艺中心|horticultural retailer|园艺用品中心|A retailer selling potted plants, seedlings and gardening products, not a public garden.|销售盆栽、幼苗和园艺用品的店铺，不是公共花园。|leisure=garden
+shop=greengrocer|Fruit and vegetable shop|果蔬店|produce retailer|蔬果零售店|A shop specializing in fresh fruit and vegetables, unlike a full supermarket.|专门销售新鲜水果和蔬菜的店铺，区别于综合超市。|shop=supermarket
+shop=hairdresser|Hairdresser or barber|理发店|hair cutting salon|美发店|A place where hair is cut, distinct from beauty shops focused on other treatments.|提供剪发服务的场所，区别于经营其他美容项目的店铺。|shop=beauty
+shop=jewelry|Jewellery shop|珠宝首饰店|jeweller retailer|首饰零售店|A retailer of rings, necklaces and similar ornaments, unlike a general variety shop.|销售戒指、项链等饰品的店铺，区别于综合杂货店。|shop=variety_store
+shop=laundry|Self-service laundry|自助洗衣店|laundromat|投币洗衣店|A shop for washing clothing and bedding, often unattended and self-service.|清洗衣物与床品的店铺，通常无人值守并由顾客自助操作。|shop=clothes
+shop=optician|Optician shop|眼镜店|eyewear retailer|配镜商店|A shop selling and fitting prescription glasses or contacts, distinct from an optometrist healthcare office.|销售和配制眼镜或隐形眼镜的店铺，区别于验光医疗机构。|healthcare=optometrist
+shop=pet|Pet shop|宠物商店|pet supplies retailer|宠物用品店|A shop selling pets or pet supplies, not a veterinary medical service.|销售宠物或宠物用品的店铺，不提供兽医诊疗服务。|amenity=veterinary
+shop=second_hand|Second-hand goods shop|二手商品店|used goods retailer|旧货商店|A retailer of previously owned goods, rather than new merchandise in a variety store.|销售曾被使用的商品的店铺，区别于销售新商品的杂货店。|shop=variety_store
+shop=sports|Sports goods shop|体育用品店|athletic equipment retailer|运动器材商店|A shop selling sporting equipment and clothing, not a venue where sport is played.|销售运动器材和服装的商店，不是开展体育活动的场馆。|leisure=sports_centre
+shop=stationery|Stationery shop|文具店|office supplies retailer|办公用品店|A retailer of paper and office supplies, distinct from a printing service.|销售纸张及办公用品的店铺，区别于复印打印服务点。|shop=copyshop
+shop=tea|Tea shop|茶叶专卖店|loose-leaf tea retailer|包装茶零售店|A shop selling loose-leaf or packaged tea, not a cafe serving prepared drinks.|销售散装或包装茶叶的店铺，不是提供现制饮品的咖啡馆。|amenity=cafe
+shop=toys|Toy shop|玩具店|children's toy retailer|儿童玩具商店|A shop focused on children's toys rather than general low-cost merchandise.|主要销售儿童玩具的店铺，区别于一般廉价杂货店。|shop=variety_store
+shop=travel_agency|Travel agency shop|旅行社门店|holiday booking office|旅游预订门店|A business arranging travel services and products, not a tourist attraction itself.|办理旅行产品和服务的营业门店，本身不是旅游景点。|tourism=attraction
+shop=variety_store|Variety store|杂货百货店|low-price mixed-goods shop|平价综合商店|A retailer of many inexpensive product types, distinct from a food-focused supermarket.|销售多种低价商品的店铺，区别于以食品为主的超市。|shop=supermarket
+sidewalk=both|Sidewalks on both sides|双侧人行道|two-sided pavement presence|道路两侧步道|Indicates sidewalks exist on both sides of a road; this does not prove wheelchair accessibility.|说明道路两侧均有人行道，不表示人行道本身轮椅可达。|wheelchair=yes
+tourism=attraction|Tourist attraction|旅游景点|visitor interest site|观光景物|An object or place of interest to visitors, broader than a particular viewpoint.|吸引游客参观的对象或地点，范围广于具体观景点。|tourism=viewpoint
+tourism=camp_site|Campsite|露营地|overnight camping area|帐篷营地|An area for overnight tents, camper vans or caravans, not indoor guest accommodation.|供帐篷、房车或拖挂车过夜的区域，不是室内旅馆住宿。|tourism=guest_house
+tourism=guest_house|Guest house|家庭旅馆|small owner-run lodging|民宿旅馆|Small-scale, often owner-operated lodging, distinct from a full hotel.|规模较小且常由业主经营的住宿场所，区别于大型酒店。|tourism=hotel
+tourism=hotel|Operating hotel|营业酒店|paid hotel lodging|提供住宿的酒店|An establishment offering paid overnight accommodation, unlike the building type alone.|提供付费过夜住宿的营业场所，区别于仅说明建筑用途的标签。|building=hotel
+tourism=museum|Museum|博物馆|exhibition museum|文博展馆|An institution exhibiting scientific, historical or cultural collections, more specific than a general attraction.|展示科学、历史或文化藏品的机构，比一般旅游景点更具体。|tourism=attraction
+tourism=viewpoint|Scenic viewpoint|观景点|panorama lookout|风景眺望点|A place with a notable view of surrounding landscape or buildings, not every tourist attraction.|可眺望周边景观或建筑的地点，并非所有旅游景点都属此类。|tourism=attraction
+wheelchair=limited|Limited wheelchair access|轮椅可达性有限|partial wheelchair usability|轮椅部分可达|Wheelchair access is limited; the exact accessible scope cannot be determined from this tag alone.|轮椅可达性有限，具体可达范围不能仅凭此标签确定。|wheelchair=yes
+wheelchair=no|No wheelchair access|轮椅不可达|wheelchair access denied by layout|轮椅无法通行|The mapped object is not wheelchair accessible; this physical condition differs from a legal access restriction.|该对象无法供轮椅通行；这一物理条件不同于法律通行限制。|access=private
+wheelchair=yes|Wheelchair accessible|轮椅可达|full wheelchair usability|轮椅可进入|The mapped object has unrestricted wheelchair access, but this tag alone does not establish an accessible route to it.|对象允许轮椅无障碍使用，但此标签不能证明通往它的整条路线可达。|wheelchair=limited

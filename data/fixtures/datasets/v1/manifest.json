@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "fixtures": {
+    "places.geojson": {
+      "sha256": "a9f987926069a297a25025534cd358c9e07f8857ca16d4e79147a546313eb48e",
+      "kind": "vector",
+      "crs": "EPSG:4326",
+      "row_count": 3,
+      "bbox": [13.1, 55.6, 13.3, 55.8]
+    },
+    "population.csv": {
+      "sha256": "669bc6a244c6d16c8684bc0adb21035eeaa61780f524307c16d9b0ca1d9fa0f5",
+      "kind": "table",
+      "crs": "EPSG:4326",
+      "row_count": 3,
+      "bbox": null
+    }
+  }
+}

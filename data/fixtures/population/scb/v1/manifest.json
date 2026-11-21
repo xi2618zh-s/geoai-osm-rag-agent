@@ -1,0 +1,118 @@
+{
+  "schema_version": 1,
+  "fixture_version": "m05-scb-population-v1",
+  "provider": "Statistics Sweden (SCB)",
+  "layer": "stat:befolkning_1km_2025",
+  "dataset_year": 2025,
+  "population_reference_date": "2025-12-31",
+  "crs": "EPSG:3006",
+  "license": "CC0-1.0",
+  "source_page": "https://www.scb.se/en/services/open-data-api/open-geodata/grid-statistics/",
+  "license_page": "https://www.scb.se/en/services/open-data-api/",
+  "retrieved_at_utc": "2026-10-04T21:09:43Z",
+  "request": {
+    "base_url": "https://geodata.scb.se/geoserver/stat/wfs",
+    "canonical_url": "https://geodata.scb.se/geoserver/stat/wfs?service=WFS&version=1.1.0&request=GetFeature&typeName=stat%3Abefolkning_1km_2025&srsName=EPSG%3A3006&bbox=385000%2C6174000%2C387000%2C6176000%2CEPSG%3A3006&outputFormat=application%2Fjson&sortBy=objectid&propertyName=objectid%2Crutid_inspire%2Crutid_scb%2Crutstorl%2Cbeftotalt%2Cman%2Ckvinna%2Cald0_4%2Cald5_9%2Cald10_14%2Cald15_19%2Cald20_24%2Cald25_29%2Cald30_34%2Cald35_39%2Cald40_44%2Cald45_49%2Cald50_54%2Cald55_59%2Cald60_64%2Cald65_69%2Cald70_74%2Cald75_79%2Cald80_84%2Cald85_89%2Cald90_94%2Cald95_99%2Cald100w%2Creferenstid%2Csp_geometry",
+    "wfs_version": "1.1.0",
+    "type_name": "stat:befolkning_1km_2025",
+    "srs_name": "EPSG:3006",
+    "bbox": [385000.0, 6174000.0, 387000.0, 6176000.0],
+    "output_format": "application/json",
+    "sort_by": "objectid",
+    "property_names": [
+      "objectid",
+      "rutid_inspire",
+      "rutid_scb",
+      "rutstorl",
+      "beftotalt",
+      "man",
+      "kvinna",
+      "ald0_4",
+      "ald5_9",
+      "ald10_14",
+      "ald15_19",
+      "ald20_24",
+      "ald25_29",
+      "ald30_34",
+      "ald35_39",
+      "ald40_44",
+      "ald45_49",
+      "ald50_54",
+      "ald55_59",
+      "ald60_64",
+      "ald65_69",
+      "ald70_74",
+      "ald75_79",
+      "ald80_84",
+      "ald85_89",
+      "ald90_94",
+      "ald95_99",
+      "ald100w",
+      "referenstid",
+      "sp_geometry"
+    ]
+  },
+  "http_metadata": {
+    "status": 200,
+    "content_type": "application/json; charset=utf-8",
+    "last_modified": null,
+    "etag": null,
+    "response_sha256": "57ab085390871cba3fdde36259b69dbbb2db88c188e44c91e4ec9ef4bb1daf1a"
+  },
+  "schema": {
+    "describe_feature_type_url": "https://geodata.scb.se/geoserver/stat/wfs?service=WFS&version=1.1.0&request=DescribeFeatureType&typeName=stat%3Abefolkning_1km_2025",
+    "sha256": "45f9c1ba7397a126cc0a303bd85d75f45d357100e8aaa423b421396a46621c25",
+    "required_non_null": {
+      "objectid": "xsd:int"
+    },
+    "nullable_strings": ["rutid_inspire", "rutid_scb", "referenstid"],
+    "nullable_integers": [
+      "rutstorl",
+      "beftotalt",
+      "man",
+      "kvinna",
+      "ald0_4",
+      "ald5_9",
+      "ald10_14",
+      "ald15_19",
+      "ald20_24",
+      "ald25_29",
+      "ald30_34",
+      "ald35_39",
+      "ald40_44",
+      "ald45_49",
+      "ald50_54",
+      "ald55_59",
+      "ald60_64",
+      "ald65_69",
+      "ald70_74",
+      "ald75_79",
+      "ald80_84",
+      "ald85_89",
+      "ald90_94",
+      "ald95_99",
+      "ald100w"
+    ],
+    "geometry": "gml:SurfacePropertyType"
+  },
+  "fixtures": {
+    "scb_population_grid_2025_raw.geojson": {
+      "sha256": "2a8445da8e4eb41baabab41f18d0fc8018621f21c2338737ace88ac0efe09b56",
+      "feature_count": 16,
+      "origin": "SCB WFS response preserved as UTF-8 with one repository trailing LF"
+    },
+    "poi_reference.geojson": {
+      "sha256": "628720d2ca5f489f67d178a7c8c7c1d0ea40dc8fc1600f72603b946af8451d1b",
+      "feature_count": 1,
+      "origin": "Project-authored synthetic reference POI",
+      "license": "CC0-1.0"
+    },
+    "expected_reference.json": {
+      "sha256": "6ad5302f240d07e39eae038b6752967f600b5daae5375ec2b53c0775b55607a9",
+      "feature_count": null,
+      "origin": "Project-authored analytical reference derived from four fully contained SCB cells",
+      "license": "CC0-1.0"
+    }
+  },
+  "disclosure_control_note": "SCB states that statistical disclosure control may cause totals to differ from sex and age components; these differences are not treated as corruption."
+}

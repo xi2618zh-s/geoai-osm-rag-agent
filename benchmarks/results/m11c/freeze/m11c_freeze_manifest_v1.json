@@ -1,0 +1,254 @@
+{
+  "ablation_systems": [
+    {
+      "clarification": null,
+      "frontend_version": "m11c-frontend-v1",
+      "model_id": null,
+      "planner_grammar": null,
+      "prompt_version": null,
+      "replan": null,
+      "system_id": "template_workflow",
+      "systems_version": "m11c-baselines-v1",
+      "templates": [
+        "search",
+        "nearest",
+        "within",
+        "spatial_join",
+        "aggregate_by_region"
+      ],
+      "validation": null
+    },
+    {
+      "frontend_version": null,
+      "model_id": null,
+      "planner_grammar": "m07.2",
+      "prompt_version": null,
+      "replan": "regrounded_once",
+      "system_id": "validator_no_frontend",
+      "systems_version": "m11c-baselines-v1",
+      "validation_policy": {
+        "allow_crs_repair": false,
+        "allow_empty": true,
+        "allow_geometry_repair": false,
+        "alternate_sources": {},
+        "expected_max_count": null,
+        "expected_min_count": null,
+        "max_features": 10000,
+        "required_final_fields": [],
+        "schema_version": "1.0"
+      }
+    },
+    {
+      "frontend_version": "m11c-frontend-v1",
+      "model_id": null,
+      "planner_grammar": "m07.2",
+      "prompt_version": null,
+      "replan": "regrounded_once",
+      "system_id": "validator_strict_empty",
+      "systems_version": "m11c-baselines-v1",
+      "validation_policy": {
+        "allow_crs_repair": false,
+        "allow_empty": false,
+        "allow_geometry_repair": false,
+        "alternate_sources": {},
+        "expected_max_count": null,
+        "expected_min_count": null,
+        "max_features": 10000,
+        "required_final_fields": [],
+        "schema_version": "1.0"
+      }
+    },
+    {
+      "frontend_version": "m11c-frontend-v1",
+      "model_id": null,
+      "planner_grammar": "m07.2",
+      "prompt_version": null,
+      "replan": null,
+      "system_id": "validator_no_replan",
+      "systems_version": "m11c-baselines-v1",
+      "validation_policy": {
+        "allow_crs_repair": false,
+        "allow_empty": true,
+        "allow_geometry_repair": false,
+        "alternate_sources": {},
+        "expected_max_count": null,
+        "expected_min_count": null,
+        "max_features": 10000,
+        "required_final_fields": [],
+        "schema_version": "1.0"
+      }
+    }
+  ],
+  "definitions": {
+    "executable": "System reaches tool execution: FW-A/FW-B front-end request with an operation that has a template; agents front-end request and M07 status plan; A1 raw M07 plan.",
+    "secondary_pass": "Diagnostic, non-official: same prediction, every component passed except required_steps is ignored. Not an M11b pass rate and not end-to-end validation.",
+    "stdev": "Across runs: sample standard deviation; within a run: population standard deviation.",
+    "strict_pass": "Official M11b v2.0 TaskScore.passed (scorer unchanged); primary metric.",
+    "subsets": "full: every task; common_executable: executable by fixed_workflow, dynamic_agent and validator_replan; agent_executable: by both agents; decision: benchmark expects non-success; supported_unexecutable_by_formal: supported tasks no formal config executes.",
+    "tool_sequence": "Analysis tools of the pass that produced the returned result; retries and validate_geometry checks count in tool_calls only."
+  },
+  "dev": {
+    "catalogue": {
+      "files": {
+        "empty": {
+          "crs": "EPSG:3857",
+          "file": "empty.geojson",
+          "sha256": "b3049ad7a1062091e169bd352424d59721a26b8b6229942aef26d11b0c6a96e1"
+        },
+        "points": {
+          "crs": "EPSG:4326",
+          "file": "geographic_points.geojson",
+          "sha256": "afeb0be1553607d0a2918b6786e1f15d34a42e3141c07b76ae82ca515af58c0b"
+        },
+        "regions": {
+          "crs": "EPSG:3857",
+          "file": "projected_regions.geojson",
+          "sha256": "f1a3f665b2dd0c33ebcd83de2e02ae157b683f8618c9834cc15888be585a1e7a"
+        },
+        "sources": {
+          "crs": "EPSG:3857",
+          "file": "projected_sources.geojson",
+          "sha256": "456a6d5cc0ab7ecc9f92efabcfe4381aab4095d1bf811832bf99a0349c42283d"
+        },
+        "targets": {
+          "crs": "EPSG:3857",
+          "file": "projected_targets.geojson",
+          "sha256": "7aaf609400bbf64ae1fc85118a8371ab0d818634cce3a561e39f31a3ee7c9731"
+        },
+        "tie": {
+          "crs": "EPSG:3857",
+          "file": "invalid_bow_tie.geojson",
+          "sha256": "4894925c724473e377275dc898e21a5f72a6d8fe8190f27f3c88b8b88d4f6cb1"
+        },
+        "values": {
+          "crs": "EPSG:3857",
+          "file": "aggregate_values.geojson",
+          "sha256": "4f9dd5c5c3d1d21ce1247e3f11496fbd9dbd3347d5b5b01275a65714b665b9a9"
+        }
+      },
+      "name": "m04b-v1",
+      "scope": "Synthetic dev catalogue"
+    },
+    "task_count": 160,
+    "task_ids_sha256": "sha256:f0362d3f23e0344aabd20026297dffe2fab32d46b96fa42b8eb45806bc54f487",
+    "tasks_sha256": "sha256:6c7f2ab5d09581642918ccda6f0f7cba90cbcb25ab9b7427d6c68596dc2d94fb"
+  },
+  "dev_common_executable_task_ids": [
+    "m11b_dev_001",
+    "m11b_dev_002",
+    "m11b_dev_003",
+    "m11b_dev_004",
+    "m11b_dev_005",
+    "m11b_dev_006",
+    "m11b_dev_007",
+    "m11b_dev_008",
+    "m11b_dev_009",
+    "m11b_dev_010",
+    "m11b_dev_011",
+    "m11b_dev_012",
+    "m11b_dev_013",
+    "m11b_dev_014",
+    "m11b_dev_015",
+    "m11b_dev_016",
+    "m11b_dev_017",
+    "m11b_dev_018",
+    "m11b_dev_019",
+    "m11b_dev_020",
+    "m11b_dev_021",
+    "m11b_dev_022",
+    "m11b_dev_023",
+    "m11b_dev_024"
+  ],
+  "dev_executable_counts": {
+    "dynamic_agent": 120,
+    "fixed_workflow": 24,
+    "template_workflow": 120,
+    "validator_no_frontend": 0,
+    "validator_no_replan": 120,
+    "validator_replan": 120,
+    "validator_strict_empty": 120
+  },
+  "formal_systems": [
+    {
+      "clarification": null,
+      "frontend_version": "m11c-frontend-v1",
+      "model_id": null,
+      "planner_grammar": null,
+      "prompt_version": null,
+      "replan": null,
+      "system_id": "fixed_workflow",
+      "systems_version": "m11c-baselines-v1",
+      "templates": [
+        "search"
+      ],
+      "validation": null
+    },
+    {
+      "frontend_version": "m11c-frontend-v1",
+      "model_id": null,
+      "planner_grammar": "m07.2",
+      "prompt_version": null,
+      "system_id": "dynamic_agent",
+      "systems_version": "m11c-baselines-v1"
+    },
+    {
+      "frontend_version": "m11c-frontend-v1",
+      "model_id": null,
+      "planner_grammar": "m07.2",
+      "prompt_version": null,
+      "replan": "regrounded_once",
+      "system_id": "validator_replan",
+      "systems_version": "m11c-baselines-v1",
+      "validation_policy": {
+        "allow_crs_repair": false,
+        "allow_empty": true,
+        "allow_geometry_repair": false,
+        "alternate_sources": {},
+        "expected_max_count": null,
+        "expected_min_count": null,
+        "max_features": 10000,
+        "required_final_fields": [],
+        "schema_version": "1.0"
+      }
+    }
+  ],
+  "matrix_file": "m11c_dev_capability_matrix_v1.jsonl",
+  "matrix_sha256": "sha256:66afad17b310ee49513f660229b061dcfead22f3c6b015721d8b77ca2a6140c5",
+  "private_policy": "Private test runs only after this freeze; aggregates only; no tuning afterwards.",
+  "protocol_version": "m11c-protocol-v1",
+  "schema_version": "1.0",
+  "seeds": [
+    11071,
+    11072,
+    11073
+  ],
+  "source_fingerprint": "sha256:96049292e2e1803eb5c6eb1a99baccb91bea35a1c6e76bb5b7fe2161b1891cb7",
+  "test": {
+    "catalogue": {
+      "files": {
+        "regions": {
+          "crs": "EPSG:3857",
+          "file": "regions.geojson",
+          "sha256": "8dfd6232eab525f8523e8b311b25c8d1ff6ed146c5dbf43a2652dfda1cce33ea"
+        },
+        "sources": {
+          "crs": "EPSG:3857",
+          "file": "sources.geojson",
+          "sha256": "911a4744fdd5d40e3f6a4923b851f79d5879682e55f981fa90fc61b21f65ab6a"
+        },
+        "targets": {
+          "crs": "EPSG:3857",
+          "file": "targets.geojson",
+          "sha256": "5e383fc89e6be555f2f28d1ebc81c35d5afbde1c6e33f5e9354ea38b3619cd38"
+        }
+      },
+      "name": "m11b-private-test-v1",
+      "scope": "Synthetic test catalogue"
+    },
+    "declared_crs": "EPSG:3857",
+    "package_present": true,
+    "private_manifest_sha256": "1c640e0ac279b3b80ed685a9bfdfaefa3714c0a50fa39c2810d5169662c7e75f",
+    "task_count": 40,
+    "tasks_sha256": "e0f9d97fc68f22f1c75e3e861b5d8b8370530ae4a634cae21d72a6f8aa2121fd"
+  }
+}
