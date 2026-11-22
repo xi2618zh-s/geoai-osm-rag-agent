@@ -208,4 +208,14 @@ See [benchmark methodology](docs/BENCHMARKS.md) and [`benchmarks/README.md`](ben
 
 ## License
 
-No open-source license has been selected. The repository is currently available for viewing and evaluation only; normal copyright rules apply.
+The code is released under the [MIT License](LICENSE). The MIT License covers the code only; data in this repository keeps its own licence:
+
+| Data | Licence | Attribution |
+|---|---|---|
+| OSM Wiki text and the knowledge base derived from it (`data/wiki_raw/`, `data/knowledge/`, `faiss_index/`) | CC BY-SA 2.0 | OpenStreetMap Wiki contributors; see the `ATTRIBUTION.md` files under `data/knowledge/osm/` |
+| Lund OSM POI fixture (`data/fixtures/osm/`) | ODbL 1.0 | © OpenStreetMap contributors |
+| SCB 1 km population grid fixtures (`data/fixtures/population/scb/`) | CC0 1.0 | Statistics Sweden (SCB) |
+| GTFS Sverige 2 fixture (`data/fixtures/gtfs/sverige2/`) | CC0 1.0 | Trafiklab / Samtrafiken |
+| Project-authored synthetic fixtures and benchmark tasks | CC0 1.0 | — |
+
+The Sweden PBF, model weights and other large downloads are not part of the repository and keep their providers' terms.
