@@ -6,7 +6,7 @@ The static site displays an archived analysis. Run `python scripts/build_public_
 
 `.github/workflows/pages.yml` is separate from offline CI and uses manual dispatch only. It uploads the explicit build directory; deployment permissions are scoped to the deploy job. Enable Pages with GitHub Actions and dispatch after the intended commit is reviewed and published. Configuration follows [GitHub's custom-workflow documentation](https://docs.github.com/en/pages/getting-started-with-github-pages/using-custom-workflows-with-github-pages), checked on 2026-11-24. Relative URLs support the repository project path.
 
-Expected address after publication: `https://xi2618zh-s.github.io/geoai-osm-rag-agent/`. This is **pending deployment**, not a verified live demo link. After publication, verify that exact project URL and every download before updating README's main link, About and profile.
+The public saved analysis is available at [GeoAI](https://xi2618zh-s.github.io/geoai-osm-rag-agent/). The initial [Pages deployment](https://github.com/xi2618zh-s/geoai-osm-rag-agent/actions/runs/45707971824) succeeded, and the project subpath, rendered report and download resources were checked. Future updates should keep README, About and the profile linked to this same address.
 
 Public real-time questions require a separately deployed backend. Static hosting does not execute Python. Resource limits, concurrent jobs, retention and operational security are a separate delivery scope; this change does not deploy that backend. The original service also uses external Nominatim, Ollama and a PBF, excluded from offline CI.
 

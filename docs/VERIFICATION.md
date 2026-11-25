@@ -31,3 +31,9 @@ python -m unittest discover -s tests -v
 For constrained-memory machines, `python scripts/run_offline_isolated.py --output output/offline_checks` runs the same test modules in separate processes. Full regressions need `requirements.txt`; the school-only install is intentionally smaller. Private files are absent from a public clone, so the existing conditional private-file checks may be skipped there.
 
 Remote CI and Pages deployment results should be judged from the repository's [Actions runs](https://github.com/xi2618zh-s/geoai-osm-rag-agent/actions). A successful static deployment is separate from a passing regression run.
+
+## Published checkout
+
+On 2026-11-26, [PR CI](https://github.com/xi2618zh-s/geoai-osm-rag-agent/actions/runs/45707391167) ran 572 tests on Linux and passed, with two conditional private-file checks skipped because the private holdout is absent. Compilation and the reproducibility contract audit also passed. This remote run is distinct from the Windows acceptance described above.
+
+The separate [Pages deployment](https://github.com/xi2618zh-s/geoai-osm-rag-agent/actions/runs/45707971824) published the explicit static build. The [live page](https://xi2618zh-s.github.io/geoai-osm-rag-agent/) renders the archived eleven-cell analysis; Python computation remains local.

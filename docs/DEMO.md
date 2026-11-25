@@ -1,13 +1,13 @@
 # Explore a school coverage analysis
 
-Build and serve the saved example with Python's standard library:
+Open [the public saved analysis](https://xi2618zh-s.github.io/geoai-osm-rag-agent/) to view the result without installation. To serve the same example on your own machine, use Python's standard library:
 
 ```powershell
 python scripts/build_public_demo.py
 python -m http.server 8080 --bind 127.0.0.1 --directory build/public_demo
 ```
 
-Open [the rendered page](http://127.0.0.1:8080/). It shows **Saved analysis**, not live computation. Public Pages hosting is prepared but pending. GitHub's HTML source viewer is not the demo.
+Open [the rendered page](http://127.0.0.1:8080/). It shows **Saved analysis**, not live computation. The public site is hosted on GitHub Pages. GitHub's HTML source viewer is not the demo.
 
 Start with the question: which cells around Lund are over 1,000 metres from an extracted school and contain at least ten children aged 5–9? The saved record identifies eleven cells holding 178 reported children. Toggle population, buffers, schools and gap layers. Select a feature, inspect the table, download CSV or projected GeoJSON, then open the unchanged standalone report and expand sources and limits.
 

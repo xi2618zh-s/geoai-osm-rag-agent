@@ -4,11 +4,11 @@
 
 GeoAI helps you find places in OpenStreetMap and analyse nearby services with population data. It shows a map, the data and calculation steps behind the result, and a downloadable report.
 
-**[View the school analysis locally](docs/LOCAL_DEMO.md#view-the-saved-analysis)** · [Run a new analysis](docs/LOCAL_DEMO.md) · [Implementation and evaluation](docs/ARCHITECTURE.md)
+**[View the school analysis](https://xi2618zh-s.github.io/geoai-osm-rag-agent/)** · [Run a new analysis](docs/LOCAL_DEMO.md) · [Implementation and evaluation](docs/ARCHITECTURE.md)
 
 ![School coverage analysis rendered in GeoAI](docs/assets/school_coverage.jpg)
 
-The static website is prepared in this checkout; public hosting is pending. The screenshot comes from the working page. Browse the saved example without installing GIS libraries using the build/serve commands below.
+The website displays a saved analysis. To change the parameters and calculate a new result, run the local page below.
 
 ## An example analysis
 
@@ -20,7 +20,7 @@ The calculation standardises population fields, projects school coordinates into
 
 This answers a bounded question about the included snapshots. Distance is straight-line polygon-to-point distance, not a walk from a home to a school. Whole cells must lie beyond the threshold. Edge cells are included, so these totals are not Lund municipality's population. Distances above 2,000 m are upper bounds. School capacity, type and OSM completeness are unknown; different OSM representations of one school may remain separate.
 
-The population reference date is 2025-12-31. The OSM file records a header timestamp of 2025-12-14; its original provider was not verified. The page distinguishes this **saved analysis** from a **new local calculation**. A static website cannot run the Python tools.
+The population reference date is 2025-12-31. The OSM file records a header timestamp of 2025-12-14; its original provider was not verified.
 
 ## How it works
 

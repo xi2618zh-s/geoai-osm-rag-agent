@@ -33,7 +33,7 @@ python scripts/build_public_demo.py
 python -m http.server 8080 --bind 127.0.0.1 --directory build/public_demo
 ```
 
-Open [the rendered saved example](http://127.0.0.1:8080/). Use HTTP, since the page fetches adjacent JSON. School startup also serves the built site at `/saved/index.html`, exercising relative resources under a subpath. Pages publication is pending; a GitHub blob page shows source instead of the demo.
+Open [the rendered saved example](http://127.0.0.1:8080/). Use HTTP, since the page fetches adjacent JSON. School startup also serves the built site at `/saved/index.html`, exercising relative resources under a subpath. The [public saved analysis](https://xi2618zh-s.github.io/geoai-osm-rag-agent/) is also available without installation; a GitHub blob page shows source instead of the demo.
 
 ## HTTP API
 
