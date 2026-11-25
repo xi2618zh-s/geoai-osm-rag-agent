@@ -41,6 +41,9 @@ from src.pipeline import run_query, run_query_without_llm
 
 app = Flask(__name__)
 
+from src.web.analysis_routes import analysis_blueprint
+app.register_blueprint(analysis_blueprint())
+
 
 def _validation_error(trace_id: str, error: ValidationError):
     body = ErrorResponse(

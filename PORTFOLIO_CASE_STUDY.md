@@ -1,54 +1,15 @@
-# Portfolio case study: evidence-grounded geospatial agent
+# GeoAI: from place queries to inspectable spatial analysis
 
-> This case study covers Stage 1 (P1–P5). Stage 2 (M00–M12a: GIS tools, population and GTFS data, constrained planning with validation, and a versioned benchmark) is summarized in the [README](README.md#stage-2-geoanalyst-extension-m00m12a).
+A place query asks where schools are. A service-coverage question also needs population data, coordinate systems, distance semantics and evidence for the displayed conclusion. GeoAI makes those responsibilities visible: a question becomes a bounded plan, deterministic tools execute it, and the report links numbers to checked outputs.
 
-## Problem
+The Lund example uses public SCB population and extracted OSM school snapshots. At 1,000 m and ten children aged 5–9, the saved calculation finds eleven cells containing 178 children. This is a straight-line coverage screen, not evidence about school capacity or street-network access. The [demo](docs/DEMO.md) and [original record](benchmarks/results/m12/m12a/formal_v1/scenario_report_m12a_A1.json) show its limits.
 
-OpenStreetMap is structurally precise but difficult for non-specialists: a user
-asks for “schools” or “airport terminals”, while execution requires correct
-`key=value` semantics, spatial bounds and geometry handling. A language model can
-interpret intent but should not be trusted to invent tags, coordinates or files.
+The previous case study records restoration of an inherited prototype. Subsequent artifacts document hybrid lexical/dense retrieval, grounded structured model decisions, deterministic OSM extraction, typed dataset/tool contracts, population/transit adapters, bounded plans, validation and reports. Historical engineering identifiers remain in technical records; this case describes the resulting system.
 
-## Engineering approach
+Documented decisions explain its shape. Hybrid retrieval was compared against a measured baseline: see [methodology](docs/BENCHMARKS.md). Interpretation stays separate from GIS execution so an ungrounded model output cannot select arbitrary tools or files: see [ADRs](docs/adr/). Report validation rebuilds metrics from execution so plausible sentences cannot substitute for evidence: see [scenario code](src/scenarios/m12a.py).
 
-I separated semantic decision from deterministic execution. A domain RAG layer
-ranks documented OSM tags; a local model returns strict structured output; schema
-and evidence grounding reject invalid choices. Nominatim, osmium and pyosmium then
-run only validated intents against real PBF data.
+The interface work adds a thin adapter around these existing components. The public site displays an already saved analysis; the local form sends editable parameters into the real scenario. Preview executes no GIS tools. Runs have independent persistent files, errors hide earlier results, and validation failure blocks success reports. The adapters do not look up reference answers. The [verification record](docs/VERIFICATION.md) describes the acceptance checks.
 
-The inherited prototype was restored before optimization. P1 established a
-quantitative baseline. P2 added contracts, trace/timing, retry and cache. P3
-introduced BM25+dense hybrid ranking. P4 added constrained multi-tag plans,
-allow-listed tools, step state, failure recovery and provenance GeoJSON. P5 makes
-the result reviewable through a clean README, official data/checksum flow,
-activation-free Windows entrypoints, offline CI and an evidence-aligned demo.
+Evaluation needs a precise reading. The [school protocol](benchmarks/results/m12/m12a/formal_v1/report.md) reports 13/13 authored public cases; a separate oracle implementation is by the same author. The [planner comparison](benchmarks/results/m11c_v2/M11C_V2_FINAL_REPORT.md) reports 136/160 public and 34/48 private strict passes, including required validation steps. Removing that criterion makes dynamic and validation configurations equal; formal runs triggered no replanning. Separate fault tests establish bounded recovery. Complex spatial relations and incomplete aggregation scoring limit conclusions.
 
-## Hard decisions
-
-- Kept Qwen 2.5 3B as the verified default on the target CPU; Mistral remains optional.
-- Rejected cross-chunk weighted voting after it underperformed top-1.
-- Added hybrid retrieval only after a baseline and 15-configuration ablation.
-- Did not add a cross-encoder after current internal retrieval errors reached zero.
-- Rejected arbitrary LLM tool calling in favor of a testable allow-list and DAG.
-- Rejected an unverified Docker artifact; delivered the path validated on Windows.
-
-## Evidence
-
-- Dense baseline: internal Recall@1 82.5%, MRR 0.8854.
-- Hybrid: internal Recall@1 100%, MRR 1.0, with about 7–10 ms added retrieval latency.
-- Qwen downstream final decision: 85.7% on 21 internal queries.
-- P4 planning: 12/12 internal exact plans.
-- Real P4 HTTP workflow: 173 café/restaurant objects and 6/6 successful steps.
-- Offline regression grew from 10 tests at P1 to 43 tests before P5 delivery tests.
-
-## What this demonstrates
-
-RAG/search evaluation, structured LLM output, failure-safe agent tooling, Python
-backend engineering, geospatial data processing, experiment design, Windows
-compatibility, reproducibility and honest technical communication.
-
-## Boundaries
-
-The knowledge base and benchmarks are small and project-authored. The service is
-local-first, not production hardened. There is no autonomous planner, multi-agent
-system, long-term memory, public SLA or external accuracy validation.
+Code and data have separate licences described in the README. A public real-time backend is a future scope; this delivery executes locally on included Lund data.
