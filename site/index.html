@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>GeoAI · School coverage in Lund</title>
+    <link rel="stylesheet" href="assets/explore.css" />
+    <script src="assets/explore.js" defer></script>
+  </head>
+  <body data-mode="saved">
+    <header>
+      <a href="#" class="wordmark">GeoAI</a>
+      <nav>
+        <a href="#analysis">Analysis</a
+        ><a href="#process">Process &amp; sources</a
+        ><a href="#local">Run locally</a
+        ><a href="https://github.com/xi2618zh-s/geoai-osm-rag-agent"
+          >GitHub ↗</a
+        >
+      </nav>
+    </header>
+    <main>
+      <div class="intro">
+        <p class="eyebrow">Explore places and analyse local services</p>
+        <h1>
+          Where are children furthest<br class="desktop" />
+          from a school?
+        </h1>
+        <p>
+          Compare population grid cells with extracted school locations around
+          Lund. Follow the calculation from the question to the map, then
+          inspect the evidence or download the results.
+        </p>
+      </div>
+      <section id="analysis">
+        <p class="eyebrow" id="mode-label">Saved analysis · Lund, Sweden</p>
+        <h2 id="question">
+          Which cells are more than 1,000 m from a school and contain at least
+          10 children aged 5–9?
+        </h2>
+        <p class="muted" id="mode-note">
+          This is an already completed analysis of the included snapshots. To
+          change the parameters and calculate a new result, run GeoAI locally.
+        </p>
+        <form id="parameters" hidden>
+          <p>
+            Use these fields to define a school coverage analysis for the
+            included Lund data.
+          </p>
+          <div class="fields">
+            <label
+              >Place<select name="place">
+                <option>Lund</option>
+              </select></label
+            ><label
+              >Distance (metres)<input
+                name="distance_m"
+                type="number"
+                min="0.01"
+                max="2000"
+                step="any"
+                value="1000"
+                required /></label
+            ><label
+              >Age band<select name="age_band">
+                <option>0-4</option>
+                <option selected>5-9</option>
+                <option>10-14</option>
+                <option>15-19</option>
+              </select></label
+            ><label
+              >Minimum children<input
+                name="minimum_children"
+                type="number"
+                min="1"
+                step="1"
+                value="10"
+                required
+            /></label>
+          </div>
+          <div class="actions">
+            <button type="submit" id="preview">Preview plan</button
+            ><button type="button" id="run" disabled>Run analysis</button>
+          </div>
+        </form>
+        <p id="status" role="status" aria-live="polite"></p>
+        <div id="preview-panel" hidden>
+          <h3>Planned calculation</h3>
+          <p>
+            No GIS tools run during preview. Distances use projected metres from
+            each grid polygon to an extracted school point.
+          </p>
+          <ol id="preview-steps"></ol>
+          <div id="preview-sources"></div>
+        </div>
+        <div id="result" hidden>
+          <p id="headline" class="conclusion"></p>
+          <div id="metrics" class="metrics"></div>
+          <div id="layers" class="layers"></div>
+          <div class="map-wrap">
+            <svg
+              id="map"
+              viewBox="0 0 900 530"
+              role="img"
+              aria-label="School coverage map in projected coordinates"
+            ></svg
+            ><span class="north">N ↑</span>
+          </div>
+          <p class="map-caption">
+            Lund study area and surrounding extracted schools · EPSG:3006,
+            projected metres · No street basemap. Select a feature to inspect
+            it.
+          </p>
+          <div id="feature" role="status">
+            Select a feature on the map, or use the result table below.
+          </div>
+          <p>
+            Distance is measured from a whole grid polygon to a school point,
+            using a straight line. It is not a walking distance. Edge cells are
+            included; these population counts are not the population of Lund
+            municipality. Distances above 2,000 m are upper bounds.
+          </p>
+          <h3>Cells matching the question</h3>
+          <div class="table-wrap"><table id="table"></table></div>
+          <p id="table-note" class="muted"></p>
+          <div id="summary"></div>
+          <div id="downloads" class="actions"></div>
+          <section id="process">
+            <h2>From data to result</h2>
+            <ol id="steps"></ol>
+            <p id="checks"></p>
+            <details>
+              <summary>Data sources, checks and limitations</summary>
+              <div id="sources"></div>
+              <ul id="limits"></ul>
+              <ul id="warnings"></ul>
+              <p id="run-meta"></p>
+              <a id="evidence-link">Download calculation record (JSON)</a>
+            </details>
+          </section>
+        </div>
+      </section>
+      <section id="local">
+        <h2>Ask the next question locally</h2>
+        <p>
+          The local page uses the same reading flow, with editable distance, age
+          band and population threshold. It verifies the included files,
+          previews a bounded plan, runs Python GIS tools, checks their outputs
+          and builds a report.
+        </p>
+        <pre><code>python -m pip install -r requirements-demo.txt
+python scripts/run_demo.py</code></pre>
+        <p>
+          Open <code>http://127.0.0.1:8000/explore</code>. No model, Ollama or
+          Sweden PBF download is needed for this school analysis.
+        </p>
+        <p>
+          <a href="guide.html"
+            >Installation, OSM queries and API instructions ↗</a
+          >
+          ·
+          <a
+            href="https://github.com/xi2618zh-s/geoai-osm-rag-agent/blob/main/docs/ARCHITECTURE.md"
+            >Implementation &amp; evaluation ↗</a
+          >
+        </p>
+      </section>
+      <footer>
+        Population: Statistics Sweden (SCB), CC0 1.0 · Schools:
+        <a href="https://www.openstreetmap.org/copyright"
+          >© OpenStreetMap contributors, ODbL 1.0</a
+        >. The local OSM source provider was not verified.
+        <a href="https://github.com/xi2618zh-s/geoai-osm-rag-agent"
+          >Source code and data licences</a
+        >.
+      </footer>
+    </main>
+  </body>
+</html>

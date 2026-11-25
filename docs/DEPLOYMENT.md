@@ -1,54 +1,13 @@
-# Deployment decision and operating model
+# Running and publishing GeoAI
 
-## Decision
+Use [LOCAL_DEMO.md](LOCAL_DEMO.md) for the lightweight school scenario and full OSM environment. School startup binds to `127.0.0.1`; select a free port using `--port 8017`. Do not stop another service to free a port.
 
-P5 uses a validated Windows/Conda one-command path as the primary delivery. A
-Dockerfile is deliberately not included in this phase because Docker is absent on
-the acceptance machine and the true runtime spans three heavyweight boundaries:
-an Ollama model, an external `osmium` binary and a roughly 773 MB mutable PBF.
-Shipping an unbuilt container would weaken, rather than improve, reproducibility.
+The static site displays an archived analysis. Run `python scripts/build_public_demo.py` and preview `build/public_demo` with an HTTP server. Only explicitly listed resources, selected report, its downloads and provenance are included. Private holdout, `.claude/`, `.env`, working output and internal notes are excluded. Source records include hashes, question, parameters and data versions. The builder refuses unexpected files already present in its destination.
 
-## Supported local topology
+`.github/workflows/pages.yml` is separate from offline CI and uses manual dispatch only. It uploads the explicit build directory; deployment permissions are scoped to the deploy job. Enable Pages with GitHub Actions and dispatch after the intended commit is reviewed and published. Configuration follows [GitHub's custom-workflow documentation](https://docs.github.com/en/pages/getting-started-with-github-pages/using-custom-workflows-with-github-pages), checked on 2026-11-24. Relative URLs support the repository project path.
 
-```text
-Browser → Flask 127.0.0.1:8000
-              ├→ Ollama 127.0.0.1:11434
-              ├→ Nominatim HTTPS
-              ├→ osmium CLI
-              └→ local Sweden PBF / FAISS / cache / GeoJSON
-```
+Expected address after publication: `https://xi2618zh-s.github.io/geoai-osm-rag-agent/`. This is **pending deployment**, not a verified live demo link. After publication, verify that exact project URL and every download before updating README's main link, About and profile.
 
-Primary commands:
+Public real-time questions require a separately deployed backend. Static hosting does not execute Python. Resource limits, concurrent jobs, retention and operational security are a separate delivery scope; this change does not deploy that backend. The original service also uses external Nominatim, Ollama and a PBF, excluded from offline CI.
 
-```bat
-scripts\setup_env.cmd
-conda run -n geoai_project_env python scripts\fetch_osm_data.py
-ollama pull qwen2.5:3b
-scripts\run_local.cmd
-```
-
-The runner performs preflight before binding the Flask port. It uses `conda run`
-so PowerShell profile execution policy cannot break environment activation.
-
-## External-state policy
-
-- PBF is downloaded, verified and ignored by Git.
-- Model weights stay in Ollama/Hugging Face caches, outside the repository.
-- Nominatim is not mocked in real E2E and therefore cannot have a fixed SLA here.
-- CI runs only deterministic offline tests; external E2E is a manual release gate.
-- The Flask development server binds to loopback by default and must not be
-  exposed directly as a public production service.
-
-## Before a public deployment
-
-Add an authenticated reverse proxy, a production WSGI server, request size/rate
-limits, persistent shared cache, centralized logs/metrics, Nominatim usage-policy
-review or a self-hosted geocoder, data/model version pinning, vulnerability scans,
-backup/retention policy and load testing. None of these are claimed as completed.
-
-## Future container trigger
-
-Containerization becomes worthwhile when a Docker-capable acceptance runner is
-available and PBF/model volumes can be mounted rather than baked into the image.
-The acceptance gate should include image build, health check, real osmium fixture,
-Ollama connectivity and shutdown/volume persistence tests.
+To disable the new full-app entry, remove its Blueprint registration; historical data/reports and endpoints remain. Do not delete original output or rewrite frozen evidence during rollback.

@@ -1,48 +1,20 @@
-# Five-minute demo playbook
+# Explore a school coverage analysis
 
-## Preparation
+Build and serve the saved example with Python's standard library:
 
-1. Run `scripts\run_local.cmd`.
-2. Open `http://127.0.0.1:8000/ui`.
-3. Keep the P4 step list and map visible; do not open unrelated personal windows.
+```powershell
+python scripts/build_public_demo.py
+python -m http.server 8080 --bind 127.0.0.1 --directory build/public_demo
+```
 
-## Demo 1: grounded single-tag query
+Open [the rendered page](http://127.0.0.1:8080/). It shows **Saved analysis**, not live computation. Public Pages hosting is prepared but pending. GitHub's HTML source viewer is not the demo.
 
-Query: `Find all cafes in Lund`
+Start with the question: which cells around Lund are over 1,000 metres from an extracted school and contain at least ten children aged 5–9? The saved record identifies eleven cells holding 178 reported children. Toggle population, buffers, schools and gap layers. Select a feature, inspect the table, download CSV or projected GeoJSON, then open the unchanged standalone report and expand sources and limits.
 
-Explain:
+The plan standardises population data, projects schools to metric coordinates, selects schools, draws display buffers, measures polygon-to-point distances and filters gaps. These are extracted points, not verified entrances. Straight-line distance is not walking distance. SCB edge cells and disclosure-control semantics affect interpretation; totals are not municipality population.
 
-- hybrid retrieval produces evidence-backed OSM tags;
-- Qwen returns a strict decision or the validator chooses ranked fallback;
-- Nominatim/osmium/pyosmium execute against real data;
-- output includes node/way/relation counts and a unique GeoJSON URL.
+To calculate a new result, follow [the local guide](LOCAL_DEMO.md), then open `/explore`. Preview the parameters and data dates. Run: the server executes GIS tools and validates outputs and report evidence before exposing downloads. Change distance to 1,500 metres: the previous preview/result disappear until another preview/run. Increase the child threshold sufficiently to obtain a valid empty result. Each successful calculation has its own run ID and persistent files.
 
-## Demo 2: constrained multi-tag workflow
+Actual screenshots: [saved analysis](assets/school_coverage.jpg), [390px screen](assets/school_coverage_mobile.jpg), [new local calculation](assets/school_coverage_local.jpg). Checks and limitations of acceptance are recorded in [the verification record](VERIFICATION.md).
 
-Switch mode to `Multi-tag OR workflow`.
-
-Query: `Find cafes or restaurants in Lund`
-
-Explain the six visible steps: geocode, one shared clip, two tag extractions,
-union/dedup and write. Show `matched_filters` in a map popup. The P4 acceptance
-snapshot returned 173 objects, but current OSM data may change that number.
-
-## Demo 3: failure boundary
-
-Query: `Find cafes and restaurants in Lund` in workflow mode.
-
-The system rejects natural-language AND as ambiguous instead of guessing whether
-the user means category union or same-object intersection. Explicit API callers
-can request object-level intersection.
-
-## Honest interpretation
-
-The key result is deliberately split by stage: retrieval reached 100% on the internal 63-query set, but
-Qwen final decision was 85.7% on 21 queries. The project therefore demonstrates
-measurement, failure analysis and constrained execution—not a production 100%
-accuracy claim.
-
-The visually accepted release screenshot is
-[`docs/assets/p5_workflow_result.png`](assets/p5_workflow_result.png). It records
-the real 173-feature P4 workflow result, six succeeded steps and rendered Leaflet
-markers. Browser console inspection reported no errors or warnings.
+The separate OSM experience is available through the full app at `/ui`. It supports `Find all cafes in Lund` and explicit OR queries such as `Find cafes or restaurants in Lund`. Its [historical screenshot](assets/p5_workflow_result.png) records 173 deduplicated café/restaurant objects; this is not a current-count guarantee. The school server links to setup instructions instead of presenting that separate runtime as an active tool.

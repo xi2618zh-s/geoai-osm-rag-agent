@@ -54,3 +54,7 @@ data/osm/*.osm.pbf.receipt.json
 
 # Local runtime outputs and working material
 /output/
+
+/build/
+
+/.venv-demo/

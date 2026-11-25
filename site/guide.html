@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Run GeoAI locally</title>
+    <link rel="stylesheet" href="assets/explore.css" />
+  </head>
+  <body>
+    <header>
+      <a class="wordmark" href="index.html">GeoAI</a>
+      <nav>
+        <a href="index.html">Analysis</a
+        ><a href="https://github.com/xi2618zh-s/geoai-osm-rag-agent"
+          >Repository ↗</a
+        >
+      </nav>
+    </header>
+    <main>
+      <div class="intro">
+        <p class="eyebrow">Local Python execution</p>
+        <h1>Change the question.<br />Run the calculation.</h1>
+        <p>
+          The included Lund snapshots need no model, API key or large data
+          download. The website shows an already saved analysis; the local app
+          computes a new one.
+        </p>
+      </div>
+      <section>
+        <h2>Install and start</h2>
+        <p>
+          Use Python 3.10 or later in a checkout containing the school explorer.
+          Use the repository version containing this explorer.
+        </p>
+        <pre><code>git clone https://github.com/xi2618zh-s/geoai-osm-rag-agent.git
+cd geoai-osm-rag-agent
+python -m venv .venv
+.venv\Scripts\python -m pip install -r requirements-demo.txt
+.venv\Scripts\python scripts/run_demo.py</code></pre>
+        <p>
+          Open <code>http://127.0.0.1:8000/explore</code>. If that port is
+          occupied, add <code>--port 8017</code> and use that port in the
+          address. On Linux/macOS use <code>.venv/bin/python</code>. The app
+          binds to loopback only.
+        </p>
+        <p>
+          Choose a distance above zero and at most 2,000 m, one of the four SCB
+          age bands (0–4, 5–9, 10–14, 15–19), and at least one child. Only Lund
+          is supported. Preview the data and plan, then run. Editing a field
+          invalidates the previous preview. The page shows actual checks and a
+          new result, including valid empty results.
+        </p>
+        <h2>Keep the result</h2>
+        <p>
+          Download CSV, projected GeoJSON, the standalone HTML report or the
+          JSON calculation record. Files live in
+          <code>output/demo_runs/&lt;run_id&gt;/</code>, separated for each
+          execution. They persist across restarts with no automatic expiry.
+          Temporary registries are removed after exports. Keep the run folder to
+          retain its report.
+        </p>
+        <p>
+          Distances use EPSG:3006 metres from grid polygons to extracted school
+          points. Convert GeoJSON to EPSG:4326 before use in longitude/latitude
+          applications. Straight-line distances do not measure a walk; edge
+          cells and incomplete school information limit interpretation.
+        </p>
+        <h2>Use the same service from a terminal</h2>
+        <pre><code>.venv\Scripts\python scripts/run_analysis_demo.py --distance-m 1000 --age-band 5-9 --minimum-children 10</code></pre>
+        <p>
+          The API accepts structured fields at
+          <code>POST /api/analyses/preview</code> and
+          <code>POST /api/analyses/run</code>. It supports this included school
+          question, not unrestricted natural-language analysis. Missing or
+          invalid parameters need correction. Data or report validation failure
+          does not produce a successful report.
+        </p>
+        <h2>OSM place queries</h2>
+        <p>
+          The separate query interface uses the full environment, Ollama, an
+          external Sweden PBF and osmium CLI. Start it separately:
+        </p>
+        <pre><code>scripts\setup_env.cmd
+conda run -n geoai_project_env python scripts\fetch_osm_data.py
+ollama pull qwen2.5:3b
+scripts\run_local.cmd</code></pre>
+        <p>
+          Open <code>/ui</code> on that server. The lightweight school server
+          does not expose the OSM query endpoints. See the repository's
+          <a
+            href="https://github.com/xi2618zh-s/geoai-osm-rag-agent/blob/main/docs/LOCAL_DEMO.md#osm-place-queries"
+            >OSM integration guide</a
+          >.
+        </p>
+      </section>
+      <footer>
+        Code and data licences are recorded in the repository. New public
+        real-time execution would require a separate backend deployment.
+      </footer>
+    </main>
+  </body>
+</html>

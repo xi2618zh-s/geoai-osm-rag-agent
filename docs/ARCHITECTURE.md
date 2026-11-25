@@ -1,103 +1,35 @@
-# Architecture and interface map
+# GeoAI architecture
 
-## 1. Design principle
-
-The system separates probabilistic semantic decisions from deterministic spatial
-execution. Retrieval and the local LLM decide *what* OSM tag is relevant. The
-spatial layer alone decides *how* real PBF objects are clipped, filtered and
-serialized.
+GeoAI supports place queries and bounded spatial analysis. The primary browser example compares Lund population cells with school locations. These paths use different inputs; the school scenario never calls the OSM tag retriever.
 
 ```mermaid
-flowchart TB
-    subgraph Decision["Probabilistic decision layer"]
-      Q["Query"] --> H["Hybrid retriever"]
-      H --> S["Single-tag Qwen parser"]
-      H --> P["Multi-tag deterministic plan compiler"]
-      S --> V["Strict schema + evidence validator"]
-      V --> F["Hybrid-ranked fallback"]
-    end
-
-    subgraph Execution["Deterministic spatial execution layer"]
-      I["Validated intent"] --> N["Nominatim"]
-      N --> O["osmium clip cache"]
-      O --> Y["pyosmium node/way/relation"]
-      Y --> C["Union/intersection + dedup"]
-      C --> G["GeoJSON provenance"]
-    end
-
-    F --> I
-    P --> T["Allow-listed Tool Registry"] --> I
-    G --> A["Flask contracts"] --> L["Leaflet UI"]
+flowchart TD
+    B[Browser / CLI] --> A[School analysis service]
+    A --> D[Hash-verified public snapshots]
+    D --> C[Isolated dataset catalogue]
+    C --> I[Restricted command interpretation]
+    I --> P[Plan and static gate]
+    P --> X[Allow-listed GIS tools]
+    X --> V[Readability, CRS and geometry checks]
+    V --> R[Canonical report and metric validation]
+    R --> F[Persistent HTML, CSV, GeoJSON and JSON record]
+    B --> O[Original OSM API]
+    O --> H[MiniLM / FAISS + BM25 retrieval]
+    H --> L[Grounded local model decision / fallback]
+    L --> N[Nominatim → osmium clip → pyosmium extraction]
+    N --> J[GeoJSON and Leaflet map]
 ```
 
-## 2. Single-tag request sequence
+`src/web/analysis_data.py` pins both public manifests, checks their file hashes and builds the standard `ScenarioCatalogue`. It imports no oracle or evaluation code. `analysis_service.py` converts fields into the existing grammar, calls `interpret_m12a` and `plan_m12a`, then reuses `execute_scenario_plan`, `build_m12a_report`, `validate_m12a_report` and the standalone renderer unchanged.
 
-```mermaid
-sequenceDiagram
-    participant U as User
-    participant API as Flask /chat
-    participant R as HybridRetriever
-    participant L as Ollama/Qwen
-    participant V as Validator
-    participant O as OSM tools
+Preview registers and verifies files temporarily but invokes no analysis tools. Run reconstructs the plan from request fields; client plans, paths and dataset IDs are rejected. Each request receives an opaque UUID directory. Reports and exports are written after evidence validation; `result.json` marks completion after the temporary registry is removed. Downloads are allowlisted and hash checked. Loading completed runs needs no in-memory session, so restart retains reports.
 
-    U->>API: natural-language query
-    API->>R: retrieve(query)
-    R-->>API: grounded tag evidence
-    API->>L: structured prompt + evidence
-    L-->>V: JSON decision
-    V-->>API: LLM decision or ranked fallback
-    API->>O: place + key=value
-    O-->>API: unique GeoJSON + counts
-    API-->>U: strict success/error response
-```
+`analysis_routes.py` is a Blueprint mounted by the small demo app and `app_min.py`. The small app avoids the legacy model/PBF import tree, binds to loopback and accepts same-origin JSON. Clarification, unsupported, success and failure are distinct states. It is not deployed as a public backend.
 
-## 3. Multi-tag workflow state
+`site/index.html` and plain CSS/JavaScript are shared by saved and local experiences. The static builder wraps the archived report JSON, decodes verified downloads and copies historical HTML byte for byte. An explicit file list and source manifest bound publishing output. SVG displays native EPSG:3006 metres with a legend and north indicator, without a web basemap. Projected exports need reprojection for RFC 7946 consumers.
 
-```mermaid
-stateDiagram-v2
-    [*] --> PlanCompilation
-    PlanCompilation --> Geocode: valid plan
-    PlanCompilation --> Failed: invalid/ambiguous
-    Geocode --> Clip: success
-    Clip --> Clip: retryable timeout, once
-    Clip --> Extract: success
-    Extract --> Combine: every tag succeeded
-    Combine --> Write: success
-    Write --> Succeeded
-    Geocode --> Failed: final failure
-    Clip --> Failed: final failure
-    Extract --> Failed: final failure
-    Combine --> Failed: final failure
-    Write --> Failed: final failure
-    Failed --> Skipped: downstream dependencies
-    Succeeded --> [*]
-    Skipped --> [*]
-```
+The original OSM interfaces remain `/chat`, `/chat_simple`, `/workflow` and `/ui`. `/plan-preview` and `/plan-ui` remain previews; `/analysis-ui` remains a saved report. Use the [OSM setup](LOCAL_DEMO.md#osm-place-queries) for that app. The lightweight server exposes school analysis and saved-page preview only.
 
-Each step records status, attempts, recovery, elapsed time, output summary and a
-stable error. Tool parameters are validated against `ToolSpec`; unknown tools and
-unexpected fields are rejected before a handler runs.
+Population semantics, GTFS stop/service analysis, six GIS tools, model frames, validation and bounded session edits retain their individual contracts in [implementation notes](roadmap/README.md), [ADRs](adr/) and [benchmarks](../benchmarks/README.md). They are not all exposed in the school form.
 
-## 4. Core interfaces
-
-| File | Main interface | Responsibility |
-|---|---|---|
-| `src/rag/hybrid_retriever.py` | `HybridRetriever.retrieve()` | Dense + lexical tag ranking |
-| `src/query/llm_parser.py` | structured parser/validator | Grounded local-model decision |
-| `src/pipeline.py` | `run_query()` | Backward-compatible single-tag E2E |
-| `src/pipeline.py` | `run_query_without_llm()` | Deterministic spatial debugging |
-| `src/agent/planner.py` | `compile_natural_language_plan()` | Constrained OR plan |
-| `src/agent/tools.py` | `ToolRegistry.invoke()` | Allow-list and tool contracts |
-| `src/agent/workflow.py` | `run_agent_workflow()` | Explicit state and recovery |
-| `src/osm/extractor.py` | `extract_features_to_geojson()` | node/way/relation geometry |
-| `app_min.py` | `/chat`, `/chat_simple`, `/workflow` | HTTP contracts |
-
-## 5. Runtime boundaries
-
-- External network: Nominatim, first MiniLM download, optional Wiki rebuild.
-- Local service: Ollama at `127.0.0.1:11434` by default.
-- External CLI: `osmium-tool`, installed by Conda or CI apt.
-- Large local input: Sweden `.osm.pbf`, never committed.
-- Mutable outputs: GeoJSON, clips, logs and caches, all ignored by Git.
-- Tracked evidence: source catalog, FAISS index/metadata, tests and benchmark JSON/MD.
+The [formal comparison](../benchmarks/results/m11c_v2/M11C_V2_FINAL_REPORT.md) scores specified validation steps as well as results. Its strict-score gap is not an answer-accuracy improvement; no formal run triggered replanning. Separate fault tests establish bounded recovery. The adapters preserve frozen scenario, data and evaluation bytes, checked against the implementation protection baseline.
